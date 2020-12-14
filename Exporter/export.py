@@ -18,6 +18,7 @@ limitations under the License.
 
 import tools.generator
 
+#要导出的配置文件
 export_files = [
     '全局配置表.xlsx',
     '任务配置表.xlsx',
@@ -27,7 +28,7 @@ export_files = [
 
 
 
-#key is protoc cmd, value is out folder!
+#导出的脚本和对应文件夹，key为protoc支持的， key is protoc cmd, value is out folder!
 ScriptTag_Dic = {
     # 'python_out': 'out_python',
     'csharp_out': 'out_csharp',
@@ -35,7 +36,7 @@ ScriptTag_Dic = {
     # 'java_out' : 'out_java'
 }
 
-# ['json', 'lua', 'protobuf']
+#导出数据格式 ['json', 'lua', 'protobuf']
 out_data_formats = ['json', 'lua', 'protobuf']
 
 if __name__ == '__main__':
