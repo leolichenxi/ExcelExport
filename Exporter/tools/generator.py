@@ -74,15 +74,6 @@ def find_index(key, v_list):
     return -1
 
 
-def register_global_msg():
-    msgs = []
-    msg = Message("Position2Int", '', '', None, False)
-    msg.add_filed('X', 'int', 'x轴向')
-    msg.add_filed('Y', 'int', 'y轴向')
-    msgs.append(msg)
-    return msgs
-
-
 def is_null_or_empty(v):
     return v == '' or v is None
 
@@ -178,7 +169,6 @@ def dict2pb(cls, adict, strict=False):
                 try:
                     setattr(obj, field.name, adict[field.name])
                 except Exception as e:
-                    raise e
                     raise ValueError(field.type, field.name, adict[field.name])
     return obj
 
@@ -204,8 +194,27 @@ class Exporter:
         print(out_data_formats)
 
     def add_global_msg(self):
-        for msg in register_global_msg( ):
+        file = 'custom.xlsx'
+        if not os.path.exists(file):
+            return
+        excel_info = xlrd.open_workbook(file)
+        sheet = excel_info.sheets()[0]
+        for index in range(1,sheet.nrows):
+            row = sheet.row_values(index)
+            msg = Message(row[0],'','',None,False)
+            msg.add_filed(row[0],row[1],row[2])
+
+        for msg in  msg.get_child_messages():
+            msg.set_name(msg.name[0:-1])
             self.global_msgs.append(msg)
+
+    # def register_global_msg(self):
+    #     msgs = []
+    #     msg = Message("Position2Int", '', '', None, False)
+    #     msg.add_filed('X', 'int', 'x轴向')
+    #     msg.add_filed('Y', 'int', 'y轴向')
+    #     msgs.append(msg)
+    #     return msgs
 
     def get_export_json_folder(self):
         return OutDir_Jsons
@@ -508,6 +517,9 @@ class Message:
         self.import_msgs = []
         self.global_msgs = []
 
+    def get_child_messages(self):
+        return self.child_msgs
+
     def add_global_msg(self, msgs):
         self.global_msgs.extend(msgs)
 
@@ -518,6 +530,9 @@ class Message:
         if self.is_list_obj:
             return self.name + 's'
         return self.name
+
+    def set_name(self,name):
+        self.name = name
 
     def get_proto_name(self):
         if self.is_list_obj:

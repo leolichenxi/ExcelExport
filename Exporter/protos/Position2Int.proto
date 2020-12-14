@@ -1,5 +1,0 @@
-syntax = "proto3";
-message Position2Int {
-   int32 X = 1 ; // x轴向
-   int32 Y = 2 ; // y轴向
-}

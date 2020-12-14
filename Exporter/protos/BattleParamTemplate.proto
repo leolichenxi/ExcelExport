@@ -1,6 +1,5 @@
 syntax = "proto3";
 package Config;
-import "protos/Position2Int.proto";
 message BattleParamTemplate {
    int32 BattleStartWaitTime = 1 ; // 战斗开始的等待时间
    repeated int32 BattleMapSizes = 2 ; // 战斗场景的大小，第一项为宽，第二项为高(坐标原点为左下角)
@@ -26,7 +25,7 @@ message BattleParamTemplate {
    int32 HeroSkillCount = 22 ; // 英雄技能存储上限
    int32 MonsterWalkModeTime = 23 ; // 怪物行走入场时间(毫秒）
    int32 MonsterDropModeTime = 24 ; // 怪物掉落入场时间(毫秒）
-   Position2Int BattleMapGrid = 25 ; // 战场格子数量，第一项为宽，第二项为高(坐标原点为左上角)
+   Battlemapgrid_ BattleMapGrid = 25 ; // 战场格子数量，第一项为宽，第二项为高(坐标原点为左上角)
    int32 GridSize = 26 ; // 格子尺寸，正方体直径
    int32 LordGrid = 27 ; // 小姐姐坐标
    int32 SkillMoveTime = 28 ; // 必杀位移时间（毫秒）
@@ -103,6 +102,10 @@ message BattleParamTemplate {
   message Elementeffectlimit_ {
    double Max = 1 ; // Max
    double Min = 2 ; // Min
+  }
+  message Battlemapgrid_ {
+   int32 X = 1 ; // X
+   int32 Y = 2 ; // Y
   }
   message Soulinterest_ {
    int32 Factor = 1 ; // Factor
