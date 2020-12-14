@@ -36,7 +36,7 @@ ScriptTag_Dic = {
 }
 
 # ['json', 'lua', 'protobuf']
-out_data_formats = ['protobuf']
+out_data_formats = ['json', 'lua', 'protobuf']
 
 if __name__ == '__main__':
     tools.generator.generator(export_files,ScriptTag_Dic, out_data_formats, "Config", 'Template')
