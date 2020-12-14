@@ -1,0 +1,64 @@
+syntax = "proto3";
+package Config;
+message BuffsTemplate {
+   int32 Id = 1 ; // BuffID
+   int32 Group = 2 ; // BUFF组ID
+   int32 Type = 3 ; // Buff类型（1瞬时2持续）
+   int32 Kind = 4 ; // buff状态(0无状态1增益2减益）
+   int32 LastTime = 5 ; // Buff持续时间（当Type为2时，填-1表示迷宫中死亡或单场战斗结束仍然保留)
+   Stacklimit_ StackLimit = 6 ; // 堆叠
+   Cover_ Cover = 7 ; // 覆盖类型
+   Trigger_ Trigger = 8 ; // BUFF触发条件
+   int32 Probility = 9 ; // BUFF触发几率
+   Searchtarget_ SearchTarget = 10 ; // 索敌与筛选
+   repeated Action_ Actions = 11 ; // BUFF效果
+   Endcondition_ EndCondition = 12 ; // BUFF结束条件
+   bool IsOwnText = 13 ; // 是否显示文本
+   repeated int32 EffectIds = 14 ; // 特效ID
+   repeated double Powers = 15 ; // buff战力系数
+   string Icon = 16 ; // buff图标
+  message Stacklimit_ {
+   int32 Type = 1 ; // Type
+   int32 Num = 2 ; // Num
+   int32 Time = 3 ; // Time
+  }
+  message Cover_ {
+   int32 TypeId = 1 ; // TypeId
+   int32 Condition = 2 ; // Condition
+   int32 Num = 3 ; // Num
+  }
+  message Trigger_ {
+   int32 Center = 1 ; // Center
+   int32 Type = 2 ; // Type
+   int32 Param1 = 3 ; // Param1
+   int32 Param2 = 4 ; // Param2
+   int32 Param3 = 5 ; // Param3
+   int32 Param4 = 6 ; // Param4
+  }
+  message Searchtarget_ {
+   int32 Type = 1 ; // Type
+   int32 X = 2 ; // X
+   int32 Y = 3 ; // Y
+   int32 Condition1 = 4 ; // Condition1
+   int32 Condition2 = 5 ; // Condition2
+   int32 Num = 6 ; // Num
+   int32 Kind = 7 ; // Kind
+  }
+  message Action_ {
+   int32 Action = 1 ; // Action
+   int32 Type = 2 ; // Type
+   int32 Num1 = 3 ; // Num1
+   int32 Num2 = 4 ; // Num2
+   int32 Num3 = 5 ; // Num3
+   int32 Num4 = 6 ; // Num4
+  }
+  message Endcondition_ {
+   int32 TriggerType = 1 ; // TriggerType
+   int32 Num1 = 2 ; // Num1
+   int32 Num2 = 3 ; // Num2
+   int32 Num3 = 4 ; // Num3
+  }
+}
+message BuffsTemplateList {
+   repeated BuffsTemplate Buffss = 1 ; // List
+}

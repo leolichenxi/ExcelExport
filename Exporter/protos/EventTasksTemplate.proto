@@ -1,0 +1,30 @@
+syntax = "proto3";
+package Config;
+message EventTasksTemplate {
+   int32 Id = 1 ; // 任务ID
+   int32 ShowProgress = 2 ; // 进度显示
+   Accessid_ AccessId = 3 ; // 跳转
+   Taskinfo_ TaskInfo = 4 ; // 任务信息
+   repeated int32 BindEventIds = 5 ; // 任务绑定的事件
+   int32 NextTask = 6 ; // 下一个任务
+   repeated Reward_ Rewards = 7 ; // 任务奖励
+  message Accessid_ {
+   int32 Id = 1 ; // Id
+   int32 Param1 = 2 ; // Param1
+  }
+  message Taskinfo_ {
+   int32 Type = 1 ; // Type
+   int32 Param1 = 2 ; // Param1
+   int32 Param2 = 3 ; // Param2
+   int32 Param3 = 4 ; // Param3
+  }
+  message Reward_ {
+   int32 Type = 1 ; // Type
+   int32 Id = 2 ; // Id
+   int32 Count = 3 ; // Count
+   int32 Param1 = 4 ; // Param1
+  }
+}
+message EventTasksTemplateList {
+   repeated EventTasksTemplate EventTaskss = 1 ; // List
+}
