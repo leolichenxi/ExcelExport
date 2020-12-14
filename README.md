@@ -17,7 +17,7 @@ Excel to json,lua and protobuf datas,also export to script language which protoc
   
  
 ### 使用方法：
-csharp 核心方法 pasrse等。参考案列TODO 上传
+google导出的代码读取数据相关的API。参考案列TODO 上传
 
 ### 注意事项：
 1.配置类型如果为字符串数组，字符串不能有分隔符,
