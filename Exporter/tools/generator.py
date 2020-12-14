@@ -184,20 +184,24 @@ def dict2pb(cls, adict, strict=False):
 
 
 class Exporter:
-    def __init__(self, file_list, out_scripts, name_space, suffix):
+    def __init__(self, file_list, out_scripts,out_data_formats, name_space, suffix):
         """
 
         :param file_list: 导出的excel 文件列表
         :param out_scripts: 导出的脚本
+        :param out_data_formats: 导出的数据格式
         :param name_space: 导出脚本的命名空间
         :param suffix:   脚本尾缀
         """
         self.file_list = file_list
+        self.out_data_formats = out_data_formats
         self.proto_infos = []
         self.global_msgs = []
         self.name_space = name_space
         self.suffix = suffix
         self.script_out_dic = out_scripts
+
+        print(out_data_formats)
 
     def add_global_msg(self):
         for msg in register_global_msg( ):
@@ -283,9 +287,16 @@ class Exporter:
             script_out, out_folder, self.get_export_proto_folder( ), msg.get_proto_file_name( ))
 
     def export_data(self):
-        self.export_json_data( )
-        self.export_lua_data( )
-        self.export_protobuf_data( )
+        for format in self.out_data_formats:
+            if format == 'lua':
+                self.export_lua_data( )
+            elif format == 'json':
+                self.export_json_data( )
+            elif format == 'protobuf':
+                self.export_protobuf_data( )
+            else:
+                ValueError("unknown export data format:",format,"lua or json or protobuf")
+
 
     def export_json_data(self):
         json_dir = self.get_export_json_folder( )
@@ -796,8 +807,8 @@ class Filed:
         return json.dumps((self.get_filed_name( ), self.get_filed_type( )), ensure_ascii=False, indent=2)
 
 
-def generator(file_list, out_scripts, name_space, suffix):
-    export = Exporter(file_list, out_scripts, name_space, suffix)
+def generator(file_list, out_scripts,out_data_formats, name_space, suffix):
+    export = Exporter(file_list, out_scripts,out_data_formats, name_space, suffix)
     export.export( )
     os.system("pause")
 

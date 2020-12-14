@@ -9,11 +9,14 @@ export_files = [
 
 #key is protoc cmd, value is out folder!
 ScriptTag_Dic = {
-    'python_out': 'out_python',
+    # 'python_out': 'out_python',
     'csharp_out': 'out_csharp',
-    'cpp_out' : 'out_cpp',
-    'java_out' : 'out_java'
+    # 'cpp_out' : 'out_cpp',
+    # 'java_out' : 'out_java'
 }
 
+# ['json', 'lua', 'protobuf']
+out_data_formats = ['protobuf']
+
 if __name__ == '__main__':
-    tools.generator.generator(export_files,ScriptTag_Dic,"Config",'Template')
+    tools.generator.generator(export_files,ScriptTag_Dic, out_data_formats, "Config", 'Template')
