@@ -57,6 +57,7 @@ ETypeObj = 'obj'
 ETypeBase = 'base'
 
 SplitArray = ','  # 配置的
+SplitObjArray = ';'  # 配置的
 SplitTypeFiled = ':'  # 对象类型的字段数组分割  10 : 100
 SheetRowMaxSpaceCount = 3  # 连续空白几行  余下的不读取
 
@@ -620,6 +621,14 @@ class Message:
     def record_list_value(self, parent, filed_name, filed_type, filed_value):
         base_type, type_define = self.get_list_filed_info(filed_type)
         list_values = []
+        values = []
+        if type_define == ETypeList:
+            pass
+        elif type_define == ETypeObj:
+            pass
+        elif type_define == ETypeBase:
+            pass
+        print(base_type,type_define)
         values = str(filed_value).strip('[]').split(SplitArray)
         for v in values:
             self.record_filed(list_values, filed_name, base_type, v)

@@ -20,10 +20,8 @@ import tools.generator
 
 #要导出的配置文件
 export_files = [
-    '全局配置表.xlsx',
-    '任务配置表.xlsx',
-    '英雄属性配置表.xlsx',
-    'BUFF配置表.xlsx',
+    '配置表1.xlsx',
+    '配置表2.xlsx',
 ]
 
 
