@@ -890,5 +890,5 @@ class Filed:
 def generator(file_list, out_scripts,out_data_formats, name_space, suffix):
     export = Exporter(file_list, out_scripts,out_data_formats, name_space, suffix)
     export.export( )
-    # os.system("pause")
+    os.system("pause")
 
