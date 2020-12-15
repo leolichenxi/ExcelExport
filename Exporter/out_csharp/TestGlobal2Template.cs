@@ -24,12 +24,13 @@ namespace Config {
     static TestGlobal2TemplateReflection() {
       byte[] descriptorData = global::System.Convert.FromBase64String(
           string.Concat(
-            "CiBwcm90b3MvVGVzdEdsb2JhbDJUZW1wbGF0ZS5wcm90bxIGQ29uZmlnIhUK",
-            "E1Rlc3RHbG9iYWwyVGVtcGxhdGViBnByb3RvMw=="));
+            "CiBwcm90b3MvVGVzdEdsb2JhbDJUZW1wbGF0ZS5wcm90bxIGQ29uZmlnIigK",
+            "E1Rlc3RHbG9iYWwyVGVtcGxhdGUSEQoJVGVzdEZsb2F0GAEgASgCYgZwcm90",
+            "bzM="));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { },
           new pbr::GeneratedClrTypeInfo(null, null, new pbr::GeneratedClrTypeInfo[] {
-            new pbr::GeneratedClrTypeInfo(typeof(global::Config.TestGlobal2Template), global::Config.TestGlobal2Template.Parser, null, null, null, null, null)
+            new pbr::GeneratedClrTypeInfo(typeof(global::Config.TestGlobal2Template), global::Config.TestGlobal2Template.Parser, new[]{ "TestFloat" }, null, null, null, null)
           }));
     }
     #endregion
@@ -65,12 +66,27 @@ namespace Config {
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public TestGlobal2Template(TestGlobal2Template other) : this() {
+      testFloat_ = other.testFloat_;
       _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public TestGlobal2Template Clone() {
       return new TestGlobal2Template(this);
+    }
+
+    /// <summary>Field number for the "TestFloat" field.</summary>
+    public const int TestFloatFieldNumber = 1;
+    private float testFloat_;
+    /// <summary>
+    /// 测试float类型
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public float TestFloat {
+      get { return testFloat_; }
+      set {
+        testFloat_ = value;
+      }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -86,12 +102,14 @@ namespace Config {
       if (ReferenceEquals(other, this)) {
         return true;
       }
+      if (!pbc::ProtobufEqualityComparers.BitwiseSingleEqualityComparer.Equals(TestFloat, other.TestFloat)) return false;
       return Equals(_unknownFields, other._unknownFields);
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public override int GetHashCode() {
       int hash = 1;
+      if (TestFloat != 0F) hash ^= pbc::ProtobufEqualityComparers.BitwiseSingleEqualityComparer.GetHashCode(TestFloat);
       if (_unknownFields != null) {
         hash ^= _unknownFields.GetHashCode();
       }
@@ -108,6 +126,10 @@ namespace Config {
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       output.WriteRawMessage(this);
     #else
+      if (TestFloat != 0F) {
+        output.WriteRawTag(13);
+        output.WriteFloat(TestFloat);
+      }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(output);
       }
@@ -117,6 +139,10 @@ namespace Config {
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
+      if (TestFloat != 0F) {
+        output.WriteRawTag(13);
+        output.WriteFloat(TestFloat);
+      }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(ref output);
       }
@@ -126,6 +152,9 @@ namespace Config {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public int CalculateSize() {
       int size = 0;
+      if (TestFloat != 0F) {
+        size += 1 + 4;
+      }
       if (_unknownFields != null) {
         size += _unknownFields.CalculateSize();
       }
@@ -136,6 +165,9 @@ namespace Config {
     public void MergeFrom(TestGlobal2Template other) {
       if (other == null) {
         return;
+      }
+      if (other.TestFloat != 0F) {
+        TestFloat = other.TestFloat;
       }
       _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
     }
@@ -151,6 +183,10 @@ namespace Config {
           default:
             _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
             break;
+          case 13: {
+            TestFloat = input.ReadFloat();
+            break;
+          }
         }
       }
     #endif
@@ -165,6 +201,10 @@ namespace Config {
           default:
             _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
             break;
+          case 13: {
+            TestFloat = input.ReadFloat();
+            break;
+          }
         }
       }
     }

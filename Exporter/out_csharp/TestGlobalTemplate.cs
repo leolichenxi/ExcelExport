@@ -25,30 +25,32 @@ namespace Config {
       byte[] descriptorData = global::System.Convert.FromBase64String(
           string.Concat(
             "Ch9wcm90b3MvVGVzdEdsb2JhbFRlbXBsYXRlLnByb3RvEgZDb25maWcaF3By",
-            "b3Rvcy9Qb3NpdGlvbjNkLnByb3RvIsEFChJUZXN0R2xvYmFsVGVtcGxhdGUS",
-            "DwoHVGVzdEludBgBIAEoBRIRCglUZXN0RmxvYXQYAiABKAISEgoKVGVzdERv",
-            "dWJsZRgDIAEoARIQCghUZXN0Qm9vbBgEIAEoCBIVCg1UZXN0SW50QXJyYXlz",
-            "GAUgAygFEhcKD1Rlc3RGbG9hdEFycmF5cxgGIAMoAhIYChBUZXN0RG91Ymxl",
-            "QXJyYXlzGAcgAygBEhYKDlRlc3RCb29sQXJyYXlzGAggAygIEjQKB1Rlc3RP",
-            "YmoYCSABKAsyIy5Db25maWcuVGVzdEdsb2JhbFRlbXBsYXRlLlRlc3RvYmpf",
-            "EjYKCFRlc3RPYmoxGAogASgLMiQuQ29uZmlnLlRlc3RHbG9iYWxUZW1wbGF0",
-            "ZS5UZXN0b2JqMV8SPwoNVGVzdE9iakFycmF5cxgLIAMoCzIoLkNvbmZpZy5U",
-            "ZXN0R2xvYmFsVGVtcGxhdGUuVGVzdG9iamFycmF5XxJBCg5UZXN0T2JqQXJy",
-            "YXkxcxgMIAMoCzIpLkNvbmZpZy5UZXN0R2xvYmFsVGVtcGxhdGUuVGVzdG9i",
-            "amFycmF5MV8SKQoUVGVzdERlZmluZUZyb21HbG9iYWwYDSABKAsyCy5Qb3Np",
-            "dGlvbjNkEisKFlRlc3REZWZpbmVGcm9tR2xvYmFsMnMYDiADKAsyCy5Qb3Np",
-            "dGlvbjNkGisKCFRlc3RvYmpfEgkKAWEYASABKAUSCQoBYhgCIAEoAhIJCgF2",
-            "GAMgASgIGi0KCVRlc3RvYmoxXxIJCgFhGAEgASgFEgoKAmJzGAIgAygCEgkK",
-            "AXYYAyABKAgaMAoNVGVzdG9iamFycmF5XxIJCgFhGAEgASgFEgkKAWIYAiAB",
-            "KAUSCQoBYxgDIAEoBRonCg5UZXN0b2JqYXJyYXkxXxIJCgFhGAEgASgFEgoK",
-            "AmJzGAIgAygCYgZwcm90bzM="));
+            "b3Rvcy9Qb3NpdGlvbjNkLnByb3RvGhxwcm90b3MvUG9zaXRpb25BcnJheTNk",
+            "LnByb3RvIu8FChJUZXN0R2xvYmFsVGVtcGxhdGUSDwoHVGVzdEludBgBIAEo",
+            "BRIRCglUZXN0RmxvYXQYAiABKAISEgoKVGVzdERvdWJsZRgDIAEoARIQCghU",
+            "ZXN0Qm9vbBgEIAEoCBIVCg1UZXN0SW50QXJyYXlzGAUgAygFEhcKD1Rlc3RG",
+            "bG9hdEFycmF5cxgGIAMoAhIYChBUZXN0RG91YmxlQXJyYXlzGAcgAygBEhYK",
+            "DlRlc3RCb29sQXJyYXlzGAggAygIEjQKB1Rlc3RPYmoYCSABKAsyIy5Db25m",
+            "aWcuVGVzdEdsb2JhbFRlbXBsYXRlLlRlc3RPYmpfEjYKCFRlc3RPYmoxGAog",
+            "ASgLMiQuQ29uZmlnLlRlc3RHbG9iYWxUZW1wbGF0ZS5UZXN0T2JqMV8SPwoN",
+            "VGVzdE9iakFycmF5cxgLIAMoCzIoLkNvbmZpZy5UZXN0R2xvYmFsVGVtcGxh",
+            "dGUuVGVzdE9iakFycmF5XxJBCg5UZXN0T2JqQXJyYXkxcxgMIAMoCzIpLkNv",
+            "bmZpZy5UZXN0R2xvYmFsVGVtcGxhdGUuVGVzdE9iakFycmF5MV8SKQoUVGVz",
+            "dERlZmluZUZyb21HbG9iYWwYDSABKAsyCy5Qb3NpdGlvbjNkEisKFlRlc3RE",
+            "ZWZpbmVGcm9tR2xvYmFsMnMYDiADKAsyCy5Qb3NpdGlvbjNkEiwKElRlc3RD",
+            "dXN0b21PYmpBcnJheRgPIAEoCzIQLlBvc2l0aW9uQXJyYXkzZBorCghUZXN0",
+            "T2JqXxIJCgFhGAEgASgFEgkKAWIYAiABKAISCQoBdhgDIAEoCBotCglUZXN0",
+            "T2JqMV8SCQoBYRgBIAEoBRIKCgJicxgCIAMoAhIJCgF2GAMgASgIGjAKDVRl",
+            "c3RPYmpBcnJheV8SCQoBYRgBIAEoBRIJCgFiGAIgASgFEgkKAWMYAyABKAUa",
+            "JwoOVGVzdE9iakFycmF5MV8SCQoBYRgBIAEoBRIKCgJicxgCIAMoAmIGcHJv",
+            "dG8z"));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
-          new pbr::FileDescriptor[] { global::Position3DReflection.Descriptor, },
+          new pbr::FileDescriptor[] { global::Position3DReflection.Descriptor, global::PositionArray3DReflection.Descriptor, },
           new pbr::GeneratedClrTypeInfo(null, null, new pbr::GeneratedClrTypeInfo[] {
-            new pbr::GeneratedClrTypeInfo(typeof(global::Config.TestGlobalTemplate), global::Config.TestGlobalTemplate.Parser, new[]{ "TestInt", "TestFloat", "TestDouble", "TestBool", "TestIntArrays", "TestFloatArrays", "TestDoubleArrays", "TestBoolArrays", "TestObj", "TestObj1", "TestObjArrays", "TestObjArray1S", "TestDefineFromGlobal", "TestDefineFromGlobal2S" }, null, null, null, new pbr::GeneratedClrTypeInfo[] { new pbr::GeneratedClrTypeInfo(typeof(global::Config.TestGlobalTemplate.Types.Testobj_), global::Config.TestGlobalTemplate.Types.Testobj_.Parser, new[]{ "A", "B", "V" }, null, null, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Config.TestGlobalTemplate.Types.Testobj1_), global::Config.TestGlobalTemplate.Types.Testobj1_.Parser, new[]{ "A", "Bs", "V" }, null, null, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Config.TestGlobalTemplate.Types.Testobjarray_), global::Config.TestGlobalTemplate.Types.Testobjarray_.Parser, new[]{ "A", "B", "C" }, null, null, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Config.TestGlobalTemplate.Types.Testobjarray1_), global::Config.TestGlobalTemplate.Types.Testobjarray1_.Parser, new[]{ "A", "Bs" }, null, null, null, null)})
+            new pbr::GeneratedClrTypeInfo(typeof(global::Config.TestGlobalTemplate), global::Config.TestGlobalTemplate.Parser, new[]{ "TestInt", "TestFloat", "TestDouble", "TestBool", "TestIntArrays", "TestFloatArrays", "TestDoubleArrays", "TestBoolArrays", "TestObj", "TestObj1", "TestObjArrays", "TestObjArray1S", "TestDefineFromGlobal", "TestDefineFromGlobal2S", "TestCustomObjArray" }, null, null, null, new pbr::GeneratedClrTypeInfo[] { new pbr::GeneratedClrTypeInfo(typeof(global::Config.TestGlobalTemplate.Types.TestObj_), global::Config.TestGlobalTemplate.Types.TestObj_.Parser, new[]{ "A", "B", "V" }, null, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Config.TestGlobalTemplate.Types.TestObj1_), global::Config.TestGlobalTemplate.Types.TestObj1_.Parser, new[]{ "A", "Bs", "V" }, null, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Config.TestGlobalTemplate.Types.TestObjArray_), global::Config.TestGlobalTemplate.Types.TestObjArray_.Parser, new[]{ "A", "B", "C" }, null, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Config.TestGlobalTemplate.Types.TestObjArray1_), global::Config.TestGlobalTemplate.Types.TestObjArray1_.Parser, new[]{ "A", "Bs" }, null, null, null, null)})
           }));
     }
     #endregion
@@ -98,6 +100,7 @@ namespace Config {
       testObjArray1S_ = other.testObjArray1S_.Clone();
       testDefineFromGlobal_ = other.testDefineFromGlobal_ != null ? other.testDefineFromGlobal_.Clone() : null;
       testDefineFromGlobal2S_ = other.testDefineFromGlobal2S_.Clone();
+      testCustomObjArray_ = other.testCustomObjArray_ != null ? other.testCustomObjArray_.Clone() : null;
       _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
     }
 
@@ -216,12 +219,12 @@ namespace Config {
 
     /// <summary>Field number for the "TestObj" field.</summary>
     public const int TestObjFieldNumber = 9;
-    private global::Config.TestGlobalTemplate.Types.Testobj_ testObj_;
+    private global::Config.TestGlobalTemplate.Types.TestObj_ testObj_;
     /// <summary>
     /// 测试普通自定义对象
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public global::Config.TestGlobalTemplate.Types.Testobj_ TestObj {
+    public global::Config.TestGlobalTemplate.Types.TestObj_ TestObj {
       get { return testObj_; }
       set {
         testObj_ = value;
@@ -230,12 +233,12 @@ namespace Config {
 
     /// <summary>Field number for the "TestObj1" field.</summary>
     public const int TestObj1FieldNumber = 10;
-    private global::Config.TestGlobalTemplate.Types.Testobj1_ testObj1_;
+    private global::Config.TestGlobalTemplate.Types.TestObj1_ testObj1_;
     /// <summary>
     /// 测试普通自定义内部含有数组对象,
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public global::Config.TestGlobalTemplate.Types.Testobj1_ TestObj1 {
+    public global::Config.TestGlobalTemplate.Types.TestObj1_ TestObj1 {
       get { return testObj1_; }
       set {
         testObj1_ = value;
@@ -244,27 +247,27 @@ namespace Config {
 
     /// <summary>Field number for the "TestObjArrays" field.</summary>
     public const int TestObjArraysFieldNumber = 11;
-    private static readonly pb::FieldCodec<global::Config.TestGlobalTemplate.Types.Testobjarray_> _repeated_testObjArrays_codec
-        = pb::FieldCodec.ForMessage(90, global::Config.TestGlobalTemplate.Types.Testobjarray_.Parser);
-    private readonly pbc::RepeatedField<global::Config.TestGlobalTemplate.Types.Testobjarray_> testObjArrays_ = new pbc::RepeatedField<global::Config.TestGlobalTemplate.Types.Testobjarray_>();
+    private static readonly pb::FieldCodec<global::Config.TestGlobalTemplate.Types.TestObjArray_> _repeated_testObjArrays_codec
+        = pb::FieldCodec.ForMessage(90, global::Config.TestGlobalTemplate.Types.TestObjArray_.Parser);
+    private readonly pbc::RepeatedField<global::Config.TestGlobalTemplate.Types.TestObjArray_> testObjArrays_ = new pbc::RepeatedField<global::Config.TestGlobalTemplate.Types.TestObjArray_>();
     /// <summary>
     /// 测试普通自定义对象数组
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public pbc::RepeatedField<global::Config.TestGlobalTemplate.Types.Testobjarray_> TestObjArrays {
+    public pbc::RepeatedField<global::Config.TestGlobalTemplate.Types.TestObjArray_> TestObjArrays {
       get { return testObjArrays_; }
     }
 
     /// <summary>Field number for the "TestObjArray1s" field.</summary>
     public const int TestObjArray1SFieldNumber = 12;
-    private static readonly pb::FieldCodec<global::Config.TestGlobalTemplate.Types.Testobjarray1_> _repeated_testObjArray1S_codec
-        = pb::FieldCodec.ForMessage(98, global::Config.TestGlobalTemplate.Types.Testobjarray1_.Parser);
-    private readonly pbc::RepeatedField<global::Config.TestGlobalTemplate.Types.Testobjarray1_> testObjArray1S_ = new pbc::RepeatedField<global::Config.TestGlobalTemplate.Types.Testobjarray1_>();
+    private static readonly pb::FieldCodec<global::Config.TestGlobalTemplate.Types.TestObjArray1_> _repeated_testObjArray1S_codec
+        = pb::FieldCodec.ForMessage(98, global::Config.TestGlobalTemplate.Types.TestObjArray1_.Parser);
+    private readonly pbc::RepeatedField<global::Config.TestGlobalTemplate.Types.TestObjArray1_> testObjArray1S_ = new pbc::RepeatedField<global::Config.TestGlobalTemplate.Types.TestObjArray1_>();
     /// <summary>
     /// 测试普通自定义内部含有数组对象数组
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public pbc::RepeatedField<global::Config.TestGlobalTemplate.Types.Testobjarray1_> TestObjArray1S {
+    public pbc::RepeatedField<global::Config.TestGlobalTemplate.Types.TestObjArray1_> TestObjArray1S {
       get { return testObjArray1S_; }
     }
 
@@ -295,6 +298,20 @@ namespace Config {
       get { return testDefineFromGlobal2S_; }
     }
 
+    /// <summary>Field number for the "TestCustomObjArray" field.</summary>
+    public const int TestCustomObjArrayFieldNumber = 15;
+    private global::PositionArray3d testCustomObjArray_;
+    /// <summary>
+    /// 测试全局配置数组
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public global::PositionArray3d TestCustomObjArray {
+      get { return testCustomObjArray_; }
+      set {
+        testCustomObjArray_ = value;
+      }
+    }
+
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public override bool Equals(object other) {
       return Equals(other as TestGlobalTemplate);
@@ -322,6 +339,7 @@ namespace Config {
       if(!testObjArray1S_.Equals(other.testObjArray1S_)) return false;
       if (!object.Equals(TestDefineFromGlobal, other.TestDefineFromGlobal)) return false;
       if(!testDefineFromGlobal2S_.Equals(other.testDefineFromGlobal2S_)) return false;
+      if (!object.Equals(TestCustomObjArray, other.TestCustomObjArray)) return false;
       return Equals(_unknownFields, other._unknownFields);
     }
 
@@ -342,6 +360,7 @@ namespace Config {
       hash ^= testObjArray1S_.GetHashCode();
       if (testDefineFromGlobal_ != null) hash ^= TestDefineFromGlobal.GetHashCode();
       hash ^= testDefineFromGlobal2S_.GetHashCode();
+      if (testCustomObjArray_ != null) hash ^= TestCustomObjArray.GetHashCode();
       if (_unknownFields != null) {
         hash ^= _unknownFields.GetHashCode();
       }
@@ -393,6 +412,10 @@ namespace Config {
         output.WriteMessage(TestDefineFromGlobal);
       }
       testDefineFromGlobal2S_.WriteTo(output, _repeated_testDefineFromGlobal2S_codec);
+      if (testCustomObjArray_ != null) {
+        output.WriteRawTag(122);
+        output.WriteMessage(TestCustomObjArray);
+      }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(output);
       }
@@ -437,6 +460,10 @@ namespace Config {
         output.WriteMessage(TestDefineFromGlobal);
       }
       testDefineFromGlobal2S_.WriteTo(ref output, _repeated_testDefineFromGlobal2S_codec);
+      if (testCustomObjArray_ != null) {
+        output.WriteRawTag(122);
+        output.WriteMessage(TestCustomObjArray);
+      }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(ref output);
       }
@@ -474,6 +501,9 @@ namespace Config {
         size += 1 + pb::CodedOutputStream.ComputeMessageSize(TestDefineFromGlobal);
       }
       size += testDefineFromGlobal2S_.CalculateSize(_repeated_testDefineFromGlobal2S_codec);
+      if (testCustomObjArray_ != null) {
+        size += 1 + pb::CodedOutputStream.ComputeMessageSize(TestCustomObjArray);
+      }
       if (_unknownFields != null) {
         size += _unknownFields.CalculateSize();
       }
@@ -503,13 +533,13 @@ namespace Config {
       testBoolArrays_.Add(other.testBoolArrays_);
       if (other.testObj_ != null) {
         if (testObj_ == null) {
-          TestObj = new global::Config.TestGlobalTemplate.Types.Testobj_();
+          TestObj = new global::Config.TestGlobalTemplate.Types.TestObj_();
         }
         TestObj.MergeFrom(other.TestObj);
       }
       if (other.testObj1_ != null) {
         if (testObj1_ == null) {
-          TestObj1 = new global::Config.TestGlobalTemplate.Types.Testobj1_();
+          TestObj1 = new global::Config.TestGlobalTemplate.Types.TestObj1_();
         }
         TestObj1.MergeFrom(other.TestObj1);
       }
@@ -522,6 +552,12 @@ namespace Config {
         TestDefineFromGlobal.MergeFrom(other.TestDefineFromGlobal);
       }
       testDefineFromGlobal2S_.Add(other.testDefineFromGlobal2S_);
+      if (other.testCustomObjArray_ != null) {
+        if (testCustomObjArray_ == null) {
+          TestCustomObjArray = new global::PositionArray3d();
+        }
+        TestCustomObjArray.MergeFrom(other.TestCustomObjArray);
+      }
       _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
     }
 
@@ -574,14 +610,14 @@ namespace Config {
           }
           case 74: {
             if (testObj_ == null) {
-              TestObj = new global::Config.TestGlobalTemplate.Types.Testobj_();
+              TestObj = new global::Config.TestGlobalTemplate.Types.TestObj_();
             }
             input.ReadMessage(TestObj);
             break;
           }
           case 82: {
             if (testObj1_ == null) {
-              TestObj1 = new global::Config.TestGlobalTemplate.Types.Testobj1_();
+              TestObj1 = new global::Config.TestGlobalTemplate.Types.TestObj1_();
             }
             input.ReadMessage(TestObj1);
             break;
@@ -603,6 +639,13 @@ namespace Config {
           }
           case 114: {
             testDefineFromGlobal2S_.AddEntriesFrom(input, _repeated_testDefineFromGlobal2S_codec);
+            break;
+          }
+          case 122: {
+            if (testCustomObjArray_ == null) {
+              TestCustomObjArray = new global::PositionArray3d();
+            }
+            input.ReadMessage(TestCustomObjArray);
             break;
           }
         }
@@ -657,14 +700,14 @@ namespace Config {
           }
           case 74: {
             if (testObj_ == null) {
-              TestObj = new global::Config.TestGlobalTemplate.Types.Testobj_();
+              TestObj = new global::Config.TestGlobalTemplate.Types.TestObj_();
             }
             input.ReadMessage(TestObj);
             break;
           }
           case 82: {
             if (testObj1_ == null) {
-              TestObj1 = new global::Config.TestGlobalTemplate.Types.Testobj1_();
+              TestObj1 = new global::Config.TestGlobalTemplate.Types.TestObj1_();
             }
             input.ReadMessage(TestObj1);
             break;
@@ -688,6 +731,13 @@ namespace Config {
             testDefineFromGlobal2S_.AddEntriesFrom(ref input, _repeated_testDefineFromGlobal2S_codec);
             break;
           }
+          case 122: {
+            if (testCustomObjArray_ == null) {
+              TestCustomObjArray = new global::PositionArray3d();
+            }
+            input.ReadMessage(TestCustomObjArray);
+            break;
+          }
         }
       }
     }
@@ -697,15 +747,15 @@ namespace Config {
     /// <summary>Container for nested types declared in the TestGlobalTemplate message type.</summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public static partial class Types {
-      public sealed partial class Testobj_ : pb::IMessage<Testobj_>
+      public sealed partial class TestObj_ : pb::IMessage<TestObj_>
       #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
           , pb::IBufferMessage
       #endif
       {
-        private static readonly pb::MessageParser<Testobj_> _parser = new pb::MessageParser<Testobj_>(() => new Testobj_());
+        private static readonly pb::MessageParser<TestObj_> _parser = new pb::MessageParser<TestObj_>(() => new TestObj_());
         private pb::UnknownFieldSet _unknownFields;
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-        public static pb::MessageParser<Testobj_> Parser { get { return _parser; } }
+        public static pb::MessageParser<TestObj_> Parser { get { return _parser; } }
 
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
         public static pbr::MessageDescriptor Descriptor {
@@ -718,14 +768,14 @@ namespace Config {
         }
 
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-        public Testobj_() {
+        public TestObj_() {
           OnConstruction();
         }
 
         partial void OnConstruction();
 
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-        public Testobj_(Testobj_ other) : this() {
+        public TestObj_(TestObj_ other) : this() {
           a_ = other.a_;
           b_ = other.b_;
           v_ = other.v_;
@@ -733,8 +783,8 @@ namespace Config {
         }
 
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-        public Testobj_ Clone() {
-          return new Testobj_(this);
+        public TestObj_ Clone() {
+          return new TestObj_(this);
         }
 
         /// <summary>Field number for the "a" field.</summary>
@@ -781,11 +831,11 @@ namespace Config {
 
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
         public override bool Equals(object other) {
-          return Equals(other as Testobj_);
+          return Equals(other as TestObj_);
         }
 
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-        public bool Equals(Testobj_ other) {
+        public bool Equals(TestObj_ other) {
           if (ReferenceEquals(other, null)) {
             return false;
           }
@@ -878,7 +928,7 @@ namespace Config {
         }
 
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-        public void MergeFrom(Testobj_ other) {
+        public void MergeFrom(TestObj_ other) {
           if (other == null) {
             return;
           }
@@ -950,15 +1000,15 @@ namespace Config {
 
       }
 
-      public sealed partial class Testobj1_ : pb::IMessage<Testobj1_>
+      public sealed partial class TestObj1_ : pb::IMessage<TestObj1_>
       #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
           , pb::IBufferMessage
       #endif
       {
-        private static readonly pb::MessageParser<Testobj1_> _parser = new pb::MessageParser<Testobj1_>(() => new Testobj1_());
+        private static readonly pb::MessageParser<TestObj1_> _parser = new pb::MessageParser<TestObj1_>(() => new TestObj1_());
         private pb::UnknownFieldSet _unknownFields;
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-        public static pb::MessageParser<Testobj1_> Parser { get { return _parser; } }
+        public static pb::MessageParser<TestObj1_> Parser { get { return _parser; } }
 
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
         public static pbr::MessageDescriptor Descriptor {
@@ -971,14 +1021,14 @@ namespace Config {
         }
 
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-        public Testobj1_() {
+        public TestObj1_() {
           OnConstruction();
         }
 
         partial void OnConstruction();
 
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-        public Testobj1_(Testobj1_ other) : this() {
+        public TestObj1_(TestObj1_ other) : this() {
           a_ = other.a_;
           bs_ = other.bs_.Clone();
           v_ = other.v_;
@@ -986,8 +1036,8 @@ namespace Config {
         }
 
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-        public Testobj1_ Clone() {
-          return new Testobj1_(this);
+        public TestObj1_ Clone() {
+          return new TestObj1_(this);
         }
 
         /// <summary>Field number for the "a" field.</summary>
@@ -1033,11 +1083,11 @@ namespace Config {
 
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
         public override bool Equals(object other) {
-          return Equals(other as Testobj1_);
+          return Equals(other as TestObj1_);
         }
 
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-        public bool Equals(Testobj1_ other) {
+        public bool Equals(TestObj1_ other) {
           if (ReferenceEquals(other, null)) {
             return false;
           }
@@ -1122,7 +1172,7 @@ namespace Config {
         }
 
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-        public void MergeFrom(Testobj1_ other) {
+        public void MergeFrom(TestObj1_ other) {
           if (other == null) {
             return;
           }
@@ -1194,15 +1244,15 @@ namespace Config {
 
       }
 
-      public sealed partial class Testobjarray_ : pb::IMessage<Testobjarray_>
+      public sealed partial class TestObjArray_ : pb::IMessage<TestObjArray_>
       #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
           , pb::IBufferMessage
       #endif
       {
-        private static readonly pb::MessageParser<Testobjarray_> _parser = new pb::MessageParser<Testobjarray_>(() => new Testobjarray_());
+        private static readonly pb::MessageParser<TestObjArray_> _parser = new pb::MessageParser<TestObjArray_>(() => new TestObjArray_());
         private pb::UnknownFieldSet _unknownFields;
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-        public static pb::MessageParser<Testobjarray_> Parser { get { return _parser; } }
+        public static pb::MessageParser<TestObjArray_> Parser { get { return _parser; } }
 
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
         public static pbr::MessageDescriptor Descriptor {
@@ -1215,14 +1265,14 @@ namespace Config {
         }
 
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-        public Testobjarray_() {
+        public TestObjArray_() {
           OnConstruction();
         }
 
         partial void OnConstruction();
 
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-        public Testobjarray_(Testobjarray_ other) : this() {
+        public TestObjArray_(TestObjArray_ other) : this() {
           a_ = other.a_;
           b_ = other.b_;
           c_ = other.c_;
@@ -1230,8 +1280,8 @@ namespace Config {
         }
 
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-        public Testobjarray_ Clone() {
-          return new Testobjarray_(this);
+        public TestObjArray_ Clone() {
+          return new TestObjArray_(this);
         }
 
         /// <summary>Field number for the "a" field.</summary>
@@ -1278,11 +1328,11 @@ namespace Config {
 
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
         public override bool Equals(object other) {
-          return Equals(other as Testobjarray_);
+          return Equals(other as TestObjArray_);
         }
 
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-        public bool Equals(Testobjarray_ other) {
+        public bool Equals(TestObjArray_ other) {
           if (ReferenceEquals(other, null)) {
             return false;
           }
@@ -1375,7 +1425,7 @@ namespace Config {
         }
 
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-        public void MergeFrom(Testobjarray_ other) {
+        public void MergeFrom(TestObjArray_ other) {
           if (other == null) {
             return;
           }
@@ -1447,15 +1497,15 @@ namespace Config {
 
       }
 
-      public sealed partial class Testobjarray1_ : pb::IMessage<Testobjarray1_>
+      public sealed partial class TestObjArray1_ : pb::IMessage<TestObjArray1_>
       #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
           , pb::IBufferMessage
       #endif
       {
-        private static readonly pb::MessageParser<Testobjarray1_> _parser = new pb::MessageParser<Testobjarray1_>(() => new Testobjarray1_());
+        private static readonly pb::MessageParser<TestObjArray1_> _parser = new pb::MessageParser<TestObjArray1_>(() => new TestObjArray1_());
         private pb::UnknownFieldSet _unknownFields;
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-        public static pb::MessageParser<Testobjarray1_> Parser { get { return _parser; } }
+        public static pb::MessageParser<TestObjArray1_> Parser { get { return _parser; } }
 
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
         public static pbr::MessageDescriptor Descriptor {
@@ -1468,22 +1518,22 @@ namespace Config {
         }
 
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-        public Testobjarray1_() {
+        public TestObjArray1_() {
           OnConstruction();
         }
 
         partial void OnConstruction();
 
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-        public Testobjarray1_(Testobjarray1_ other) : this() {
+        public TestObjArray1_(TestObjArray1_ other) : this() {
           a_ = other.a_;
           bs_ = other.bs_.Clone();
           _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
         }
 
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-        public Testobjarray1_ Clone() {
-          return new Testobjarray1_(this);
+        public TestObjArray1_ Clone() {
+          return new TestObjArray1_(this);
         }
 
         /// <summary>Field number for the "a" field.</summary>
@@ -1515,11 +1565,11 @@ namespace Config {
 
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
         public override bool Equals(object other) {
-          return Equals(other as Testobjarray1_);
+          return Equals(other as TestObjArray1_);
         }
 
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-        public bool Equals(Testobjarray1_ other) {
+        public bool Equals(TestObjArray1_ other) {
           if (ReferenceEquals(other, null)) {
             return false;
           }
@@ -1591,7 +1641,7 @@ namespace Config {
         }
 
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-        public void MergeFrom(Testobjarray1_ other) {
+        public void MergeFrom(TestObjArray1_ other) {
           if (other == null) {
             return;
           }

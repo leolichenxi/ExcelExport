@@ -1,4 +1,5 @@
 syntax = "proto3";
 package Config;
 message TestGlobal2Template {
+   float TestFloat = 1 ; // 测试float类型
 }

@@ -84,7 +84,6 @@ def get_bool_value(is_true):
         return 1
     return 0
 
-
 def is_in_list(in_list, value):
     for i in in_list:
         if i == value:
@@ -95,6 +94,11 @@ def is_in_list(in_list, value):
 def get_json_data(data):
     return json.dumps(data, ensure_ascii=False, indent=2)
 
+def first_char_upper(v):
+    if is_null_or_empty(v):
+        return v
+    v = v[0].upper() + v[1:]
+    return v
 
 def newline(count):
     return '\n' + '  ' * count
@@ -161,7 +165,10 @@ def dict2pb(cls, adict, strict=False):
                     item = getattr(obj, field.name).add( )
                     item.CopyFrom(dict2pb(msg_type._concrete_class, sub_dict))
             else:
-                map(getattr(obj, field.name).append, adict[field.name])
+                try:
+                   map(getattr(obj, field.name).append, adict[field.name])
+                except Exception as e:
+                   raise ValueError('getattr',field.type, field.name, adict[field.name], e)
         else:
             if field.type == FD.TYPE_MESSAGE:
                 value = dict2pb(msg_type._concrete_class, adict[field.name])
@@ -170,7 +177,7 @@ def dict2pb(cls, adict, strict=False):
                 try:
                     setattr(obj, field.name, adict[field.name])
                 except Exception as e:
-                    raise ValueError(field.type, field.name, adict[field.name],e)
+                    raise ValueError('setattr',field.type, field.name, adict[field.name],e)
     return obj
 
 
@@ -199,13 +206,14 @@ class Exporter:
             return
         excel_info = xlrd.open_workbook(file)
         sheet = excel_info.sheets()[0]
+        msgs = Message("GlobalDefine", '', '', None, False)
         for index in range(1,sheet.nrows):
             row = sheet.row_values(index)
-            msg = Message(row[0],'','',None,False)
-            msg.add_filed(row[0],row[1],row[2])
+            if not self.is_ignore_row(row):
+               msgs.add_filed(row[0],row[1],row[2])
 
-        for msg in msg.get_child_messages():
-            msg.set_name(msg.name[0:-1])
+        for msg in msgs.child_msgs:
+            msg.set_name(msg.get_name()[:-1])
             self.global_msgs.append(msg)
 
     # def register_global_msg(self):
@@ -606,7 +614,6 @@ class Message:
         return json.dumps(info, ensure_ascii=False, indent=2)
 
     def record_internal_filed(self, export_obj, filed_name, filed_type, filed_value):
-
         self.record_filed(export_obj, filed_name, filed_type, filed_value)
 
     def record_filed(self, export_data, filed_name, filed_type, filed_value):
@@ -620,7 +627,6 @@ class Message:
             self.record_list_value(export_data, filed_name, filed_type, filed_value)
         elif type_define == ETypeObj:
             self.record_obj_value(export_data, filed_name, filed_type, filed_value)
-            pass
 
     def record_base_value(self, parent, filed_name, filed_type, filed_value):
         base_type = self.get_type_name(filed_type, filed_name)
@@ -648,10 +654,11 @@ class Message:
         if custom_message:
            custom_field_types = custom_message.get_msg_file_types()
            for field in custom_field_types:
-               filed_types.append(('%s %s'%(field.get_filed_type(),field.get_filed_name())))
+               filed_types.append(field.get_defined_type()+' '+field.get_filed_name())
         else:
-           filed_types = self.get_obj_file_types(filed_type)
+           filed_types.extend(self.get_obj_file_types(filed_type))
 
+        print(filed_types)
         values = str(filed_value).strip('{}').split(':')
         if not is_null_or_empty(values):
             for i in range(0, len(filed_types)):
@@ -735,17 +742,17 @@ class Message:
         return base_type, type_define
 
     def build_obj_filed(self, filed_name, filed_type, filed_des, is_array=False):
+        print(filed_type)
         custom_msg = self.check_or_import_msg_type(filed_type)
         if custom_msg:
             self.build_filed_proto(filed_name, custom_msg.get_proto_name( ), filed_des, is_array)
         else:
-            class_name = filed_name.capitalize( ) + '_'
+            class_name = first_char_upper(filed_name) + '_'
             msgItem = Message(class_name, '', '', self, False)
             filed_types = self.get_obj_file_types(filed_type)
             for i in range(0, len(filed_types)):
                 proto_filed_type, proto_filed_name = self.split_space(filed_types[i])
                 msgItem.add_filed(proto_filed_name, proto_filed_type, proto_filed_name)
-            pass
             msg = self.check_or_import_msg(msgItem)
             if msg:
                 self.build_filed_proto(filed_name, msg.get_proto_name( ), filed_des, is_array)
@@ -797,8 +804,7 @@ class Message:
         self.fileds_proto[filed.get_filed_name( )] = filed
         return filed
 
-    @staticmethod
-    def get_type_define(filed_type):
+    def get_type_define(self,filed_type):
         """
         获取字段定义类型
         :param filed_type:
@@ -811,7 +817,9 @@ class Message:
             return ETypeObj
         elif BaseTypes.__contains__(filed_type):
             return ETypeBase
-        print('get_type_define', filed_type)
+        elif self.try_get_global_msg(filed_type):
+            return ETypeObj
+        raise ValueError('unknown filed type:', filed_type)
         return ETypeObj
 
     def get_type_name(self, filed_type, file_name):
@@ -854,6 +862,11 @@ class Filed:
     def get_filed_type(self):
         return self.filed_type
 
+    def get_defined_type(self):
+        if self.is_list:
+            return self.filed_type+'[]'
+        return self.filed_type
+
     def get_filed_des(self):
         return self.filed_des
 
@@ -861,8 +874,7 @@ class Filed:
         r = ''
         if self.is_list:
             r = ' repeated'
-        return '%s %s %s = %s ; // % s' % (
-            r, self.get_filed_type( ), self.get_filed_name( ), index, self.get_filed_des( ))
+        return '%s %s %s = %s ; // % s' % (r, self.get_filed_type( ), self.get_filed_name( ), index, self.get_filed_des( ))
 
     def scheme_info(self):
         return json.dumps((self.get_filed_name( ), self.get_filed_type( )), ensure_ascii=False, indent=2)
@@ -871,5 +883,5 @@ class Filed:
 def generator(file_list, out_scripts,out_data_formats, name_space, suffix):
     export = Exporter(file_list, out_scripts,out_data_formats, name_space, suffix)
     export.export( )
-    os.system("pause")
+    # os.system("pause")
 

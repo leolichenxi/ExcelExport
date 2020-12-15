@@ -1,0 +1,6 @@
+syntax = "proto3";
+message PositionArray3d {
+   repeated float as = 1 ; // a
+   repeated float ys = 2 ; // y
+   repeated float zs = 3 ; // z
+  }
