@@ -23,12 +23,12 @@ public static partial class PositionArray3DReflection {
     byte[] descriptorData = global::System.Convert.FromBase64String(
         string.Concat(
           "Chxwcm90b3MvUG9zaXRpb25BcnJheTNkLnByb3RvIjUKD1Bvc2l0aW9uQXJy",
-          "YXkzZBIKCgJhcxgBIAMoAhIKCgJ5cxgCIAMoAhIKCgJ6cxgDIAMoAmIGcHJv",
+          "YXkzZBIKCgJ4cxgBIAMoAhIKCgJ5cxgCIAMoAhIKCgJ6cxgDIAMoAmIGcHJv",
           "dG8z"));
     descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
         new pbr::FileDescriptor[] { },
         new pbr::GeneratedClrTypeInfo(null, null, new pbr::GeneratedClrTypeInfo[] {
-          new pbr::GeneratedClrTypeInfo(typeof(global::PositionArray3d), global::PositionArray3d.Parser, new[]{ "As", "Ys", "Zs" }, null, null, null, null)
+          new pbr::GeneratedClrTypeInfo(typeof(global::PositionArray3d), global::PositionArray3d.Parser, new[]{ "Xs", "Ys", "Zs" }, null, null, null, null)
         }));
   }
   #endregion
@@ -64,7 +64,7 @@ public sealed partial class PositionArray3d : pb::IMessage<PositionArray3d>
 
   [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
   public PositionArray3d(PositionArray3d other) : this() {
-    as_ = other.as_.Clone();
+    xs_ = other.xs_.Clone();
     ys_ = other.ys_.Clone();
     zs_ = other.zs_.Clone();
     _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
@@ -75,17 +75,17 @@ public sealed partial class PositionArray3d : pb::IMessage<PositionArray3d>
     return new PositionArray3d(this);
   }
 
-  /// <summary>Field number for the "as" field.</summary>
-  public const int AsFieldNumber = 1;
-  private static readonly pb::FieldCodec<float> _repeated_as_codec
+  /// <summary>Field number for the "xs" field.</summary>
+  public const int XsFieldNumber = 1;
+  private static readonly pb::FieldCodec<float> _repeated_xs_codec
       = pb::FieldCodec.ForFloat(10);
-  private readonly pbc::RepeatedField<float> as_ = new pbc::RepeatedField<float>();
+  private readonly pbc::RepeatedField<float> xs_ = new pbc::RepeatedField<float>();
   /// <summary>
-  /// a
+  /// x
   /// </summary>
   [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-  public pbc::RepeatedField<float> As {
-    get { return as_; }
+  public pbc::RepeatedField<float> Xs {
+    get { return xs_; }
   }
 
   /// <summary>Field number for the "ys" field.</summary>
@@ -127,7 +127,7 @@ public sealed partial class PositionArray3d : pb::IMessage<PositionArray3d>
     if (ReferenceEquals(other, this)) {
       return true;
     }
-    if(!as_.Equals(other.as_)) return false;
+    if(!xs_.Equals(other.xs_)) return false;
     if(!ys_.Equals(other.ys_)) return false;
     if(!zs_.Equals(other.zs_)) return false;
     return Equals(_unknownFields, other._unknownFields);
@@ -136,7 +136,7 @@ public sealed partial class PositionArray3d : pb::IMessage<PositionArray3d>
   [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
   public override int GetHashCode() {
     int hash = 1;
-    hash ^= as_.GetHashCode();
+    hash ^= xs_.GetHashCode();
     hash ^= ys_.GetHashCode();
     hash ^= zs_.GetHashCode();
     if (_unknownFields != null) {
@@ -155,7 +155,7 @@ public sealed partial class PositionArray3d : pb::IMessage<PositionArray3d>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
     output.WriteRawMessage(this);
   #else
-    as_.WriteTo(output, _repeated_as_codec);
+    xs_.WriteTo(output, _repeated_xs_codec);
     ys_.WriteTo(output, _repeated_ys_codec);
     zs_.WriteTo(output, _repeated_zs_codec);
     if (_unknownFields != null) {
@@ -167,7 +167,7 @@ public sealed partial class PositionArray3d : pb::IMessage<PositionArray3d>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
   [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
   void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
-    as_.WriteTo(ref output, _repeated_as_codec);
+    xs_.WriteTo(ref output, _repeated_xs_codec);
     ys_.WriteTo(ref output, _repeated_ys_codec);
     zs_.WriteTo(ref output, _repeated_zs_codec);
     if (_unknownFields != null) {
@@ -179,7 +179,7 @@ public sealed partial class PositionArray3d : pb::IMessage<PositionArray3d>
   [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
   public int CalculateSize() {
     int size = 0;
-    size += as_.CalculateSize(_repeated_as_codec);
+    size += xs_.CalculateSize(_repeated_xs_codec);
     size += ys_.CalculateSize(_repeated_ys_codec);
     size += zs_.CalculateSize(_repeated_zs_codec);
     if (_unknownFields != null) {
@@ -193,7 +193,7 @@ public sealed partial class PositionArray3d : pb::IMessage<PositionArray3d>
     if (other == null) {
       return;
     }
-    as_.Add(other.as_);
+    xs_.Add(other.xs_);
     ys_.Add(other.ys_);
     zs_.Add(other.zs_);
     _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
@@ -212,7 +212,7 @@ public sealed partial class PositionArray3d : pb::IMessage<PositionArray3d>
           break;
         case 10:
         case 13: {
-          as_.AddEntriesFrom(input, _repeated_as_codec);
+          xs_.AddEntriesFrom(input, _repeated_xs_codec);
           break;
         }
         case 18:
@@ -241,7 +241,7 @@ public sealed partial class PositionArray3d : pb::IMessage<PositionArray3d>
           break;
         case 10:
         case 13: {
-          as_.AddEntriesFrom(ref input, _repeated_as_codec);
+          xs_.AddEntriesFrom(ref input, _repeated_xs_codec);
           break;
         }
         case 18:

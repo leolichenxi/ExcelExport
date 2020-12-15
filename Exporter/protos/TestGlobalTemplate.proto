@@ -17,11 +17,12 @@ message TestGlobalTemplate {
    repeated TestObjArray1_ TestObjArray1s = 12 ; // 测试普通自定义内部含有数组对象数组
    Position3d TestDefineFromGlobal = 13 ; // 测试全局对象声明
    repeated Position3d TestDefineFromGlobal2s = 14 ; // 测试全局对象声明数组
-   PositionArray3d TestCustomObjArray = 15 ; // 测试全局配置数组
+   PositionArray3d TestCustomObj = 15 ; // 测试全局配置数组字段
+   repeated PositionArray3d TestCustomObjArrays = 16 ; // 测试全局配置含有数组字段的数组
   message TestObj_ {
    int32 a = 1 ; // a
    float b = 2 ; // b
-   bool v = 3 ; // v
+   bool c = 3 ; // c
   }
   message TestObj1_ {
    int32 a = 1 ; // a

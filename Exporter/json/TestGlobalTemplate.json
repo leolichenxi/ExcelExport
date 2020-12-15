@@ -2,7 +2,7 @@
   "TestInt": 7,
   "TestFloat": 6.5,
   "TestDouble": 7.852,
-  "TestBool": 1,
+  "TestBool": true,
   "TestIntArrays": [
     1,
     2,
@@ -22,15 +22,15 @@
     2.01
   ],
   "TestBoolArrays": [
-    1,
-    0,
-    1,
-    0
+    true,
+    false,
+    true,
+    false
   ],
   "TestObj": {
     "a": 1,
     "b": 2.02,
-    "v": 0
+    "c": true
   },
   "TestObj1": {
     "a": 1,
@@ -40,7 +40,7 @@
       3.0,
       4.0
     ],
-    "v": 0
+    "v": true
   },
   "TestObjArrays": [
     {
@@ -89,17 +89,44 @@
       "z": 10.0
     }
   ],
-  "TestCustomObjArray": {
-    "ass": [
+  "TestCustomObj": {
+    "xs": [
       1.0,
       2.0
     ],
-    "yss": [
+    "ys": [
       2.0,
       6.0
     ],
-    "zss": [
+    "zs": [
       3.0
     ]
-  }
+  },
+  "TestCustomObjArrays": [
+    {
+      "xs": [
+        1.0,
+        2.0
+      ],
+      "ys": [
+        2.0,
+        6.0
+      ],
+      "zs": [
+        3.0
+      ]
+    },
+    {
+      "xs": [
+        2.0
+      ],
+      "ys": [
+        5.0
+      ],
+      "zs": [
+        10.0,
+        12.0
+      ]
+    }
+  ]
 }

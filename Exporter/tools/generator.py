@@ -67,6 +67,11 @@ OutDir_Lua = 'lua'
 OutDir_Protobuf = 'protobuf'
 ListSuffix = 'List'
 
+LogEnable = True;
+
+def log(*args):
+    if LogEnable:
+       print(args)
 
 def find_index(key, v_list):
     for index, item in enumerate(v_list):
@@ -81,8 +86,8 @@ def is_null_or_empty(v):
 
 def get_bool_value(is_true):
     if is_true:
-        return 1
-    return 0
+        return True
+    return False
 
 def is_in_list(in_list, value):
     for i in in_list:
@@ -156,7 +161,7 @@ def dict2pb(cls, adict, strict=False):
             if key not in field_names:
                 raise ValueError('Key "%s" can not be mapped to field in %s class.' % (key, type(obj)))
     for field in obj.DESCRIPTOR.fields:
-        if not field.name in adict:
+        if not adict.__contains__(field.name):
             continue
         msg_type = field.message_type
         if field.label == FD.LABEL_REPEATED:
@@ -165,10 +170,10 @@ def dict2pb(cls, adict, strict=False):
                     item = getattr(obj, field.name).add( )
                     item.CopyFrom(dict2pb(msg_type._concrete_class, sub_dict))
             else:
-                try:
-                   map(getattr(obj, field.name).append, adict[field.name])
-                except Exception as e:
-                   raise ValueError('getattr',field.type, field.name, adict[field.name], e)
+                for i in adict[field.name]:
+                    getattr(obj, field.name).append(i)
+                # map(getattr(obj, field.name).append, adict[field.name]) bug this function!
+
         else:
             if field.type == FD.TYPE_MESSAGE:
                 value = dict2pb(msg_type._concrete_class, adict[field.name])
@@ -203,7 +208,7 @@ class Exporter:
     def add_global_msg(self):
         file = 'custom.xlsx'
         if not os.path.exists(file):
-            print("if need a custom type,create a custom.xlsx file.")
+            log("if need a custom type,create a custom.xlsx file.")
             return
         try:
             excel_info = xlrd.open_workbook(file)
@@ -451,7 +456,6 @@ class Exporter:
             class_type = getattr(class_proto, py_file)
         elif isinstance(obj, dict):
             class_type = getattr(class_proto, py_file + ListSuffix)
-
         if class_type:
             proto = dict2pb(class_type, obj)
             file_name = out_file_name + '.byte'
@@ -656,11 +660,10 @@ class Message:
         if custom_message:
            custom_field_types = custom_message.get_msg_file_types()
            for field in custom_field_types:
-               filed_types.append(field.get_defined_type()+' '+field.get_filed_name())
+               filed_types.append(field.get_defined_type()+' '+ field.get_name())
         else:
            filed_types.extend(self.get_obj_file_types(filed_type))
 
-        print(filed_types)
         values = str(filed_value).strip('{}').split(':')
         if not is_null_or_empty(values):
             for i in range(0, len(filed_types)):
@@ -668,7 +671,7 @@ class Message:
                 v = values[i] if i < len(values) else ''
                 self.record_filed(obj, item_filed_name, item_filed_type, v)
         else:
-            print(filed_name)
+            print('record_obj_value is null:',filed_name)
         self.fill_value(parent, filed_name, obj)
 
     @staticmethod
@@ -744,7 +747,6 @@ class Message:
         return base_type, type_define
 
     def build_obj_filed(self, filed_name, filed_type, filed_des, is_array=False):
-        print(filed_type)
         custom_msg = self.check_or_import_msg_type(filed_type)
         if custom_msg:
             self.build_filed_proto(filed_name, custom_msg.get_proto_name( ), filed_des, is_array)
@@ -855,6 +857,9 @@ class Filed:
         self.filed_des = filed_des.replace('\n', '')
         self.is_list = is_list
         pass
+
+    def get_name(self):
+        return self.filed_name
 
     def get_filed_name(self):
         if self.is_list:

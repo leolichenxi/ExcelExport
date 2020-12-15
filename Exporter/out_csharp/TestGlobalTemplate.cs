@@ -26,7 +26,7 @@ namespace Config {
           string.Concat(
             "Ch9wcm90b3MvVGVzdEdsb2JhbFRlbXBsYXRlLnByb3RvEgZDb25maWcaF3By",
             "b3Rvcy9Qb3NpdGlvbjNkLnByb3RvGhxwcm90b3MvUG9zaXRpb25BcnJheTNk",
-            "LnByb3RvIu8FChJUZXN0R2xvYmFsVGVtcGxhdGUSDwoHVGVzdEludBgBIAEo",
+            "LnByb3RvIpkGChJUZXN0R2xvYmFsVGVtcGxhdGUSDwoHVGVzdEludBgBIAEo",
             "BRIRCglUZXN0RmxvYXQYAiABKAISEgoKVGVzdERvdWJsZRgDIAEoARIQCghU",
             "ZXN0Qm9vbBgEIAEoCBIVCg1UZXN0SW50QXJyYXlzGAUgAygFEhcKD1Rlc3RG",
             "bG9hdEFycmF5cxgGIAMoAhIYChBUZXN0RG91YmxlQXJyYXlzGAcgAygBEhYK",
@@ -37,17 +37,17 @@ namespace Config {
             "dGUuVGVzdE9iakFycmF5XxJBCg5UZXN0T2JqQXJyYXkxcxgMIAMoCzIpLkNv",
             "bmZpZy5UZXN0R2xvYmFsVGVtcGxhdGUuVGVzdE9iakFycmF5MV8SKQoUVGVz",
             "dERlZmluZUZyb21HbG9iYWwYDSABKAsyCy5Qb3NpdGlvbjNkEisKFlRlc3RE",
-            "ZWZpbmVGcm9tR2xvYmFsMnMYDiADKAsyCy5Qb3NpdGlvbjNkEiwKElRlc3RD",
-            "dXN0b21PYmpBcnJheRgPIAEoCzIQLlBvc2l0aW9uQXJyYXkzZBorCghUZXN0",
-            "T2JqXxIJCgFhGAEgASgFEgkKAWIYAiABKAISCQoBdhgDIAEoCBotCglUZXN0",
-            "T2JqMV8SCQoBYRgBIAEoBRIKCgJicxgCIAMoAhIJCgF2GAMgASgIGjAKDVRl",
-            "c3RPYmpBcnJheV8SCQoBYRgBIAEoBRIJCgFiGAIgASgFEgkKAWMYAyABKAUa",
-            "JwoOVGVzdE9iakFycmF5MV8SCQoBYRgBIAEoBRIKCgJicxgCIAMoAmIGcHJv",
-            "dG8z"));
+            "ZWZpbmVGcm9tR2xvYmFsMnMYDiADKAsyCy5Qb3NpdGlvbjNkEicKDVRlc3RD",
+            "dXN0b21PYmoYDyABKAsyEC5Qb3NpdGlvbkFycmF5M2QSLQoTVGVzdEN1c3Rv",
+            "bU9iakFycmF5cxgQIAMoCzIQLlBvc2l0aW9uQXJyYXkzZBorCghUZXN0T2Jq",
+            "XxIJCgFhGAEgASgFEgkKAWIYAiABKAISCQoBYxgDIAEoCBotCglUZXN0T2Jq",
+            "MV8SCQoBYRgBIAEoBRIKCgJicxgCIAMoAhIJCgF2GAMgASgIGjAKDVRlc3RP",
+            "YmpBcnJheV8SCQoBYRgBIAEoBRIJCgFiGAIgASgFEgkKAWMYAyABKAUaJwoO",
+            "VGVzdE9iakFycmF5MV8SCQoBYRgBIAEoBRIKCgJicxgCIAMoAmIGcHJvdG8z"));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { global::Position3DReflection.Descriptor, global::PositionArray3DReflection.Descriptor, },
           new pbr::GeneratedClrTypeInfo(null, null, new pbr::GeneratedClrTypeInfo[] {
-            new pbr::GeneratedClrTypeInfo(typeof(global::Config.TestGlobalTemplate), global::Config.TestGlobalTemplate.Parser, new[]{ "TestInt", "TestFloat", "TestDouble", "TestBool", "TestIntArrays", "TestFloatArrays", "TestDoubleArrays", "TestBoolArrays", "TestObj", "TestObj1", "TestObjArrays", "TestObjArray1S", "TestDefineFromGlobal", "TestDefineFromGlobal2S", "TestCustomObjArray" }, null, null, null, new pbr::GeneratedClrTypeInfo[] { new pbr::GeneratedClrTypeInfo(typeof(global::Config.TestGlobalTemplate.Types.TestObj_), global::Config.TestGlobalTemplate.Types.TestObj_.Parser, new[]{ "A", "B", "V" }, null, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Config.TestGlobalTemplate), global::Config.TestGlobalTemplate.Parser, new[]{ "TestInt", "TestFloat", "TestDouble", "TestBool", "TestIntArrays", "TestFloatArrays", "TestDoubleArrays", "TestBoolArrays", "TestObj", "TestObj1", "TestObjArrays", "TestObjArray1S", "TestDefineFromGlobal", "TestDefineFromGlobal2S", "TestCustomObj", "TestCustomObjArrays" }, null, null, null, new pbr::GeneratedClrTypeInfo[] { new pbr::GeneratedClrTypeInfo(typeof(global::Config.TestGlobalTemplate.Types.TestObj_), global::Config.TestGlobalTemplate.Types.TestObj_.Parser, new[]{ "A", "B", "C" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Config.TestGlobalTemplate.Types.TestObj1_), global::Config.TestGlobalTemplate.Types.TestObj1_.Parser, new[]{ "A", "Bs", "V" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Config.TestGlobalTemplate.Types.TestObjArray_), global::Config.TestGlobalTemplate.Types.TestObjArray_.Parser, new[]{ "A", "B", "C" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Config.TestGlobalTemplate.Types.TestObjArray1_), global::Config.TestGlobalTemplate.Types.TestObjArray1_.Parser, new[]{ "A", "Bs" }, null, null, null, null)})
@@ -100,7 +100,8 @@ namespace Config {
       testObjArray1S_ = other.testObjArray1S_.Clone();
       testDefineFromGlobal_ = other.testDefineFromGlobal_ != null ? other.testDefineFromGlobal_.Clone() : null;
       testDefineFromGlobal2S_ = other.testDefineFromGlobal2S_.Clone();
-      testCustomObjArray_ = other.testCustomObjArray_ != null ? other.testCustomObjArray_.Clone() : null;
+      testCustomObj_ = other.testCustomObj_ != null ? other.testCustomObj_.Clone() : null;
+      testCustomObjArrays_ = other.testCustomObjArrays_.Clone();
       _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
     }
 
@@ -298,18 +299,31 @@ namespace Config {
       get { return testDefineFromGlobal2S_; }
     }
 
-    /// <summary>Field number for the "TestCustomObjArray" field.</summary>
-    public const int TestCustomObjArrayFieldNumber = 15;
-    private global::PositionArray3d testCustomObjArray_;
+    /// <summary>Field number for the "TestCustomObj" field.</summary>
+    public const int TestCustomObjFieldNumber = 15;
+    private global::PositionArray3d testCustomObj_;
     /// <summary>
-    /// 测试全局配置数组
+    /// 测试全局配置数组字段
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public global::PositionArray3d TestCustomObjArray {
-      get { return testCustomObjArray_; }
+    public global::PositionArray3d TestCustomObj {
+      get { return testCustomObj_; }
       set {
-        testCustomObjArray_ = value;
+        testCustomObj_ = value;
       }
+    }
+
+    /// <summary>Field number for the "TestCustomObjArrays" field.</summary>
+    public const int TestCustomObjArraysFieldNumber = 16;
+    private static readonly pb::FieldCodec<global::PositionArray3d> _repeated_testCustomObjArrays_codec
+        = pb::FieldCodec.ForMessage(130, global::PositionArray3d.Parser);
+    private readonly pbc::RepeatedField<global::PositionArray3d> testCustomObjArrays_ = new pbc::RepeatedField<global::PositionArray3d>();
+    /// <summary>
+    /// 测试全局配置含有数组字段的数组
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public pbc::RepeatedField<global::PositionArray3d> TestCustomObjArrays {
+      get { return testCustomObjArrays_; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -339,7 +353,8 @@ namespace Config {
       if(!testObjArray1S_.Equals(other.testObjArray1S_)) return false;
       if (!object.Equals(TestDefineFromGlobal, other.TestDefineFromGlobal)) return false;
       if(!testDefineFromGlobal2S_.Equals(other.testDefineFromGlobal2S_)) return false;
-      if (!object.Equals(TestCustomObjArray, other.TestCustomObjArray)) return false;
+      if (!object.Equals(TestCustomObj, other.TestCustomObj)) return false;
+      if(!testCustomObjArrays_.Equals(other.testCustomObjArrays_)) return false;
       return Equals(_unknownFields, other._unknownFields);
     }
 
@@ -360,7 +375,8 @@ namespace Config {
       hash ^= testObjArray1S_.GetHashCode();
       if (testDefineFromGlobal_ != null) hash ^= TestDefineFromGlobal.GetHashCode();
       hash ^= testDefineFromGlobal2S_.GetHashCode();
-      if (testCustomObjArray_ != null) hash ^= TestCustomObjArray.GetHashCode();
+      if (testCustomObj_ != null) hash ^= TestCustomObj.GetHashCode();
+      hash ^= testCustomObjArrays_.GetHashCode();
       if (_unknownFields != null) {
         hash ^= _unknownFields.GetHashCode();
       }
@@ -412,10 +428,11 @@ namespace Config {
         output.WriteMessage(TestDefineFromGlobal);
       }
       testDefineFromGlobal2S_.WriteTo(output, _repeated_testDefineFromGlobal2S_codec);
-      if (testCustomObjArray_ != null) {
+      if (testCustomObj_ != null) {
         output.WriteRawTag(122);
-        output.WriteMessage(TestCustomObjArray);
+        output.WriteMessage(TestCustomObj);
       }
+      testCustomObjArrays_.WriteTo(output, _repeated_testCustomObjArrays_codec);
       if (_unknownFields != null) {
         _unknownFields.WriteTo(output);
       }
@@ -460,10 +477,11 @@ namespace Config {
         output.WriteMessage(TestDefineFromGlobal);
       }
       testDefineFromGlobal2S_.WriteTo(ref output, _repeated_testDefineFromGlobal2S_codec);
-      if (testCustomObjArray_ != null) {
+      if (testCustomObj_ != null) {
         output.WriteRawTag(122);
-        output.WriteMessage(TestCustomObjArray);
+        output.WriteMessage(TestCustomObj);
       }
+      testCustomObjArrays_.WriteTo(ref output, _repeated_testCustomObjArrays_codec);
       if (_unknownFields != null) {
         _unknownFields.WriteTo(ref output);
       }
@@ -501,9 +519,10 @@ namespace Config {
         size += 1 + pb::CodedOutputStream.ComputeMessageSize(TestDefineFromGlobal);
       }
       size += testDefineFromGlobal2S_.CalculateSize(_repeated_testDefineFromGlobal2S_codec);
-      if (testCustomObjArray_ != null) {
-        size += 1 + pb::CodedOutputStream.ComputeMessageSize(TestCustomObjArray);
+      if (testCustomObj_ != null) {
+        size += 1 + pb::CodedOutputStream.ComputeMessageSize(TestCustomObj);
       }
+      size += testCustomObjArrays_.CalculateSize(_repeated_testCustomObjArrays_codec);
       if (_unknownFields != null) {
         size += _unknownFields.CalculateSize();
       }
@@ -552,12 +571,13 @@ namespace Config {
         TestDefineFromGlobal.MergeFrom(other.TestDefineFromGlobal);
       }
       testDefineFromGlobal2S_.Add(other.testDefineFromGlobal2S_);
-      if (other.testCustomObjArray_ != null) {
-        if (testCustomObjArray_ == null) {
-          TestCustomObjArray = new global::PositionArray3d();
+      if (other.testCustomObj_ != null) {
+        if (testCustomObj_ == null) {
+          TestCustomObj = new global::PositionArray3d();
         }
-        TestCustomObjArray.MergeFrom(other.TestCustomObjArray);
+        TestCustomObj.MergeFrom(other.TestCustomObj);
       }
+      testCustomObjArrays_.Add(other.testCustomObjArrays_);
       _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
     }
 
@@ -642,10 +662,14 @@ namespace Config {
             break;
           }
           case 122: {
-            if (testCustomObjArray_ == null) {
-              TestCustomObjArray = new global::PositionArray3d();
+            if (testCustomObj_ == null) {
+              TestCustomObj = new global::PositionArray3d();
             }
-            input.ReadMessage(TestCustomObjArray);
+            input.ReadMessage(TestCustomObj);
+            break;
+          }
+          case 130: {
+            testCustomObjArrays_.AddEntriesFrom(input, _repeated_testCustomObjArrays_codec);
             break;
           }
         }
@@ -732,10 +756,14 @@ namespace Config {
             break;
           }
           case 122: {
-            if (testCustomObjArray_ == null) {
-              TestCustomObjArray = new global::PositionArray3d();
+            if (testCustomObj_ == null) {
+              TestCustomObj = new global::PositionArray3d();
             }
-            input.ReadMessage(TestCustomObjArray);
+            input.ReadMessage(TestCustomObj);
+            break;
+          }
+          case 130: {
+            testCustomObjArrays_.AddEntriesFrom(ref input, _repeated_testCustomObjArrays_codec);
             break;
           }
         }
@@ -778,7 +806,7 @@ namespace Config {
         public TestObj_(TestObj_ other) : this() {
           a_ = other.a_;
           b_ = other.b_;
-          v_ = other.v_;
+          c_ = other.c_;
           _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
         }
 
@@ -815,17 +843,17 @@ namespace Config {
           }
         }
 
-        /// <summary>Field number for the "v" field.</summary>
-        public const int VFieldNumber = 3;
-        private bool v_;
+        /// <summary>Field number for the "c" field.</summary>
+        public const int CFieldNumber = 3;
+        private bool c_;
         /// <summary>
-        /// v
+        /// c
         /// </summary>
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-        public bool V {
-          get { return v_; }
+        public bool C {
+          get { return c_; }
           set {
-            v_ = value;
+            c_ = value;
           }
         }
 
@@ -844,7 +872,7 @@ namespace Config {
           }
           if (A != other.A) return false;
           if (!pbc::ProtobufEqualityComparers.BitwiseSingleEqualityComparer.Equals(B, other.B)) return false;
-          if (V != other.V) return false;
+          if (C != other.C) return false;
           return Equals(_unknownFields, other._unknownFields);
         }
 
@@ -853,7 +881,7 @@ namespace Config {
           int hash = 1;
           if (A != 0) hash ^= A.GetHashCode();
           if (B != 0F) hash ^= pbc::ProtobufEqualityComparers.BitwiseSingleEqualityComparer.GetHashCode(B);
-          if (V != false) hash ^= V.GetHashCode();
+          if (C != false) hash ^= C.GetHashCode();
           if (_unknownFields != null) {
             hash ^= _unknownFields.GetHashCode();
           }
@@ -878,9 +906,9 @@ namespace Config {
             output.WriteRawTag(21);
             output.WriteFloat(B);
           }
-          if (V != false) {
+          if (C != false) {
             output.WriteRawTag(24);
-            output.WriteBool(V);
+            output.WriteBool(C);
           }
           if (_unknownFields != null) {
             _unknownFields.WriteTo(output);
@@ -899,9 +927,9 @@ namespace Config {
             output.WriteRawTag(21);
             output.WriteFloat(B);
           }
-          if (V != false) {
+          if (C != false) {
             output.WriteRawTag(24);
-            output.WriteBool(V);
+            output.WriteBool(C);
           }
           if (_unknownFields != null) {
             _unknownFields.WriteTo(ref output);
@@ -918,7 +946,7 @@ namespace Config {
           if (B != 0F) {
             size += 1 + 4;
           }
-          if (V != false) {
+          if (C != false) {
             size += 1 + 1;
           }
           if (_unknownFields != null) {
@@ -938,8 +966,8 @@ namespace Config {
           if (other.B != 0F) {
             B = other.B;
           }
-          if (other.V != false) {
-            V = other.V;
+          if (other.C != false) {
+            C = other.C;
           }
           _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
         }
@@ -964,7 +992,7 @@ namespace Config {
                 break;
               }
               case 24: {
-                V = input.ReadBool();
+                C = input.ReadBool();
                 break;
               }
             }
@@ -990,7 +1018,7 @@ namespace Config {
                 break;
               }
               case 24: {
-                V = input.ReadBool();
+                C = input.ReadBool();
                 break;
               }
             }
