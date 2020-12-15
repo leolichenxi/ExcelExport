@@ -17,12 +17,10 @@ Excel to json,lua and protobuf datas,also export to script language which protoc
   
  
 ### 使用方法：
-google导出的代码读取数据相关的API。参考案列TODO 上传
+google导出的代码读取数据相关的API。参考案列上传
 
 ### 注意事项：
-1.配置类型如果为字符串数组，字符串不能有分隔符,
-2.配置类型如果为对象数组 不支持字段有数组 数据,(同样因为分隔符为,后续优化)
-3.配置类型如果为对象且不是数组，支持字段和数组为数组。
+
 
 ### 所需配置
 
