@@ -1,0 +1,16 @@
+{
+  "TestTableArrays": [
+    {
+      "Id": 1,
+      "Weapons": [
+        2,
+        1,
+        3
+      ],
+      "Model": "hero_chushi",
+      "Icon": "chushi",
+      "MachineType": "防御",
+      "MapType": "平原"
+    }
+  ]
+}
