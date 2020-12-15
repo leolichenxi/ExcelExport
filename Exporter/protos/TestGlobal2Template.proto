@@ -1,0 +1,4 @@
+syntax = "proto3";
+package Config;
+message TestGlobal2Template {
+}

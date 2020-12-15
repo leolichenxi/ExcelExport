@@ -1,0 +1,38 @@
+syntax = "proto3";
+package Config;
+import "protos/Position3d.proto";
+message TestGlobalTemplate {
+   int32 TestInt = 1 ; // 测试int类型
+   float TestFloat = 2 ; // 测试float类型
+   double TestDouble = 3 ; // 测试double类型
+   bool TestBool = 4 ; // 测试bool类型
+   repeated int32 TestIntArrays = 5 ; // 测试int数组
+   repeated float TestFloatArrays = 6 ; // 测试float数组
+   repeated double TestDoubleArrays = 7 ; // 测试double数组
+   repeated bool TestBoolArrays = 8 ; // 测试bool数组
+   Testobj_ TestObj = 9 ; // 测试普通自定义对象
+   Testobj1_ TestObj1 = 10 ; // 测试普通自定义内部含有数组对象,
+   repeated Testobjarray_ TestObjArrays = 11 ; // 测试普通自定义对象数组
+   repeated Testobjarray1_ TestObjArray1s = 12 ; // 测试普通自定义内部含有数组对象数组
+   Position3d TestDefineFromGlobal = 13 ; // 测试全局对象声明
+   repeated Position3d TestDefineFromGlobal2s = 14 ; // 测试全局对象声明数组
+  message Testobj_ {
+   int32 a = 1 ; // a
+   float b = 2 ; // b
+   bool v = 3 ; // v
+  }
+  message Testobj1_ {
+   int32 a = 1 ; // a
+   repeated float bs = 2 ; // b
+   bool v = 3 ; // v
+  }
+  message Testobjarray_ {
+   int32 a = 1 ; // a
+   int32 b = 2 ; // b
+   int32 c = 3 ; // c
+  }
+  message Testobjarray1_ {
+   int32 a = 1 ; // a
+   repeated float bs = 2 ; // b
+  }
+}

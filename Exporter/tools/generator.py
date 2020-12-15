@@ -170,7 +170,7 @@ def dict2pb(cls, adict, strict=False):
                 try:
                     setattr(obj, field.name, adict[field.name])
                 except Exception as e:
-                    raise ValueError(field.type, field.name, adict[field.name])
+                    raise ValueError(field.type, field.name, adict[field.name],e)
     return obj
 
 
@@ -191,8 +191,7 @@ class Exporter:
         self.name_space = name_space
         self.suffix = suffix
         self.script_out_dic = out_scripts
-
-        print(out_data_formats)
+        self.add_global_msg( )
 
     def add_global_msg(self):
         file = 'custom.xlsx'
@@ -205,7 +204,7 @@ class Exporter:
             msg = Message(row[0],'','',None,False)
             msg.add_filed(row[0],row[1],row[2])
 
-        for msg in  msg.get_child_messages():
+        for msg in msg.get_child_messages():
             msg.set_name(msg.name[0:-1])
             self.global_msgs.append(msg)
 
@@ -248,7 +247,6 @@ class Exporter:
         return p.group(1) if p else False
 
     def export(self):
-        self.add_global_msg( )
         files = self.get_file_list_path( )
         for excel_file in files:
             excel_data = xlrd.open_workbook(excel_file)
@@ -305,7 +303,7 @@ class Exporter:
             elif format == 'protobuf':
                 self.export_protobuf_data( )
             else:
-                ValueError("unknown export data format:",format,"lua or json or protobuf")
+                raise ValueError("unknown export data format:",format,"lua or json or protobuf")
 
 
     def export_json_data(self):
@@ -453,8 +451,13 @@ class Exporter:
         else:
             raise ValueError('export to protobuf error! proto:' + py_file)
 
-    @staticmethod
-    def is_ignore_row(row):
+    def is_ignore_row(self, row):
+        if len(row[0]) == 0:
+            print('empty row!', row)
+            return True
+        if len(row[0][0]) == '#':
+            print('empty row!', row)
+            return True
         if row[0][0] == '#':
             return True
         return False
@@ -523,6 +526,12 @@ class Message:
 
     def add_global_msg(self, msgs):
         self.global_msgs.extend(msgs)
+
+    def try_get_global_msg(self, msg_name):
+        for msg in self.global_msgs:
+            if msg.get_proto_name() == msg_name:
+                return msg
+        return None
 
     def is_child_message(self):
         return self.parent_msg is not None
@@ -615,7 +624,7 @@ class Message:
 
     def record_base_value(self, parent, filed_name, filed_type, filed_value):
         base_type = self.get_type_name(filed_type, filed_name)
-        value = self.convert(base_type, filed_value)
+        value = self.convert(base_type, filed_value,filed_name)
         self.fill_value(parent, filed_name, value)
 
     def record_list_value(self, parent, filed_name, filed_type, filed_value):
@@ -623,20 +632,26 @@ class Message:
         list_values = []
         values = []
         if type_define == ETypeList:
-            pass
-        elif type_define == ETypeObj:
-            pass
+            raise ValueError('bug here!',filed_name,filed_type,filed_value)
         elif type_define == ETypeBase:
-            pass
-        print(base_type,type_define)
-        values = str(filed_value).strip('[]').split(SplitArray)
+            values = str(filed_value).strip('[]').split(SplitArray)
+        elif type_define == ETypeObj:
+            values = str(filed_value).strip('[]').split(SplitObjArray)
         for v in values:
             self.record_filed(list_values, filed_name, base_type, v)
         self.fill_value(parent, filed_name + 's', list_values)
 
     def record_obj_value(self, parent, filed_name, filed_type, filed_value):
         obj = collections.OrderedDict( )
-        filed_types = self.get_obj_file_types(filed_type)
+        custom_message = self.try_get_global_msg(filed_type)
+        filed_types = []
+        if custom_message:
+           custom_field_types = custom_message.get_msg_file_types()
+           for field in custom_field_types:
+               filed_types.append(('%s %s'%(field.get_filed_type(),field.get_filed_name())))
+        else:
+           filed_types = self.get_obj_file_types(filed_type)
+
         values = str(filed_value).strip('{}').split(':')
         if not is_null_or_empty(values):
             for i in range(0, len(filed_types)):
@@ -655,15 +670,15 @@ class Message:
             parent[filed_name] = filed_value
 
     @staticmethod
-    def convert(base_type, value):
+    def convert(base_type, value,filed_name = None):
         if base_type == 'bool':
             bool_value = str(value)
-            if bool_value in ('0', 'false', 'False', 'off', 'Off', '', 'None'):
+            if bool_value in ('0','0.0', 'false', 'False', 'off', 'Off', '', 'None'):
                 return get_bool_value(False)
-            elif bool_value in ('1', 'true', 'True', 'on', 'On'):
+            elif bool_value in ('1','1.0','true', 'True', 'on', 'On'):
                 return get_bool_value(True)
             else:
-                print("error!!!", value)
+                raise ValueError("error!!!", base_type, filed_name,value)
         elif base_type == 'int32':
             if is_null_or_empty(value):
                 return 0
@@ -680,6 +695,8 @@ class Message:
             if is_null_or_empty(value):
                 return ''
             value = str(value)
+        else:
+            print("convert error! unknown type:", base_type)
         return value
 
     def add_filed(self, filed_name, filed_type, filed_des):
@@ -718,19 +735,31 @@ class Message:
         return base_type, type_define
 
     def build_obj_filed(self, filed_name, filed_type, filed_des, is_array=False):
-        class_name = filed_name.capitalize( ) + '_'
-        msgItem = Message(class_name, '', '', self, False)
-        filed_types = self.get_obj_file_types(filed_type)
-        for i in range(0, len(filed_types)):
-            proto_filed_type, proto_filed_name = self.split_space(filed_types[i])
-            msgItem.add_filed(proto_filed_name, proto_filed_type, proto_filed_name)
-        pass
-        msg = self.check_or_import_msg(msgItem)
-        if msg:
-            self.build_filed_proto(filed_name, msg.get_proto_name( ), filed_des, is_array)
+        custom_msg = self.check_or_import_msg_type(filed_type)
+        if custom_msg:
+            self.build_filed_proto(filed_name, custom_msg.get_proto_name( ), filed_des, is_array)
         else:
-            self.build_filed_proto(filed_name, class_name, filed_des, is_array)
-            self.child_msgs.append(msgItem)
+            class_name = filed_name.capitalize( ) + '_'
+            msgItem = Message(class_name, '', '', self, False)
+            filed_types = self.get_obj_file_types(filed_type)
+            for i in range(0, len(filed_types)):
+                proto_filed_type, proto_filed_name = self.split_space(filed_types[i])
+                msgItem.add_filed(proto_filed_name, proto_filed_type, proto_filed_name)
+            pass
+            msg = self.check_or_import_msg(msgItem)
+            if msg:
+                self.build_filed_proto(filed_name, msg.get_proto_name( ), filed_des, is_array)
+            else:
+                self.build_filed_proto(filed_name, class_name, filed_des, is_array)
+                self.child_msgs.append(msgItem)
+
+    def check_or_import_msg_type(self, filed_type):
+        custom_msg = self.try_get_global_msg(filed_type)
+        if custom_msg:
+            if not is_in_list(self.import_msgs, custom_msg.get_proto_name()):
+                self.import_msgs.append(custom_msg.get_proto_name())
+        return custom_msg
+
 
     def check_or_import_msg(self, msg):
         info = msg.get_class_info( )
@@ -748,6 +777,12 @@ class Message:
     @staticmethod
     def get_obj_file_types(filed_type):
         return filed_type.strip('{}').split(SplitTypeFiled)
+
+    def get_msg_file_types(self):
+        fileds = []
+        for filed in self.fileds_proto.values( ):
+            fileds.append(filed)
+        return fileds
 
     def build_filed_proto(self, filed_name, filed_type, filed_des, is_list):
         """
@@ -774,8 +809,10 @@ class Message:
             return ETypeList
         elif filed_type[0] == '{' and filed_type[-1] == '}':
             return ETypeObj
-        else:
+        elif BaseTypes.__contains__(filed_type):
             return ETypeBase
+        print('get_type_define', filed_type)
+        return ETypeObj
 
     def get_type_name(self, filed_type, file_name):
         """

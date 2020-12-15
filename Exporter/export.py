@@ -24,8 +24,6 @@ export_files = [
     '配置表2.xlsx',
 ]
 
-
-
 #导出的脚本和对应文件夹，key为protoc支持的， key is protoc cmd, value is out folder!
 ScriptTag_Dic = {
     # 'python_out': 'out_python',

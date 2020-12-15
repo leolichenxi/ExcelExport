@@ -1,0 +1,13 @@
+syntax = "proto3";
+package Config;
+message TestTableArraysTemplate {
+   int32 Id = 1 ; // 英雄ID
+   repeated int32 Weapons = 2 ; // 武器(武器Id)
+   string Model = 3 ; // 切片
+   string Icon = 4 ; // Icon
+   string MachineType = 5 ; // 机体类型
+   string MapType = 6 ; // 地形适应
+}
+message TestTableArraysTemplateList {
+   repeated TestTableArraysTemplate TestTableArrayss = 1 ; // List
+}
