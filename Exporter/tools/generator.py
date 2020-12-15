@@ -203,18 +203,21 @@ class Exporter:
     def add_global_msg(self):
         file = 'custom.xlsx'
         if not os.path.exists(file):
+            print("if need a custom type,create a custom.xlsx file.")
             return
-        excel_info = xlrd.open_workbook(file)
-        sheet = excel_info.sheets()[0]
-        msgs = Message("GlobalDefine", '', '', None, False)
-        for index in range(1,sheet.nrows):
-            row = sheet.row_values(index)
-            if not self.is_ignore_row(row):
-               msgs.add_filed(row[0],row[1],row[2])
-
-        for msg in msgs.child_msgs:
-            msg.set_name(msg.get_name()[:-1])
-            self.global_msgs.append(msg)
+        try:
+            excel_info = xlrd.open_workbook(file)
+            sheet = excel_info.sheets( )[0]
+            msgs = Message("GlobalDefine", '', '', None, False)
+            for index in range(1, sheet.nrows):
+                row = sheet.row_values(index)
+                if not self.is_ignore_row(row):
+                    msgs.add_filed(row[0], row[1], row[2])
+            for msg in msgs.child_msgs:
+                msg.set_name(msg.get_name( )[:-1])
+                self.global_msgs.append(msg)
+        except Exception as e:
+            raise ValueError('export global fail!',e)
 
     # def register_global_msg(self):
     #     msgs = []
