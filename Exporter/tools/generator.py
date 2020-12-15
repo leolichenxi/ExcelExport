@@ -302,8 +302,7 @@ class Exporter:
         os.system(cmd)
 
     def get_protoc_cmd(self, msg, script_out, out_folder):
-        return 'protoc --%s=%s/ %s/%s' % (
-            script_out, out_folder, self.get_export_proto_folder( ), msg.get_proto_file_name( ))
+        return 'protoc --%s=%s/ %s/%s' % (script_out, out_folder, self.get_export_proto_folder( ), msg.get_proto_file_name( ))
 
     def export_data(self):
         for format in self.out_data_formats:
