@@ -886,9 +886,7 @@ class Filed:
     def scheme_info(self):
         return json.dumps((self.get_filed_name( ), self.get_filed_type( )), ensure_ascii=False, indent=2)
 
-
 def generator(file_list, out_scripts,out_data_formats, name_space, suffix):
     export = Exporter(file_list, out_scripts,out_data_formats, name_space, suffix)
     export.export( )
-    os.system("pause")
 

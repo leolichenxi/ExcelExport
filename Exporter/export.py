@@ -15,8 +15,10 @@ WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
 See the License for the specific language governing permissions and
 limitations under the License.
 '''
+import traceback
 
 import tools.generator
+import sys
 
 #要导出的配置文件
 export_files = [
@@ -35,5 +37,16 @@ ScriptTag_Dic = {
 #导出数据格式 ['json', 'lua', 'protobuf']
 out_data_formats = ['json', 'lua', 'protobuf']
 
+def main():
+  try:
+    tools.generator.generator(export_files, ScriptTag_Dic, out_data_formats, "Config", 'Template')
+    print("all operation finish successful")
+    return 0
+  except Exception as e:
+    traceback.print_exc()
+    print("has error, see logs, please return key to exit")
+    input()
+    return 1
+
 if __name__ == '__main__':
-    tools.generator.generator(export_files,ScriptTag_Dic, out_data_formats, "Config", 'Template')
+    sys.exit(main())
