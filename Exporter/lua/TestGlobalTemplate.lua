@@ -3,14 +3,6 @@ return {
   TestFloat = 6.5,
   TestDouble = 7.852,
   TestBool = true,
-  TestIntArrays = {
-    1,
-    2,
-    3,
-    4,
-    5,
-    6
-  },
   TestFloatArrays = {
     1.2,
     1.8,

@@ -9,5 +9,5 @@ message TestTableArraysTemplate {
    string MapType = 6 ; // 地形适应
 }
 message TestTableArraysTemplateList {
-   repeated TestTableArraysTemplate TestTableArrayss = 1 ; // List
+   repeated TestTableArraysTemplate TestTableArrays = 1 ; // List
 }

@@ -581,7 +581,7 @@ class Message:
             class_define = self.add_line(class_define, '}')
         if self.is_list_obj and not self.is_child_message( ):
             list_define = 'message %s%s {' % (self.get_proto_name( ), ListSuffix)
-            filed = Filed(self.get_name( ), self.get_proto_name( ), ListSuffix, True)
+            filed = Filed(self.name, self.get_proto_name( ), ListSuffix, True)
             list_define = self.add_space_line(list_define, filed.get_define_proto(1))
             list_define = self.add_line(list_define, '}')
             class_define = self.add_line(class_define, list_define)

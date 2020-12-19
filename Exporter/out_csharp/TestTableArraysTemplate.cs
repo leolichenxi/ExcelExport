@@ -27,14 +27,14 @@ namespace Config {
             "CiRwcm90b3MvVGVzdFRhYmxlQXJyYXlzVGVtcGxhdGUucHJvdG8SBkNvbmZp",
             "ZyJ5ChdUZXN0VGFibGVBcnJheXNUZW1wbGF0ZRIKCgJJZBgBIAEoBRIPCgdX",
             "ZWFwb25zGAIgAygFEg0KBU1vZGVsGAMgASgJEgwKBEljb24YBCABKAkSEwoL",
-            "TWFjaGluZVR5cGUYBSABKAkSDwoHTWFwVHlwZRgGIAEoCSJYChtUZXN0VGFi",
-            "bGVBcnJheXNUZW1wbGF0ZUxpc3QSOQoQVGVzdFRhYmxlQXJyYXlzcxgBIAMo",
-            "CzIfLkNvbmZpZy5UZXN0VGFibGVBcnJheXNUZW1wbGF0ZWIGcHJvdG8z"));
+            "TWFjaGluZVR5cGUYBSABKAkSDwoHTWFwVHlwZRgGIAEoCSJXChtUZXN0VGFi",
+            "bGVBcnJheXNUZW1wbGF0ZUxpc3QSOAoPVGVzdFRhYmxlQXJyYXlzGAEgAygL",
+            "Mh8uQ29uZmlnLlRlc3RUYWJsZUFycmF5c1RlbXBsYXRlYgZwcm90bzM="));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { },
           new pbr::GeneratedClrTypeInfo(null, null, new pbr::GeneratedClrTypeInfo[] {
             new pbr::GeneratedClrTypeInfo(typeof(global::Config.TestTableArraysTemplate), global::Config.TestTableArraysTemplate.Parser, new[]{ "Id", "Weapons", "Model", "Icon", "MachineType", "MapType" }, null, null, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Config.TestTableArraysTemplateList), global::Config.TestTableArraysTemplateList.Parser, new[]{ "TestTableArrayss" }, null, null, null, null)
+            new pbr::GeneratedClrTypeInfo(typeof(global::Config.TestTableArraysTemplateList), global::Config.TestTableArraysTemplateList.Parser, new[]{ "TestTableArrays" }, null, null, null, null)
           }));
     }
     #endregion
@@ -431,7 +431,7 @@ namespace Config {
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public TestTableArraysTemplateList(TestTableArraysTemplateList other) : this() {
-      testTableArrayss_ = other.testTableArrayss_.Clone();
+      testTableArrays_ = other.testTableArrays_.Clone();
       _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
     }
 
@@ -440,17 +440,17 @@ namespace Config {
       return new TestTableArraysTemplateList(this);
     }
 
-    /// <summary>Field number for the "TestTableArrayss" field.</summary>
-    public const int TestTableArrayssFieldNumber = 1;
-    private static readonly pb::FieldCodec<global::Config.TestTableArraysTemplate> _repeated_testTableArrayss_codec
+    /// <summary>Field number for the "TestTableArrays" field.</summary>
+    public const int TestTableArraysFieldNumber = 1;
+    private static readonly pb::FieldCodec<global::Config.TestTableArraysTemplate> _repeated_testTableArrays_codec
         = pb::FieldCodec.ForMessage(10, global::Config.TestTableArraysTemplate.Parser);
-    private readonly pbc::RepeatedField<global::Config.TestTableArraysTemplate> testTableArrayss_ = new pbc::RepeatedField<global::Config.TestTableArraysTemplate>();
+    private readonly pbc::RepeatedField<global::Config.TestTableArraysTemplate> testTableArrays_ = new pbc::RepeatedField<global::Config.TestTableArraysTemplate>();
     /// <summary>
     /// List
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public pbc::RepeatedField<global::Config.TestTableArraysTemplate> TestTableArrayss {
-      get { return testTableArrayss_; }
+    public pbc::RepeatedField<global::Config.TestTableArraysTemplate> TestTableArrays {
+      get { return testTableArrays_; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -466,14 +466,14 @@ namespace Config {
       if (ReferenceEquals(other, this)) {
         return true;
       }
-      if(!testTableArrayss_.Equals(other.testTableArrayss_)) return false;
+      if(!testTableArrays_.Equals(other.testTableArrays_)) return false;
       return Equals(_unknownFields, other._unknownFields);
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public override int GetHashCode() {
       int hash = 1;
-      hash ^= testTableArrayss_.GetHashCode();
+      hash ^= testTableArrays_.GetHashCode();
       if (_unknownFields != null) {
         hash ^= _unknownFields.GetHashCode();
       }
@@ -490,7 +490,7 @@ namespace Config {
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       output.WriteRawMessage(this);
     #else
-      testTableArrayss_.WriteTo(output, _repeated_testTableArrayss_codec);
+      testTableArrays_.WriteTo(output, _repeated_testTableArrays_codec);
       if (_unknownFields != null) {
         _unknownFields.WriteTo(output);
       }
@@ -500,7 +500,7 @@ namespace Config {
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
-      testTableArrayss_.WriteTo(ref output, _repeated_testTableArrayss_codec);
+      testTableArrays_.WriteTo(ref output, _repeated_testTableArrays_codec);
       if (_unknownFields != null) {
         _unknownFields.WriteTo(ref output);
       }
@@ -510,7 +510,7 @@ namespace Config {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public int CalculateSize() {
       int size = 0;
-      size += testTableArrayss_.CalculateSize(_repeated_testTableArrayss_codec);
+      size += testTableArrays_.CalculateSize(_repeated_testTableArrays_codec);
       if (_unknownFields != null) {
         size += _unknownFields.CalculateSize();
       }
@@ -522,7 +522,7 @@ namespace Config {
       if (other == null) {
         return;
       }
-      testTableArrayss_.Add(other.testTableArrayss_);
+      testTableArrays_.Add(other.testTableArrays_);
       _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
     }
 
@@ -538,7 +538,7 @@ namespace Config {
             _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
             break;
           case 10: {
-            testTableArrayss_.AddEntriesFrom(input, _repeated_testTableArrayss_codec);
+            testTableArrays_.AddEntriesFrom(input, _repeated_testTableArrays_codec);
             break;
           }
         }
@@ -556,7 +556,7 @@ namespace Config {
             _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
             break;
           case 10: {
-            testTableArrayss_.AddEntriesFrom(ref input, _repeated_testTableArrayss_codec);
+            testTableArrays_.AddEntriesFrom(ref input, _repeated_testTableArrays_codec);
             break;
           }
         }
