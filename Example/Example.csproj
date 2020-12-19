@@ -19,6 +19,9 @@
     <None Update="json\TestTableArraysTemplate.json">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </None>
+    <None Update="protobuf\BattleParamTemplate.byte">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
     <None Update="protobuf\TestGlobal2Template.byte">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </None>
