@@ -458,7 +458,7 @@ class Exporter:
             class_type = getattr(class_proto, py_file + ListSuffix)
         if class_type:
             proto = dict2pb(class_type, obj)
-            file_name = out_file_name + '.byte'
+            file_name = out_file_name + '.bytes'
             print("save protobuf data :", file_name)
             with codecs.open(file_name, 'wb') as f:
                 f.write(proto.SerializeToString( ))
