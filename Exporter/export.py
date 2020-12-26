@@ -15,10 +15,10 @@ WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
 See the License for the specific language governing permissions and
 limitations under the License.
 '''
-import traceback
 
 import tools.generator
-import sys
+import os
+import copyconfig
 
 #要导出的配置文件
 export_files = [
@@ -37,16 +37,10 @@ ScriptTag_Dic = {
 #导出数据格式 ['json', 'lua', 'protobuf']
 out_data_formats = ['json', 'lua', 'protobuf']
 
-def main():
-  try:
-    tools.generator.generator(export_files, ScriptTag_Dic, out_data_formats, "Config", 'Template')
-    print("all operation finish successful")
-    return 0
-  except Exception as e:
-    traceback.print_exc()
-    print("has error, see logs, please return key to exit")
-    input()
-    return 1
+#拷贝到工程的路径
+out_script_path = os.path.abspath(os.path.join(os.getcwd(), "../../../ClientMaster/Assets/Scripts/Config/"))
+out_config_path = os.path.abspath(os.path.join(os.getcwd(), "../../../ClientMaster/Assets/Bundles/Config/"))
 
 if __name__ == '__main__':
-    sys.exit(main())
+    tools.generator.generator(export_files,ScriptTag_Dic, out_data_formats, "Config", 'Template')
+    # copyconfig.copy(out_data_formats, ScriptTag_Dic, out_config_path, out_script_path)
