@@ -27,7 +27,7 @@ export_files = [
 ]
 
 #导出的脚本和对应文件夹，key为protoc支持的， key is protoc cmd, value is out folder!
-ScriptTag_Dic = {
+out_script_formats = {
     # 'python_out': 'out_python',
     'csharp_out': 'out_csharp',
     # 'cpp_out' : 'out_cpp',
@@ -35,12 +35,16 @@ ScriptTag_Dic = {
 }
 
 #导出数据格式 ['json', 'lua', 'protobuf']
-out_data_formats = ['json', 'lua', 'protobuf']
+out_data_formats = {
+    'json': 'out_json',
+    'lua': 'out_lua',
+    'protobuf': 'out_protobuf'
+}
 
 #拷贝到工程的路径
 out_script_path = os.path.abspath(os.path.join(os.getcwd(), "../../../ClientMaster/Assets/Scripts/Config/"))
 out_config_path = os.path.abspath(os.path.join(os.getcwd(), "../../../ClientMaster/Assets/Bundles/Config/"))
 
 if __name__ == '__main__':
-    tools.generator.generator(export_files,ScriptTag_Dic, out_data_formats, "Config", 'Template')
-    # copyconfig.copy(out_data_formats, ScriptTag_Dic, out_config_path, out_script_path)
+    tools.generator.generator(export_files,out_script_formats, out_data_formats, "Config", 'Template')
+    # copyconfig.copy(out_data_formats, out_script_formats, out_config_path, out_script_path)

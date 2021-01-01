@@ -207,6 +207,9 @@ class Exporter:
 
     def add_global_msg(self):
         file = 'custom.xlsx'
+        self.add_global_file_msg(file)
+
+    def add_global_file_msg(self,file):
         if not os.path.exists(file):
             log("if need a custom type,create a custom.xlsx file.")
             return
@@ -222,7 +225,9 @@ class Exporter:
                 msg.set_name(msg.get_name( )[:-1])
                 self.global_msgs.append(msg)
         except Exception as e:
-            raise ValueError('export global fail!',e)
+            raise ValueError('export global fail!', e)
+
+
 
     # def register_global_msg(self):
     #     msgs = []
@@ -310,36 +315,39 @@ class Exporter:
         return 'protoc --%s=%s/ %s/%s' % (script_out, out_folder, self.get_export_proto_folder( ), msg.get_proto_file_name( ))
 
     def export_data(self):
-        for format in self.out_data_formats:
+        for format, out_folder in self.out_data_formats.items( ):
             if format == 'lua':
-                self.export_lua_data( )
+                self.export_lua_data(out_folder)
             elif format == 'json':
-                self.export_json_data( )
+                self.export_json_data(out_folder)
             elif format == 'protobuf':
-                self.export_protobuf_data( )
+                self.export_protobuf_data(out_folder)
             else:
                 raise ValueError("unknown export data format:",format,"lua or json or protobuf")
 
 
-    def export_json_data(self):
-        json_dir = self.get_export_json_folder( )
+    def export_json_data(self,out_folder):
+        # json_dir = self.get_export_json_folder( )
+        json_dir = out_folder
         prepare_dir(json_dir)
         for info in self.proto_infos:
             file_name = info.get_proto_name( )
             json_file = json_dir + '/' + file_name
             self.save_to_json(json_file, info.get_value( ))
 
-    def export_lua_data(self):
-        lua_dir = self.get_export_lua_folder( )
+    def export_lua_data(self,out_folder):
+        # lua_dir = self.get_export_lua_folder( )
+        lua_dir = out_folder
         prepare_dir(lua_dir)
         for info in self.proto_infos:
             file_name = info.get_proto_name( )
             lua_file = lua_dir + '/' + file_name
             self.save_to_lua(lua_file, info.get_value( ))
 
-    def export_protobuf_data(self):
+    def export_protobuf_data(self,out_folder):
         self.execute_protoc_out_script('python_out', '.')
-        protobuf_dir = self.get_export_protobuf_folder( )
+        # protobuf_dir = self.get_export_protobuf_folder( )
+        protobuf_dir = out_folder
         prepare_dir(protobuf_dir)
         for info in self.proto_infos:
             file_name = info.get_proto_name( )
