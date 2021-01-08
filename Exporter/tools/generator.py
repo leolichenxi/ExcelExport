@@ -17,12 +17,13 @@ limitations under the License.
 '''
 
 import sys
+
 print(sys.platform)
 if sys.version_info < (3, 0):
     print('python version need more than 3.x')
     sys.exit(1)
 else:
-    print('python version:',sys.version_info)
+    print('python version:', sys.version_info)
 import os
 import xlrd
 import re
@@ -45,11 +46,11 @@ Index_Item_Type = 1
 Index_Item_Name = 2
 
 BaseTypes = {
-    'int': 'int32',
-    'float': 'float',
-    'double': 'double',
-    'string': 'string',
-    'bool': 'bool'
+    'int':'int32',
+    'float':'float',
+    'double':'double',
+    'string':'string',
+    'bool':'bool'
 }
 
 ETypeList = 'list'
@@ -69,9 +70,11 @@ ListSuffix = 'List'
 
 LogEnable = True;
 
+
 def log(*args):
     if LogEnable:
-       print(args)
+        print(args)
+
 
 def find_index(key, v_list):
     for index, item in enumerate(v_list):
@@ -89,6 +92,7 @@ def get_bool_value(is_true):
         return True
     return False
 
+
 def is_in_list(in_list, value):
     for i in in_list:
         if i == value:
@@ -99,11 +103,13 @@ def is_in_list(in_list, value):
 def get_json_data(data):
     return json.dumps(data, ensure_ascii=False, indent=2)
 
+
 def first_char_upper(v):
     if is_null_or_empty(v):
         return v
-    v = v[0].upper() + v[1:]
+    v = v[0].upper( ) + v[1:]
     return v
+
 
 def newline(count):
     return '\n' + '  ' * count
@@ -182,12 +188,12 @@ def dict2pb(cls, adict, strict=False):
                 try:
                     setattr(obj, field.name, adict[field.name])
                 except Exception as e:
-                    raise ValueError('setattr',field.type, field.name, adict[field.name],e)
+                    raise ValueError('setattr', field.type, field.name, adict[field.name], e)
     return obj
 
 
 class Exporter:
-    def __init__(self, file_list, out_scripts,out_data_formats, name_space, suffix):
+    def __init__(self, file_list, out_scripts, out_data_formats, name_space, suffix):
         """
 
         :param file_list: 导出的excel 文件列表
@@ -209,7 +215,7 @@ class Exporter:
         file = 'custom.xlsx'
         self.add_global_file_msg(file)
 
-    def add_global_file_msg(self,file):
+    def add_global_file_msg(self, file):
         if not os.path.exists(file):
             log("if need a custom type,create a custom.xlsx file.")
             return
@@ -226,8 +232,6 @@ class Exporter:
                 self.global_msgs.append(msg)
         except Exception as e:
             raise ValueError('export global fail!', e)
-
-
 
     # def register_global_msg(self):
     #     msgs = []
@@ -312,7 +316,8 @@ class Exporter:
         os.system(cmd)
 
     def get_protoc_cmd(self, msg, script_out, out_folder):
-        return 'protoc --%s=%s/ %s/%s' % (script_out, out_folder, self.get_export_proto_folder( ), msg.get_proto_file_name( ))
+        return 'protoc --%s=%s/ %s/%s' % (
+            script_out, out_folder, self.get_export_proto_folder( ), msg.get_proto_file_name( ))
 
     def export_data(self):
         for format, out_folder in self.out_data_formats.items( ):
@@ -323,10 +328,9 @@ class Exporter:
             elif format == 'protobuf':
                 self.export_protobuf_data(out_folder)
             else:
-                raise ValueError("unknown export data format:",format,"lua or json or protobuf")
+                raise ValueError("unknown export data format:", format, "lua or json or protobuf")
 
-
-    def export_json_data(self,out_folder):
+    def export_json_data(self, out_folder):
         # json_dir = self.get_export_json_folder( )
         json_dir = out_folder
         prepare_dir(json_dir)
@@ -335,7 +339,7 @@ class Exporter:
             json_file = json_dir + '/' + file_name
             self.save_to_json(json_file, info.get_value( ))
 
-    def export_lua_data(self,out_folder):
+    def export_lua_data(self, out_folder):
         # lua_dir = self.get_export_lua_folder( )
         lua_dir = out_folder
         prepare_dir(lua_dir)
@@ -344,7 +348,7 @@ class Exporter:
             lua_file = lua_dir + '/' + file_name
             self.save_to_lua(lua_file, info.get_value( ))
 
-    def export_protobuf_data(self,out_folder):
+    def export_protobuf_data(self, out_folder):
         self.execute_protoc_out_script('python_out', '.')
         # protobuf_dir = self.get_export_protobuf_folder( )
         protobuf_dir = out_folder
@@ -551,7 +555,7 @@ class Message:
 
     def try_get_global_msg(self, msg_name):
         for msg in self.global_msgs:
-            if msg.get_proto_name() == msg_name:
+            if msg.get_proto_name( ) == msg_name:
                 return msg
         return None
 
@@ -563,7 +567,7 @@ class Message:
             return self.name + 's'
         return self.name
 
-    def set_name(self,name):
+    def set_name(self, name):
         self.name = name
 
     def get_proto_name(self):
@@ -644,7 +648,7 @@ class Message:
 
     def record_base_value(self, parent, filed_name, filed_type, filed_value):
         base_type = self.get_type_name(filed_type, filed_name)
-        value = self.convert(base_type, filed_value,filed_name)
+        value = self.convert(base_type, filed_value, filed_name)
         self.fill_value(parent, filed_name, value)
 
     def record_list_value(self, parent, filed_name, filed_type, filed_value):
@@ -652,7 +656,7 @@ class Message:
         list_values = []
         values = []
         if type_define == ETypeList:
-            raise ValueError('bug here!',filed_name,filed_type,filed_value)
+            raise ValueError('bug here!', filed_name, filed_type, filed_value)
         elif type_define == ETypeBase:
             values = str(filed_value).strip('[]').split(SplitArray)
         elif type_define == ETypeObj:
@@ -666,11 +670,11 @@ class Message:
         custom_message = self.try_get_global_msg(filed_type)
         filed_types = []
         if custom_message:
-           custom_field_types = custom_message.get_msg_file_types()
-           for field in custom_field_types:
-               filed_types.append(field.get_defined_type()+' '+ field.get_name())
+            custom_field_types = custom_message.get_msg_file_types( )
+            for field in custom_field_types:
+                filed_types.append(field.get_defined_type( ) + ' ' + field.get_name( ))
         else:
-           filed_types.extend(self.get_obj_file_types(filed_type))
+            filed_types.extend(self.get_obj_file_types(filed_type))
 
         values = str(filed_value).strip('{}').split(':')
         if not is_null_or_empty(values):
@@ -679,7 +683,7 @@ class Message:
                 v = values[i] if i < len(values) else ''
                 self.record_filed(obj, item_filed_name, item_filed_type, v)
         else:
-            print('record_obj_value is null:',filed_name)
+            print('record_obj_value is null:', filed_name)
         self.fill_value(parent, filed_name, obj)
 
     @staticmethod
@@ -690,15 +694,15 @@ class Message:
             parent[filed_name] = filed_value
 
     @staticmethod
-    def convert(base_type, value,filed_name = None):
+    def convert(base_type, value, filed_name=None):
         if base_type == 'bool':
             bool_value = str(value)
-            if bool_value in ('0','0.0', 'false', 'False', 'off', 'Off', '', 'None'):
+            if bool_value in ('0', '0.0', 'false', 'False', 'off', 'Off', '', 'None'):
                 return get_bool_value(False)
-            elif bool_value in ('1','1.0','true', 'True', 'on', 'On'):
+            elif bool_value in ('1', '1.0', 'true', 'True', 'on', 'On'):
                 return get_bool_value(True)
             else:
-                raise ValueError("error!!!", base_type, filed_name,value)
+                raise ValueError("error!!!", base_type, filed_name, value)
         elif base_type == 'int32':
             if is_null_or_empty(value):
                 return 0
@@ -775,10 +779,9 @@ class Message:
     def check_or_import_msg_type(self, filed_type):
         custom_msg = self.try_get_global_msg(filed_type)
         if custom_msg:
-            if not is_in_list(self.import_msgs, custom_msg.get_proto_name()):
-                self.import_msgs.append(custom_msg.get_proto_name())
+            if not is_in_list(self.import_msgs, custom_msg.get_proto_name( )):
+                self.import_msgs.append(custom_msg.get_proto_name( ))
         return custom_msg
-
 
     def check_or_import_msg(self, msg):
         info = msg.get_class_info( )
@@ -816,7 +819,7 @@ class Message:
         self.fileds_proto[filed.get_filed_name( )] = filed
         return filed
 
-    def get_type_define(self,filed_type):
+    def get_type_define(self, filed_type):
         """
         获取字段定义类型
         :param filed_type:
@@ -879,7 +882,7 @@ class Filed:
 
     def get_defined_type(self):
         if self.is_list:
-            return self.filed_type+'[]'
+            return self.filed_type + '[]'
         return self.filed_type
 
     def get_filed_des(self):
@@ -889,12 +892,13 @@ class Filed:
         r = ''
         if self.is_list:
             r = ' repeated'
-        return '%s %s %s = %s ; // % s' % (r, self.get_filed_type( ), self.get_filed_name( ), index, self.get_filed_des( ))
+        return '%s %s %s = %s ; // % s' % (
+            r, self.get_filed_type( ), self.get_filed_name( ), index, self.get_filed_des( ))
 
     def scheme_info(self):
         return json.dumps((self.get_filed_name( ), self.get_filed_type( )), ensure_ascii=False, indent=2)
 
-def generator(file_list, out_scripts,out_data_formats, name_space, suffix):
-    export = Exporter(file_list, out_scripts,out_data_formats, name_space, suffix)
-    export.export( )
 
+def generator(file_list, out_scripts, out_data_formats, name_space, suffix):
+    export = Exporter(file_list, out_scripts, out_data_formats, name_space, suffix)
+    export.export( )
