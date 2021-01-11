@@ -900,5 +900,14 @@ class Filed:
 
 
 def generator(file_list, out_scripts, out_data_formats, name_space, suffix):
+    """
+
+    :param file_list:  Excel Exports
+    :param out_scripts:  Scripts Formats: Dictionary  key is protoc cmd, value is out folder
+    :param out_data_formats: Export datas; key is lua json or protobuf, value is out folder
+    :param name_space: Scripts NameSpace
+    :param suffix: ScriptClass Suffix
+    :return:
+    """
     export = Exporter(file_list, out_scripts, out_data_formats, name_space, suffix)
     export.export( )
