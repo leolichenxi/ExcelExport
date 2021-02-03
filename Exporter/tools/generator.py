@@ -228,6 +228,7 @@ class Exporter:
                 if not self.is_ignore_row(row):
                     msgs.add_filed(row[0], row[1], row[2])
             for msg in msgs.child_msgs:
+                msg.parent_msg = None
                 msg.set_name(msg.get_name( )[:-1])
                 self.global_msgs.append(msg)
         except Exception as e:
