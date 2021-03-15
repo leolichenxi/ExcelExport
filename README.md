@@ -59,8 +59,8 @@ google导出的代码读取数据相关的API。参考案列上传
 
 ### 所需配置
 
-Python3 
-protoc 支持proto3 proto2兼容性未知
+Python3以上
+protoc 支持proto3,proto2兼容性未测试
 python 依赖库： google,protobuf,xlrd,refection
 
 
