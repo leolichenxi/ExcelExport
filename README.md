@@ -33,6 +33,7 @@ Excel to json,lua and protobuf datas,also export to script language which protoc
 设计分两类表暂命名：单表,列表.
 
 > 单表： 类似配置表1.xlsx,数据为一份,通常为全局表,无复用需求.
+
 > 列表： 存在N条数据规则一样.
   
  
