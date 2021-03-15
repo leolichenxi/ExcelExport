@@ -28,7 +28,7 @@ export_files = [
 
 #导出的脚本和对应文件夹，key为protoc支持的， key is protoc cmd, value is out folder!
 out_script_formats = {
-    # 'python_out': 'out_python',
+    'python_out': 'out_python',
     'csharp_out': 'out_csharp',
     # 'cpp_out' : 'out_cpp',
     # 'java_out' : 'out_java'
@@ -47,4 +47,5 @@ out_config_path = os.path.abspath(os.path.join(os.getcwd(), "../../../ClientMast
 
 if __name__ == '__main__':
     tools.generator.generator(export_files,out_script_formats, out_data_formats, "Config", 'Template')
+    os.system("pause")
     # copyconfig.copy(out_data_formats, out_script_formats, out_config_path, out_script_path)

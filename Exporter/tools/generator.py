@@ -61,6 +61,7 @@ SplitArray = ','  # 配置的
 SplitObjArray = ';'  # 配置的
 SplitTypeFiled = ':'  # 对象类型的字段数组分割  10 : 100
 SheetRowMaxSpaceCount = 3  # 连续空白几行  余下的不读取
+IgnoreSign = '#'
 
 OutDir_Protos = 'protos'
 OutDir_Jsons = 'json'
@@ -482,10 +483,10 @@ class Exporter:
         if len(row[0]) == 0:
             print('empty row!', row)
             return True
-        if len(row[0][0]) == '#':
+        if len(row[0][0]) == 0:
             print('empty row!', row)
             return True
-        if row[0][0] == '#':
+        if row[0][0] == IgnoreSign:
             return True
         return False
 
