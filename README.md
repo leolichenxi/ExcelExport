@@ -39,12 +39,13 @@ Excel to json,lua and protobuf datas,also export to script language which protoc
  
 ### 使用方法：
 
-1. 基础类型支持： int float double string bool ;
-2. 数组配置间隔符号为,   int[] 可配置数据  1,2,5,10;
-3. 声明一个数据对象：例如  Position3D  {int x:int y:int[] z} 对应数据为 1:2:1,2,3 即 x = 1,y = 2, z = 1,2,3;
-4. 对象数组  Position3D[]  {int x:int y:int[] z}[] 对应数据举例 1,2:2,6:3;2:5:10,12 中间用分号;隔开;
-5. Excel 行第一个前加 #或者留空 此行不会被解析对象或加入数列;
-6. 列表连续空白三行之后的不会被加入数据;
+1. 表名规则 中文名+|+英文名， 中文名作为注释，英文名作为类名，列表会在类名后自动加s,数组类都会自动加s;
+2. 基础类型支持： int float double string bool ;
+3. 数组配置间隔符号为,   int[] 可配置数据  1,2,5,10;
+4. 声明一个数据对象：例如  Position3D  {int x:int y:int[] z} 对应数据为 1:2:1,2,3 即 x = 1,y = 2, z = 1,2,3;
+5. 对象数组  Position3D[]  {int x:int y:int[] z}[] 对应数据举例 1,2:2,6:3;2:5:10,12 中间用分号;隔开;
+6. Excel 行第一个前加 #或者留空 此行不会被解析对象或加入数列;
+7. 列表连续空白三行之后的不会被加入数据;
 
 > 支持全局类型配置方法新加的在custom.xlsx,这样在全局可以像基础类型那样定义，参考Position3d.
 
