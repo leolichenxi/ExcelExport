@@ -343,7 +343,7 @@ class Exporter:
             self.export_script_item(msg, script_out, folder)
 
     def export_script_item(self, msg, script_out, out_folder):
-        print("generate script :", script_out, out_folder)
+        print("generate script :", msg.get_proto_name( ))
         cmd = self.get_protoc_cmd(msg, script_out, out_folder)
         os.system(cmd)
 
