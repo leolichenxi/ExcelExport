@@ -1,0 +1,2024 @@
+[
+  {
+    "export_file": "F:\\Personal\\Important\\JustDoIt\\Tools\\ExportTools\\Export\\client\\BuffsTemplate.json",
+    "root": "BuffsTemplate",
+    "item": "Buff",
+    "schema": {
+      "Id": [
+        "int",
+        "BuffID"
+      ],
+      "Group": [
+        "int",
+        "BUFF组ID"
+      ],
+      "Type": [
+        "int",
+        "Buff类型（1瞬时2持续）"
+      ],
+      "Kind": [
+        "int",
+        "buff状态(0无状态1增益2减益）"
+      ],
+      "LastTime": [
+        "int",
+        "Buff持续时间（当Type为2时，填-1表示迷宫中死亡或单场战斗结束仍然保留)"
+      ],
+      "StackLimit": [
+        {
+          "Type": [
+            "int"
+          ],
+          "Num": [
+            "int"
+          ],
+          "Time": [
+            "int"
+          ]
+        },
+        "堆叠"
+      ],
+      "Cover": [
+        {
+          "TypeId": [
+            "int"
+          ],
+          "Condition": [
+            "int"
+          ],
+          "Num": [
+            "int"
+          ]
+        },
+        "覆盖类型"
+      ],
+      "Trigger": [
+        {
+          "Center": [
+            "int"
+          ],
+          "Type": [
+            "int"
+          ],
+          "Param1": [
+            "int"
+          ],
+          "Param2": [
+            "int"
+          ],
+          "Param3": [
+            "int"
+          ],
+          "Param4": [
+            "int"
+          ]
+        },
+        "BUFF触发条件"
+      ],
+      "Probility": [
+        "int",
+        "BUFF触发几率"
+      ],
+      "SearchTarget": [
+        {
+          "Type": [
+            "int"
+          ],
+          "X": [
+            "int"
+          ],
+          "Y": [
+            "int"
+          ],
+          "Condition1": [
+            "int"
+          ],
+          "Condition2": [
+            "int"
+          ],
+          "Num": [
+            "int"
+          ],
+          "Kind": [
+            "int"
+          ]
+        },
+        "索敌与筛选"
+      ],
+      "Actions": [
+        [
+          {
+            "Action": [
+              "int"
+            ],
+            "Type": [
+              "int"
+            ],
+            "Num1": [
+              "int"
+            ],
+            "Num2": [
+              "int"
+            ],
+            "Num3": [
+              "int"
+            ],
+            "Num4": [
+              "int"
+            ]
+          }
+        ],
+        "BUFF效果"
+      ],
+      "EndCondition": [
+        {
+          "TriggerType": [
+            "int"
+          ],
+          "Num1": [
+            "int"
+          ],
+          "Num2": [
+            "int"
+          ],
+          "Num3": [
+            "int"
+          ]
+        },
+        "BUFF结束条件"
+      ],
+      "IsOwnText": [
+        "bool",
+        "是否显示文本"
+      ],
+      "EffectIds": [
+        [
+          "int"
+        ],
+        "特效ID"
+      ],
+      "Powers": [
+        [
+          "double"
+        ],
+        "buff战力系数"
+      ],
+      "Icon": [
+        "string",
+        "buff图标"
+      ]
+    }
+  },
+  {
+    "export_file": "F:\\Personal\\Important\\JustDoIt\\Tools\\ExportTools\\Export\\client\\GlobalTemplate.json",
+    "root": "GlobalTemplate",
+    "item": "Global",
+    "schema": {
+      "NameLimit": [
+        "int",
+        "名字字数限制"
+      ],
+      "DefaultDropGroup": [
+        "int",
+        "玩家进入游戏时初始获得物品掉落组"
+      ],
+      "ChangeNameCost": [
+        "int",
+        "改名消耗（单位：宝石）"
+      ],
+      "PlayeEnergyRecoverTime": [
+        "int",
+        "每恢复一点体力所需时间（单位：分钟）"
+      ],
+      "FieldHeroNumLimits": [
+        [
+          {
+            "Level": [
+              "int"
+            ],
+            "Num": [
+              "int"
+            ]
+          }
+        ],
+        "各等级可上阵英雄数量，现在的等级对应的是玩家等级"
+      ],
+      "FormationNameLimit": [
+        "int",
+        "阵容名字字数限制"
+      ],
+      "FormationCareerLimit": [
+        "int",
+        "同职业的魔物上阵不能超过x个"
+      ],
+      "InitialFormaitonHeros": [
+        [
+          "int"
+        ],
+        "队伍1-队伍3默认初始英雄及站位"
+      ],
+      "FormationCount": [
+        "int",
+        "玩家可设置X个队伍"
+      ],
+      "HeroNormalTalentCountLimit": [
+        "int",
+        "英雄普通奥义数量上限"
+      ],
+      "HeroHealthCorrectionBase": [
+        "int",
+        "英雄生命属性权重值"
+      ],
+      "HeroHealthCorrectionCoe": [
+        "double",
+        "英雄生命属性权重系数"
+      ],
+      "HeroAttackCorrectionBase": [
+        "int",
+        "英雄攻击属性权重值"
+      ],
+      "HeroAttackCorrectionCoe": [
+        "double",
+        "英雄攻击属性权重系数"
+      ],
+      "HeroDodgeCorrectionBase": [
+        "int",
+        "英雄闪避属性权重值"
+      ],
+      "HeroDodgeCorrectionCoe": [
+        "double",
+        "英雄闪避属性权重系数"
+      ],
+      "HeroCritCorrectionBase": [
+        "int",
+        "英雄暴击属性权重值"
+      ],
+      "HeroCritCorrectionCoe": [
+        "double",
+        "英雄暴击属性权重系数"
+      ],
+      "HeroBlckCorrectionBase": [
+        "int",
+        "英雄暴击属性权重值"
+      ],
+      "HeroBlckCorrectionCoe": [
+        "double",
+        "英雄暴击属性权重系数"
+      ],
+      "ShowHealthCoe": [
+        "double",
+        "生命显示系数"
+      ],
+      "ShowAttackCoe": [
+        "double",
+        "攻击显示系数"
+      ],
+      "ShowDodgeCoe": [
+        "double",
+        "闪避显示系数"
+      ],
+      "ShowCritCoe": [
+        "double",
+        "暴击显示系数"
+      ],
+      "ShowVitCoe": [
+        "double",
+        "体质显示系数"
+      ],
+      "ShowStrCoe": [
+        "double",
+        "力量显示系数"
+      ],
+      "ShowAgiCoe": [
+        "double",
+        "敏捷显示系数"
+      ],
+      "ShowDexCoe": [
+        "double",
+        "暴击显示系数"
+      ],
+      "ShowDefenseNumCoe": [
+        "double",
+        "伤害减免显示系数"
+      ],
+      "ShowDefenseRateCoe": [
+        "double",
+        "伤害抗性显示系数"
+      ],
+      "ShowElementCoe": [
+        "double",
+        "克制强度显示系数"
+      ],
+      "ShowCritDamCoe": [
+        "double",
+        "暴击伤害显示系数"
+      ],
+      "DodgePowerCorrection": [
+        "double",
+        "闪避战斗力修正"
+      ],
+      "CritPowerCorrection": [
+        "double",
+        "暴击战斗力修正"
+      ],
+      "BlockPowerCorrection": [
+        "double",
+        "格档战斗力修正"
+      ],
+      "HeroAttributeEvaluation": [
+        {
+          "Num1": [
+            "int"
+          ],
+          "Num2": [
+            "int"
+          ],
+          "Num3": [
+            "int"
+          ]
+        },
+        "英雄个体值评价（(0,Num1]是C，(Num1,Num2]是B，(Num2,Num3]是A，大于Num3是S）"
+      ],
+      "HeroLevelLimits": [
+        [
+          "int"
+        ],
+        "英雄不同星级对应的等级上限，数组第一项为1星对应的等级上限"
+      ],
+      "HeroStarLimit": [
+        "int",
+        "英雄星级上限"
+      ],
+      "HeroStarUpNeedCards": [
+        [
+          "int"
+        ],
+        "英雄不同星级升星所需消耗的同星副卡数量，数组第一项为1星升2星时所需数量"
+      ],
+      "HeroStarUpNeedGolds": [
+        [
+          "int"
+        ],
+        "英雄不同星级升星所需消耗的金币数量，数组第一项为1星升2星时所需数量"
+      ],
+      "HeroStarUpGainNormalTalents": [
+        [
+          "int"
+        ],
+        "当英雄升到指定星级时，可获得1个奥义，从英雄表里的奥义库中随机1个(新增字段！！！）"
+      ],
+      "HeroStarUpCancelGiveCards": [
+        [
+          "int"
+        ],
+        "英雄不同星级取消升星时返还的副卡数量，数组第一项为1星升2星取消时返还的数量（删除了放弃升星结果的操作，该字段删除）"
+      ],
+      "HeroStarUpCancelGiveGold": [
+        "double",
+        "英雄取消升星时消耗的金币比例（删除了放弃升星结果的操作，该字段删除）"
+      ],
+      "HeroLearningNeedGolds": [
+        [
+          "int"
+        ],
+        "英雄不同星级学习时所需消耗的金币数量，数组第一项为1星所需数量"
+      ],
+      "HeroClassNeedCards": [
+        [
+          {
+            "Class1": [
+              "int"
+            ],
+            "Class2": [
+              "int"
+            ],
+            "Class3": [
+              "int"
+            ],
+            "Class4": [
+              "int"
+            ],
+            "Class5": [
+              "int"
+            ],
+            "Class6": [
+              "int"
+            ]
+          }
+        ],
+        "英雄不同星级在不同阶数时进阶所需消耗的同卡数量，数组第一项为1星时所需数量，Class1表示0阶升1阶所需数量"
+      ],
+      "HeroSkillTrainingGiveExpCoe": [
+        "double",
+        "英雄特训返还英雄经验比例"
+      ],
+      "NormalLotteryFreeTime": [
+        "int",
+        "金币免费召唤冷却时间，单位：分钟"
+      ],
+      "SpecialLotteryFreeTime": [
+        "int",
+        "氪金免费召唤冷却时间，单位：分钟"
+      ],
+      "LotteryTicketDiamondCost": [
+        "int",
+        "单张抽卡券消耗的钻石"
+      ],
+      "SpecialLotteryPrice": [
+        {
+          "Once": [
+            "int"
+          ],
+          "TenTimes": [
+            "int"
+          ]
+        },
+        "氪金召唤价格（单次消耗的抽卡券，10次消耗的抽卡券）"
+      ],
+      "SpecialLotteryOneDrawNormalNum": [
+        {
+          "Base": [
+            "int"
+          ],
+          "ExtraRate": [
+            "int"
+          ]
+        },
+        "氪金非第10次单抽；10连抽排除必出（紫/橙）外剩余的抽卡次数调用卡池的权重（保底数量、超级蛋几率）"
+      ],
+      "OrangeCardBaseCount": [
+        "int",
+        "累计氪金&活动抽到第n次，未获得橙卡，则本次必定给一张橙卡"
+      ],
+      "LotteryPointBonus": [
+        {
+          "Special": [
+            "int"
+          ],
+          "Activity": [
+            "int"
+          ]
+        },
+        "抽卡所获积分（氪金抽、活动抽），若钻石/活动抽如果是十连，积分需要x10"
+      ],
+      "ActivityLotteryOneDrawNormalNum": [
+        {
+          "Base": [
+            "int"
+          ],
+          "ExtraRate": [
+            "int"
+          ]
+        },
+        "活动非第10次单抽；10连抽排除必出（紫/橙）外剩余的抽卡次数调用卡池的权重（保底数量、超级蛋几率）\n对应【限时召唤配置表】里的卡池"
+      ],
+      "SpecialWorkProbility": [
+        "double",
+        "特殊事件概率"
+      ],
+      "HeroWorkPickRewardInterval": [
+        "int",
+        "金币矿洞,建材矿洞，饮品工坊产出一份资源需要的时间（单位：秒）"
+      ],
+      "HeroWorkHeroExpPickRewardInterval": [
+        "int",
+        "美食工坊（产魔物经验药水）产出一份资源需要的时间（单位：秒）"
+      ],
+      "ResourceAnimationIntervals": [
+        [
+          "int"
+        ],
+        "月岩矿洞，金币矿洞，美食区，饮品区资源出现间隔动画（单位：秒）"
+      ],
+      "AllRecivedIconUnlockLevel": [
+        "int",
+        "勘探井/烹饪屋的【一键领取】按钮解锁等级（勘探井/烹饪屋的等级，非玩家等级）"
+      ],
+      "RankListNumber": [
+        "int",
+        "排行榜入榜人数（显示前50名的玩家信息）"
+      ],
+      "RankLimitNumer": [
+        "int",
+        "超过x名，显示未上榜"
+      ],
+      "ListRefreshTime": [
+        "int",
+        "排行榜刷新时间（秒数）"
+      ],
+      "BlueEquipmentSyntheticNumber": [
+        "int",
+        "蓝色装备合成碎片数"
+      ],
+      "PurpleEquipmentSyntheticNumber": [
+        "int",
+        "紫色装备合成碎片数"
+      ],
+      "GoldenEquipmentSyntheticNumber": [
+        "int",
+        "金色装备合成碎片数"
+      ],
+      "GoldenEquipmentSyntheticNumbers": [
+        [
+          "int"
+        ],
+        "装备分解获得物品掉落组（从白色品质到金色品质）"
+      ],
+      "NormalDuplicateEnergyCost": [
+        "int",
+        "闯关普通模式消耗体力（关卡类型为1的）"
+      ],
+      "ChallengeDuplicateEnergyCost": [
+        "int",
+        "迷宫消耗体力（关卡类型为6）"
+      ],
+      "BuildingUpgradeMaxCount": [
+        "int",
+        "玩家最多同时能升级多少建筑"
+      ],
+      "BuildingUpgradeReturnFactor": [
+        "double",
+        "取消升级返回的资源"
+      ],
+      "BuildingUpgradeDiamondCost": [
+        "double",
+        "使用钻石加速升级的钻石花费系数"
+      ],
+      "WorkSpeedUpDiamondCost": [
+        "int",
+        "每张工作加速券的钻石价格，每张工作加速券固定加速30分钟"
+      ],
+      "PvpCoolDownTime": [
+        "int",
+        "PVP挑战冷却时间，单位是秒"
+      ],
+      "PvpAttackFreeTimes": [
+        "int",
+        "每日PVP进攻免费次数"
+      ],
+      "PvpSettlementDayPerWeek": [
+        "int",
+        "PVP每周结算日"
+      ],
+      "PvpSettlementTimePerWeek": [
+        "string",
+        "PVP每周和每日结算时间"
+      ],
+      "ReturnTechnologyMaterialPercentage": [
+        "double",
+        "返还科技材料系数"
+      ],
+      "LordLevelLimted": [
+        "int",
+        "小姐姐等级上限"
+      ],
+      "EquipmentBagLimted": [
+        "int",
+        "背包装备最多可承载上限（超过则发邮件给玩家）"
+      ],
+      "TechnologyResetCost": [
+        "int",
+        "重置魔王小姐姐科技树消耗的充值币数量"
+      ],
+      "DailyTaskWeights": [
+        [
+          {
+            "WhiteWeight": [
+              "int"
+            ],
+            "GreenWeight": [
+              "int"
+            ],
+            "BlueWeight": [
+              "int"
+            ],
+            "PurpleWeight": [
+              "int"
+            ],
+            "OrangeWeight": [
+              "int"
+            ]
+          }
+        ],
+        "1-10级酒馆对应的任务品质权重"
+      ],
+      "ReleaseTaskCounts": [
+        [
+          {
+            "Min": [
+              "int"
+            ],
+            "Max": [
+              "int"
+            ],
+            "Count": [
+              "int"
+            ]
+          }
+        ],
+        "酒馆等级对应的候选任务数量"
+      ],
+      "ReceiveTaskCounts": [
+        [
+          {
+            "Min": [
+              "int"
+            ],
+            "Max": [
+              "int"
+            ],
+            "Count": [
+              "int"
+            ]
+          }
+        ],
+        "酒馆等级对应的可接任务数量"
+      ],
+      "TavernSpeechShowTime": [
+        "int",
+        "酒馆/羁绊对白框默认展示时间（单位：毫秒）"
+      ],
+      "TavernSpeechAppearInterval": [
+        "int",
+        "酒馆对白每隔一定时间，播放一次（单位：毫秒）"
+      ],
+      "HeroCommentWordLimit": [
+        "int",
+        "英雄评价字数限制"
+      ],
+      "HeroCommentCountLimit": [
+        "int",
+        "53条里最多只能出现你的评论N条，超过给到限制"
+      ],
+      "HeroCommentNumber": [
+        "int",
+        "评价除了点赞的3条，另外保留N条推荐数据"
+      ],
+      "HeroCommentLatestNumber": [
+        "int",
+        "评论除了点赞的3条，另外保留N条最新数据"
+      ],
+      "AdvertisingMapInterval": [
+        "int",
+        "主界面滚动广告图滚动间隔时间（单位：毫秒）"
+      ],
+      "EmailLimited": [
+        "int",
+        "系统&玩家邮件上限封数（单位：封）"
+      ],
+      "SystemEmailExpireTime": [
+        "int",
+        "服务器数配置表中的邮件过期天数（单位：天），超过天数自动删除，但如果是已读并领取附件，则立即自动删除"
+      ],
+      "PrizeEmailPlayerLevels": [
+        [
+          "int"
+        ],
+        "预设信件由系统推送给比发信人等级低的玩家。等级差为数组，若无符合条件的人，则扩大区间。"
+      ],
+      "PrizeEmailPlayerReceiveEmailCondition": [
+        "int",
+        "预设信件收件人条件（最近x小时未收到过预设信件）\n最近yCommendFriendLoginTime）小时有上线过"
+      ],
+      "PrizeEmailSendStrangerNum": [
+        "int",
+        "同一封预设邮件最多可同时发送给N个陌生玩家"
+      ],
+      "PrizeEmailSendReward": [
+        {
+          "Type": [
+            "int"
+          ],
+          "Id": [
+            "int"
+          ],
+          "Count": [
+            "int"
+          ]
+        },
+        "发送预设邮件后可获得奖励"
+      ],
+      "PrizeEmailMessageCount": [
+        "int",
+        "预设信件可编辑x字留言"
+      ],
+      "PrizeEmailStrangerReplyReward": [
+        {
+          "Type": [
+            "int"
+          ],
+          "Id": [
+            "int"
+          ],
+          "Count": [
+            "int"
+          ]
+        },
+        "陌生人回复预设信件可获得的奖励"
+      ],
+      "PlayerEmailSaveCount": [
+        "int",
+        "可保存x封玩家邮件"
+      ],
+      "PlayerEmailDailySendCount": [
+        "int",
+        "每天给同一个玩家发送信件数上限"
+      ],
+      "EmailTitleCount": [
+        "int",
+        "邮件标题字数限制"
+      ],
+      "FreedomEmailMessageCount": [
+        "int",
+        "纯交流信件（以及非首次发送的谜题信件）可编辑x字留言"
+      ],
+      "EmailLatestConnectPersonCount": [
+        "int",
+        "选择收件人时，【最近】页签下显示最近联系过的10个玩家"
+      ],
+      "EnergyRecoverPayments": [
+        [
+          {
+            "Times": [
+              "int"
+            ],
+            "Count": [
+              "int"
+            ]
+          }
+        ],
+        "购买体力次数和每次购买消耗元气石数量"
+      ],
+      "PaymentResetTime": [
+        "string",
+        "每日购买体力次数和花费重置时间"
+      ],
+      "HeroContractMaxNumber": [
+        "int",
+        "英雄契约上限数量"
+      ],
+      "HeroStarUpContractNnlockNumber": [
+        "int",
+        "每次升星可解锁开启契约数量"
+      ],
+      "HeroContractSlotCount": [
+        "int",
+        "单个契约上的潜力插槽数"
+      ],
+      "DefaultContractNumber": [
+        "int",
+        "默认拥有契约数量"
+      ],
+      "ContractStarslimits": [
+        [
+          {
+            "Contract": [
+              "int"
+            ],
+            "Stars": [
+              "int"
+            ]
+          }
+        ],
+        "契约编号以及对应的限制插入英雄星级"
+      ],
+      "HeroInjectionContractCount": [
+        "int",
+        "每次插槽的献身英雄需求数量"
+      ],
+      "DefaultContractUnlockHeroStars": [
+        "int",
+        "默认解锁赠送契约的英雄星级限制"
+      ],
+      "HeroContractUnlockSlotLevels": [
+        [
+          {
+            "Contrack": [
+              "int"
+            ],
+            "Slot": [
+              "int"
+            ],
+            "Level": [
+              "int"
+            ]
+          }
+        ],
+        "契约插槽解锁等级限制(*举例1:1:20，第1份契约的第1个插槽需要20级解锁)"
+      ],
+      "LordEquipPowerKeys": [
+        [
+          "double"
+        ],
+        "小姐姐装备战斗力系数：攻击，爆击率，爆击伤害"
+      ],
+      "PvpDataCleanTime": [
+        "int",
+        "天梯赛上赛季数据清除时间，单位为秒（*举例新赛季为2018/8/6 00:00:00开启，则清除数据为提前1小时的2018/8/5 23:00:00）"
+      ],
+      "PvpTargetPlayerCount": [
+        "int",
+        "PVP天梯赛每次可作为挑战目标选择的人数"
+      ],
+      "PvpDailyBuyEachPayAttackTimes": [
+        "int",
+        "天梯每次花费钻石可增加额外挑战的次数"
+      ],
+      "PvpRefreshSettingTime": [
+        "string",
+        "每天重置PVP刷新购买价格和次数的时间"
+      ],
+      "PvpSeasonSettleTime": [
+        "int",
+        "赛季结束后间隔至发送奖励的时间，单位为秒"
+      ],
+      "PvpBaseChallengeScore": [
+        "int",
+        "天梯比赛战斗结束基础分数变动值"
+      ],
+      "PvpDailyRewardSendTime": [
+        "string",
+        "天梯每日奖励发放时间"
+      ],
+      "RefreshPublicCoolDownTime": [
+        "int",
+        "刷新按钮点击操作冷却时间，单位是毫秒"
+      ],
+      "DailyPlayGoldCost": [
+        "int",
+        "龙之宝库消耗体力值（关卡类型2）"
+      ],
+      "DailyPlayGoldTimes": [
+        "int",
+        "龙之宝库每天可挑战次数"
+      ],
+      "GoldChallengeCountdown": [
+        "int",
+        "龙之宝库挑战倒计时，单位是毫秒"
+      ],
+      "GoldChallengeStartCountdown": [
+        "int",
+        "龙之宝库挑战开始前倒计时，单位是毫秒"
+      ],
+      "DailyPlayExperienceCost": [
+        "int",
+        "女巫甜点屋消耗体力值（关卡类型3）"
+      ],
+      "DailyPlayExperienceTimes": [
+        "int",
+        "女巫甜点屋每天可挑战次数"
+      ],
+      "ExperienceChallengeCountdown": [
+        "int",
+        "挑战倒计时，单位是毫秒"
+      ],
+      "ExperienceChallengeStartCountdown": [
+        "int",
+        "挑战开始前倒计时，单位是毫秒"
+      ],
+      "GiftAddFavorCounts": [
+        [
+          "int"
+        ],
+        "不同类型的礼物增加的好感度值(精致的礼物，普通礼物，糟糕的礼物）"
+      ],
+      "FavorDuplicateEnergyCost": [
+        "int",
+        "羁绊关卡消耗体力（关卡类型8）"
+      ],
+      "HeroPropertyGradeScores": [
+        [
+          "int"
+        ],
+        "英雄主属性潜能SABC的分值"
+      ],
+      "HighGradeScore": [
+        "int",
+        "英雄主属性潜能分值≥配置值时，被认为是高潜能英雄，抽卡展示界面需有特殊动画"
+      ],
+      "CommendFriendCount": [
+        "int",
+        "每次推送N个符合条件的好友"
+      ],
+      "CommendFriendLevels": [
+        [
+          "int"
+        ],
+        "推荐好友的上下等级差,若无符合条件的，则扩展区间"
+      ],
+      "CommendFriendLoginTime": [
+        "int",
+        "推荐好友的登入时间（单位：小时），最近N小时内有上线过"
+      ],
+      "FriendDailySendGiftCount": [
+        "int",
+        "好友系统每天可赠送x个人礼物"
+      ],
+      "FriendDailyReceiveGiftCount": [
+        "int",
+        "好友系统每天可接收x个人的礼物"
+      ],
+      "FriendSendGiftFriendshipPoint": [
+        "int",
+        "赠送礼物，双方可增加的亲密度数"
+      ],
+      "DailyFriendshipPointGainLimit": [
+        "int",
+        "每天与单个玩家增加的亲密度上限"
+      ],
+      "FriendApplicationCount": [
+        "int",
+        "保存最近N条好友申请条目，超过从最早一条开始删"
+      ],
+      "RecentContactCount": [
+        "int",
+        "显示最近N个联系人（发生过私聊、信件交互的）"
+      ],
+      "HeroClassAdvanceSkills": [
+        [
+          {
+            "Times": [
+              "int"
+            ],
+            "Type": [
+              "int"
+            ]
+          }
+        ],
+        "进阶次数对应的进阶技能类型，1类型为绝技、2类型为天赋、3类型为必杀（终结技）"
+      ],
+      "EquipmentEnhanceEnchantCounts": [
+        [
+          {
+            "EnhanceLevel": [
+              "int"
+            ],
+            "Count": [
+              "int"
+            ]
+          }
+        ],
+        "强化等级和可附魔条目对应"
+      ],
+      "EquipmentEnhanceBreakLevels": [
+        [
+          "int"
+        ],
+        "装备需要突破上限的强化等级"
+      ],
+      "EquipmentEnhanceLevelMax": [
+        "int",
+        "装备强化总等级上限"
+      ],
+      "EquipmentEnchantPays": [
+        [
+          {
+            "Quality": [
+              "int"
+            ],
+            "Count": [
+              "int"
+            ]
+          }
+        ],
+        "不同品质附魔卷轴消耗价格"
+      ],
+      "HeroContractNeedHeroNumbers": [
+        [
+          {
+            "Contrack": [
+              "int"
+            ],
+            "Slot": [
+              "int"
+            ],
+            "Count": [
+              "int"
+            ]
+          }
+        ],
+        "契约编号以及对应的插槽插入英雄的需求数量"
+      ],
+      "ChatSendMessageFrequency": [
+        "int",
+        "世界频道发言频率冷却时间（s）"
+      ],
+      "ChatWordsLimitation": [
+        "int",
+        "世界/公会/私聊发言文字数字限制"
+      ],
+      "WorldChatSaveNumber": [
+        "int",
+        "世界频道在线期间聊天数量保存（条），超过数量从最早一条开始删"
+      ],
+      "GuildChatSaveNumber": [
+        "int",
+        "公会频道在线期间聊天数量保存（条），超过数量从最早一条开始删"
+      ],
+      "PrivateChatSaveNumber": [
+        "int",
+        "私聊频道在线期间聊天数量保存（条），超过数量从最早一条开始删"
+      ],
+      "SystemChatSaveNumber": [
+        "int",
+        "系统频道在线期间聊天数量保存（条），超过数量从最早一条开始删"
+      ],
+      "VoiceChatTime": [
+        "int",
+        "语音时长（单位 s）"
+      ],
+      "DropInterfaceLimit": [
+        "int",
+        "界面跳转层数限制。超过层数做拦截（包括弹窗）。从进入主界面开始计算"
+      ],
+      "DailyPlayEquipmentMaterialsCost": [
+        "int",
+        "非法收藏家消耗体力值"
+      ],
+      "DailyPlayEquipmentMaterialsTimes": [
+        "int",
+        "非法收藏家每天可挑战次数"
+      ],
+      "EquipmentMaterialsChallengeCountdown": [
+        "int",
+        "挑战倒计时"
+      ],
+      "EquipmentMaterialsChallengeStartCountdown": [
+        "int",
+        "挑战开始前倒计时"
+      ],
+      "DailyPlayContractMaterialsCost": [
+        "int",
+        "光明邮政总部消耗体力值"
+      ],
+      "DailyPlayContractMaterialsTimes": [
+        "int",
+        "光明邮政总部每天可挑战次数"
+      ],
+      "ContractMaterialsChallengeCountdown": [
+        "int",
+        "挑战倒计时"
+      ],
+      "ContractMaterialsChallengeStartCountdown": [
+        "int",
+        "挑战开始前倒计时"
+      ],
+      "TestEmailToSb": [
+        "int",
+        "测试发信，填写收件人id（测试完后删除）"
+      ],
+      "LeafFallInterval": [
+        "int",
+        "树叶飘落间隔时间（单位:毫秒）"
+      ],
+      "LeafFallTime": [
+        "int",
+        "树叶飘落1次消耗的时间（单位：毫秒）"
+      ],
+      "MonthCardRebuyTime": [
+        "int",
+        "月卡续费时间（到期前N天可购买）（单位：天）"
+      ],
+      "MonthCardEffectTimes": [
+        [
+          "int"
+        ],
+        "buff卡，普通月卡，豪华月卡生效天数（单位：天），仅供客户端显示用"
+      ],
+      "DailyBonusCycleId": [
+        "int",
+        "每日签到从哪个id开始循环（注：配置7的倍数+1）"
+      ],
+      "GuideCondition": [
+        "int",
+        "新手开启或关闭（0=关闭 1=开启）"
+      ],
+      "GuideSkipResultRoomId": [
+        "int",
+        "新手跳过结算的房间id"
+      ],
+      "EquipmentDecomposeGoldReturns": [
+        [
+          {
+            "Rarity": [
+              "int"
+            ],
+            "Count": [
+              "int"
+            ]
+          }
+        ],
+        "未强化的装备品质返还金币"
+      ],
+      "EquipmentDecomposeMaterialReturns": [
+        [
+          {
+            "Rarity": [
+              "int"
+            ],
+            "Id": [
+              "int"
+            ],
+            "Count": [
+              "int"
+            ]
+          }
+        ],
+        "品质返还材料和数量"
+      ],
+      "EquipmentDecomposeReturnCoefficients": [
+        [
+          "double"
+        ],
+        "不同品质装备在拆解后的返还系数"
+      ],
+      "EquipmentDecomposeMax": [
+        "int",
+        "单次同时拆解装备的上限数量"
+      ],
+      "BuyEnergy": [
+        "int",
+        "每日购买体力次数"
+      ],
+      "BuyCrossPerson": [
+        "int",
+        "每日购买天梯次数"
+      ],
+      "TreasureShopRefresh": [
+        "int",
+        "每日珍奇市场刷新次数"
+      ],
+      "LadderShopRefresh": [
+        "int",
+        "每日竞技商店可刷新次数"
+      ],
+      "GuildShopRefresh": [
+        "int",
+        "每日公会商店可刷新次数"
+      ],
+      "PointShopRefresh": [
+        "int",
+        "每日魔法工坊可刷新次数"
+      ],
+      "DecompositionShopRefresh": [
+        "int",
+        "每日魔骸商店可刷新次数"
+      ],
+      "DailyPlayGoldRefresh": [
+        "int",
+        "每日龙之宝库可购买挑战次数"
+      ],
+      "DailyPlayExpRefresh": [
+        "int",
+        "每日女巫甜点屋可购买次数"
+      ],
+      "DailyPlayEquipmentMaterialsRefresh": [
+        "int",
+        "每日非法收藏家可购买次数"
+      ],
+      "DailyPlayContractMaterialsRefresh": [
+        "int",
+        "每日光明邮政总部可购买次数"
+      ],
+      "BossRushRefresh": [
+        "int",
+        "每日血月潮汐可购买次数"
+      ],
+      "BuildingNpcAppearLevel": [
+        "int",
+        "当玩家队伍达到指定等级后，有几率触发npc。"
+      ],
+      "BuildingNpcAppearRate": [
+        "int",
+        "npc触发概率（万分比）"
+      ],
+      "BuildingNpcAppearDailyTimes": [
+        "int",
+        "每天最多会触发n次npc入场，每日0点刷新。"
+      ],
+      "BuildingNpcStayTimes": [
+        "int",
+        "板娘出现后停留时间（单位：分钟）"
+      ],
+      "ShowHeroPreviewStars": [
+        [
+          "int"
+        ],
+        "自继承形象预览读取魔物星级"
+      ],
+      "ActivityDailySignNpc": [
+        "int",
+        "每日签到活动默认npc形象"
+      ],
+      "StarRisingUnlocks": [
+        [
+          {
+            "Star": [
+              "int"
+            ],
+            "Type": [
+              "int"
+            ]
+          }
+        ],
+        "魔物星级解锁对应系统（Type1绝技2必杀3天赋4进阶5新形象6契约）"
+      ],
+      "DailyPlayEntryShowLists": [
+        [
+          "int"
+        ],
+        "1=龙之宝库（对应关卡类型2）  2=女巫甜点屋（关卡类型3）3=非法收藏家（关卡类型4） 4=光明邮政总局（关卡类型5）"
+      ],
+      "HangUpTimeLimit": [
+        "int",
+        "挂机时间上限（单位：小时），大于配置值时，将不继续产收益。"
+      ],
+      "HangUpRewardAnimations": [
+        [
+          "int"
+        ],
+        "不同个挂机时间播放不同动画，一共4种(单位：秒）"
+      ],
+      "HangUpKillEnemyCount": [
+        "int",
+        "挂机敌方单个怪物受击n次死亡"
+      ],
+      "HeroLevelUpgradeGoldCost": [
+        "int",
+        "英雄升级金币消耗"
+      ],
+      "DuplicateNextButtonUnlock": [
+        "int",
+        "关卡类型为1的战斗，当通关指定关卡后，出现【下一关】按钮"
+      ],
+      "PvpDuplicateId": [
+        "int",
+        "荣耀竞技场调用的关卡id"
+      ],
+      "HomePageActivityImageRollingInterval": [
+        "int",
+        "主界面广告图滚动间隔时间（单位：秒）"
+      ],
+      "ChildForbidTime": [
+        "string",
+        "未成年人禁止游戏时间段"
+      ],
+      "ChildPlayTime": [
+        {
+          "NormalLimit": [
+            "int"
+          ],
+          "HolidayLimit": [
+            "int"
+          ]
+        },
+        "未成年人的游戏时间限制，工作日90分钟，节假日180分钟，配置单位均为分钟"
+      ],
+      "HeroResetCost": [
+        "int",
+        "英雄重置的费用"
+      ],
+      "HeoResetMinLevel": [
+        "int",
+        "英雄重置的最小等级，用于列表里显示的等级"
+      ],
+      "CreateGuildCost": [
+        "int",
+        "创建公会消耗钻石"
+      ],
+      "AddGuildTime": [
+        "int",
+        "离开公会多长时间不可以加入（单位：秒）"
+      ],
+      "GuildNameLimit": [
+        "int",
+        "公会名称限制汉字数量"
+      ],
+      "GuildJoinMaxCount": [
+        "int",
+        "最多同时申请几个公会"
+      ],
+      "GuildApplyListCount": [
+        "int",
+        "公会申请列表最大人数"
+      ],
+      "GuildVicePresidentCount": [
+        "int",
+        "副会长人数"
+      ],
+      "GuildUserCount": [
+        "int",
+        "成员人数"
+      ],
+      "GuildAllUserCount": [
+        "int",
+        "公会总人数"
+      ],
+      "GuildAnnouncementCount": [
+        "int",
+        "公会公告字符长度（汉字）"
+      ],
+      "GuildAssistanceHeroCount": [
+        "int",
+        "公会援助英雄数量(最多出借4个，不然UI放不下）"
+      ],
+      "GuildIcons": [
+        [
+          "string"
+        ],
+        "公会图标（最多配置12个）"
+      ],
+      "GuildSeekHelpNum": [
+        "int",
+        "公会援助请求次数（每日00：00刷新）"
+      ],
+      "TavernTaskBrisk": [
+        "int",
+        "酒馆任务给工会增加活跃度"
+      ],
+      "GveMapBattleCount": [
+        "int",
+        "工会副本每天每个委托可挑战次数"
+      ],
+      "GveDuplicateCardElementCounts": [
+        [
+          "int"
+        ],
+        "公会副本玩家牌库地、水、火、风各元素卡牌数量（总和四元素相加总数）"
+      ],
+      "GveDuplicateHandCard": [
+        "int",
+        "公会副本玩家每回合补充手牌的最大数量"
+      ],
+      "GveDuplicateRoundTime": [
+        "int",
+        "公会副本回合准备时间"
+      ],
+      "GveDuplicateWinDeleteCardCount": [
+        "int",
+        "公会副本胜利移除卡牌数量"
+      ],
+      "GveDuplicateLoseDeleteCardCount": [
+        "int",
+        "公会副本失败移除卡牌数量"
+      ],
+      "GveDuplicateOverCardCount": [
+        "int",
+        "公会副本结束判定任意一方移除卡排数量大于等于该值"
+      ],
+      "GveDuplicateBossLossHpCount": [
+        "int",
+        "公会副本每张牌扣除BOSS血量系数"
+      ],
+      "GveDuplicateRewardGold": [
+        "int",
+        "公会副本对BOSS每造成1点伤害获得金币系数"
+      ]
+    }
+  },
+  {
+    "export_file": "F:\\Personal\\Important\\JustDoIt\\Tools\\ExportTools\\Export\\client\\BattleParamTemplate.json",
+    "root": "BattleParamTemplate",
+    "item": "BattleParam",
+    "schema": {
+      "BattleStartWaitTime": [
+        "int",
+        "战斗开始的等待时间"
+      ],
+      "BattleMapSizes": [
+        [
+          "int"
+        ],
+        "战斗场景的大小，第一项为宽，第二项为高(坐标原点为左下角)"
+      ],
+      "DodgeEffectLimit": [
+        {
+          "Max": [
+            "int"
+          ],
+          "Min": [
+            "int"
+          ]
+        },
+        "闪避上下限"
+      ],
+      "CritEffectLimit": [
+        {
+          "Max": [
+            "int"
+          ],
+          "Min": [
+            "int"
+          ]
+        },
+        "暴击上下限"
+      ],
+      "CritDamEffectLimit": [
+        {
+          "Max": [
+            "int"
+          ],
+          "Min": [
+            "int"
+          ]
+        },
+        "暴击伤害上下限"
+      ],
+      "DefenseRateEffectLimit": [
+        {
+          "Max": [
+            "int"
+          ],
+          "Min": [
+            "int"
+          ]
+        },
+        "伤害抗性上下限"
+      ],
+      "DamageReduceLimit": [
+        "int",
+        "伤害减免上限"
+      ],
+      "CoolDownLimit": [
+        {
+          "Max": [
+            "int"
+          ],
+          "Min": [
+            "int"
+          ]
+        },
+        "攻击速度上下限"
+      ],
+      "ElementEffectLimit": [
+        {
+          "Max": [
+            "double"
+          ],
+          "Min": [
+            "double"
+          ]
+        },
+        "克制强度上下限"
+      ],
+      "ElementAttackBase": [
+        "double",
+        "攻击基础克制强度"
+      ],
+      "ElementDefenseBase": [
+        "double",
+        "防御基础克制强度"
+      ],
+      "ElementEffectBase": [
+        "int",
+        "默认克制强度"
+      ],
+      "DamageCorrectionRange": [
+        {
+          "Max": [
+            "int"
+          ],
+          "Min": [
+            "int"
+          ]
+        },
+        "伤害随机范围"
+      ],
+      "DodgeCorrection": [
+        "double",
+        "闪避修正系数"
+      ],
+      "CritCorrection": [
+        "double",
+        "暴击修正系数"
+      ],
+      "BlckEffect": [
+        "int",
+        "格档效果"
+      ],
+      "BlockEffectLimit": [
+        {
+          "Max": [
+            "int"
+          ],
+          "Min": [
+            "int"
+          ]
+        },
+        "格挡率上下限"
+      ],
+      "HeroMaxEnergyValue": [
+        "int",
+        "英雄能量值上限"
+      ],
+      "HeroMaxEnergyNum": [
+        "int",
+        "英雄能量技累计次数上限"
+      ],
+      "LordMaxEnergy": [
+        "int",
+        "小姐姐能量上限"
+      ],
+      "MaxAttackSpeed": [
+        "double",
+        "最大攻击速度缩放比例。"
+      ],
+      "HeroSkillCount": [
+        "int",
+        "英雄技能存储上限"
+      ],
+      "MonsterWalkModeTime": [
+        "int",
+        "怪物行走入场时间(毫秒）"
+      ],
+      "MonsterDropModeTime": [
+        "int",
+        "怪物掉落入场时间(毫秒）"
+      ],
+      "BattleMapGrid": [
+        {
+          "X": [
+            "int"
+          ],
+          "Y": [
+            "int"
+          ]
+        },
+        "战场格子数量，第一项为宽，第二项为高(坐标原点为左上角)"
+      ],
+      "GridSize": [
+        "int",
+        "格子尺寸，正方体直径"
+      ],
+      "LordGrid": [
+        "int",
+        "小姐姐坐标"
+      ],
+      "SkillMoveTime": [
+        "int",
+        "必杀位移时间（毫秒）"
+      ],
+      "SkillFlashTime": [
+        "int",
+        "必杀叮特效时间（毫秒）"
+      ],
+      "MonsterDropRange": [
+        "int",
+        "击杀魔物后掉落物掉落范围（以魔物的站立坐标为圆心）"
+      ],
+      "OffsetDistance": [
+        "int",
+        "掉落物反向偏移距离量"
+      ],
+      "DropItemStayTime": [
+        "int",
+        "掉落物品停留显示时间，单位是毫秒"
+      ],
+      "BannerStayMaxtime": [
+        "int",
+        "获取记录面板停留最大时间，单位是毫秒"
+      ],
+      "LordMoveSpeed": [
+        "int",
+        "小姐姐移动速度"
+      ],
+      "DropItemRange": [
+        "int",
+        "物品掉落范围，半径"
+      ],
+      "MaxRoom": [
+        "int",
+        "副本每列最大房间数"
+      ],
+      "LordHealthFactor": [
+        "int",
+        "每一点领主生命值，回复英雄的百分比生命值。此值为万分比。"
+      ],
+      "RuneRefreshPrices": [
+        [
+          "int"
+        ],
+        "RL中炼成阵刷新消耗规则"
+      ],
+      "HeroMaxRuneCount": [
+        "int",
+        "英雄最多可携带的符文数量"
+      ],
+      "MaxSoulStampDemand": [
+        "int",
+        "最大炼成所需魂印数"
+      ],
+      "SoulStampDemandFactor": [
+        "double",
+        "炼成阵所需魂印数量，总等级*该系数，向下取整，即为每次炼成所需的魂印数"
+      ],
+      "BagCapacity": [
+        "int",
+        "战斗中，装备背包和魂印背包的数量上限。"
+      ],
+      "ResolveFactor": [
+        "int",
+        "战斗中，分解装备获得的魔魂。(万分比，向下取整)"
+      ],
+      "SkillFadeOutTime": [
+        "int",
+        "战斗中，释放必杀技后，淡出的时间，单位毫秒"
+      ],
+      "PvpEnemyLordGrid": [
+        "int",
+        "对手小姐姐坐标"
+      ],
+      "PvpSceneBuffs": [
+        [
+          "int"
+        ],
+        "PVP战斗全场增强Buff，需填入BuffId"
+      ],
+      "PvpFirstHandWaiting": [
+        "int",
+        "先手技能等待时间，单位是秒"
+      ],
+      "PvpSecondHandWaiting": [
+        "int",
+        "后手技能等待时间，单位是秒"
+      ],
+      "PvpStartCountDown": [
+        "int",
+        "竞技战斗开始前倒计时，单位是秒"
+      ],
+      "PvpOverCountDown": [
+        "int",
+        "竞技战斗结束前倒计时，单位是秒"
+      ],
+      "SoulInterest": [
+        {
+          "Factor": [
+            "int"
+          ],
+          "MaxCount": [
+            "int"
+          ]
+        },
+        "每轮魔魂的利息，当前魔魂多少，乘以万分比（向下取整），第二个数是最大值"
+      ],
+      "BattleHeroDieValue": [
+        "int",
+        "战斗最多死亡人数（含）"
+      ],
+      "BattleMaxTimeValue": [
+        "int",
+        "战斗最大时间（含）"
+      ],
+      "BattleJumpTime": [
+        "int",
+        "战斗移动跳跃时间（毫秒）"
+      ],
+      "ProfessionUpgradeCount": [
+        "int",
+        "一个上古残页房间，同时展示的商品数量。"
+      ],
+      "HandCardLimit": [
+        "int",
+        "玩家战斗中手牌上限"
+      ],
+      "ForgetCosts": [
+        [
+          "int"
+        ],
+        "遗忘操作消耗"
+      ],
+      "PrayCosts": [
+        [
+          "int"
+        ],
+        "祈祷操作消耗"
+      ],
+      "CardLevelUpNeedNum": [
+        "int",
+        "X张同卡升级为1张高级卡，“X”"
+      ],
+      "CardUseToDrawUnique": [
+        "int",
+        "每使用5张基础卡，抽1张必杀卡（暂时屏蔽）"
+      ],
+      "OriginalHandCardLimit": [
+        "int",
+        "玩家战斗中初始手牌上限"
+      ],
+      "UniqueSkillCardLimitCountOT": [
+        "int",
+        "每轮发牌必杀卡数量上限"
+      ],
+      "DropCoefficientInEliteRoom": [
+        "int",
+        "精英房掉落翻倍系数（对应战斗地图配置表的MonsterValueBase的掉落字段）"
+      ],
+      "DropCoefficientInBossRoom": [
+        "int",
+        "BOSS房掉落翻倍系数（对应战斗地图配置表的MonsterValueBase的掉落字段）"
+      ],
+      "HeroRebornTime": [
+        "int",
+        "英雄死亡后，复活的时间，单位毫秒，用于在多层模式中"
+      ],
+      "HeroRebornHpCostFactor": [
+        "int",
+        "英雄死亡后，复活需要消耗的领主血量系数(仅限于迷宫中)，最终扣血量=英雄星级*该系数"
+      ],
+      "OriginalHandCardNum": [
+        "int",
+        "玩家战斗中初始发牌数量（受HandCardLimit限制）"
+      ],
+      "ChallengeFirstHandChance": [
+        "int",
+        "挑战者先手概率（万分比）"
+      ],
+      "PvpChallengeTime": [
+        "int",
+        "天梯对战总时长"
+      ],
+      "FirstHandEnergyCardCount": [
+        "int",
+        "天梯先手首次发牌必杀卡牌数量"
+      ],
+      "SecondtHandEnergyCardCount": [
+        "int",
+        "天梯后手首次发牌必杀卡牌数量"
+      ],
+      "PvpFirstHandTime": [
+        "int",
+        "先手等待出手时间（毫秒）"
+      ],
+      "PvpSecondHandTime": [
+        "int",
+        "后手等待出手时间（毫秒）"
+      ],
+      "LordCardSpacing": [
+        "int",
+        "领主卡牌使用间隔时间（毫秒）"
+      ],
+      "EnergyCardCheckUp": [
+        "int",
+        "必杀卡牌检查使用间隔（毫秒）"
+      ],
+      "PvpOriginalHandCardNum": [
+        "int",
+        "PVP战斗玩家战斗中初始发牌数量（受HandCardLimit限制）"
+      ],
+      "BattleSpeedUpRates": [
+        [
+          "double"
+        ],
+        "所有战斗2倍速按钮实际读取值"
+      ],
+      "HangUpIntervalTime": [
+        "int",
+        "挂机流程间隔时间"
+      ],
+      "NextWaveAppearInterval": [
+        "int",
+        "上一批次的怪物全部击杀完后，下一批次的怪物出现的时间间隔，单位(毫秒)"
+      ],
+      "Dice": [
+        {
+          "DiceCount": [
+            "int"
+          ],
+          "DiceValue": [
+            "int"
+          ]
+        },
+        "迷宫中玩家可选骰子数量的上限及迷宫中玩家骰子最大的面数"
+      ],
+      "RemainsCompoundOriginalCount": [
+        "int",
+        "迷宫中玩家可合成遗物的初始次数"
+      ],
+      "MazeValueFactor": [
+        {
+          "AtkRate": [
+            "double"
+          ],
+          "Factor": [
+            "int"
+          ]
+        },
+        "迷宫动态难度的函数系数，AtkRate为攻击力计算时的倍速，Factor为计算函数中用的参数"
+      ],
+      "BattleDashTime": [
+        "int",
+        "近战战斗冲刺时间（Dash）"
+      ],
+      "BattleDashBackTime": [
+        "int",
+        "近战战斗冲刺返回时间（DashBack）"
+      ],
+      "BattleRoundSafeTime": [
+        "int",
+        "如果有击飞和击倒 留出的安全表现时间"
+      ],
+      "BattleWaitNextTime": [
+        "int",
+        "下个不是友军（如果不是友军，需要等待当年动作执行完毕），行动前，需要等待一个比较短暂的时间，该时间在全局配置表配置。作用为让摄像机回调到一个位置。"
+      ],
+      "BattleRoundTime": [
+        "int",
+        "行为重新开始等待时间"
+      ],
+      "BattleHitFlyForce": [
+        "int",
+        "击飞力"
+      ],
+      "BattleHitDownForce": [
+        "int",
+        "击倒力"
+      ],
+      "BattleHitFlyMaxHeight": [
+        "int",
+        "击飞最大高度"
+      ],
+      "BattleGravity": [
+        "int",
+        "击飞下降重力"
+      ],
+      "BattleFlyUpGravity": [
+        "int",
+        "击飞上行重力"
+      ],
+      "BattleNearTopGravity": [
+        "int",
+        "速度趋近顶部重力"
+      ],
+      "BattleNearTopSpeed": [
+        "int",
+        "速衰接近顶部速度判定"
+      ]
+    }
+  },
+  {
+    "export_file": "F:\\Personal\\Important\\JustDoIt\\Tools\\ExportTools\\Export\\client\\DailyTasksTemplate.json",
+    "root": "DailyTasksTemplate",
+    "item": "DailyTask",
+    "schema": {
+      "Id": [
+        "int",
+        "任务ID"
+      ],
+      "Kind": [
+        "int",
+        "任务种类"
+      ],
+      "LevelRange": [
+        {
+          "Min": [
+            "int"
+          ],
+          "Max": [
+            "int"
+          ]
+        },
+        "酒馆等级区间"
+      ],
+      "Quality": [
+        "int",
+        "任务品质"
+      ],
+      "Level": [
+        "int",
+        "需求玩家等级"
+      ],
+      "ShowProgress": [
+        "int",
+        "进度显示"
+      ],
+      "AccessId": [
+        "int",
+        "跳转"
+      ],
+      "TaskInfo": [
+        {
+          "Type": [
+            "int"
+          ],
+          "Param1": [
+            "int"
+          ],
+          "Param2": [
+            "int"
+          ],
+          "Param3": [
+            "int"
+          ]
+        },
+        "任务信息"
+      ],
+      "Rewards": [
+        [
+          {
+            "Type": [
+              "int"
+            ],
+            "Id": [
+              "int"
+            ],
+            "Count": [
+              "int"
+            ],
+            "Param1": [
+              "int"
+            ]
+          }
+        ],
+        "任务奖励"
+      ],
+      "ShowRewards": [
+        [
+          {
+            "Type": [
+              "int"
+            ],
+            "Id": [
+              "int"
+            ],
+            "Count": [
+              "int"
+            ]
+          }
+        ],
+        "奖励展示"
+      ]
+    }
+  },
+  {
+    "export_file": "F:\\Personal\\Important\\JustDoIt\\Tools\\ExportTools\\Export\\client\\EventTasksTemplate.json",
+    "root": "EventTasksTemplate",
+    "item": "EventTask",
+    "schema": {
+      "Id": [
+        "int",
+        "任务ID"
+      ],
+      "ShowProgress": [
+        "int",
+        "进度显示"
+      ],
+      "AccessId": [
+        {
+          "Id": [
+            "int"
+          ],
+          "Param1": [
+            "int"
+          ]
+        },
+        "跳转"
+      ],
+      "TaskInfo": [
+        {
+          "Type": [
+            "int"
+          ],
+          "Param1": [
+            "int"
+          ],
+          "Param2": [
+            "int"
+          ],
+          "Param3": [
+            "int"
+          ]
+        },
+        "任务信息"
+      ],
+      "BindEventIds": [
+        [
+          "int"
+        ],
+        "任务绑定的事件"
+      ],
+      "NextTask": [
+        "int",
+        "下一个任务"
+      ],
+      "Rewards": [
+        [
+          {
+            "Type": [
+              "int"
+            ],
+            "Id": [
+              "int"
+            ],
+            "Count": [
+              "int"
+            ],
+            "Param1": [
+              "int"
+            ]
+          }
+        ],
+        "任务奖励"
+      ]
+    }
+  }
+]

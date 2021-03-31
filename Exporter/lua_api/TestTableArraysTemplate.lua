@@ -1,0 +1,7 @@
+---@class TestTableArraysTemplate 
+---@field  Id int32 @英雄ID 
+---@field  Weapons int32[] @武器(武器Id) 
+---@field  Model string @切片 
+---@field  Icon string @Icon 
+---@field  MachineType string @机体类型 
+---@field  MapType string @地形适应 

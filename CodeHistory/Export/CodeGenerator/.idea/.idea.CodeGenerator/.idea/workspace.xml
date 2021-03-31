@@ -1,0 +1,200 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="BranchesTreeState">
+    <expand>
+      <path>
+        <item name="ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="LOCAL_ROOT" type="e8cecc67:BranchNodeDescriptor" />
+      </path>
+      <path>
+        <item name="ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="REMOTE_ROOT" type="e8cecc67:BranchNodeDescriptor" />
+      </path>
+      <path>
+        <item name="ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="REMOTE_ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="GROUP_NODE:origin" type="e8cecc67:BranchNodeDescriptor" />
+      </path>
+    </expand>
+    <select />
+  </component>
+  <component name="ChangeListManager">
+    <list default="true" id="9af6a374-d99f-423b-b806-001c3450e606" name="Default Changelist" comment="" />
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/../../.." />
+  </component>
+  <component name="GitToolBoxStore">
+    <option name="projectConfigVersion" value="2" />
+  </component>
+  <component name="HighlightingSettingsPerFile">
+    <setting file="file://$PROJECT_DIR$/export_config.json" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Core/code_dom.json" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Program.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Core/CodeBuilder.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/code_dom.json" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Core/Utility.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Core/export_config.json" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Core/APINote/CodeUnitCreator.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Core/CodeUnitBuilder.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Core/LoadUtility/GeneratorUtility.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Core/APINote/CodeWorker.cs" root0="FORCE_HIGHLIGHTING" />
+  </component>
+  <component name="IdeDocumentHistory">
+    <option name="CHANGED_PATHS">
+      <list>
+        <option value="$PROJECT_DIR$/Core/CodeWorkd.cs" />
+        <option value="$PROJECT_DIR$/Core/CodeWorker.cs" />
+        <option value="$PROJECT_DIR$/Core/CodeUnitCreator.cs" />
+        <option value="$PROJECT_DIR$/schemaclient.json" />
+        <option value="$PROJECT_DIR$/WeaponTemplate.json" />
+        <option value="$PROJECT_DIR$/Test.json" />
+        <option value="$PROJECT_DIR$/Core/CodeConst.cs" />
+        <option value="$PROJECT_DIR$/Core/client/GlobalTemplate.cs" />
+        <option value="$PROJECT_DIR$/Core/client/BuffsTemplate.cs" />
+        <option value="$PROJECT_DIR$/Core/client/BattleParamTemplate.cs" />
+        <option value="$PROJECT_DIR$/Core/APINote/CodeUnitCreator.cs" />
+        <option value="$PROJECT_DIR$/Core/APINote/CodeWorker.cs" />
+        <option value="$PROJECT_DIR$/Example/Program.cs" />
+        <option value="$PROJECT_DIR$/client/BuffsTemplate.cs" />
+        <option value="$PROJECT_DIR$/Core/LoadUtility/JsonLoader.cs" />
+        <option value="$PROJECT_DIR$/Core/Utility.cs" />
+        <option value="$PROJECT_DIR$/Core/CodeBuilder.cs" />
+        <option value="$PROJECT_DIR$/Core/CodeUnitBuilder.cs" />
+        <option value="$PROJECT_DIR$/client/Template/BattleParamTemplate.cs" />
+        <option value="$PROJECT_DIR$/Core/LoadUtility/GeneratorUtility.cs" />
+        <option value="$PROJECT_DIR$/Program.cs" />
+      </list>
+    </option>
+  </component>
+  <component name="ProjectId" id="1hzdIJE69awoKzExl4HUjwn4Hee" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true">
+    <ConfirmationsSetting value="2" id="Add" />
+  </component>
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent">
+    <property name="ASKED_ADD_EXTERNAL_FILES" value="true" />
+    <property name="DebuggerViewTab_PTCS_FirstProportionKey" value="0.34991798" />
+    <property name="DebuggerViewTab_PTCS_LastProportionKey" value="0.300164" />
+    <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
+    <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
+    <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
+    <property name="TWShift.4" value="true" />
+    <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="settings.editor.selected.configurable" value="project.propVCSSupport.Mappings" />
+  </component>
+  <component name="RunManager" selected=".NET Project.CodeGenerator">
+    <configuration name="Publish CodeGenerator to folder" type="DotNetFolderPublish" factoryName="Publish to folder" temporary="true">
+      <riderPublish uuid_high="7387303056943958799" uuid_low="-6671399365051384672" />
+      <method v="2" />
+    </configuration>
+    <configuration name="CodeGenerator" type="DotNetProject" factoryName=".NET Project">
+      <option name="EXE_PATH" value="" />
+      <option name="PROGRAM_PARAMETERS" value="" />
+      <option name="WORKING_DIRECTORY" value="" />
+      <option name="PASS_PARENT_ENVS" value="1" />
+      <option name="USE_EXTERNAL_CONSOLE" value="0" />
+      <option name="USE_MONO" value="0" />
+      <option name="RUNTIME_ARGUMENTS" value="" />
+      <option name="PROJECT_PATH" value="$PROJECT_DIR$/CodeGenerator.csproj" />
+      <option name="PROJECT_EXE_PATH_TRACKING" value="1" />
+      <option name="PROJECT_ARGUMENTS_TRACKING" value="1" />
+      <option name="PROJECT_WORKING_DIRECTORY_TRACKING" value="1" />
+      <option name="PROJECT_KIND" value="DotNetCore" />
+      <option name="PROJECT_TFM" value="" />
+      <method v="2">
+        <option name="Build" />
+      </method>
+    </configuration>
+    <recent_temporary>
+      <list>
+        <item itemvalue="Publish to folder.Publish CodeGenerator to folder" />
+      </list>
+    </recent_temporary>
+  </component>
+  <component name="SvnConfiguration">
+    <configuration />
+  </component>
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="9af6a374-d99f-423b-b806-001c3450e606" name="Default Changelist" comment="" />
+      <created>1601017778610</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1601017778610</updated>
+      <workItem from="1601017783635" duration="418000" />
+      <workItem from="1601018317359" duration="10763000" />
+      <workItem from="1601177000933" duration="765000" />
+      <workItem from="1602483930684" duration="37199000" />
+      <workItem from="1602645709934" duration="14232000" />
+      <workItem from="1602690722928" duration="2176000" />
+      <workItem from="1602746029551" duration="7363000" />
+      <workItem from="1603266328158" duration="4542000" />
+      <workItem from="1603449570554" duration="5528000" />
+      <workItem from="1603765895525" duration="6082000" />
+      <workItem from="1603779326371" duration="724000" />
+      <workItem from="1603780581333" duration="2799000" />
+      <workItem from="1603785058342" duration="3727000" />
+      <workItem from="1603789413183" duration="11615000" />
+      <workItem from="1605515366450" duration="5731000" />
+      <workItem from="1605522037042" duration="297000" />
+      <workItem from="1605522363387" duration="5210000" />
+      <workItem from="1605598919207" duration="697000" />
+      <workItem from="1605616568197" duration="2420000" />
+      <workItem from="1605670803496" duration="5684000" />
+      <workItem from="1605757863847" duration="7037000" />
+      <workItem from="1605863402965" duration="301000" />
+      <workItem from="1616148825631" duration="30000" />
+    </task>
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="1" />
+  </component>
+  <component name="UnityProjectConfiguration" hasMinimizedUI="false" />
+  <component name="UnityUnitTestConfiguration" currentTestLauncher="NUnit" />
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State />
+          </value>
+        </entry>
+      </map>
+    </option>
+    <option name="oldMeFiltersMigrated" value="true" />
+  </component>
+  <component name="VcsManagerConfiguration">
+    <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
+    <ignored-roots>
+      <path value="$PROJECT_DIR$/../../.." />
+    </ignored-roots>
+    <option name="CLEAR_INITIAL_COMMIT_MESSAGE" value="true" />
+  </component>
+  <component name="WindowStateProjectService">
+    <state width="1860" height="189" key="GridCell.Tab.0.bottom" timestamp="1616148855581">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state width="1860" height="189" key="GridCell.Tab.0.bottom/1920.0.1920.1040/0.0.1920.1040@0.0.1920.1040" timestamp="1616148855581" />
+    <state width="1860" height="189" key="GridCell.Tab.0.center" timestamp="1616148855580">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state width="1860" height="189" key="GridCell.Tab.0.center/1920.0.1920.1040/0.0.1920.1040@0.0.1920.1040" timestamp="1616148855580" />
+    <state width="1860" height="189" key="GridCell.Tab.0.left" timestamp="1616148855579">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state width="1860" height="189" key="GridCell.Tab.0.left/1920.0.1920.1040/0.0.1920.1040@0.0.1920.1040" timestamp="1616148855579" />
+    <state width="1860" height="189" key="GridCell.Tab.0.right" timestamp="1616148855580">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state width="1860" height="189" key="GridCell.Tab.0.right/1920.0.1920.1040/0.0.1920.1040@0.0.1920.1040" timestamp="1616148855580" />
+  </component>
+</project>

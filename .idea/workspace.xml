@@ -1,0 +1,184 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="BranchesTreeState">
+    <expand>
+      <path>
+        <item name="ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="LOCAL_ROOT" type="e8cecc67:BranchNodeDescriptor" />
+      </path>
+      <path>
+        <item name="ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="REMOTE_ROOT" type="e8cecc67:BranchNodeDescriptor" />
+      </path>
+      <path>
+        <item name="ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="REMOTE_ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="GROUP_NODE:origin" type="e8cecc67:BranchNodeDescriptor" />
+      </path>
+    </expand>
+    <select />
+  </component>
+  <component name="ChangeListManager">
+    <list default="true" id="3d63954a-a010-468c-b1c7-b116a467866e" name="Default Changelist" comment="上传部分readme">
+      <change beforePath="$PROJECT_DIR$/Exporter/export.py" beforeDir="false" afterPath="$PROJECT_DIR$/Exporter/export.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Exporter/out_csharp/TestGlobalTemplate.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Exporter/out_csharp/TestGlobalTemplate.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Exporter/out_json/TestGlobalTemplate.json" beforeDir="false" afterPath="$PROJECT_DIR$/Exporter/out_json/TestGlobalTemplate.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Exporter/out_lua/TestGlobalTemplate.lua" beforeDir="false" afterPath="$PROJECT_DIR$/Exporter/out_lua/TestGlobalTemplate.lua" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Exporter/out_protobuf/TestGlobalTemplate.bytes" beforeDir="false" afterPath="$PROJECT_DIR$/Exporter/out_protobuf/TestGlobalTemplate.bytes" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Exporter/out_python/protos/TestGlobalTemplate_pb2.py" beforeDir="false" afterPath="$PROJECT_DIR$/Exporter/out_python/protos/TestGlobalTemplate_pb2.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Exporter/protos/TestGlobalTemplate.proto" beforeDir="false" afterPath="$PROJECT_DIR$/Exporter/protos/TestGlobalTemplate.proto" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Exporter/tools/generator.py" beforeDir="false" afterPath="$PROJECT_DIR$/Exporter/tools/generator.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Exporter/配置表1.xlsx" beforeDir="false" afterPath="$PROJECT_DIR$/Exporter/配置表1.xlsx" afterDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="ProjectId" id="1n3DxpSqs8YuC0BGb81y9tD6P2v" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent">
+    <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
+    <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
+    <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/Exporter" />
+    <property name="settings.editor.selected.configurable" value="com.jetbrains.python.configuration.PyActiveSdkModuleConfigurable" />
+  </component>
+  <component name="RunManager">
+    <configuration name="generator" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
+      <module name="ExcelExport" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/Exporter" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/Exporter/export.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+      <option name="REDIRECT_INPUT" value="false" />
+      <option name="INPUT_FILE" value="" />
+      <method v="2" />
+    </configuration>
+    <recent_temporary>
+      <list>
+        <item itemvalue="Python.generator" />
+      </list>
+    </recent_temporary>
+  </component>
+  <component name="SvnConfiguration">
+    <configuration />
+  </component>
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="3d63954a-a010-468c-b1c7-b116a467866e" name="Default Changelist" comment="" />
+      <created>1610610129178</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1610610129178</updated>
+      <workItem from="1610610131595" duration="1538000" />
+      <workItem from="1610678106734" duration="501000" />
+      <workItem from="1610679229602" duration="86000" />
+      <workItem from="1611219728201" duration="186000" />
+      <workItem from="1611312301639" duration="21000" />
+      <workItem from="1614071460813" duration="1388000" />
+      <workItem from="1614932195800" duration="613000" />
+      <workItem from="1615798758781" duration="1116000" />
+      <workItem from="1615801541683" duration="172000" />
+      <workItem from="1615801733336" duration="9000" />
+      <workItem from="1615802951251" duration="3892000" />
+      <workItem from="1615880969902" duration="1283000" />
+      <workItem from="1616149018388" duration="261000" />
+      <workItem from="1616739183211" duration="19000" />
+      <workItem from="1617179434547" duration="16000" />
+      <workItem from="1617179478176" duration="8000" />
+    </task>
+    <task id="LOCAL-00001" summary="上传部分readme">
+      <created>1615806364798</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1615806364798</updated>
+    </task>
+    <option name="localTasksCounter" value="2" />
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="2" />
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State />
+          </value>
+        </entry>
+      </map>
+    </option>
+    <option name="oldMeFiltersMigrated" value="true" />
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="上传部分readme" />
+    <option name="LAST_COMMIT_MESSAGE" value="上传部分readme" />
+  </component>
+  <component name="WindowStateProjectService">
+    <state x="414" y="175" key="#com.intellij.execution.impl.EditConfigurationsDialog" timestamp="1611219868523">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state x="414" y="175" key="#com.intellij.execution.impl.EditConfigurationsDialog/1920.0.1920.1040/0.0.1920.1040@0.0.1920.1040" timestamp="1611219868523" />
+    <state x="656" y="111" key="#generator" timestamp="1611219832280">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state x="656" y="111" key="#generator/1920.0.1920.1040/0.0.1920.1040@0.0.1920.1040" timestamp="1611219832280" />
+    <state x="2659" y="274" key="FileChooserDialogImpl" timestamp="1617179482448">
+      <screen x="1920" y="0" width="1920" height="1040" />
+    </state>
+    <state x="739" y="274" key="FileChooserDialogImpl/1920.0.1920.1040/0.0.1920.1040@0.0.1920.1040" timestamp="1615801739329" />
+    <state x="2659" y="274" key="FileChooserDialogImpl/1920.0.1920.1040/0.0.1920.1040@1920.0.1920.1040" timestamp="1617179482448" />
+    <state width="1877" height="282" key="GridCell.Tab.0.bottom" timestamp="1615813054492">
+      <screen x="1920" y="0" width="1920" height="1040" />
+    </state>
+    <state width="1877" height="282" key="GridCell.Tab.0.bottom/1920.0.1920.1040/0.0.1920.1040@1920.0.1920.1040" timestamp="1615813054492" />
+    <state width="1877" height="282" key="GridCell.Tab.0.center" timestamp="1615813054492">
+      <screen x="1920" y="0" width="1920" height="1040" />
+    </state>
+    <state width="1877" height="282" key="GridCell.Tab.0.center/1920.0.1920.1040/0.0.1920.1040@1920.0.1920.1040" timestamp="1615813054492" />
+    <state width="1877" height="282" key="GridCell.Tab.0.left" timestamp="1615813054492">
+      <screen x="1920" y="0" width="1920" height="1040" />
+    </state>
+    <state width="1877" height="282" key="GridCell.Tab.0.left/1920.0.1920.1040/0.0.1920.1040@1920.0.1920.1040" timestamp="1615813054492" />
+    <state width="1877" height="282" key="GridCell.Tab.0.right" timestamp="1615813054492">
+      <screen x="1920" y="0" width="1920" height="1040" />
+    </state>
+    <state width="1877" height="282" key="GridCell.Tab.0.right/1920.0.1920.1040/0.0.1920.1040@1920.0.1920.1040" timestamp="1615813054492" />
+    <state x="461" y="164" key="SettingsEditor" timestamp="1615801688864">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state x="461" y="164" key="SettingsEditor/1920.0.1920.1040/0.0.1920.1040@0.0.1920.1040" timestamp="1615801688864" />
+    <state x="2472" y="253" key="Vcs.Push.Dialog.v2" timestamp="1615806374809">
+      <screen x="1920" y="0" width="1920" height="1040" />
+    </state>
+    <state x="2472" y="253" key="Vcs.Push.Dialog.v2/1920.0.1920.1040/0.0.1920.1040@1920.0.1920.1040" timestamp="1615806374809" />
+    <state x="657" y="307" key="git4idea.merge.GitPullDialog" timestamp="1615798767032">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state x="657" y="307" key="git4idea.merge.GitPullDialog/1920.0.1920.1040/0.0.1920.1040@0.0.1920.1040" timestamp="1615798767032" />
+  </component>
+  <component name="com.intellij.coverage.CoverageDataManagerImpl">
+    <SUITE FILE_PATH="coverage/ExcelExport$generator.coverage" NAME="generator Coverage Results" MODIFIED="1615804738875" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/Exporter" />
+  </component>
+</project>

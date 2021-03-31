@@ -1,0 +1,16 @@
+{
+  "version": 2,
+  "dgSpecHash": "vt6r0/gFp6R20tyu+JLgJhZSZNxQbhMUaA4oMM6vwwogzOjvmnfmc/OqIm6wGZriX6Kkg3z8V+jpQRBqOTt+IA==",
+  "success": true,
+  "projectFilePath": "F:\\MyGitHub\\ExcelExport\\CodeHistory\\Export\\CodeGenerator\\CodeGenerator.csproj",
+  "expectedPackageFiles": [
+    "C:\\Users\\lichenxi02\\.nuget\\packages\\google.protobuf\\3.14.0\\google.protobuf.3.14.0.nupkg.sha512",
+    "C:\\Users\\lichenxi02\\.nuget\\packages\\newtonsoft.json\\12.0.3\\newtonsoft.json.12.0.3.nupkg.sha512",
+    "C:\\Users\\lichenxi02\\.nuget\\packages\\protobuf-net\\3.0.62\\protobuf-net.3.0.62.nupkg.sha512",
+    "C:\\Users\\lichenxi02\\.nuget\\packages\\protobuf-net.core\\3.0.62\\protobuf-net.core.3.0.62.nupkg.sha512",
+    "C:\\Users\\lichenxi02\\.nuget\\packages\\system.codedom\\4.7.0\\system.codedom.4.7.0.nupkg.sha512",
+    "C:\\Users\\lichenxi02\\.nuget\\packages\\system.memory\\4.5.3\\system.memory.4.5.3.nupkg.sha512",
+    "C:\\Users\\lichenxi02\\.nuget\\packages\\system.runtime.compilerservices.unsafe\\4.5.2\\system.runtime.compilerservices.unsafe.4.5.2.nupkg.sha512"
+  ],
+  "logs": []
+}

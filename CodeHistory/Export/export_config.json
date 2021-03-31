@@ -1,0 +1,15 @@
+{
+  "files": [
+    "英雄属性配置表.xlsx",
+    "BUFF配置表.xlsx",
+    "全局配置表.xlsx",
+    "任务配置表.xlsx"
+  ],
+  "format": "lua",
+  "exportSign": "client",
+  "namespace": "Config",
+  "suffix": "Template",
+  "outFolder": "client",
+  "code_dom": "code_dom.json",
+  "export_config": "export_config.json"
+}

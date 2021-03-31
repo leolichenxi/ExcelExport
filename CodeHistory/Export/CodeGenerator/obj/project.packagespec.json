@@ -1,0 +1,65 @@
+﻿{
+  "version": "1.0.0",
+  "restore": {
+    "projectUniqueName": "F:\\MyGitHub\\ExcelExport\\CodeHistory\\Export\\CodeGenerator\\CodeGenerator.csproj",
+    "projectName": "CodeGenerator",
+    "projectPath": "F:\\MyGitHub\\ExcelExport\\CodeHistory\\Export\\CodeGenerator\\CodeGenerator.csproj",
+    "outputPath": "F:\\MyGitHub\\ExcelExport\\CodeHistory\\Export\\CodeGenerator\\obj\\",
+    "projectStyle": "PackageReference",
+    "originalTargetFrameworks": [
+      "netcoreapp3.1"
+    ],
+    "sources": {
+      "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+      "https://api.nuget.org/v3/index.json": {}
+    },
+    "frameworks": {
+      "netcoreapp3.1": {
+        "projectReferences": {}
+      }
+    },
+    "warningProperties": {
+      "warnAsError": [
+        "NU1605"
+      ]
+    }
+  },
+  "frameworks": {
+    "netcoreapp3.1": {
+      "dependencies": {
+        "Google.Protobuf": {
+          "target": "Package",
+          "version": "[3.14.0, )"
+        },
+        "Newtonsoft.Json": {
+          "target": "Package",
+          "version": "[12.0.3, )"
+        },
+        "System.CodeDom": {
+          "target": "Package",
+          "version": "[4.7.0, )"
+        },
+        "protobuf-net": {
+          "target": "Package",
+          "version": "[3.0.62, )"
+        }
+      },
+      "imports": [
+        "net461",
+        "net462",
+        "net47",
+        "net471",
+        "net472",
+        "net48"
+      ],
+      "assetTargetFallback": true,
+      "warn": true,
+      "frameworkReferences": {
+        "Microsoft.NETCore.App": {
+          "privateAssets": "all"
+        }
+      },
+      "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\3.1.300\\RuntimeIdentifierGraph.json"
+    }
+  }
+}

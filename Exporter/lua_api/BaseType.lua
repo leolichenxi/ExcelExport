@@ -1,0 +1,4 @@
+---@class int32 number
+---@class double number
+---@class float number
+---@class bool boolean

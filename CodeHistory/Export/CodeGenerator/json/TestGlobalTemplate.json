@@ -1,0 +1,14 @@
+{
+  "TestInt": 7,
+  "TestFloat": 6.5,
+  "TestDouble": 7.852,
+  "TestBool": 1,
+  "TestIntArrays": [
+    1,
+    2,
+    3,
+    4,
+    5,
+    6
+  ]
+}

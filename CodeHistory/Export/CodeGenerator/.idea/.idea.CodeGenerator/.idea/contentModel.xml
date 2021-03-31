@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ContentModelStore">
+    <e p="C:\Users\lichenxi02\AppData\Local\JetBrains\Rider2020.1\extResources" t="IncludeRecursive" />
+    <e p="C:\Users\lichenxi02\AppData\Local\JetBrains\Rider2020.1\resharper-host\Local\Transient\ReSharperHost\v201\SolutionCaches\_CodeGenerator.-889719923.00" t="ExcludeRecursive" />
+    <e p="F:\MyGitHub\ExcelExport\CodeHistory\Export\CodeGenerator" t="IncludeRecursive">
+      <e p="bin" t="ExcludeRecursive" />
+      <e p="code_dom.json" t="Include" />
+      <e p="CodeGenerator.csproj" t="IncludeRecursive" />
+      <e p="CodeGenerator.sln" t="IncludeFlat" />
+      <e p="Core" t="Include">
+        <e p="Addressbook.cs" t="Include" />
+        <e p="APINote" t="Include">
+          <e p="CodeUnitCreator.cs" t="Include" />
+          <e p="CodeWorker.cs" t="Include" />
+        </e>
+        <e p="code_dom.json" t="Include" />
+        <e p="CodeBuilder.cs" t="Include" />
+        <e p="CodeUnitBuilder.cs" t="Include" />
+        <e p="Config" t="Include">
+          <e p="BattleParam.byte" t="Include" />
+          <e p="BattleParam.cs" t="Include" />
+          <e p="BattleParam.json" t="Include" />
+          <e p="Buff.byte" t="Include" />
+          <e p="Buff.cs" t="Include" />
+          <e p="Buff.json" t="Include" />
+          <e p="DailyTask.byte" t="Include" />
+          <e p="DailyTask.cs" t="Include" />
+          <e p="DailyTask.json" t="Include" />
+          <e p="EventTask.byte" t="Include" />
+          <e p="EventTask.cs" t="Include" />
+          <e p="EventTask.json" t="Include" />
+          <e p="Global.byte" t="Include" />
+          <e p="Global.cs" t="Include" />
+          <e p="Global.json" t="Include" />
+          <e p="Position3Int.cs" t="Include" />
+        </e>
+        <e p="export_config.json" t="Include" />
+        <e p="LoadUtility" t="Include">
+          <e p="GeneratorUtility.cs" t="Include" />
+        </e>
+        <e p="Utility.cs" t="Include" />
+      </e>
+      <e p="export_config.json" t="Include" />
+      <e p="json" t="Include">
+        <e p="TestGlobal2Template.json" t="Include" />
+        <e p="TestGlobalTemplate.json" t="Include" />
+        <e p="TestTableArraysTemplate.json" t="Include" />
+      </e>
+      <e p="obj" t="ExcludeRecursive">
+        <e p="Debug" t="Include">
+          <e p="netcoreapp3.1" t="Include">
+            <e p="CodeGenerator.AssemblyInfo.cs" t="Include" />
+          </e>
+        </e>
+      </e>
+      <e p="out_csharp" t="Include">
+        <e p="Position3D.cs" t="Include" />
+        <e p="PositionArray3D.cs" t="Include" />
+        <e p="TestGlobal2Template.cs" t="Include" />
+        <e p="TestGlobalTemplate.cs" t="Include" />
+        <e p="TestTableArraysTemplate.cs" t="Include" />
+      </e>
+      <e p="packages" t="ExcludeRecursive" />
+      <e p="Program.cs" t="Include" />
+      <e p="protobuf" t="Include">
+        <e p="TestGlobal2Template.byte" t="Include" />
+        <e p="TestGlobalTemplate.byte" t="Include" />
+        <e p="TestTableArraysTemplate.byte" t="Include" />
+      </e>
+    </e>
+  </component>
+</project>
