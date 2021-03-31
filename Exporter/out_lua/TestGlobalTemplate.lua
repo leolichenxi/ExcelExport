@@ -1,10 +1,12 @@
-return {
+---@type TestGlobalTemplate
+local TestGlobalTemplate = {
   TestInt = 7,
   TestStringArrays = {
     "哈",
     "哈哈",
     "哈哈1"
   },
+  TestString1 = 1.1111111111111112e+131,
   TestString = "哈哈哈",
   TestFloat = 6.5,
   TestDouble = 7.852,
@@ -128,3 +130,4 @@ return {
     }
   }
 }
+return TestGlobalTemplate

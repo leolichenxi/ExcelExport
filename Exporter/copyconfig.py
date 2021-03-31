@@ -44,5 +44,5 @@ def copy(config_files, script_files, out_config_path, out_script_path):
     for k, v in script_files.items():
         copy_dir(os.getcwd() + '/' + v, out_script_path)
     # 拷贝配置文件
-    for file in config_files:
+    for k, file in config_files.items():
         copy_dir(os.getcwd() + '/' + file, out_config_path)

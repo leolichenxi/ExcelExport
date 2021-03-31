@@ -1,4 +1,5 @@
-return {
+---@type TestTableArraysTemplate[]
+local TestTableArraysTemplate = {
   TestTableArrays = {
     {
       Id = 1,
@@ -122,3 +123,4 @@ return {
     }
   }
 }
+return TestTableArraysTemplate

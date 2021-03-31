@@ -21,7 +21,7 @@ DESCRIPTOR = _descriptor.FileDescriptor(
   syntax='proto3',
   serialized_options=None,
   create_key=_descriptor._internal_create_key,
-  serialized_pb=b'\n\x1fprotos/TestGlobalTemplate.proto\x12\x06\x43onfig\x1a\x17protos/Position3d.proto\x1a\x1cprotos/PositionArray3d.proto\"\xc7\x06\n\x12TestGlobalTemplate\x12\x0f\n\x07TestInt\x18\x01 \x01(\x05\x12\x18\n\x10TestStringArrays\x18\x02 \x03(\t\x12\x12\n\nTestString\x18\x03 \x01(\t\x12\x11\n\tTestFloat\x18\x04 \x01(\x02\x12\x12\n\nTestDouble\x18\x05 \x01(\x01\x12\x10\n\x08TestBool\x18\x06 \x01(\x08\x12\x15\n\rTestIntArrays\x18\x07 \x03(\x05\x12\x17\n\x0fTestFloatArrays\x18\x08 \x03(\x02\x12\x18\n\x10TestDoubleArrays\x18\t \x03(\x01\x12\x16\n\x0eTestBoolArrays\x18\n \x03(\x08\x12\x34\n\x07TestObj\x18\x0b \x01(\x0b\x32#.Config.TestGlobalTemplate.TestObj_\x12\x36\n\x08TestObj1\x18\x0c \x01(\x0b\x32$.Config.TestGlobalTemplate.TestObj1_\x12?\n\rTestObjArrays\x18\r \x03(\x0b\x32(.Config.TestGlobalTemplate.TestObjArray_\x12\x41\n\x0eTestObjArray1s\x18\x0e \x03(\x0b\x32).Config.TestGlobalTemplate.TestObjArray1_\x12)\n\x14TestDefineFromGlobal\x18\x0f \x01(\x0b\x32\x0b.Position3d\x12+\n\x16TestDefineFromGlobal2s\x18\x10 \x03(\x0b\x32\x0b.Position3d\x12\'\n\rTestCustomObj\x18\x11 \x01(\x0b\x32\x10.PositionArray3d\x12-\n\x13TestCustomObjArrays\x18\x12 \x03(\x0b\x32\x10.PositionArray3d\x1a+\n\x08TestObj_\x12\t\n\x01\x61\x18\x01 \x01(\x05\x12\t\n\x01\x62\x18\x02 \x01(\x02\x12\t\n\x01\x63\x18\x03 \x01(\x08\x1a-\n\tTestObj1_\x12\t\n\x01\x61\x18\x01 \x01(\x05\x12\n\n\x02\x62s\x18\x02 \x03(\x02\x12\t\n\x01v\x18\x03 \x01(\x08\x1a\x30\n\rTestObjArray_\x12\t\n\x01\x61\x18\x01 \x01(\x05\x12\t\n\x01\x62\x18\x02 \x01(\x05\x12\t\n\x01\x63\x18\x03 \x01(\x05\x1a\'\n\x0eTestObjArray1_\x12\t\n\x01\x61\x18\x01 \x01(\x05\x12\n\n\x02\x62s\x18\x02 \x03(\x02\x62\x06proto3'
+  serialized_pb=b'\n\x1fprotos/TestGlobalTemplate.proto\x12\x06\x43onfig\x1a\x17protos/Position3d.proto\x1a\x1cprotos/PositionArray3d.proto\"\xdc\x06\n\x12TestGlobalTemplate\x12\x0f\n\x07TestInt\x18\x01 \x01(\x05\x12\x18\n\x10TestStringArrays\x18\x02 \x03(\t\x12\x13\n\x0bTestString1\x18\x03 \x01(\x01\x12\x12\n\nTestString\x18\x04 \x01(\t\x12\x11\n\tTestFloat\x18\x05 \x01(\x02\x12\x12\n\nTestDouble\x18\x06 \x01(\x01\x12\x10\n\x08TestBool\x18\x07 \x01(\x08\x12\x15\n\rTestIntArrays\x18\x08 \x03(\x05\x12\x17\n\x0fTestFloatArrays\x18\t \x03(\x02\x12\x18\n\x10TestDoubleArrays\x18\n \x03(\x01\x12\x16\n\x0eTestBoolArrays\x18\x0b \x03(\x08\x12\x34\n\x07TestObj\x18\x0c \x01(\x0b\x32#.Config.TestGlobalTemplate.TestObj_\x12\x36\n\x08TestObj1\x18\r \x01(\x0b\x32$.Config.TestGlobalTemplate.TestObj1_\x12?\n\rTestObjArrays\x18\x0e \x03(\x0b\x32(.Config.TestGlobalTemplate.TestObjArray_\x12\x41\n\x0eTestObjArray1s\x18\x0f \x03(\x0b\x32).Config.TestGlobalTemplate.TestObjArray1_\x12)\n\x14TestDefineFromGlobal\x18\x10 \x01(\x0b\x32\x0b.Position3d\x12+\n\x16TestDefineFromGlobal2s\x18\x11 \x03(\x0b\x32\x0b.Position3d\x12\'\n\rTestCustomObj\x18\x12 \x01(\x0b\x32\x10.PositionArray3d\x12-\n\x13TestCustomObjArrays\x18\x13 \x03(\x0b\x32\x10.PositionArray3d\x1a+\n\x08TestObj_\x12\t\n\x01\x61\x18\x01 \x01(\x05\x12\t\n\x01\x62\x18\x02 \x01(\x02\x12\t\n\x01\x63\x18\x03 \x01(\x08\x1a-\n\tTestObj1_\x12\t\n\x01\x61\x18\x01 \x01(\x05\x12\n\n\x02\x62s\x18\x02 \x03(\x02\x12\t\n\x01v\x18\x03 \x01(\x08\x1a\x30\n\rTestObjArray_\x12\t\n\x01\x61\x18\x01 \x01(\x05\x12\t\n\x01\x62\x18\x02 \x01(\x05\x12\t\n\x01\x63\x18\x03 \x01(\x05\x1a\'\n\x0eTestObjArray1_\x12\t\n\x01\x61\x18\x01 \x01(\x05\x12\n\n\x02\x62s\x18\x02 \x03(\x02\x62\x06proto3'
   ,
   dependencies=[protos_dot_Position3d__pb2.DESCRIPTOR,protos_dot_PositionArray3d__pb2.DESCRIPTOR,])
 
@@ -69,8 +69,8 @@ _TESTGLOBALTEMPLATE_TESTOBJ_ = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=757,
-  serialized_end=800,
+  serialized_start=778,
+  serialized_end=821,
 )
 
 _TESTGLOBALTEMPLATE_TESTOBJ1_ = _descriptor.Descriptor(
@@ -114,8 +114,8 @@ _TESTGLOBALTEMPLATE_TESTOBJ1_ = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=802,
-  serialized_end=847,
+  serialized_start=823,
+  serialized_end=868,
 )
 
 _TESTGLOBALTEMPLATE_TESTOBJARRAY_ = _descriptor.Descriptor(
@@ -159,8 +159,8 @@ _TESTGLOBALTEMPLATE_TESTOBJARRAY_ = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=849,
-  serialized_end=897,
+  serialized_start=870,
+  serialized_end=918,
 )
 
 _TESTGLOBALTEMPLATE_TESTOBJARRAY1_ = _descriptor.Descriptor(
@@ -197,8 +197,8 @@ _TESTGLOBALTEMPLATE_TESTOBJARRAY1_ = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=899,
-  serialized_end=938,
+  serialized_start=920,
+  serialized_end=959,
 )
 
 _TESTGLOBALTEMPLATE = _descriptor.Descriptor(
@@ -224,113 +224,120 @@ _TESTGLOBALTEMPLATE = _descriptor.Descriptor(
       is_extension=False, extension_scope=None,
       serialized_options=None, file=DESCRIPTOR,  create_key=_descriptor._internal_create_key),
     _descriptor.FieldDescriptor(
-      name='TestString', full_name='Config.TestGlobalTemplate.TestString', index=2,
-      number=3, type=9, cpp_type=9, label=1,
+      name='TestString1', full_name='Config.TestGlobalTemplate.TestString1', index=2,
+      number=3, type=1, cpp_type=5, label=1,
+      has_default_value=False, default_value=float(0),
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      serialized_options=None, file=DESCRIPTOR,  create_key=_descriptor._internal_create_key),
+    _descriptor.FieldDescriptor(
+      name='TestString', full_name='Config.TestGlobalTemplate.TestString', index=3,
+      number=4, type=9, cpp_type=9, label=1,
       has_default_value=False, default_value=b"".decode('utf-8'),
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       serialized_options=None, file=DESCRIPTOR,  create_key=_descriptor._internal_create_key),
     _descriptor.FieldDescriptor(
-      name='TestFloat', full_name='Config.TestGlobalTemplate.TestFloat', index=3,
-      number=4, type=2, cpp_type=6, label=1,
+      name='TestFloat', full_name='Config.TestGlobalTemplate.TestFloat', index=4,
+      number=5, type=2, cpp_type=6, label=1,
       has_default_value=False, default_value=float(0),
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       serialized_options=None, file=DESCRIPTOR,  create_key=_descriptor._internal_create_key),
     _descriptor.FieldDescriptor(
-      name='TestDouble', full_name='Config.TestGlobalTemplate.TestDouble', index=4,
-      number=5, type=1, cpp_type=5, label=1,
+      name='TestDouble', full_name='Config.TestGlobalTemplate.TestDouble', index=5,
+      number=6, type=1, cpp_type=5, label=1,
       has_default_value=False, default_value=float(0),
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       serialized_options=None, file=DESCRIPTOR,  create_key=_descriptor._internal_create_key),
     _descriptor.FieldDescriptor(
-      name='TestBool', full_name='Config.TestGlobalTemplate.TestBool', index=5,
-      number=6, type=8, cpp_type=7, label=1,
+      name='TestBool', full_name='Config.TestGlobalTemplate.TestBool', index=6,
+      number=7, type=8, cpp_type=7, label=1,
       has_default_value=False, default_value=False,
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       serialized_options=None, file=DESCRIPTOR,  create_key=_descriptor._internal_create_key),
     _descriptor.FieldDescriptor(
-      name='TestIntArrays', full_name='Config.TestGlobalTemplate.TestIntArrays', index=6,
-      number=7, type=5, cpp_type=1, label=3,
+      name='TestIntArrays', full_name='Config.TestGlobalTemplate.TestIntArrays', index=7,
+      number=8, type=5, cpp_type=1, label=3,
       has_default_value=False, default_value=[],
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       serialized_options=None, file=DESCRIPTOR,  create_key=_descriptor._internal_create_key),
     _descriptor.FieldDescriptor(
-      name='TestFloatArrays', full_name='Config.TestGlobalTemplate.TestFloatArrays', index=7,
-      number=8, type=2, cpp_type=6, label=3,
+      name='TestFloatArrays', full_name='Config.TestGlobalTemplate.TestFloatArrays', index=8,
+      number=9, type=2, cpp_type=6, label=3,
       has_default_value=False, default_value=[],
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       serialized_options=None, file=DESCRIPTOR,  create_key=_descriptor._internal_create_key),
     _descriptor.FieldDescriptor(
-      name='TestDoubleArrays', full_name='Config.TestGlobalTemplate.TestDoubleArrays', index=8,
-      number=9, type=1, cpp_type=5, label=3,
+      name='TestDoubleArrays', full_name='Config.TestGlobalTemplate.TestDoubleArrays', index=9,
+      number=10, type=1, cpp_type=5, label=3,
       has_default_value=False, default_value=[],
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       serialized_options=None, file=DESCRIPTOR,  create_key=_descriptor._internal_create_key),
     _descriptor.FieldDescriptor(
-      name='TestBoolArrays', full_name='Config.TestGlobalTemplate.TestBoolArrays', index=9,
-      number=10, type=8, cpp_type=7, label=3,
+      name='TestBoolArrays', full_name='Config.TestGlobalTemplate.TestBoolArrays', index=10,
+      number=11, type=8, cpp_type=7, label=3,
       has_default_value=False, default_value=[],
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       serialized_options=None, file=DESCRIPTOR,  create_key=_descriptor._internal_create_key),
     _descriptor.FieldDescriptor(
-      name='TestObj', full_name='Config.TestGlobalTemplate.TestObj', index=10,
-      number=11, type=11, cpp_type=10, label=1,
-      has_default_value=False, default_value=None,
-      message_type=None, enum_type=None, containing_type=None,
-      is_extension=False, extension_scope=None,
-      serialized_options=None, file=DESCRIPTOR,  create_key=_descriptor._internal_create_key),
-    _descriptor.FieldDescriptor(
-      name='TestObj1', full_name='Config.TestGlobalTemplate.TestObj1', index=11,
+      name='TestObj', full_name='Config.TestGlobalTemplate.TestObj', index=11,
       number=12, type=11, cpp_type=10, label=1,
       has_default_value=False, default_value=None,
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       serialized_options=None, file=DESCRIPTOR,  create_key=_descriptor._internal_create_key),
     _descriptor.FieldDescriptor(
-      name='TestObjArrays', full_name='Config.TestGlobalTemplate.TestObjArrays', index=12,
-      number=13, type=11, cpp_type=10, label=3,
-      has_default_value=False, default_value=[],
+      name='TestObj1', full_name='Config.TestGlobalTemplate.TestObj1', index=12,
+      number=13, type=11, cpp_type=10, label=1,
+      has_default_value=False, default_value=None,
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       serialized_options=None, file=DESCRIPTOR,  create_key=_descriptor._internal_create_key),
     _descriptor.FieldDescriptor(
-      name='TestObjArray1s', full_name='Config.TestGlobalTemplate.TestObjArray1s', index=13,
+      name='TestObjArrays', full_name='Config.TestGlobalTemplate.TestObjArrays', index=13,
       number=14, type=11, cpp_type=10, label=3,
       has_default_value=False, default_value=[],
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       serialized_options=None, file=DESCRIPTOR,  create_key=_descriptor._internal_create_key),
     _descriptor.FieldDescriptor(
-      name='TestDefineFromGlobal', full_name='Config.TestGlobalTemplate.TestDefineFromGlobal', index=14,
-      number=15, type=11, cpp_type=10, label=1,
-      has_default_value=False, default_value=None,
-      message_type=None, enum_type=None, containing_type=None,
-      is_extension=False, extension_scope=None,
-      serialized_options=None, file=DESCRIPTOR,  create_key=_descriptor._internal_create_key),
-    _descriptor.FieldDescriptor(
-      name='TestDefineFromGlobal2s', full_name='Config.TestGlobalTemplate.TestDefineFromGlobal2s', index=15,
-      number=16, type=11, cpp_type=10, label=3,
+      name='TestObjArray1s', full_name='Config.TestGlobalTemplate.TestObjArray1s', index=14,
+      number=15, type=11, cpp_type=10, label=3,
       has_default_value=False, default_value=[],
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       serialized_options=None, file=DESCRIPTOR,  create_key=_descriptor._internal_create_key),
     _descriptor.FieldDescriptor(
-      name='TestCustomObj', full_name='Config.TestGlobalTemplate.TestCustomObj', index=16,
-      number=17, type=11, cpp_type=10, label=1,
+      name='TestDefineFromGlobal', full_name='Config.TestGlobalTemplate.TestDefineFromGlobal', index=15,
+      number=16, type=11, cpp_type=10, label=1,
       has_default_value=False, default_value=None,
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       serialized_options=None, file=DESCRIPTOR,  create_key=_descriptor._internal_create_key),
     _descriptor.FieldDescriptor(
-      name='TestCustomObjArrays', full_name='Config.TestGlobalTemplate.TestCustomObjArrays', index=17,
-      number=18, type=11, cpp_type=10, label=3,
+      name='TestDefineFromGlobal2s', full_name='Config.TestGlobalTemplate.TestDefineFromGlobal2s', index=16,
+      number=17, type=11, cpp_type=10, label=3,
+      has_default_value=False, default_value=[],
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      serialized_options=None, file=DESCRIPTOR,  create_key=_descriptor._internal_create_key),
+    _descriptor.FieldDescriptor(
+      name='TestCustomObj', full_name='Config.TestGlobalTemplate.TestCustomObj', index=17,
+      number=18, type=11, cpp_type=10, label=1,
+      has_default_value=False, default_value=None,
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      serialized_options=None, file=DESCRIPTOR,  create_key=_descriptor._internal_create_key),
+    _descriptor.FieldDescriptor(
+      name='TestCustomObjArrays', full_name='Config.TestGlobalTemplate.TestCustomObjArrays', index=18,
+      number=19, type=11, cpp_type=10, label=3,
       has_default_value=False, default_value=[],
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
@@ -348,7 +355,7 @@ _TESTGLOBALTEMPLATE = _descriptor.Descriptor(
   oneofs=[
   ],
   serialized_start=99,
-  serialized_end=938,
+  serialized_end=959,
 )
 
 _TESTGLOBALTEMPLATE_TESTOBJ_.containing_type = _TESTGLOBALTEMPLATE

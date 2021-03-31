@@ -45,12 +45,18 @@ Index_Item_Des = 0
 Index_Item_Type = 1
 Index_Item_Name = 2
 
+BaseTypeInt = "int32"
+BaseTypeFloat = "float"
+BaseTypeDouble = "double"
+BaseTypeString = "string"
+BaseTypeBool = "bool"
+
 BaseTypes = {
-    'int':'int32',
-    'float':'float',
-    'double':'double',
-    'string':'string',
-    'bool':'bool'
+    'int': BaseTypeInt,
+    'float':BaseTypeFloat,
+    'double':BaseTypeDouble,
+    'string':BaseTypeString,
+    'bool':BaseTypeBool
 }
 
 ETypeList = 'list'
@@ -299,6 +305,30 @@ class Exporter:
             print("export proto file:", msg.get_proto_file_name( ))
             msg.to_protobuf_proto(proto_dir)
 
+    def export_lua_api(self):
+        api_dir = 'lua_api'
+        prepare_dir(api_dir)
+        self.export_base_api(api_dir)
+        for msg in self.global_msgs:
+            print("export global lua api file:", msg.get_proto_file_name( ))
+            msg.to_lua_api(api_dir)
+        for info in self.proto_infos:
+            msg = info.get_message()
+            print("export lua api file:", msg.get_proto_file_name( ))
+            msg.to_lua_api(api_dir)
+
+
+    def export_base_api(self,out_dir):
+        file_name = ('%s/' % (out_dir) if len(out_dir) > 0 else '') + 'BaseType' + '.lua'
+        base_int = '---@class int32 number'
+        base_double = '---@class double number'
+        base_float = '---@class float number'
+        base_bool = '---@class bool boolean'
+        value = '%s\n%s\n%s\n%s' % (base_int, base_double, base_float, base_bool)
+        with codecs.open(file_name, 'w', 'utf-8') as f:
+            f.write(value)
+
+
     def export_script(self):
         if isinstance(self.script_out_dic, dict):
             for k, v in self.script_out_dic.items( ):
@@ -324,6 +354,7 @@ class Exporter:
     def export_data(self):
         for format, out_folder in self.out_data_formats.items( ):
             if format == 'lua':
+                self.export_lua_api()
                 self.export_lua_data(out_folder)
             elif format == 'json':
                 self.export_json_data(out_folder)
@@ -346,9 +377,7 @@ class Exporter:
         lua_dir = out_folder
         prepare_dir(lua_dir)
         for info in self.proto_infos:
-            file_name = info.get_proto_name( )
-            lua_file = lua_dir + '/' + file_name
-            self.save_to_lua(lua_file, info.get_value( ))
+            self.save_to_lua(lua_dir, info)
 
     def export_protobuf_data(self, out_folder):
         self.execute_protoc_out_script('python_out', '.')
@@ -453,14 +482,24 @@ class Exporter:
         with codecs.open(file_name, 'w', 'utf-8') as f:
             f.write(value)
 
-    def save_to_lua(self, out_file_name, obj):
-        file_name = out_file_name + '.lua'
-        print("save lua data :", file_name)
+    def save_to_lua(self, out_dir, info):
+        """
+
+        :param out_dir:
+        :param info: @ProtoInfo
+        :return:
+        """
+        file_name = info.get_proto_name( )
+        lua_file = out_dir + '/' + file_name + '.lua'
+        obj = info.get_value( )
+        print("save lua data :", lua_file)
         lua_str = "".join(get_lua_data(obj))
-        with codecs.open(file_name, 'w', 'utf-8') as f:
-            f.write('return ')
-            f.write(lua_str)
-        pass
+        array = '[]'
+        if info.is_single():
+            array = ''
+        with codecs.open(lua_file, 'w', 'utf-8') as f:
+            f.write('---@type %s%s\n' % (file_name, array))
+            f.write('local %s = %s\n%s %s' % (file_name, lua_str, 'return', file_name))
 
     def save_to_protobuf_data(self, out_file_name, py_file, obj, is_single):
         module_name = self.get_export_proto_folder( )
@@ -497,7 +536,6 @@ class Exporter:
     @staticmethod
     def get_global_sheet_info(sheet):
         """
-
         :param sheet:
         :return:
         """
@@ -580,6 +618,12 @@ class Message:
     def get_proto_file_name(self):
         return self.get_proto_name( ) + '.proto'
 
+    def get_msg_lua_api(self):
+        api = '---@class %s ' % (self.get_proto_name( ))
+        for i, filed in enumerate(self.fileds_proto.values( )):
+            api = self.add_line(api, filed.get_lua_api())
+        return api
+
     def get_msg_proto(self):
         """
         :return: .proto 文件描述
@@ -618,6 +662,18 @@ class Message:
         file_name = ('%s/' % (out_dir) if len(out_dir) > 0 else '') + self.get_proto_name( ) + '.proto'
         with codecs.open(file_name, 'w', 'utf-8') as f:
             f.write(self.get_full_proto( ))
+
+    def to_lua_api(self, out_dir=''):
+        file_name = ('%s/' % (out_dir) if len(out_dir) > 0 else '') + self.get_proto_name( ) + '.lua'
+        with codecs.open(file_name, 'w', 'utf-8') as f:
+            f.write(self.get_msg_lua_api())
+
+        file_name = ('%s/' % (out_dir) if len(out_dir) > 0 else '') + self.get_proto_name( ) + '.'
+        for msg in self.child_msgs:
+            child_file_name = file_name + msg.get_proto_name( ) + '.lua'
+            with codecs.open(child_file_name, 'w', 'utf-8') as f:
+                f.write(msg.get_msg_lua_api( ))
+
 
     @staticmethod
     def add_space_line(s, value):
@@ -697,7 +753,7 @@ class Message:
 
     @staticmethod
     def convert(base_type, value, filed_name=None):
-        if base_type == 'bool':
+        if base_type == BaseTypeBool:
             bool_value = str(value)
             if bool_value in ('0', '0.0', 'false', 'False', 'off', 'Off', '', 'None'):
                 return get_bool_value(False)
@@ -705,19 +761,19 @@ class Message:
                 return get_bool_value(True)
             else:
                 raise ValueError("error!!!", base_type, filed_name, value)
-        elif base_type == 'int32':
+        elif base_type == BaseTypeInt:
             if is_null_or_empty(value):
                 return 0
             value = int(float(value))
-        elif base_type == 'float':
+        elif base_type == BaseTypeFloat:
             if is_null_or_empty(value):
                 return 0
             value = float(value)
-        elif base_type == 'double':
+        elif base_type == BaseTypeDouble:
             if is_null_or_empty(value):
                 return 0
             value = float(value)
-        elif base_type == 'string':
+        elif base_type == BaseTypeString:
             if is_null_or_empty(value):
                 return ''
             value = str(value)
@@ -896,6 +952,12 @@ class Filed:
             r = ' repeated'
         return '%s %s %s = %s ; // % s' % (
             r, self.get_filed_type( ), self.get_filed_name( ), index, self.get_filed_des( ))
+
+    def get_lua_api(self):
+        r = ''
+        if self.is_list:
+            r = '[]'
+        return '%s %s %s%s @%s ' % ("---@field ", self.get_filed_name(), self.get_filed_type(), r,self.get_filed_des())
 
     def scheme_info(self):
         return json.dumps((self.get_filed_name( ), self.get_filed_type( )), ensure_ascii=False, indent=2)
