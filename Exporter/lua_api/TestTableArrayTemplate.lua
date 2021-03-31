@@ -1,4 +1,4 @@
----@class TestTableArraysTemplate 
+---@class TestTableArrayTemplate 
 ---@field  Id int32 @英雄ID 
 ---@field  Weapons int32[] @武器(武器Id) 
 ---@field  Model string @切片 

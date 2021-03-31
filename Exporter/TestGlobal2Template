@@ -1,7 +1,0 @@
----@type TestGlobal2Template
-TestGlobal2Template = {
-  TestFloat = 6.5
-}
-return TestGlobal2Template{
-  TestFloat = 6.5
-}

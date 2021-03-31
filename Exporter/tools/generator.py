@@ -603,16 +603,16 @@ class Message:
         return self.parent_msg is not None
 
     def get_name(self):
-        if self.is_list_obj:
-            return self.name + 's'
+        # if self.is_list_obj:
+        #     return self.name + 's'
         return self.name
 
     def set_name(self, name):
         self.name = name
 
     def get_proto_name(self):
-        if self.is_list_obj:
-            return self.name + 's' + self.suffix
+        # if self.is_list_obj:
+        #     return self.name + 's' + self.suffix
         return self.name + self.suffix
 
     def get_proto_file_name(self):
