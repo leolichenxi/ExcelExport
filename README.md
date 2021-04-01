@@ -70,3 +70,7 @@ python 依赖库： google,protobuf,xlrd,refection
 
 ##### 参考部分：
  * https://developers.google.com/protocol-buffers/docs/overview#scalar
+ * https://github.com/EmmyLua
+ * https://github.com/yanghuan/proton
+ 特别鸣谢前同事@yanghuan 
+ 
