@@ -484,7 +484,6 @@ class Exporter:
 
     def save_to_lua(self, out_dir, info):
         """
-
         :param out_dir:
         :param info: @ProtoInfo
         :return:
@@ -495,8 +494,9 @@ class Exporter:
         print("save lua data :", lua_file)
         lua_str = "".join(get_lua_data(obj))
         array = '[]'
-        if info.is_single():
-            array = ''
+        # if info.is_single():
+        if True:
+             array = ''
         with codecs.open(lua_file, 'w', 'utf-8') as f:
             f.write('---@type %s%s\n' % (file_name, array))
             f.write('local %s = %s\n%s %s' % (file_name, lua_str, 'return', file_name))
@@ -603,23 +603,23 @@ class Message:
         return self.parent_msg is not None
 
     def get_name(self):
-        # if self.is_list_obj:
-        #     return self.name + 's'
+        if self.is_list_obj:
+            return self.name + 's'
         return self.name
 
     def set_name(self, name):
         self.name = name
 
     def get_proto_name(self):
-        # if self.is_list_obj:
-        #     return self.name + 's' + self.suffix
+        if self.is_list_obj:
+            return self.name + 's' + self.suffix
         return self.name + self.suffix
 
     def get_proto_file_name(self):
         return self.get_proto_name( ) + '.proto'
 
     def get_msg_lua_api(self):
-        api = '---@class %s ' % (self.get_proto_name( ))
+        api = '---@class %s ' % (self.name + self.suffix)
         for i, filed in enumerate(self.fileds_proto.values( )):
             api = self.add_line(api, filed.get_lua_api())
         return api
@@ -645,6 +645,14 @@ class Message:
             class_define = self.add_line(class_define, list_define)
         return class_define
 
+    def get_list_lua_api(self):
+        if self.is_list_obj and not self.is_child_message( ):
+            api = '---@class %s ' % (self.get_proto_name( ))
+            filed = Filed(self.name, self.name + self.suffix, ListSuffix, True)
+            api = self.add_line(api, filed.get_lua_api())
+            return api
+        return None
+
     def get_full_proto(self):
         info = 'syntax = "proto3";'
         if not is_null_or_empty(self.name_space):
@@ -664,16 +672,23 @@ class Message:
             f.write(self.get_full_proto( ))
 
     def to_lua_api(self, out_dir=''):
+        list_sheet_api = self.get_list_lua_api()
         file_name = ('%s/' % (out_dir) if len(out_dir) > 0 else '') + self.get_proto_name( ) + '.lua'
+        if list_sheet_api:
+           with codecs.open(file_name, 'w', 'utf-8') as f:
+                f.write(list_sheet_api)
+
+           template_api_name = self.name + self.suffix
+           file_name = ('%s/' % (out_dir) if len(out_dir) > 0 else '') + template_api_name + '.lua'
+
         with codecs.open(file_name, 'w', 'utf-8') as f:
-            f.write(self.get_msg_lua_api())
+            f.write(self.get_msg_lua_api( ))
 
         file_name = ('%s/' % (out_dir) if len(out_dir) > 0 else '') + self.get_proto_name( ) + '.'
         for msg in self.child_msgs:
             child_file_name = file_name + msg.get_proto_name( ) + '.lua'
             with codecs.open(child_file_name, 'w', 'utf-8') as f:
                 f.write(msg.get_msg_lua_api( ))
-
 
     @staticmethod
     def add_space_line(s, value):
