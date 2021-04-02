@@ -12,9 +12,9 @@ F:\MyGitHub\ExcelExport\Example\obj\Debug\netcoreapp3.1\Example.csproj.CopyCompl
 F:\MyGitHub\ExcelExport\Example\obj\Debug\netcoreapp3.1\Example.dll
 F:\MyGitHub\ExcelExport\Example\obj\Debug\netcoreapp3.1\Example.pdb
 F:\MyGitHub\ExcelExport\Example\obj\Debug\netcoreapp3.1\Example.genruntimeconfig.cache
-F:\MyGitHub\ExcelExport\Example\bin\Debug\netcoreapp3.1\json\TestGlobal2Template.json
-F:\MyGitHub\ExcelExport\Example\bin\Debug\netcoreapp3.1\json\TestGlobalTemplate.json
-F:\MyGitHub\ExcelExport\Example\bin\Debug\netcoreapp3.1\json\TestTableArraysTemplate.json
-F:\MyGitHub\ExcelExport\Example\bin\Debug\netcoreapp3.1\protobuf\TestGlobal2Template.byte
-F:\MyGitHub\ExcelExport\Example\bin\Debug\netcoreapp3.1\protobuf\TestGlobalTemplate.byte
-F:\MyGitHub\ExcelExport\Example\bin\Debug\netcoreapp3.1\protobuf\TestTableArraysTemplate.byte
+F:\MyGitHub\ExcelExport\Example\bin\Debug\netcoreapp3.1\out_json\TestGlobal2Template.json
+F:\MyGitHub\ExcelExport\Example\bin\Debug\netcoreapp3.1\out_json\TestGlobalTemplate.json
+F:\MyGitHub\ExcelExport\Example\bin\Debug\netcoreapp3.1\out_json\TestTableArraysTemplate.json
+F:\MyGitHub\ExcelExport\Example\bin\Debug\netcoreapp3.1\out_protobuf\TestGlobal2Template.bytes
+F:\MyGitHub\ExcelExport\Example\bin\Debug\netcoreapp3.1\out_protobuf\TestGlobalTemplate.bytes
+F:\MyGitHub\ExcelExport\Example\bin\Debug\netcoreapp3.1\out_protobuf\TestTableArraysTemplate.bytes

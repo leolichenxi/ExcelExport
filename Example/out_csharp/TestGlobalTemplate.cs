@@ -26,28 +26,30 @@ namespace Config {
           string.Concat(
             "Ch9wcm90b3MvVGVzdEdsb2JhbFRlbXBsYXRlLnByb3RvEgZDb25maWcaF3By",
             "b3Rvcy9Qb3NpdGlvbjNkLnByb3RvGhxwcm90b3MvUG9zaXRpb25BcnJheTNk",
-            "LnByb3RvIpkGChJUZXN0R2xvYmFsVGVtcGxhdGUSDwoHVGVzdEludBgBIAEo",
-            "BRIRCglUZXN0RmxvYXQYAiABKAISEgoKVGVzdERvdWJsZRgDIAEoARIQCghU",
-            "ZXN0Qm9vbBgEIAEoCBIVCg1UZXN0SW50QXJyYXlzGAUgAygFEhcKD1Rlc3RG",
-            "bG9hdEFycmF5cxgGIAMoAhIYChBUZXN0RG91YmxlQXJyYXlzGAcgAygBEhYK",
-            "DlRlc3RCb29sQXJyYXlzGAggAygIEjQKB1Rlc3RPYmoYCSABKAsyIy5Db25m",
-            "aWcuVGVzdEdsb2JhbFRlbXBsYXRlLlRlc3RPYmpfEjYKCFRlc3RPYmoxGAog",
-            "ASgLMiQuQ29uZmlnLlRlc3RHbG9iYWxUZW1wbGF0ZS5UZXN0T2JqMV8SPwoN",
-            "VGVzdE9iakFycmF5cxgLIAMoCzIoLkNvbmZpZy5UZXN0R2xvYmFsVGVtcGxh",
-            "dGUuVGVzdE9iakFycmF5XxJBCg5UZXN0T2JqQXJyYXkxcxgMIAMoCzIpLkNv",
-            "bmZpZy5UZXN0R2xvYmFsVGVtcGxhdGUuVGVzdE9iakFycmF5MV8SKQoUVGVz",
-            "dERlZmluZUZyb21HbG9iYWwYDSABKAsyCy5Qb3NpdGlvbjNkEisKFlRlc3RE",
-            "ZWZpbmVGcm9tR2xvYmFsMnMYDiADKAsyCy5Qb3NpdGlvbjNkEicKDVRlc3RD",
-            "dXN0b21PYmoYDyABKAsyEC5Qb3NpdGlvbkFycmF5M2QSLQoTVGVzdEN1c3Rv",
-            "bU9iakFycmF5cxgQIAMoCzIQLlBvc2l0aW9uQXJyYXkzZBorCghUZXN0T2Jq",
-            "XxIJCgFhGAEgASgFEgkKAWIYAiABKAISCQoBYxgDIAEoCBotCglUZXN0T2Jq",
-            "MV8SCQoBYRgBIAEoBRIKCgJicxgCIAMoAhIJCgF2GAMgASgIGjAKDVRlc3RP",
-            "YmpBcnJheV8SCQoBYRgBIAEoBRIJCgFiGAIgASgFEgkKAWMYAyABKAUaJwoO",
-            "VGVzdE9iakFycmF5MV8SCQoBYRgBIAEoBRIKCgJicxgCIAMoAmIGcHJvdG8z"));
+            "LnByb3RvItwGChJUZXN0R2xvYmFsVGVtcGxhdGUSDwoHVGVzdEludBgBIAEo",
+            "BRIYChBUZXN0U3RyaW5nQXJyYXlzGAIgAygJEhMKC1Rlc3RTdHJpbmcxGAMg",
+            "ASgBEhIKClRlc3RTdHJpbmcYBCABKAkSEQoJVGVzdEZsb2F0GAUgASgCEhIK",
+            "ClRlc3REb3VibGUYBiABKAESEAoIVGVzdEJvb2wYByABKAgSFQoNVGVzdElu",
+            "dEFycmF5cxgIIAMoBRIXCg9UZXN0RmxvYXRBcnJheXMYCSADKAISGAoQVGVz",
+            "dERvdWJsZUFycmF5cxgKIAMoARIWCg5UZXN0Qm9vbEFycmF5cxgLIAMoCBI0",
+            "CgdUZXN0T2JqGAwgASgLMiMuQ29uZmlnLlRlc3RHbG9iYWxUZW1wbGF0ZS5U",
+            "ZXN0T2JqXxI2CghUZXN0T2JqMRgNIAEoCzIkLkNvbmZpZy5UZXN0R2xvYmFs",
+            "VGVtcGxhdGUuVGVzdE9iajFfEj8KDVRlc3RPYmpBcnJheXMYDiADKAsyKC5D",
+            "b25maWcuVGVzdEdsb2JhbFRlbXBsYXRlLlRlc3RPYmpBcnJheV8SQQoOVGVz",
+            "dE9iakFycmF5MXMYDyADKAsyKS5Db25maWcuVGVzdEdsb2JhbFRlbXBsYXRl",
+            "LlRlc3RPYmpBcnJheTFfEikKFFRlc3REZWZpbmVGcm9tR2xvYmFsGBAgASgL",
+            "MgsuUG9zaXRpb24zZBIrChZUZXN0RGVmaW5lRnJvbUdsb2JhbDJzGBEgAygL",
+            "MgsuUG9zaXRpb24zZBInCg1UZXN0Q3VzdG9tT2JqGBIgASgLMhAuUG9zaXRp",
+            "b25BcnJheTNkEi0KE1Rlc3RDdXN0b21PYmpBcnJheXMYEyADKAsyEC5Qb3Np",
+            "dGlvbkFycmF5M2QaKwoIVGVzdE9ial8SCQoBYRgBIAEoBRIJCgFiGAIgASgC",
+            "EgkKAWMYAyABKAgaLQoJVGVzdE9iajFfEgkKAWEYASABKAUSCgoCYnMYAiAD",
+            "KAISCQoBdhgDIAEoCBowCg1UZXN0T2JqQXJyYXlfEgkKAWEYASABKAUSCQoB",
+            "YhgCIAEoBRIJCgFjGAMgASgFGicKDlRlc3RPYmpBcnJheTFfEgkKAWEYASAB",
+            "KAUSCgoCYnMYAiADKAJiBnByb3RvMw=="));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { global::Position3DReflection.Descriptor, global::PositionArray3DReflection.Descriptor, },
           new pbr::GeneratedClrTypeInfo(null, null, new pbr::GeneratedClrTypeInfo[] {
-            new pbr::GeneratedClrTypeInfo(typeof(global::Config.TestGlobalTemplate), global::Config.TestGlobalTemplate.Parser, new[]{ "TestInt", "TestFloat", "TestDouble", "TestBool", "TestIntArrays", "TestFloatArrays", "TestDoubleArrays", "TestBoolArrays", "TestObj", "TestObj1", "TestObjArrays", "TestObjArray1S", "TestDefineFromGlobal", "TestDefineFromGlobal2S", "TestCustomObj", "TestCustomObjArrays" }, null, null, null, new pbr::GeneratedClrTypeInfo[] { new pbr::GeneratedClrTypeInfo(typeof(global::Config.TestGlobalTemplate.Types.TestObj_), global::Config.TestGlobalTemplate.Types.TestObj_.Parser, new[]{ "A", "B", "C" }, null, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Config.TestGlobalTemplate), global::Config.TestGlobalTemplate.Parser, new[]{ "TestInt", "TestStringArrays", "TestString1", "TestString", "TestFloat", "TestDouble", "TestBool", "TestIntArrays", "TestFloatArrays", "TestDoubleArrays", "TestBoolArrays", "TestObj", "TestObj1", "TestObjArrays", "TestObjArray1S", "TestDefineFromGlobal", "TestDefineFromGlobal2S", "TestCustomObj", "TestCustomObjArrays" }, null, null, null, new pbr::GeneratedClrTypeInfo[] { new pbr::GeneratedClrTypeInfo(typeof(global::Config.TestGlobalTemplate.Types.TestObj_), global::Config.TestGlobalTemplate.Types.TestObj_.Parser, new[]{ "A", "B", "C" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Config.TestGlobalTemplate.Types.TestObj1_), global::Config.TestGlobalTemplate.Types.TestObj1_.Parser, new[]{ "A", "Bs", "V" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Config.TestGlobalTemplate.Types.TestObjArray_), global::Config.TestGlobalTemplate.Types.TestObjArray_.Parser, new[]{ "A", "B", "C" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Config.TestGlobalTemplate.Types.TestObjArray1_), global::Config.TestGlobalTemplate.Types.TestObjArray1_.Parser, new[]{ "A", "Bs" }, null, null, null, null)})
@@ -87,6 +89,9 @@ namespace Config {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public TestGlobalTemplate(TestGlobalTemplate other) : this() {
       testInt_ = other.testInt_;
+      testStringArrays_ = other.testStringArrays_.Clone();
+      testString1_ = other.testString1_;
+      testString_ = other.testString_;
       testFloat_ = other.testFloat_;
       testDouble_ = other.testDouble_;
       testBool_ = other.testBool_;
@@ -124,8 +129,49 @@ namespace Config {
       }
     }
 
+    /// <summary>Field number for the "TestStringArrays" field.</summary>
+    public const int TestStringArraysFieldNumber = 2;
+    private static readonly pb::FieldCodec<string> _repeated_testStringArrays_codec
+        = pb::FieldCodec.ForString(18);
+    private readonly pbc::RepeatedField<string> testStringArrays_ = new pbc::RepeatedField<string>();
+    /// <summary>
+    /// 测试string[]类型
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public pbc::RepeatedField<string> TestStringArrays {
+      get { return testStringArrays_; }
+    }
+
+    /// <summary>Field number for the "TestString1" field.</summary>
+    public const int TestString1FieldNumber = 3;
+    private double testString1_;
+    /// <summary>
+    /// 测试string数字类型
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public double TestString1 {
+      get { return testString1_; }
+      set {
+        testString1_ = value;
+      }
+    }
+
+    /// <summary>Field number for the "TestString" field.</summary>
+    public const int TestStringFieldNumber = 4;
+    private string testString_ = "";
+    /// <summary>
+    /// 测试string类型
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public string TestString {
+      get { return testString_; }
+      set {
+        testString_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
+      }
+    }
+
     /// <summary>Field number for the "TestFloat" field.</summary>
-    public const int TestFloatFieldNumber = 2;
+    public const int TestFloatFieldNumber = 5;
     private float testFloat_;
     /// <summary>
     /// 测试float类型
@@ -139,7 +185,7 @@ namespace Config {
     }
 
     /// <summary>Field number for the "TestDouble" field.</summary>
-    public const int TestDoubleFieldNumber = 3;
+    public const int TestDoubleFieldNumber = 6;
     private double testDouble_;
     /// <summary>
     /// 测试double类型
@@ -153,7 +199,7 @@ namespace Config {
     }
 
     /// <summary>Field number for the "TestBool" field.</summary>
-    public const int TestBoolFieldNumber = 4;
+    public const int TestBoolFieldNumber = 7;
     private bool testBool_;
     /// <summary>
     /// 测试bool类型
@@ -167,9 +213,9 @@ namespace Config {
     }
 
     /// <summary>Field number for the "TestIntArrays" field.</summary>
-    public const int TestIntArraysFieldNumber = 5;
+    public const int TestIntArraysFieldNumber = 8;
     private static readonly pb::FieldCodec<int> _repeated_testIntArrays_codec
-        = pb::FieldCodec.ForInt32(42);
+        = pb::FieldCodec.ForInt32(66);
     private readonly pbc::RepeatedField<int> testIntArrays_ = new pbc::RepeatedField<int>();
     /// <summary>
     /// 测试int数组
@@ -180,9 +226,9 @@ namespace Config {
     }
 
     /// <summary>Field number for the "TestFloatArrays" field.</summary>
-    public const int TestFloatArraysFieldNumber = 6;
+    public const int TestFloatArraysFieldNumber = 9;
     private static readonly pb::FieldCodec<float> _repeated_testFloatArrays_codec
-        = pb::FieldCodec.ForFloat(50);
+        = pb::FieldCodec.ForFloat(74);
     private readonly pbc::RepeatedField<float> testFloatArrays_ = new pbc::RepeatedField<float>();
     /// <summary>
     /// 测试float数组
@@ -193,9 +239,9 @@ namespace Config {
     }
 
     /// <summary>Field number for the "TestDoubleArrays" field.</summary>
-    public const int TestDoubleArraysFieldNumber = 7;
+    public const int TestDoubleArraysFieldNumber = 10;
     private static readonly pb::FieldCodec<double> _repeated_testDoubleArrays_codec
-        = pb::FieldCodec.ForDouble(58);
+        = pb::FieldCodec.ForDouble(82);
     private readonly pbc::RepeatedField<double> testDoubleArrays_ = new pbc::RepeatedField<double>();
     /// <summary>
     /// 测试double数组
@@ -206,9 +252,9 @@ namespace Config {
     }
 
     /// <summary>Field number for the "TestBoolArrays" field.</summary>
-    public const int TestBoolArraysFieldNumber = 8;
+    public const int TestBoolArraysFieldNumber = 11;
     private static readonly pb::FieldCodec<bool> _repeated_testBoolArrays_codec
-        = pb::FieldCodec.ForBool(66);
+        = pb::FieldCodec.ForBool(90);
     private readonly pbc::RepeatedField<bool> testBoolArrays_ = new pbc::RepeatedField<bool>();
     /// <summary>
     /// 测试bool数组
@@ -219,7 +265,7 @@ namespace Config {
     }
 
     /// <summary>Field number for the "TestObj" field.</summary>
-    public const int TestObjFieldNumber = 9;
+    public const int TestObjFieldNumber = 12;
     private global::Config.TestGlobalTemplate.Types.TestObj_ testObj_;
     /// <summary>
     /// 测试普通自定义对象
@@ -233,7 +279,7 @@ namespace Config {
     }
 
     /// <summary>Field number for the "TestObj1" field.</summary>
-    public const int TestObj1FieldNumber = 10;
+    public const int TestObj1FieldNumber = 13;
     private global::Config.TestGlobalTemplate.Types.TestObj1_ testObj1_;
     /// <summary>
     /// 测试普通自定义内部含有数组对象,
@@ -247,9 +293,9 @@ namespace Config {
     }
 
     /// <summary>Field number for the "TestObjArrays" field.</summary>
-    public const int TestObjArraysFieldNumber = 11;
+    public const int TestObjArraysFieldNumber = 14;
     private static readonly pb::FieldCodec<global::Config.TestGlobalTemplate.Types.TestObjArray_> _repeated_testObjArrays_codec
-        = pb::FieldCodec.ForMessage(90, global::Config.TestGlobalTemplate.Types.TestObjArray_.Parser);
+        = pb::FieldCodec.ForMessage(114, global::Config.TestGlobalTemplate.Types.TestObjArray_.Parser);
     private readonly pbc::RepeatedField<global::Config.TestGlobalTemplate.Types.TestObjArray_> testObjArrays_ = new pbc::RepeatedField<global::Config.TestGlobalTemplate.Types.TestObjArray_>();
     /// <summary>
     /// 测试普通自定义对象数组
@@ -260,9 +306,9 @@ namespace Config {
     }
 
     /// <summary>Field number for the "TestObjArray1s" field.</summary>
-    public const int TestObjArray1SFieldNumber = 12;
+    public const int TestObjArray1SFieldNumber = 15;
     private static readonly pb::FieldCodec<global::Config.TestGlobalTemplate.Types.TestObjArray1_> _repeated_testObjArray1S_codec
-        = pb::FieldCodec.ForMessage(98, global::Config.TestGlobalTemplate.Types.TestObjArray1_.Parser);
+        = pb::FieldCodec.ForMessage(122, global::Config.TestGlobalTemplate.Types.TestObjArray1_.Parser);
     private readonly pbc::RepeatedField<global::Config.TestGlobalTemplate.Types.TestObjArray1_> testObjArray1S_ = new pbc::RepeatedField<global::Config.TestGlobalTemplate.Types.TestObjArray1_>();
     /// <summary>
     /// 测试普通自定义内部含有数组对象数组
@@ -273,7 +319,7 @@ namespace Config {
     }
 
     /// <summary>Field number for the "TestDefineFromGlobal" field.</summary>
-    public const int TestDefineFromGlobalFieldNumber = 13;
+    public const int TestDefineFromGlobalFieldNumber = 16;
     private global::Position3d testDefineFromGlobal_;
     /// <summary>
     /// 测试全局对象声明
@@ -287,9 +333,9 @@ namespace Config {
     }
 
     /// <summary>Field number for the "TestDefineFromGlobal2s" field.</summary>
-    public const int TestDefineFromGlobal2SFieldNumber = 14;
+    public const int TestDefineFromGlobal2SFieldNumber = 17;
     private static readonly pb::FieldCodec<global::Position3d> _repeated_testDefineFromGlobal2S_codec
-        = pb::FieldCodec.ForMessage(114, global::Position3d.Parser);
+        = pb::FieldCodec.ForMessage(138, global::Position3d.Parser);
     private readonly pbc::RepeatedField<global::Position3d> testDefineFromGlobal2S_ = new pbc::RepeatedField<global::Position3d>();
     /// <summary>
     /// 测试全局对象声明数组
@@ -300,7 +346,7 @@ namespace Config {
     }
 
     /// <summary>Field number for the "TestCustomObj" field.</summary>
-    public const int TestCustomObjFieldNumber = 15;
+    public const int TestCustomObjFieldNumber = 18;
     private global::PositionArray3d testCustomObj_;
     /// <summary>
     /// 测试全局配置数组字段
@@ -314,9 +360,9 @@ namespace Config {
     }
 
     /// <summary>Field number for the "TestCustomObjArrays" field.</summary>
-    public const int TestCustomObjArraysFieldNumber = 16;
+    public const int TestCustomObjArraysFieldNumber = 19;
     private static readonly pb::FieldCodec<global::PositionArray3d> _repeated_testCustomObjArrays_codec
-        = pb::FieldCodec.ForMessage(130, global::PositionArray3d.Parser);
+        = pb::FieldCodec.ForMessage(154, global::PositionArray3d.Parser);
     private readonly pbc::RepeatedField<global::PositionArray3d> testCustomObjArrays_ = new pbc::RepeatedField<global::PositionArray3d>();
     /// <summary>
     /// 测试全局配置含有数组字段的数组
@@ -340,6 +386,9 @@ namespace Config {
         return true;
       }
       if (TestInt != other.TestInt) return false;
+      if(!testStringArrays_.Equals(other.testStringArrays_)) return false;
+      if (!pbc::ProtobufEqualityComparers.BitwiseDoubleEqualityComparer.Equals(TestString1, other.TestString1)) return false;
+      if (TestString != other.TestString) return false;
       if (!pbc::ProtobufEqualityComparers.BitwiseSingleEqualityComparer.Equals(TestFloat, other.TestFloat)) return false;
       if (!pbc::ProtobufEqualityComparers.BitwiseDoubleEqualityComparer.Equals(TestDouble, other.TestDouble)) return false;
       if (TestBool != other.TestBool) return false;
@@ -362,6 +411,9 @@ namespace Config {
     public override int GetHashCode() {
       int hash = 1;
       if (TestInt != 0) hash ^= TestInt.GetHashCode();
+      hash ^= testStringArrays_.GetHashCode();
+      if (TestString1 != 0D) hash ^= pbc::ProtobufEqualityComparers.BitwiseDoubleEqualityComparer.GetHashCode(TestString1);
+      if (TestString.Length != 0) hash ^= TestString.GetHashCode();
       if (TestFloat != 0F) hash ^= pbc::ProtobufEqualityComparers.BitwiseSingleEqualityComparer.GetHashCode(TestFloat);
       if (TestDouble != 0D) hash ^= pbc::ProtobufEqualityComparers.BitwiseDoubleEqualityComparer.GetHashCode(TestDouble);
       if (TestBool != false) hash ^= TestBool.GetHashCode();
@@ -397,16 +449,25 @@ namespace Config {
         output.WriteRawTag(8);
         output.WriteInt32(TestInt);
       }
+      testStringArrays_.WriteTo(output, _repeated_testStringArrays_codec);
+      if (TestString1 != 0D) {
+        output.WriteRawTag(25);
+        output.WriteDouble(TestString1);
+      }
+      if (TestString.Length != 0) {
+        output.WriteRawTag(34);
+        output.WriteString(TestString);
+      }
       if (TestFloat != 0F) {
-        output.WriteRawTag(21);
+        output.WriteRawTag(45);
         output.WriteFloat(TestFloat);
       }
       if (TestDouble != 0D) {
-        output.WriteRawTag(25);
+        output.WriteRawTag(49);
         output.WriteDouble(TestDouble);
       }
       if (TestBool != false) {
-        output.WriteRawTag(32);
+        output.WriteRawTag(56);
         output.WriteBool(TestBool);
       }
       testIntArrays_.WriteTo(output, _repeated_testIntArrays_codec);
@@ -414,22 +475,22 @@ namespace Config {
       testDoubleArrays_.WriteTo(output, _repeated_testDoubleArrays_codec);
       testBoolArrays_.WriteTo(output, _repeated_testBoolArrays_codec);
       if (testObj_ != null) {
-        output.WriteRawTag(74);
+        output.WriteRawTag(98);
         output.WriteMessage(TestObj);
       }
       if (testObj1_ != null) {
-        output.WriteRawTag(82);
+        output.WriteRawTag(106);
         output.WriteMessage(TestObj1);
       }
       testObjArrays_.WriteTo(output, _repeated_testObjArrays_codec);
       testObjArray1S_.WriteTo(output, _repeated_testObjArray1S_codec);
       if (testDefineFromGlobal_ != null) {
-        output.WriteRawTag(106);
+        output.WriteRawTag(130, 1);
         output.WriteMessage(TestDefineFromGlobal);
       }
       testDefineFromGlobal2S_.WriteTo(output, _repeated_testDefineFromGlobal2S_codec);
       if (testCustomObj_ != null) {
-        output.WriteRawTag(122);
+        output.WriteRawTag(146, 1);
         output.WriteMessage(TestCustomObj);
       }
       testCustomObjArrays_.WriteTo(output, _repeated_testCustomObjArrays_codec);
@@ -446,16 +507,25 @@ namespace Config {
         output.WriteRawTag(8);
         output.WriteInt32(TestInt);
       }
+      testStringArrays_.WriteTo(ref output, _repeated_testStringArrays_codec);
+      if (TestString1 != 0D) {
+        output.WriteRawTag(25);
+        output.WriteDouble(TestString1);
+      }
+      if (TestString.Length != 0) {
+        output.WriteRawTag(34);
+        output.WriteString(TestString);
+      }
       if (TestFloat != 0F) {
-        output.WriteRawTag(21);
+        output.WriteRawTag(45);
         output.WriteFloat(TestFloat);
       }
       if (TestDouble != 0D) {
-        output.WriteRawTag(25);
+        output.WriteRawTag(49);
         output.WriteDouble(TestDouble);
       }
       if (TestBool != false) {
-        output.WriteRawTag(32);
+        output.WriteRawTag(56);
         output.WriteBool(TestBool);
       }
       testIntArrays_.WriteTo(ref output, _repeated_testIntArrays_codec);
@@ -463,22 +533,22 @@ namespace Config {
       testDoubleArrays_.WriteTo(ref output, _repeated_testDoubleArrays_codec);
       testBoolArrays_.WriteTo(ref output, _repeated_testBoolArrays_codec);
       if (testObj_ != null) {
-        output.WriteRawTag(74);
+        output.WriteRawTag(98);
         output.WriteMessage(TestObj);
       }
       if (testObj1_ != null) {
-        output.WriteRawTag(82);
+        output.WriteRawTag(106);
         output.WriteMessage(TestObj1);
       }
       testObjArrays_.WriteTo(ref output, _repeated_testObjArrays_codec);
       testObjArray1S_.WriteTo(ref output, _repeated_testObjArray1S_codec);
       if (testDefineFromGlobal_ != null) {
-        output.WriteRawTag(106);
+        output.WriteRawTag(130, 1);
         output.WriteMessage(TestDefineFromGlobal);
       }
       testDefineFromGlobal2S_.WriteTo(ref output, _repeated_testDefineFromGlobal2S_codec);
       if (testCustomObj_ != null) {
-        output.WriteRawTag(122);
+        output.WriteRawTag(146, 1);
         output.WriteMessage(TestCustomObj);
       }
       testCustomObjArrays_.WriteTo(ref output, _repeated_testCustomObjArrays_codec);
@@ -493,6 +563,13 @@ namespace Config {
       int size = 0;
       if (TestInt != 0) {
         size += 1 + pb::CodedOutputStream.ComputeInt32Size(TestInt);
+      }
+      size += testStringArrays_.CalculateSize(_repeated_testStringArrays_codec);
+      if (TestString1 != 0D) {
+        size += 1 + 8;
+      }
+      if (TestString.Length != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeStringSize(TestString);
       }
       if (TestFloat != 0F) {
         size += 1 + 4;
@@ -516,11 +593,11 @@ namespace Config {
       size += testObjArrays_.CalculateSize(_repeated_testObjArrays_codec);
       size += testObjArray1S_.CalculateSize(_repeated_testObjArray1S_codec);
       if (testDefineFromGlobal_ != null) {
-        size += 1 + pb::CodedOutputStream.ComputeMessageSize(TestDefineFromGlobal);
+        size += 2 + pb::CodedOutputStream.ComputeMessageSize(TestDefineFromGlobal);
       }
       size += testDefineFromGlobal2S_.CalculateSize(_repeated_testDefineFromGlobal2S_codec);
       if (testCustomObj_ != null) {
-        size += 1 + pb::CodedOutputStream.ComputeMessageSize(TestCustomObj);
+        size += 2 + pb::CodedOutputStream.ComputeMessageSize(TestCustomObj);
       }
       size += testCustomObjArrays_.CalculateSize(_repeated_testCustomObjArrays_codec);
       if (_unknownFields != null) {
@@ -536,6 +613,13 @@ namespace Config {
       }
       if (other.TestInt != 0) {
         TestInt = other.TestInt;
+      }
+      testStringArrays_.Add(other.testStringArrays_);
+      if (other.TestString1 != 0D) {
+        TestString1 = other.TestString1;
+      }
+      if (other.TestString.Length != 0) {
+        TestString = other.TestString;
       }
       if (other.TestFloat != 0F) {
         TestFloat = other.TestFloat;
@@ -596,79 +680,91 @@ namespace Config {
             TestInt = input.ReadInt32();
             break;
           }
-          case 21: {
-            TestFloat = input.ReadFloat();
+          case 18: {
+            testStringArrays_.AddEntriesFrom(input, _repeated_testStringArrays_codec);
             break;
           }
           case 25: {
+            TestString1 = input.ReadDouble();
+            break;
+          }
+          case 34: {
+            TestString = input.ReadString();
+            break;
+          }
+          case 45: {
+            TestFloat = input.ReadFloat();
+            break;
+          }
+          case 49: {
             TestDouble = input.ReadDouble();
             break;
           }
-          case 32: {
+          case 56: {
             TestBool = input.ReadBool();
-            break;
-          }
-          case 42:
-          case 40: {
-            testIntArrays_.AddEntriesFrom(input, _repeated_testIntArrays_codec);
-            break;
-          }
-          case 50:
-          case 53: {
-            testFloatArrays_.AddEntriesFrom(input, _repeated_testFloatArrays_codec);
-            break;
-          }
-          case 58:
-          case 57: {
-            testDoubleArrays_.AddEntriesFrom(input, _repeated_testDoubleArrays_codec);
             break;
           }
           case 66:
           case 64: {
+            testIntArrays_.AddEntriesFrom(input, _repeated_testIntArrays_codec);
+            break;
+          }
+          case 74:
+          case 77: {
+            testFloatArrays_.AddEntriesFrom(input, _repeated_testFloatArrays_codec);
+            break;
+          }
+          case 82:
+          case 81: {
+            testDoubleArrays_.AddEntriesFrom(input, _repeated_testDoubleArrays_codec);
+            break;
+          }
+          case 90:
+          case 88: {
             testBoolArrays_.AddEntriesFrom(input, _repeated_testBoolArrays_codec);
             break;
           }
-          case 74: {
+          case 98: {
             if (testObj_ == null) {
               TestObj = new global::Config.TestGlobalTemplate.Types.TestObj_();
             }
             input.ReadMessage(TestObj);
             break;
           }
-          case 82: {
+          case 106: {
             if (testObj1_ == null) {
               TestObj1 = new global::Config.TestGlobalTemplate.Types.TestObj1_();
             }
             input.ReadMessage(TestObj1);
             break;
           }
-          case 90: {
+          case 114: {
             testObjArrays_.AddEntriesFrom(input, _repeated_testObjArrays_codec);
             break;
           }
-          case 98: {
+          case 122: {
             testObjArray1S_.AddEntriesFrom(input, _repeated_testObjArray1S_codec);
             break;
           }
-          case 106: {
+          case 130: {
             if (testDefineFromGlobal_ == null) {
               TestDefineFromGlobal = new global::Position3d();
             }
             input.ReadMessage(TestDefineFromGlobal);
             break;
           }
-          case 114: {
+          case 138: {
             testDefineFromGlobal2S_.AddEntriesFrom(input, _repeated_testDefineFromGlobal2S_codec);
             break;
           }
-          case 122: {
+          case 146: {
             if (testCustomObj_ == null) {
               TestCustomObj = new global::PositionArray3d();
             }
             input.ReadMessage(TestCustomObj);
             break;
           }
-          case 130: {
+          case 154: {
             testCustomObjArrays_.AddEntriesFrom(input, _repeated_testCustomObjArrays_codec);
             break;
           }
@@ -690,79 +786,91 @@ namespace Config {
             TestInt = input.ReadInt32();
             break;
           }
-          case 21: {
-            TestFloat = input.ReadFloat();
+          case 18: {
+            testStringArrays_.AddEntriesFrom(ref input, _repeated_testStringArrays_codec);
             break;
           }
           case 25: {
+            TestString1 = input.ReadDouble();
+            break;
+          }
+          case 34: {
+            TestString = input.ReadString();
+            break;
+          }
+          case 45: {
+            TestFloat = input.ReadFloat();
+            break;
+          }
+          case 49: {
             TestDouble = input.ReadDouble();
             break;
           }
-          case 32: {
+          case 56: {
             TestBool = input.ReadBool();
-            break;
-          }
-          case 42:
-          case 40: {
-            testIntArrays_.AddEntriesFrom(ref input, _repeated_testIntArrays_codec);
-            break;
-          }
-          case 50:
-          case 53: {
-            testFloatArrays_.AddEntriesFrom(ref input, _repeated_testFloatArrays_codec);
-            break;
-          }
-          case 58:
-          case 57: {
-            testDoubleArrays_.AddEntriesFrom(ref input, _repeated_testDoubleArrays_codec);
             break;
           }
           case 66:
           case 64: {
+            testIntArrays_.AddEntriesFrom(ref input, _repeated_testIntArrays_codec);
+            break;
+          }
+          case 74:
+          case 77: {
+            testFloatArrays_.AddEntriesFrom(ref input, _repeated_testFloatArrays_codec);
+            break;
+          }
+          case 82:
+          case 81: {
+            testDoubleArrays_.AddEntriesFrom(ref input, _repeated_testDoubleArrays_codec);
+            break;
+          }
+          case 90:
+          case 88: {
             testBoolArrays_.AddEntriesFrom(ref input, _repeated_testBoolArrays_codec);
             break;
           }
-          case 74: {
+          case 98: {
             if (testObj_ == null) {
               TestObj = new global::Config.TestGlobalTemplate.Types.TestObj_();
             }
             input.ReadMessage(TestObj);
             break;
           }
-          case 82: {
+          case 106: {
             if (testObj1_ == null) {
               TestObj1 = new global::Config.TestGlobalTemplate.Types.TestObj1_();
             }
             input.ReadMessage(TestObj1);
             break;
           }
-          case 90: {
+          case 114: {
             testObjArrays_.AddEntriesFrom(ref input, _repeated_testObjArrays_codec);
             break;
           }
-          case 98: {
+          case 122: {
             testObjArray1S_.AddEntriesFrom(ref input, _repeated_testObjArray1S_codec);
             break;
           }
-          case 106: {
+          case 130: {
             if (testDefineFromGlobal_ == null) {
               TestDefineFromGlobal = new global::Position3d();
             }
             input.ReadMessage(TestDefineFromGlobal);
             break;
           }
-          case 114: {
+          case 138: {
             testDefineFromGlobal2S_.AddEntriesFrom(ref input, _repeated_testDefineFromGlobal2S_codec);
             break;
           }
-          case 122: {
+          case 146: {
             if (testCustomObj_ == null) {
               TestCustomObj = new global::PositionArray3d();
             }
             input.ReadMessage(TestCustomObj);
             break;
           }
-          case 130: {
+          case 154: {
             testCustomObjArrays_.AddEntriesFrom(ref input, _repeated_testCustomObjArrays_codec);
             break;
           }

@@ -19,6 +19,24 @@
     <None Update="json\TestTableArraysTemplate.json">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </None>
+    <None Update="out_json\TestGlobal2Template.json">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Update="out_json\TestGlobalTemplate.json">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Update="out_json\TestTableArraysTemplate.json">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Update="out_protobuf\TestGlobal2Template.bytes">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Update="out_protobuf\TestGlobalTemplate.bytes">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Update="out_protobuf\TestTableArraysTemplate.bytes">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
     <None Update="protobuf\BattleParamTemplate.byte">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </None>
