@@ -8,7 +8,7 @@ namespace Example
         static void Main(string[] args)
         {
 
-            //TestJson();
+            TestJson();
             TestProtobuf();
 
         }
@@ -19,8 +19,8 @@ namespace Example
             TestGlobalTemplate template = TestGlobalTemplate.Parser.ParseJson(GetJson(typeof(TestGlobalTemplate)));
             Console.WriteLine(template);
 
-            TestTableArraysTemplateList template2 = TestTableArraysTemplateList.Parser.ParseJson(GetJson(typeof(TestTableArraysTemplate)));
-            Console.WriteLine(template2.TestTableArrays);
+            //TestTableArraysTemplateList template2 = TestTableArraysTemplateList.Parser.ParseJson(GetJson(typeof(TestTableArraysTemplate)));
+            //Console.WriteLine(template2.TestTableArrays);
         }
         private static void TestProtobuf()
         {

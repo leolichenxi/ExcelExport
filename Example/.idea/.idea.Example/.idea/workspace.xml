@@ -1,0 +1,121 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ChangeListManager">
+    <list default="true" id="eb76e1ed-6dc0-4ec9-9122-05eb743626b2" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/.vs/Example/DesignTimeBuild/.dtbcache" beforeDir="false" afterPath="$PROJECT_DIR$/.vs/Example/DesignTimeBuild/.dtbcache" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.vs/Example/v16/.suo" beforeDir="false" afterPath="$PROJECT_DIR$/.vs/Example/v16/.suo" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.vs/Example/v16/Server/sqlite3/storage.ide" beforeDir="false" afterPath="$PROJECT_DIR$/.vs/Example/v16/Server/sqlite3/storage.ide" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.vs/Example/v16/Server/sqlite3/storage.ide-shm" beforeDir="false" afterPath="$PROJECT_DIR$/.vs/Example/v16/Server/sqlite3/storage.ide-shm" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.vs/Example/v16/Server/sqlite3/storage.ide-wal" beforeDir="false" afterPath="$PROJECT_DIR$/.vs/Example/v16/Server/sqlite3/storage.ide-wal" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Program.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Program.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/bin/Debug/netcoreapp3.1/Example.dll" beforeDir="false" afterPath="$PROJECT_DIR$/bin/Debug/netcoreapp3.1/Example.dll" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/bin/Debug/netcoreapp3.1/Example.pdb" beforeDir="false" afterPath="$PROJECT_DIR$/bin/Debug/netcoreapp3.1/Example.pdb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/bin/Debug/netcoreapp3.1/out_json/TestGlobalTemplate.json" beforeDir="false" afterPath="$PROJECT_DIR$/bin/Debug/netcoreapp3.1/out_json/TestGlobalTemplate.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/bin/Debug/netcoreapp3.1/out_protobuf/TestGlobalTemplate.bytes" beforeDir="false" afterPath="$PROJECT_DIR$/bin/Debug/netcoreapp3.1/out_protobuf/TestGlobalTemplate.bytes" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/obj/Debug/netcoreapp3.1/Example.csprojAssemblyReference.cache" beforeDir="false" afterPath="$PROJECT_DIR$/obj/Debug/netcoreapp3.1/Example.csprojAssemblyReference.cache" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/obj/Debug/netcoreapp3.1/Example.dll" beforeDir="false" afterPath="$PROJECT_DIR$/obj/Debug/netcoreapp3.1/Example.dll" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/obj/Debug/netcoreapp3.1/Example.pdb" beforeDir="false" afterPath="$PROJECT_DIR$/obj/Debug/netcoreapp3.1/Example.pdb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/obj/Example.csproj.nuget.g.props" beforeDir="false" afterPath="$PROJECT_DIR$/obj/Example.csproj.nuget.g.props" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out_csharp/TestGlobalTemplate.cs" beforeDir="false" afterPath="$PROJECT_DIR$/out_csharp/TestGlobalTemplate.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out_json/TestGlobalTemplate.json" beforeDir="false" afterPath="$PROJECT_DIR$/out_json/TestGlobalTemplate.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out_protobuf/TestGlobalTemplate.bytes" beforeDir="false" afterPath="$PROJECT_DIR$/out_protobuf/TestGlobalTemplate.bytes" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Exporter/custom.xlsx" beforeDir="false" afterPath="$PROJECT_DIR$/../Exporter/custom.xlsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Exporter/export.py" beforeDir="false" afterPath="$PROJECT_DIR$/../Exporter/export.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Exporter/lua_api/BaseType.lua" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Exporter/lua_api/Position3d.lua" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Exporter/lua_api/PositionArray3d.lua" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Exporter/lua_api/TestGlobal2Template.lua" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Exporter/lua_api/TestGlobalTemplate.TestObj1_.lua" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Exporter/lua_api/TestGlobalTemplate.TestObjArray1_.lua" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Exporter/lua_api/TestGlobalTemplate.TestObjArray_.lua" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Exporter/lua_api/TestGlobalTemplate.TestObj_.lua" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Exporter/lua_api/TestGlobalTemplate.lua" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Exporter/lua_api/TestTableArrayTemplate.lua" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Exporter/lua_api/TestTableArraysTemplate.lua" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Exporter/out_csharp/Position3D.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Exporter/out_csharp/PositionArray3D.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Exporter/out_csharp/TestGlobal2Template.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Exporter/out_csharp/TestGlobalTemplate.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Exporter/out_csharp/TestTableArraysTemplate.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Exporter/out_json/TestGlobal2Template.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Exporter/out_json/TestGlobalTemplate.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Exporter/out_json/TestTableArraysTemplate.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Exporter/out_lua/TestGlobal2Template.lua" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Exporter/out_lua/TestGlobalTemplate.lua" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Exporter/out_lua/TestTableArraysTemplate.lua" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Exporter/out_protobuf/TestGlobal2Template.bytes" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Exporter/out_protobuf/TestGlobalTemplate.bytes" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Exporter/out_protobuf/TestTableArraysTemplate.bytes" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Exporter/out_python/protos/TestGlobal2Template_pb2.py" beforeDir="false" afterPath="$PROJECT_DIR$/../Exporter/out_python/protos/TestGlobal2Template_pb2.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Exporter/out_python/protos/TestGlobalTemplate_pb2.py" beforeDir="false" afterPath="$PROJECT_DIR$/../Exporter/out_python/protos/TestGlobalTemplate_pb2.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Exporter/protos/Position3d.proto" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Exporter/protos/PositionArray3d.proto" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Exporter/protos/TestGlobal2Template.proto" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Exporter/protos/TestGlobalTemplate.proto" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Exporter/protos/TestTableArraysTemplate.proto" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Exporter/tools/generator.py" beforeDir="false" afterPath="$PROJECT_DIR$/../Exporter/tools/generator.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Exporter/配置表1.xlsx" beforeDir="false" afterPath="$PROJECT_DIR$/../Exporter/配置表1.xlsx" afterDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/.." />
+  </component>
+  <component name="GitToolBoxStore">
+    <option name="projectConfigVersion" value="2" />
+  </component>
+  <component name="ProjectId" id="1qn13e3HnKyUxDv8yATSYsVrdaK" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent">
+    <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
+    <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
+    <property name="WebServerToolWindowFactoryState" value="false" />
+  </component>
+  <component name="RunManager">
+    <configuration name="Example" type="DotNetProject" factoryName=".NET Project">
+      <option name="EXE_PATH" value="" />
+      <option name="PROGRAM_PARAMETERS" value="" />
+      <option name="WORKING_DIRECTORY" value="" />
+      <option name="PASS_PARENT_ENVS" value="1" />
+      <option name="USE_EXTERNAL_CONSOLE" value="0" />
+      <option name="USE_MONO" value="0" />
+      <option name="RUNTIME_ARGUMENTS" value="" />
+      <option name="PROJECT_PATH" value="$PROJECT_DIR$/Example.csproj" />
+      <option name="PROJECT_EXE_PATH_TRACKING" value="1" />
+      <option name="PROJECT_ARGUMENTS_TRACKING" value="1" />
+      <option name="PROJECT_WORKING_DIRECTORY_TRACKING" value="1" />
+      <option name="PROJECT_KIND" value="DotNetCore" />
+      <option name="PROJECT_TFM" value="" />
+      <method v="2">
+        <option name="Build" />
+      </method>
+    </configuration>
+  </component>
+  <component name="SvnConfiguration">
+    <configuration />
+  </component>
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="eb76e1ed-6dc0-4ec9-9122-05eb743626b2" name="Default Changelist" comment="" />
+      <created>1617700342648</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1617700342648</updated>
+      <workItem from="1617700345468" duration="4000" />
+      <workItem from="1617713236012" duration="7000" />
+    </task>
+    <servers />
+  </component>
+  <component name="UnityProjectConfiguration" hasMinimizedUI="null" />
+  <component name="UnityUnitTestConfiguration" currentTestLauncher="NUnit" />
+  <component name="VcsManagerConfiguration">
+    <option name="CLEAR_INITIAL_COMMIT_MESSAGE" value="true" />
+  </component>
+</project>

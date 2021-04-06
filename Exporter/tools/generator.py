@@ -59,15 +59,22 @@ BaseTypes = {
     'bool':BaseTypeBool
 }
 
+BaseProtoTypes = {
+    'int32':'int',
+}
+
 ETypeList = 'list'
 ETypeObj = 'obj'
 ETypeBase = 'base'
 
 SplitArray = ','  # 配置的
 SplitObjArray = ';'  # 配置的
-SplitTypeFiled = ':'  # 对象类型的字段数组分割  10 : 100
+SplitTypeFiled = ';'  # 对象类型的字段数组分割  int a : int b
+SplitValueFiled = ';'  # 对象类型的字段数组分割  10 : 100
 SheetRowMaxSpaceCount = 3  # 连续空白几行  余下的不读取
 IgnoreSign = '#'
+
+SplitArrayObjValue = r"{.*?}"
 
 OutDir_Protos = 'protos'
 OutDir_Jsons = 'json'
@@ -75,7 +82,7 @@ OutDir_Lua = 'lua'
 OutDir_Protobuf = 'protobuf'
 ListSuffix = 'List'
 
-LogEnable = True;
+LogEnable = True
 
 
 def log(*args):
@@ -114,7 +121,7 @@ def get_json_data(data):
 def first_char_upper(v):
     if is_null_or_empty(v):
         return v
-    v = v[0].upper() + v[1:]
+    v = v[0].upper( ) + v[1:]
     return v
 
 
@@ -160,7 +167,7 @@ def dict2pb(cls,adict,strict=False):
     Takes a class representing the ProtoBuf Message and fills it with data from
     the dict.
     """
-    obj = cls()
+    obj = cls( )
     for field in obj.DESCRIPTOR.fields:
         if not field.label == field.LABEL_REQUIRED:
             continue
@@ -170,7 +177,7 @@ def dict2pb(cls,adict,strict=False):
             raise ValueError('Field "%s" missing from descriptor dictionary.' % field.name)
     field_names = set([field.name for field in obj.DESCRIPTOR.fields])
     if strict:
-        for key in adict.keys():
+        for key in adict.keys( ):
             if key not in field_names:
                 raise ValueError('Key "%s" can not be mapped to field in %s class.' % (key,type(obj)))
     for field in obj.DESCRIPTOR.fields:
@@ -180,7 +187,7 @@ def dict2pb(cls,adict,strict=False):
         if field.label == FD.LABEL_REPEATED:
             if field.type == FD.TYPE_MESSAGE:
                 for sub_dict in adict[field.name]:
-                    item = getattr(obj,field.name).add()
+                    item = getattr(obj,field.name).add( )
                     item.CopyFrom(dict2pb(msg_type._concrete_class,sub_dict))
             else:
                 for i in adict[field.name]:
@@ -216,7 +223,7 @@ class Exporter:
         self.name_space = name_space
         self.suffix = suffix
         self.script_out_dic = out_scripts
-        self.add_global_msg()
+        self.add_global_msg( )
 
     def add_global_msg(self):
         file = 'custom.xlsx'
@@ -228,7 +235,7 @@ class Exporter:
             return
         try:
             excel_info = xlrd.open_workbook(file)
-            sheet = excel_info.sheets()[0]
+            sheet = excel_info.sheets( )[0]
             msgs = Message("GlobalDefine",'','',None,False)
             for index in range(1,sheet.nrows):
                 row = sheet.row_values(index)
@@ -236,7 +243,7 @@ class Exporter:
                     msgs.add_filed(row[0],row[1],row[2])
             for msg in msgs.child_msgs:
                 msg.parent_msg = None
-                msg.set_name(msg.get_name()[:-1])
+                msg.set_name(msg.get_name( )[:-1])
                 self.global_msgs.append(msg)
         except Exception as e:
             raise ValueError('export global fail!',e)
@@ -280,34 +287,34 @@ class Exporter:
         return p.group(1) if p else False
 
     def export(self):
-        files = self.get_file_list_path()
+        files = self.get_file_list_path( )
         for excel_file in files:
             excel_data = xlrd.open_workbook(excel_file)
-            for sheet in excel_data.sheets():
+            for sheet in excel_data.sheets( ):
                 export_mark_name = self.get_sheet_export_mark(sheet.name)
                 if export_mark_name:
                     info = self.build_single_sheet_proto(export_mark_name,sheet)
                     self.proto_infos.append(info)
-        self.export_proto()
-        self.export_script()
-        self.export_data()
+        self.export_proto( )
+        self.export_script( )
+        self.export_data( )
 
     def export_proto(self):
-        global_dir = self.get_export_global_proto_folder()
-        proto_dir = self.get_export_proto_folder()
+        global_dir = self.get_export_global_proto_folder( )
+        proto_dir = self.get_export_proto_folder( )
         prepare_dir(global_dir)
         prepare_dir(proto_dir)
         for msg in self.global_msgs:
-            print("export global proto file:",msg.get_proto_file_name())
+            print("export global proto file:",msg.get_proto_file_name( ))
             msg.to_protobuf_proto(global_dir)
         for info in self.proto_infos:
-            msg = info.get_message()
-            print("export proto file:",msg.get_proto_file_name())
+            msg = info.get_message( )
+            print("export proto file:",msg.get_proto_file_name( ))
             msg.to_protobuf_proto(proto_dir)
 
     def export_script(self):
         if isinstance(self.script_out_dic,dict):
-            for k,v in self.script_out_dic.items():
+            for k,v in self.script_out_dic.items( ):
                 prepare_dir(v)
                 self.execute_protoc_out_script(k,v)
 
@@ -315,22 +322,22 @@ class Exporter:
         for msg in self.global_msgs:
             self.export_script_item(msg,script_out,folder)
         for info in self.proto_infos:
-            msg = info.get_message()
+            msg = info.get_message( )
             self.export_script_item(msg,script_out,folder)
 
     def export_script_item(self,msg,script_out,out_folder):
-        print("generate script :",msg.get_proto_name())
+        print("generate script :",msg.get_proto_name( ))
         cmd = self.get_protoc_cmd(msg,script_out,out_folder)
         os.system(cmd)
 
     def get_protoc_cmd(self,msg,script_out,out_folder):
         return 'protoc --%s=%s/ %s/%s' % (
-            script_out,out_folder,self.get_export_proto_folder(),msg.get_proto_file_name())
+            script_out,out_folder,self.get_export_proto_folder( ),msg.get_proto_file_name( ))
 
     def export_data(self):
-        for format,out_folder in self.out_data_formats.items():
+        for format,out_folder in self.out_data_formats.items( ):
             if format == 'lua':
-                self.export_lua_api()
+                self.export_lua_api( )
                 self.export_lua_data(out_folder)
             elif format == 'json':
                 self.export_json_data(out_folder)
@@ -344,9 +351,9 @@ class Exporter:
         json_dir = out_folder
         prepare_dir(json_dir)
         for info in self.proto_infos:
-            file_name = info.get_proto_name()
+            file_name = info.get_proto_name( )
             json_file = json_dir + '/' + file_name
-            self.save_to_json(json_file,info.get_value())
+            self.save_to_json(json_file,info.get_value( ))
 
     def export_lua_data(self,out_folder):
         # lua_dir = self.get_export_lua_folder( )
@@ -361,10 +368,10 @@ class Exporter:
         protobuf_dir = out_folder
         prepare_dir(protobuf_dir)
         for info in self.proto_infos:
-            file_name = info.get_proto_name()
+            file_name = info.get_proto_name( )
             proto_file = protobuf_dir + '/' + file_name
-            self.save_to_protobuf_data(proto_file,file_name,info.get_value(),info.is_single())
-        for root,dirs,files in os.walk(self.get_export_proto_folder()):
+            self.save_to_protobuf_data(proto_file,file_name,info.get_value( ),info.is_single( ))
+        for root,dirs,files in os.walk(self.get_export_proto_folder( )):
             for name in files:
                 if (name.endswith(".py")):
                     os.remove(os.path.join(root,name))
@@ -390,8 +397,8 @@ class Exporter:
             row_des = sheet.row_values(Index_Item_Des)
             row_types = sheet.row_values(Index_Item_Type)
             row_names = sheet.row_values(Index_Item_Name)
-            filed_names = collections.OrderedDict()
-            filed_types = collections.OrderedDict()
+            filed_names = collections.OrderedDict( )
+            filed_types = collections.OrderedDict( )
             for index,value in enumerate(row_names):
                 filed_name = self.strip_filed(value)
                 if index < len(row_types):
@@ -401,12 +408,12 @@ class Exporter:
                         filed_types[index] = filed_type
                         filed_des = row_des[index] if index < len(row_des) else filed_name
                         msg.add_filed(filed_name,filed_type,filed_des)
-            export_obj_dic = collections.OrderedDict()
+            export_obj_dic = collections.OrderedDict( )
             export_obj = []
             space_row_count = 0
             for row_index in range(4,sheet.nrows):
                 row_values = sheet.row_values(row_index)
-                first_text = str(row_values[0]).strip()
+                first_text = str(row_values[0]).strip( )
                 if is_null_or_empty(first_text):
                     space_row_count += 1
                     if space_row_count >= 3:
@@ -414,14 +421,14 @@ class Exporter:
                 else:
                     if first_text[0] == '#':
                         continue
-                    item_obj = collections.OrderedDict()
-                    for key,value in filed_names.items():
+                    item_obj = collections.OrderedDict( )
+                    for key,value in filed_names.items( ):
                         filed_name = value
                         filed_type = filed_types[key]
                         filed_value = row_values[key] if len(row_values) > key else ''
                         msg.record_internal_filed(item_obj,filed_name,filed_type,filed_value)
                     export_obj.append(item_obj)
-            export_obj_dic[msg.get_name()] = export_obj
+            export_obj_dic[msg.get_name( )] = export_obj
             return msg,export_obj_dic
         except Exception as e:
             raise e
@@ -431,7 +438,7 @@ class Exporter:
             msg = Message(proto_name,self.name_space,self.suffix,None,False)  # 创建一个Message Proto
             msg.add_global_msg(self.global_msgs)
             space_row_count = 0
-            export_obj = collections.OrderedDict()
+            export_obj = collections.OrderedDict( )
             for filed_index in range(1,sheet.nrows):
                 row = sheet.row_values(filed_index)
                 if not self.is_ignore_row(row):
@@ -464,9 +471,9 @@ class Exporter:
         :param info: @ProtoInfo
         :return:
         """
-        file_name = info.get_proto_name()
+        file_name = info.get_proto_name( )
         lua_file = out_dir + '/' + file_name + '.lua'
-        obj = info.get_value()
+        obj = info.get_value( )
         print("save lua data :",lua_file)
         lua_str = "".join(get_lua_data(obj))
         array = '[]'
@@ -482,11 +489,11 @@ class Exporter:
         prepare_dir(api_dir)
         self.export_base_api(api_dir)
         for msg in self.global_msgs:
-            print("export global lua api file:",msg.get_proto_file_name())
+            print("export global lua api file:",msg.get_proto_file_name( ))
             msg.to_lua_api(api_dir)
         for info in self.proto_infos:
-            msg = info.get_message()
-            print("export lua api file:",msg.get_proto_file_name())
+            msg = info.get_message( )
+            print("export lua api file:",msg.get_proto_file_name( ))
             msg.to_lua_api(api_dir)
 
     def export_base_api(self,out_dir):
@@ -500,7 +507,7 @@ class Exporter:
             f.write(value)
 
     def save_to_protobuf_data(self,out_file_name,py_file,obj,is_single):
-        module_name = self.get_export_proto_folder()
+        module_name = self.get_export_proto_folder( )
         class_proto = importlib.import_module(module_name + '.' + py_file + '_pb2')
         class_type = None
         if is_single:
@@ -512,7 +519,7 @@ class Exporter:
             file_name = out_file_name + '.bytes'
             print("save protobuf data :",file_name)
             with codecs.open(file_name,'wb') as f:
-                f.write(proto.SerializeToString())
+                f.write(proto.SerializeToString( ))
         else:
             raise ValueError('export to protobuf error! proto:' + py_file)
 
@@ -529,7 +536,7 @@ class Exporter:
 
     @staticmethod
     def strip_filed(value):
-        return str(value).strip()
+        return str(value).strip( )
 
     @staticmethod
     def get_global_sheet_info(sheet):
@@ -559,7 +566,7 @@ class Message:
         self.name = name
         self.name_space = name_space
         self.suffix = suffix
-        self.fileds_proto = collections.OrderedDict()  # 用于生成.proto 的 filed 列表
+        self.fileds_proto = collections.OrderedDict( )  # 用于生成.proto 的 filed 列表
         self.parent_msg = parent_msg  # 从属哪个message
         self.child_msgs = []
         self.is_list_obj = is_list_obj
@@ -574,7 +581,7 @@ class Message:
 
     def try_get_global_msg(self,msg_name):
         for msg in self.global_msgs:
-            if msg.get_proto_name() == msg_name:
+            if msg.get_proto_name( ) == msg_name:
                 return msg
         return None
 
@@ -595,40 +602,40 @@ class Message:
         return self.name + self.suffix
 
     def get_proto_file_name(self):
-        return self.get_proto_name() + '.proto'
+        return self.get_proto_name( ) + '.proto'
 
     def get_msg_lua_api(self):
         api = '---@class %s ' % (self.name + self.suffix)
-        for i,filed in enumerate(self.fileds_proto.values()):
-            api = self.add_line(api,filed.get_lua_api())
+        for i,filed in enumerate(self.fileds_proto.values( )):
+            api = self.add_line(api,filed.get_lua_api( ))
         return api
 
     def get_msg_proto(self):
         """
         :return: .proto 文件描述
         """
-        class_define = 'message %s {' % (self.get_proto_name())
-        for i,filed in enumerate(self.fileds_proto.values()):
+        class_define = 'message %s {' % (self.get_proto_name( ))
+        for i,filed in enumerate(self.fileds_proto.values( )):
             class_define = self.add_space_line(class_define,filed.get_define_proto(i + 1))
         for msg in self.child_msgs:
-            class_define = self.add_space_line(class_define,msg.get_msg_proto())
-        if self.is_child_message():
+            class_define = self.add_space_line(class_define,msg.get_msg_proto( ))
+        if self.is_child_message( ):
             class_define = self.add_line(class_define,'  }')
         else:
             class_define = self.add_line(class_define,'}')
-        if self.is_list_obj and not self.is_child_message():
-            list_define = 'message %s%s {' % (self.get_proto_name(),ListSuffix)
-            filed = Filed(self.name,self.get_proto_name(),ListSuffix,True)
+        if self.is_list_obj and not self.is_child_message( ):
+            list_define = 'message %s%s {' % (self.get_proto_name( ),ListSuffix)
+            filed = Filed(self.name,self.get_proto_name( ),ListSuffix,True)
             list_define = self.add_space_line(list_define,filed.get_define_proto(1))
             list_define = self.add_line(list_define,'}')
             class_define = self.add_line(class_define,list_define)
         return class_define
 
     def get_list_lua_api(self):
-        if self.is_list_obj and not self.is_child_message():
-            api = '---@class %s ' % (self.get_proto_name())
+        if self.is_list_obj and not self.is_child_message( ):
+            api = '---@class %s ' % (self.get_proto_name( ))
             filed = Filed(self.name,self.name + self.suffix,ListSuffix,True)
-            api = self.add_line(api,filed.get_lua_api())
+            api = self.add_line(api,filed.get_lua_api( ))
             return api
         return None
 
@@ -638,7 +645,7 @@ class Message:
             info = self.add_line(info,"package %s;" % (self.name_space))
         for msg in self.import_msgs:
             info = self.add_line(info,'import "%s/%s.proto";' % (OutDir_Protos,msg))
-        info = self.add_line(info,self.get_msg_proto())
+        info = self.add_line(info,self.get_msg_proto( ))
         return info
 
     def to_protobuf_proto(self,out_dir=''):
@@ -646,13 +653,13 @@ class Message:
         :param out_dir: 导出的文件夹
         :return:
         """
-        file_name = ('%s/' % (out_dir) if len(out_dir) > 0 else '') + self.get_proto_name() + '.proto'
+        file_name = ('%s/' % (out_dir) if len(out_dir) > 0 else '') + self.get_proto_name( ) + '.proto'
         with codecs.open(file_name,'w','utf-8') as f:
-            f.write(self.get_full_proto())
+            f.write(self.get_full_proto( ))
 
     def to_lua_api(self,out_dir=''):
-        list_sheet_api = self.get_list_lua_api()
-        file_name = ('%s/' % (out_dir) if len(out_dir) > 0 else '') + self.get_proto_name() + '.lua'
+        list_sheet_api = self.get_list_lua_api( )
+        file_name = ('%s/' % (out_dir) if len(out_dir) > 0 else '') + self.get_proto_name( ) + '.lua'
         if list_sheet_api:
             with codecs.open(file_name,'w','utf-8') as f:
                 f.write(list_sheet_api)
@@ -661,13 +668,13 @@ class Message:
             file_name = ('%s/' % (out_dir) if len(out_dir) > 0 else '') + template_api_name + '.lua'
 
         with codecs.open(file_name,'w','utf-8') as f:
-            f.write(self.get_msg_lua_api())
+            f.write(self.get_msg_lua_api( ))
 
-        file_name = ('%s/' % (out_dir) if len(out_dir) > 0 else '') + self.get_proto_name() + '.'
+        file_name = ('%s/' % (out_dir) if len(out_dir) > 0 else '') + self.get_proto_name( ) + '.'
         for msg in self.child_msgs:
-            child_file_name = file_name + msg.get_proto_name() + '.lua'
+            child_file_name = file_name + msg.get_proto_name( ) + '.lua'
             with codecs.open(child_file_name,'w','utf-8') as f:
-                f.write(msg.get_msg_lua_api())
+                f.write(msg.get_msg_lua_api( ))
 
     @staticmethod
     def add_space_line(s,value):
@@ -679,8 +686,8 @@ class Message:
 
     def get_class_info(self):
         info = []
-        for filed in self.fileds_proto.values():
-            info.append(filed.scheme_info())
+        for filed in self.fileds_proto.values( ):
+            info.append(filed.scheme_info( ))
         return json.dumps(info,ensure_ascii=False,indent=2)
 
     def record_internal_filed(self,export_obj,filed_name,filed_type,filed_value):
@@ -692,7 +699,6 @@ class Message:
         type_define = self.get_type_define(filed_type)
         if type_define == ETypeBase:
             self.record_base_value(export_data,filed_name,filed_type,filed_value)
-            pass
         elif type_define == ETypeList:
             self.record_list_value(export_data,filed_name,filed_type,filed_value)
         elif type_define == ETypeObj:
@@ -712,27 +718,30 @@ class Message:
         elif type_define == ETypeBase:
             values = str(filed_value).strip('[]').split(SplitArray)
         elif type_define == ETypeObj:
-            values = str(filed_value).strip('[]').split(SplitObjArray)
+            values = re.findall(SplitArrayObjValue,
+                                str(filed_value))  ##--str(filed_value).strip('[]').split(SplitObjArray)
         for v in values:
             self.record_filed(list_values,filed_name,base_type,v)
         self.fill_value(parent,filed_name + 's',list_values)
 
     def record_obj_value(self,parent,filed_name,filed_type,filed_value):
-        obj = collections.OrderedDict()
+        obj = collections.OrderedDict( )
         custom_message = self.try_get_global_msg(filed_type)
         filed_types = []
         if custom_message:
-            custom_field_types = custom_message.get_msg_file_types()
+            custom_field_types = custom_message.get_msg_file_types( )
             for field in custom_field_types:
-                filed_types.append(field.get_defined_type() + ' ' + field.get_name())
+                print(field.get_defined_type( ) + ' ' + field.get_name( ))
+                filed_types.append(field.get_defined_type( ) + ' ' + field.get_name( ))
         else:
             filed_types.extend(self.get_obj_file_types(filed_type))
 
-        values = str(filed_value).strip('{}').split(':')
+        values = str(filed_value).strip('{}').split(SplitValueFiled)
         if not is_null_or_empty(values):
             for i in range(0,len(filed_types)):
                 item_filed_type,item_filed_name = self.split_space(filed_types[i])
                 v = values[i] if i < len(values) else ''
+
                 self.record_filed(obj,item_filed_name,item_filed_type,v)
         else:
             print('record_obj_value is null:',filed_name)
@@ -813,7 +822,7 @@ class Message:
     def build_obj_filed(self,filed_name,filed_type,filed_des,is_array=False):
         custom_msg = self.check_or_import_msg_type(filed_type)
         if custom_msg:
-            self.build_filed_proto(filed_name,custom_msg.get_proto_name(),filed_des,is_array)
+            self.build_filed_proto(filed_name,custom_msg.get_proto_name( ),filed_des,is_array)
         else:
             class_name = first_char_upper(filed_name) + '_'
             msgItem = Message(class_name,'','',self,False)
@@ -823,7 +832,7 @@ class Message:
                 msgItem.add_filed(proto_filed_name,proto_filed_type,proto_filed_name)
             msg = self.check_or_import_msg(msgItem)
             if msg:
-                self.build_filed_proto(filed_name,msg.get_proto_name(),filed_des,is_array)
+                self.build_filed_proto(filed_name,msg.get_proto_name( ),filed_des,is_array)
             else:
                 self.build_filed_proto(filed_name,class_name,filed_des,is_array)
                 self.child_msgs.append(msgItem)
@@ -831,18 +840,18 @@ class Message:
     def check_or_import_msg_type(self,filed_type):
         custom_msg = self.try_get_global_msg(filed_type)
         if custom_msg:
-            if not is_in_list(self.import_msgs,custom_msg.get_proto_name()):
-                self.import_msgs.append(custom_msg.get_proto_name())
+            if not is_in_list(self.import_msgs,custom_msg.get_proto_name( )):
+                self.import_msgs.append(custom_msg.get_proto_name( ))
         return custom_msg
 
     def check_or_import_msg(self,msg):
-        info = msg.get_class_info()
+        info = msg.get_class_info( )
         for child in self.child_msgs:
-            if child.get_class_info() == info:
+            if child.get_class_info( ) == info:
                 return child
         for global_msg in self.global_msgs:
-            if global_msg.get_class_info() == info:
-                import_name = global_msg.get_proto_name()
+            if global_msg.get_class_info( ) == info:
+                import_name = global_msg.get_proto_name( )
                 if not is_in_list(self.import_msgs,import_name):
                     self.import_msgs.append(import_name)
                 return global_msg
@@ -850,11 +859,11 @@ class Message:
 
     @staticmethod
     def get_obj_file_types(filed_type):
-        return filed_type.strip('{}').split(SplitTypeFiled)
+        return filed_type.strip('{}').split(SplitObjArray)
 
     def get_msg_file_types(self):
         fileds = []
-        for filed in self.fileds_proto.values():
+        for filed in self.fileds_proto.values( ):
             fileds.append(filed)
         return fileds
 
@@ -868,7 +877,7 @@ class Message:
         :return:
         """
         filed = Filed(filed_name,filed_type,filed_des,is_list)
-        self.fileds_proto[filed.get_filed_name()] = filed
+        self.fileds_proto[filed.get_filed_name( )] = filed
         return filed
 
     def get_type_define(self,filed_type):
@@ -905,12 +914,12 @@ class Message:
         elif define_type == ETypeList:
             return self.get_type_name(filed_type[:-2],file_name)
         elif define_type == ETypeBase:
-            filed_type = filed_type.lower()
+            filed_type = filed_type.lower( )
             return BaseTypes[filed_type]
 
     @staticmethod
     def split_space(s):
-        return re.split(r'[' + string.whitespace + ']+',s.strip())
+        return re.split(r'[' + string.whitespace + ']+',s.strip( ))
 
 
 class ProtoInfo:
@@ -920,7 +929,7 @@ class ProtoInfo:
         self.is_single_sheet = is_single_sheet
 
     def get_proto_name(self):
-        return self.message.get_proto_name()
+        return self.message.get_proto_name( )
 
     def get_message(self):
         return self.message
@@ -953,7 +962,12 @@ class Filed:
 
     def get_defined_type(self):
         if self.is_list:
-            return self.filed_type + '[]'
+            return self.get_define_base_type( ) + '[]'
+        return self.get_define_base_type( )
+
+    def get_define_base_type(self):
+        if BaseProtoTypes.__contains__(self.filed_type):
+            return BaseProtoTypes[self.filed_type]
         return self.filed_type
 
     def get_filed_des(self):
@@ -964,16 +978,16 @@ class Filed:
         if self.is_list:
             r = ' repeated'
         return '%s %s %s = %s ; // % s' % (
-            r,self.get_filed_type(),self.get_filed_name(),index,self.get_filed_des())
+            r,self.get_filed_type( ),self.get_filed_name( ),index,self.get_filed_des( ))
 
     def get_lua_api(self):
         r = ''
         if self.is_list:
             r = '[]'
-        return '%s %s %s%s @%s ' % ("---@field ",self.get_filed_name(),self.get_filed_type(),r,self.get_filed_des())
+        return '%s %s %s%s @%s ' % ("---@field ",self.get_filed_name( ),self.get_filed_type( ),r,self.get_filed_des( ))
 
     def scheme_info(self):
-        return json.dumps((self.get_filed_name(),self.get_filed_type()),ensure_ascii=False,indent=2)
+        return json.dumps((self.get_filed_name( ),self.get_filed_type( )),ensure_ascii=False,indent=2)
 
 
 def generator(file_list,out_scripts,out_data_formats,name_space,suffix):
@@ -987,4 +1001,4 @@ def generator(file_list,out_scripts,out_data_formats,name_space,suffix):
     :return:
     """
     export = Exporter(file_list,out_scripts,out_data_formats,name_space,suffix)
-    export.export()
+    export.export( )

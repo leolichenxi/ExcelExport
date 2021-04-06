@@ -1,0 +1,4 @@
+---@class TestTypeInt_ 
+---@field  x int32 @x 
+---@field  y int32 @y 
+---@field  z int32 @z 

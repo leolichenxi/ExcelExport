@@ -1,0 +1,12 @@
+{
+  "version": 2,
+  "dgSpecHash": "xUqr96ZADta+e94UD4MzsGMNd0SGspXEtHXDsUAxP3luEyK5QoMlscvxmk3kbP6Ucry5hrTqBzz+K31HiAMGEQ==",
+  "success": true,
+  "projectFilePath": "F:\\MyGitHub\\ExcelExport\\Example\\Example.csproj",
+  "expectedPackageFiles": [
+    "C:\\Users\\lichenxi02\\.nuget\\packages\\google.protobuf\\3.14.0\\google.protobuf.3.14.0.nupkg.sha512",
+    "C:\\Users\\lichenxi02\\.nuget\\packages\\system.memory\\4.5.3\\system.memory.4.5.3.nupkg.sha512",
+    "C:\\Users\\lichenxi02\\.nuget\\packages\\system.runtime.compilerservices.unsafe\\4.5.2\\system.runtime.compilerservices.unsafe.4.5.2.nupkg.sha512"
+  ],
+  "logs": []
+}

@@ -30,8 +30,6 @@ export_files = [
 out_script_formats = {
     'python_out': 'out_python',
     'csharp_out': 'out_csharp',
-    # 'cpp_out' : 'out_cpp',
-    # 'java_out' : 'out_java'
 }
 
 #导出数据格式 ['json', 'lua', 'protobuf']
