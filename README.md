@@ -57,9 +57,10 @@ google导出的代码读取数据相关的API。参考案列上传
 
 ### 注意事项：
 
-> 使用者需注意string问题, 这里不建议在对象或数组里配置string类型,因为分割符可能导致意想不到的结果,比如 string[]  第一:句话,第二,句话
-就会解析错误; 这种情况建议新建一张string 文本表 这里都填上索引id,也方便多语言翻译和文本复用
+> 使用者需注意配置string文本的问题, 这里不建议在对象或数组里配置string类型,因为分割符可能导致意想不到的结果,比如长度为2 string[],第一句话含有(":"),第二句话含有(",")
+就会解析错误; 这种情况建议新建一张string 文本表 这里都填上索引id,也方便多语言翻译和文本复用。
 
+数据解析的特殊符号 |,:;{}[]都是英文输入法状态下的符号。
 
 ### 所需配置
 
@@ -71,6 +72,9 @@ python 依赖库： google,protobuf,xlrd,refection
 ##### 参考部分：
  * https://developers.google.com/protocol-buffers/docs/overview#scalar
  * https://github.com/EmmyLua
- * https://github.com/yanghuan/proton
- 特别鸣谢前同事@yanghuan 
- 
+ * https://github.com/yanghuan/proton  特别鸣谢前同事@yanghuan 
+ * https://github.com/EmmyLua/IntelliJ-EmmyLua 
+ * https://developers.google.com/protocol-buffers
+
+ #### License
+ [Apache 2.0 license] (http://www.apache.org/licenses/LICENSE-2.0)
