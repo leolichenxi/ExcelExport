@@ -76,4 +76,5 @@ python 依赖库： google,protobuf,xlrd,refection
  * https://github.com/EmmyLua/IntelliJ-EmmyLua 
  * https://developers.google.com/protocol-buffers
 
- 
+ #### License
+ [Apache 2.0 license] (http://www.apache.org/licenses/LICENSE-2.0)
