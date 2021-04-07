@@ -82,6 +82,9 @@ OutDir_Lua = 'lua'
 OutDir_Protobuf = 'protobuf'
 ListSuffix = 'List'
 
+BooleanFalse = ('0','0.0','false','False','off','Off','','None')
+BooleanTrue = ('1','1.0','true','True','on','On')
+
 LogEnable = True
 
 
@@ -115,7 +118,7 @@ def is_in_list(in_list,value):
 
 
 def get_json_data(data):
-    return json.dumps(data,ensure_ascii=False,indent=2)
+    return json.dumps(data,ensure_ascii = False,indent = 2)
 
 
 def first_char_upper(v):
@@ -136,9 +139,9 @@ def prepare_dir(dir):
         os.makedirs(dir)
 
 
-def get_lua_data(obj,indent=1):
+def get_lua_data(obj,indent = 1):
     if isinstance(obj,int) or isinstance(obj,float) or isinstance(obj,str):
-        yield json.dumps(obj,ensure_ascii=False)
+        yield json.dumps(obj,ensure_ascii = False)
     else:
         yield '{'
         is_list = isinstance(obj,list)
@@ -162,7 +165,7 @@ def get_lua_data(obj,indent=1):
         yield '}'
 
 
-def dict2pb(cls,adict,strict=False):
+def dict2pb(cls,adict,strict = False):
     """
     Takes a class representing the ProtoBuf Message and fills it with data from
     the dict.
@@ -279,7 +282,6 @@ class Exporter:
 
     def get_sheet_export_mark(self,sheet_name):
         """
-
         :param sheet_name:
         :return: sheet name
         """
@@ -648,7 +650,7 @@ class Message:
         info = self.add_line(info,self.get_msg_proto( ))
         return info
 
-    def to_protobuf_proto(self,out_dir=''):
+    def to_protobuf_proto(self,out_dir = ''):
         """
         :param out_dir: 导出的文件夹
         :return:
@@ -657,7 +659,7 @@ class Message:
         with codecs.open(file_name,'w','utf-8') as f:
             f.write(self.get_full_proto( ))
 
-    def to_lua_api(self,out_dir=''):
+    def to_lua_api(self,out_dir = ''):
         list_sheet_api = self.get_list_lua_api( )
         file_name = ('%s/' % (out_dir) if len(out_dir) > 0 else '') + self.get_proto_name( ) + '.lua'
         if list_sheet_api:
@@ -688,7 +690,7 @@ class Message:
         info = []
         for filed in self.fileds_proto.values( ):
             info.append(filed.scheme_info( ))
-        return json.dumps(info,ensure_ascii=False,indent=2)
+        return json.dumps(info,ensure_ascii = False,indent = 2)
 
     def record_internal_filed(self,export_obj,filed_name,filed_type,filed_value):
         self.record_filed(export_obj,filed_name,filed_type,filed_value)
@@ -754,12 +756,12 @@ class Message:
             parent[filed_name] = filed_value
 
     @staticmethod
-    def convert(base_type,value,filed_name=None):
+    def convert(base_type,value,filed_name = None):
         if base_type == BaseTypeBool:
             bool_value = str(value)
-            if bool_value in ('0','0.0','false','False','off','Off','','None'):
+            if bool_value in BooleanFalse:
                 return get_bool_value(False)
-            elif bool_value in ('1','1.0','true','True','on','On'):
+            elif bool_value in BooleanTrue:
                 return get_bool_value(True)
             else:
                 raise ValueError("error!!!",base_type,filed_name,value)
@@ -796,7 +798,7 @@ class Message:
         """
         self.build_filed(filed_name,filed_type,filed_des)
 
-    def build_filed(self,filed_name,filed_type,filed_des,is_array=False):
+    def build_filed(self,filed_name,filed_type,filed_des,is_array = False):
         type_define = self.get_type_define(filed_type)
         if type_define == ETypeBase:
             proto_type = self.get_type_name(filed_type,filed_name)
@@ -818,7 +820,7 @@ class Message:
         type_define = self.get_type_define(base_type)
         return base_type,type_define
 
-    def build_obj_filed(self,filed_name,filed_type,filed_des,is_array=False):
+    def build_obj_filed(self,filed_name,filed_type,filed_des,is_array = False):
         custom_msg = self.check_or_import_msg_type(filed_type)
         if custom_msg:
             self.build_filed_proto(filed_name,custom_msg.get_proto_name( ),filed_des,is_array)
@@ -941,7 +943,7 @@ class ProtoInfo:
 
 
 class Filed:
-    def __init__(self,filed_name,filed_type,filed_des,is_list=False):
+    def __init__(self,filed_name,filed_type,filed_des,is_list = False):
         self.filed_name = filed_name
         self.filed_type = filed_type
         self.filed_des = filed_des.replace('\n','')
@@ -986,7 +988,7 @@ class Filed:
         return '%s %s %s%s @%s ' % ("---@field ",self.get_filed_name( ),self.get_filed_type( ),r,self.get_filed_des( ))
 
     def scheme_info(self):
-        return json.dumps((self.get_filed_name( ),self.get_filed_type( )),ensure_ascii=False,indent=2)
+        return json.dumps((self.get_filed_name( ),self.get_filed_type( )),ensure_ascii = False,indent = 2)
 
 
 def generator(file_list,out_scripts,out_data_formats,name_space,suffix):
