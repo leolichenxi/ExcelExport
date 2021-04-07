@@ -731,7 +731,6 @@ class Message:
         if custom_message:
             custom_field_types = custom_message.get_msg_file_types( )
             for field in custom_field_types:
-                print(field.get_defined_type( ) + ' ' + field.get_name( ))
                 filed_types.append(field.get_defined_type( ) + ' ' + field.get_name( ))
         else:
             filed_types.extend(self.get_obj_file_types(filed_type))
