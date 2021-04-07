@@ -27,8 +27,8 @@ namespace Example
             TestGlobalTemplate template = TestGlobalTemplate.Parser.ParseFrom(GetBytes(typeof(TestGlobalTemplate)));
             Console.WriteLine(template);
 
-            TestTableArraysTemplateList template2 = TestTableArraysTemplateList.Parser.ParseFrom(GetBytes(typeof(TestTableArraysTemplate)));
-            Console.WriteLine(template2.TestTableArrays);
+            //TestTableArraysTemplateList template2 = TestTableArraysTemplateList.Parser.ParseFrom(GetBytes(typeof(TestTableArraysTemplate)));
+            //Console.WriteLine(template2.TestTableArrays);
         }
 
         private static string GetJson(Type t)

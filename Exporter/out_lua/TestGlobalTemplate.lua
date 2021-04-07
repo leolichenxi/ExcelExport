@@ -7,7 +7,7 @@ local TestGlobalTemplate = {
     "哈哈1"
   },
   TestString1 = 1.1111111111111112e+131,
-  TestString = "哈哈哈",
+  TestString = "哈\\哈\n哈",
   TestFloat = 6.5,
   TestDouble = 7.852,
   TestBool = true,
