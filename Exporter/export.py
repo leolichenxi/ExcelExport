@@ -39,13 +39,9 @@ out_data_formats = {
     'protobuf': 'out_protobuf'
 }
 
-out_cmd_language = {
-
-}
-
 #拷贝到工程的路径
-out_script_path = os.path.abspath(os.path.join(os.getcwd(), "../../../ClientMaster/Assets/Scripts/Config/"))
-out_config_path = os.path.abspath(os.path.join(os.getcwd(), "../../../ClientMaster/Assets/Bundles/Config/"))
+# out_script_path = os.path.abspath(os.path.join(os.getcwd(), "../../../ClientMaster/Assets/Scripts/Config/"))
+# out_config_path = os.path.abspath(os.path.join(os.getcwd(), "../../../ClientMaster/Assets/Bundles/Config/"))
 
 if __name__ == '__main__':
     tools.generator.generator(export_files,out_script_formats, out_data_formats, "Config", 'Template')
