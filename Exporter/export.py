@@ -18,7 +18,7 @@ limitations under the License.
 
 import tools.generator
 import os
-import copyconfig
+# import copyconfig
 
 #要导出的配置文件
 export_files = [
