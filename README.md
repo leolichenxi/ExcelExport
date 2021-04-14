@@ -26,7 +26,8 @@ Excel to json,lua and protobuf datas,also export to script language which protoc
 1. 支持字段 int,float,string.bool类型，配置方式参考示例excel;
 2. 支持对象配置方式;
 3. 支持数组配置;
-4. 使用场景，unity游戏开发，服务端等;
+
+>使用场景，unity游戏开发，服务端等;
 
 >待完善 long,double 等；由于python3移除long数据转换，如有需求暂配置字符串，脚本中自定义转化。
 
