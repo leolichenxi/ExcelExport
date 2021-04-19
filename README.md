@@ -16,7 +16,7 @@ limitations under the License.
 '''
 
 # ExcelExport
-Excel to json,lua and protobuf datas,also export to script language which protoc support. Write by python.
+Excel to json,lua and protobuf datas,also export to script language which protoc support. Write by python. TODO: FlatBuffer
 
 ### 说明:
 
