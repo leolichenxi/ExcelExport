@@ -28,15 +28,15 @@ export_files = [
 
 #导出的脚本和对应文件夹，key为protoc支持的， key is protoc cmd, value is out folder!
 out_script_formats = {
-    'python_out': 'out_python',
-    'csharp_out': 'out_csharp',
+    'csharp_out': 'out_protobuf_csharp',
 }
 
 #导出数据格式 ['json', 'lua', 'protobuf']
 out_data_formats = {
     'json': 'out_json',
     'lua': 'out_lua',
-    'protobuf': 'out_protobuf'
+    'protobuf': 'out_protobuf',
+    'flatbuffer':"out_flatbuffer"
 }
 
 #拷贝到工程的路径

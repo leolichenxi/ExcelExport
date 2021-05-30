@@ -1,0 +1,7 @@
+attribute "priority";
+table Position3d {
+   x:float ; // x
+   y:float ; // y
+   z:float ; // z
+}
+root_type Position3d;

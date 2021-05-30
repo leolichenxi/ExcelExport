@@ -1,0 +1,1 @@
+flatc --binary TestGlobalTemplate.fbs ../out_json/TestGlobalTemplate.json

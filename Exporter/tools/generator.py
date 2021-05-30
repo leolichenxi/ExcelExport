@@ -117,6 +117,21 @@ def prepare_dir(dir):
 def get_json_data(data):
     return json.dumps(data,ensure_ascii = False,indent = 2)
 
+def convert_to_lower_snake_cake(key):
+    length = len(key)
+    if length == 1:
+        return key.lower()
+    elif length >=2:
+        new_key = key[0].lower()
+        for i in range(1,length):
+            if key[i].isupper():
+                new_key = new_key + "_" + key[i].lower()
+            else:
+                new_key = new_key + key[i]
+            pass
+        return new_key
+    return key
+
 def get_lua_data(obj,indent = 1):
     if isinstance(obj,int) or isinstance(obj,float) or isinstance(obj,str):
         yield json.dumps(obj,ensure_ascii = False)
@@ -207,6 +222,12 @@ def get_export_global_proto_folder():
 
 def get_export_protobuf_folder():
     return OutDir_Protobuf
+
+def get_export_global_flat_folder():
+    return "flat"
+
+def get_export_flat_data_folder():
+    return "flat_data"
 
 def is_ignore_row(row):
     if len(row[0]) == 0:
@@ -306,6 +327,9 @@ class Exporter:
         self.export_script()
         self.export_data()
 
+        self.export_flat_scheme()
+        self.export_flat_script()
+
     def export_proto(self):
         global_dir = get_export_global_proto_folder()
         proto_dir = get_export_proto_folder()
@@ -319,11 +343,30 @@ class Exporter:
             log("export proto file:",msg.get_proto_file_name())
             msg.to_protobuf_proto(proto_dir)
 
+    def export_flat_scheme(self):
+        global_dir = get_export_global_flat_folder()
+        proto_dir = get_export_global_flat_folder()
+        prepare_dir(global_dir)
+        prepare_dir(proto_dir)
+        for msg in self.global_msgs:
+            log("export global proto file:",msg.get_proto_file_name())
+            msg.to_flat_scheme(global_dir)
+        for info in self.proto_infos:
+            msg = info.get_message()
+            log("export flat file:",msg.get_proto_file_name())
+            msg.to_flat_scheme(proto_dir)
+
     def export_script(self):
         if isinstance(self.script_out_dic,dict):
             for k,v in self.script_out_dic.items():
                 prepare_dir(v)
                 self.execute_protoc_out_script(k,v)
+
+    def export_flat_script(self):
+        if isinstance(self.script_out_dic,dict):
+            for k,v in self.script_out_dic.items():
+                prepare_dir(v)
+                self.execute_flat_buffer_out_script(k,v)
 
     def execute_protoc_out_script(self,script_out,folder):
         for msg in self.global_msgs:
@@ -332,7 +375,19 @@ class Exporter:
             msg = info.get_message()
             self.export_script_item(msg,script_out,folder)
 
+    def execute_flat_buffer_out_script(self,script_out,folder):
+        for msg in self.global_msgs:
+            self.export_flat_script_item(msg,script_out,folder)
+        for info in self.proto_infos:
+            msg = info.get_message()
+            self.export_flat_script_item(msg,script_out,folder)
+
     def export_script_item(self,msg,script_out,out_folder):
+        log("generate script :",msg.get_proto_name())
+        cmd = self.get_protoc_cmd(msg,script_out,out_folder)
+        os.system(cmd)
+
+    def export_flat_script_item(self,msg,script_out,out_folder):
         log("generate script :",msg.get_proto_name())
         cmd = self.get_protoc_cmd(msg,script_out,out_folder)
         os.system(cmd)
@@ -350,6 +405,8 @@ class Exporter:
                 self.export_json_data(out_folder)
             elif format == 'protobuf':
                 self.export_protobuf_data(out_folder)
+            elif format == 'flatbuffer':
+                log("Todo flatbuffer")
             else:
                 raise ValueError("unknown export data format:",format,"lua or json or protobuf")
 
@@ -360,6 +417,7 @@ class Exporter:
             file_name = info.get_proto_name()
             json_file = json_dir + '/' + file_name
             self.save_to_json(json_file,info.get_value())
+            self.save_to_json(json_file+'lower',info.get_lower_value())
 
     def export_lua_data(self,out_folder):
         lua_dir = out_folder
@@ -458,6 +516,7 @@ class Exporter:
                     if filed_name and filed_type:
                         msg.add_filed(filed_name,filed_type,filed_des)
                         msg.record_internal_filed(export_obj,filed_name,filed_type,filed_value)
+
             return msg,export_obj
         except Exception as e:
             raise e
@@ -628,6 +687,9 @@ class Message:
     def get_proto_file_name(self):
         return self.get_proto_name() + '.proto'
 
+    def get_flat_buffer_proto_file_name(self):
+        return self.get_proto_name() + '.fbs'
+
     def get_msg_lua_api(self):
         api = '---@class %s ' % (self.name + self.suffix)
         for i,filed in enumerate(self.fileds_proto.values()):
@@ -655,6 +717,31 @@ class Message:
             class_define = add_line(class_define,list_define)
         return class_define
 
+    def get_msg_flat_scheme(self):
+        """
+               :return: .proto 文件描述
+               """
+        class_define = 'table %s {' % (self.get_proto_name())
+        for i,filed in enumerate(self.fileds_proto.values()):
+            class_define = add_space_line(class_define,filed.get_define_flat_scheme())
+
+        if self.is_child_message():
+            class_define = add_line(class_define,'  }')
+        else:
+            class_define = add_line(class_define,'}')
+
+        for msg in self.child_msgs:
+            class_define = add_space_line(class_define, msg.get_msg_flat_scheme())
+
+        if self.is_list_obj and not self.is_child_message():
+            list_define = 'table %s%s {' % (self.get_proto_name(),ListSuffix)
+            filed = Filed(self.name,self.get_proto_name(),ListSuffix,True)
+            list_define = add_space_line(list_define,filed.get_define_flat_scheme())
+            list_define = add_line(list_define,'}')
+            class_define = add_line(class_define,list_define)
+        return class_define
+        pass
+
     def get_list_lua_api(self):
         if self.is_list_obj and not self.is_child_message():
             api = '---@class %s ' % (self.get_proto_name())
@@ -668,18 +755,50 @@ class Message:
         if not is_null_or_empty(self.name_space):
             info = add_line(info,"package %s;" % (self.name_space))
         for msg in self.import_msgs:
-            info = add_line(info,'import "%s/%s.proto";' % (OutDir_Protos,msg))
+            info = add_line(info,'import "%s/%s.proto";' % (get_export_proto_folder(),msg))
         info = add_line(info,self.get_msg_proto())
         return info
+
+    def get_full_flat_scheme(self):
+        info = ''
+        for msg in self.import_msgs:
+            include_file = 'include "%s.fbs";' % (msg)
+            if info == "":
+                info = include_file
+            else:
+                info = add_line(info,include_file)
+
+        if info == "":
+            info = 'attribute "priority";'
+        else:
+            info = add_line(info, 'attribute "priority";')
+
+        if not is_null_or_empty(self.name_space):
+            info = add_line(info,"namespace %s;" % (self.name_space))
+
+        info = add_line(info,self.get_msg_flat_scheme())
+        info = add_line(info,"root_type " + self.get_proto_name() +";")
+        return info
+
 
     def to_protobuf_proto(self,out_dir = ''):
         """
         :param out_dir: 导出的文件夹
         :return:
         """
-        file_name = ('%s/' % (out_dir) if len(out_dir) > 0 else '') + self.get_proto_name() + '.proto'
+        file_name = ('%s/' % (out_dir) if len(out_dir) > 0 else '') + self.get_proto_file_name()  ## self.get_proto_name() + '.proto'
         with codecs.open(file_name,'w','utf-8') as f:
             f.write(self.get_full_proto())
+
+    def to_flat_scheme(self,out_dir = ''):
+        """
+        :param out_dir: 导出的文件夹
+        :return:
+        """
+        file_name = ('%s/' % (out_dir) if len(out_dir) > 0 else '') + self.get_flat_buffer_proto_file_name()
+        log(file_name)
+        with codecs.open(file_name,'w','utf-8') as f:
+            f.write(self.get_full_flat_scheme())
 
     def to_lua_api(self,out_dir = ''):
         list_sheet_api = self.get_list_lua_api()
@@ -734,8 +853,7 @@ class Message:
         elif type_define == ETypeBase:
             values = str(filed_value).strip('[]').split(SplitArray)
         elif type_define == ETypeObj:
-            values = re.findall(SplitArrayObjValue,
-                                str(filed_value))  ##--str(filed_value).strip('[]').split(SplitObjArray)
+            values = re.findall(SplitArrayObjValue,str(filed_value))  ##--str(filed_value).strip('[]').split(SplitObjArray)
         for v in values:
             self.record_filed(list_values,filed_name,base_type,v)
         fill_value(parent,filed_name + 's',list_values)
@@ -895,7 +1013,28 @@ class ProtoInfo:
     def __init__(self,msg,record_obj,is_single_sheet):
         self.message = msg
         self.record_obj = record_obj
+        self.record_lower_obj = collections.OrderedDict()
+        self.copy_obj(record_obj,self.record_lower_obj)
         self.is_single_sheet = is_single_sheet
+
+    def copy_obj(self,source_obj,des_obj):
+        for k, v in source_obj.items():
+            self.record_obj_to_lower(k, v, des_obj)
+
+    def record_obj_to_lower(self,key,value ,dest_obj):
+        key = convert_to_lower_snake_cake(key)
+        if isinstance(value, dict):
+            dic_value = collections.OrderedDict()
+            for k, v in value.items():
+                self.record_obj_to_lower(k,v, dic_value)
+            fill_value(dest_obj,key,dic_value)
+        elif isinstance(value, list):
+            list_value = []
+            for i in range(len(value)):
+                self.record_obj_to_lower(key,value[i],list_value)
+            fill_value(dest_obj, key, list_value)
+        else:
+            fill_value(dest_obj, key, value)
 
     def get_proto_name(self):
         return self.message.get_proto_name()
@@ -905,6 +1044,9 @@ class ProtoInfo:
 
     def get_value(self):
         return self.record_obj
+
+    def get_lower_value(self):
+        return self.record_lower_obj
 
     def is_single(self):
         return self.is_single_sheet
@@ -926,6 +1068,12 @@ class Filed:
             return self.filed_name + 's'
         return self.filed_name
 
+    def get_flat_buffer_filed_name(self):
+        flat_filed_name = self.get_filed_name()
+        flat_filed_name = convert_to_lower_snake_cake(flat_filed_name)
+        return  flat_filed_name
+
+
     def get_filed_type(self):
         return self.filed_type
 
@@ -946,7 +1094,19 @@ class Filed:
         r = ''
         if self.is_list:
             r = ' repeated'
-        return '%s %s %s = %s ; // % s' % (r,self.get_filed_type(),self.get_filed_name(),index,self.get_filed_des())
+        return '%s %s %s = %s ; // %s' % (r,self.get_filed_type(),self.get_filed_name(),index,self.get_filed_des())
+
+    def get_define_flat_scheme(self):
+        """
+        example v:[float:3];
+        name:string;
+        :param index:
+        :return:
+        """
+        define_type = self.get_filed_type()
+        if self.is_list:
+            define_type =  "["+define_type+"]"
+        return ' %s:%s ; // %s' % (self.get_flat_buffer_filed_name(),define_type,self.get_filed_des())
 
     def get_lua_api(self):
         r = ''

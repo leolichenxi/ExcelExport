@@ -1,0 +1,14 @@
+attribute "priority";
+namespace Config;
+table TestTableArraysTemplate {
+   id:int32 ; // 英雄ID
+   weapons:[int32] ; // 武器(武器Id)
+   model:string ; // 切片
+   icon:string ; // Icon
+   machine_type:string ; // 机体类型
+   map_type:string ; // 地形适应
+}
+table TestTableArraysTemplateList {
+   test_table_arrays:[TestTableArraysTemplate] ; // List
+}
+root_type TestTableArraysTemplate;
