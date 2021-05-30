@@ -1,0 +1,16 @@
+F:\MyGitHub\ExcelExport\ExampleFlat\ExampleFlat\ExampleFlat\obj\Debug\netcoreapp3.1\ExampleFlat.csprojAssemblyReference.cache
+F:\MyGitHub\ExcelExport\ExampleFlat\ExampleFlat\ExampleFlat\obj\Debug\netcoreapp3.1\ExampleFlat.AssemblyInfoInputs.cache
+F:\MyGitHub\ExcelExport\ExampleFlat\ExampleFlat\ExampleFlat\obj\Debug\netcoreapp3.1\ExampleFlat.AssemblyInfo.cs
+F:\MyGitHub\ExcelExport\ExampleFlat\ExampleFlat\ExampleFlat\obj\Debug\netcoreapp3.1\ExampleFlat.csproj.CoreCompileInputs.cache
+F:\MyGitHub\ExcelExport\ExampleFlat\ExampleFlat\ExampleFlat\bin\Debug\netcoreapp3.1\ExampleFlat.exe
+F:\MyGitHub\ExcelExport\ExampleFlat\ExampleFlat\ExampleFlat\bin\Debug\netcoreapp3.1\ExampleFlat.deps.json
+F:\MyGitHub\ExcelExport\ExampleFlat\ExampleFlat\ExampleFlat\bin\Debug\netcoreapp3.1\ExampleFlat.runtimeconfig.json
+F:\MyGitHub\ExcelExport\ExampleFlat\ExampleFlat\ExampleFlat\bin\Debug\netcoreapp3.1\ExampleFlat.runtimeconfig.dev.json
+F:\MyGitHub\ExcelExport\ExampleFlat\ExampleFlat\ExampleFlat\bin\Debug\netcoreapp3.1\ExampleFlat.dll
+F:\MyGitHub\ExcelExport\ExampleFlat\ExampleFlat\ExampleFlat\bin\Debug\netcoreapp3.1\ExampleFlat.pdb
+F:\MyGitHub\ExcelExport\ExampleFlat\ExampleFlat\ExampleFlat\bin\Debug\netcoreapp3.1\Newtonsoft.Json.dll
+F:\MyGitHub\ExcelExport\ExampleFlat\ExampleFlat\ExampleFlat\obj\Debug\netcoreapp3.1\ExampleFlat.csproj.CopyComplete
+F:\MyGitHub\ExcelExport\ExampleFlat\ExampleFlat\ExampleFlat\obj\Debug\netcoreapp3.1\ExampleFlat.dll
+F:\MyGitHub\ExcelExport\ExampleFlat\ExampleFlat\ExampleFlat\obj\Debug\netcoreapp3.1\ExampleFlat.pdb
+F:\MyGitHub\ExcelExport\ExampleFlat\ExampleFlat\ExampleFlat\obj\Debug\netcoreapp3.1\ExampleFlat.genruntimeconfig.cache
+F:\MyGitHub\ExcelExport\ExampleFlat\ExampleFlat\ExampleFlat\bin\Debug\netcoreapp3.1\TestGlobalTemplatelower.bin

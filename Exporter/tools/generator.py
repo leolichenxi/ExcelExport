@@ -383,18 +383,23 @@ class Exporter:
             self.export_flat_script_item(msg,script_out,folder)
 
     def export_script_item(self,msg,script_out,out_folder):
-        log("generate script :",msg.get_proto_name())
+        log("generate protobuff script :",msg.get_proto_name())
         cmd = self.get_protoc_cmd(msg,script_out,out_folder)
         os.system(cmd)
 
     def export_flat_script_item(self,msg,script_out,out_folder):
-        log("generate script :",msg.get_proto_name())
-        cmd = self.get_protoc_cmd(msg,script_out,out_folder)
+        log("generate flatbuff script :",msg.get_proto_name())
+        cmd = self.get_flat_cmd(msg,script_out,out_folder)
         os.system(cmd)
 
     def get_protoc_cmd(self,msg,script_out,out_folder):
         return 'protoc --%s=%s/ %s/%s' % (
             script_out,out_folder,get_export_proto_folder(),msg.get_proto_file_name())
+
+    def get_flat_cmd(self, msg, script_out, out_folder):
+        cmd = 'flatc --%s -n %s/%s --gen-all' % ('csharp',get_export_global_flat_folder(), msg.get_flat_buffer_proto_file_name())
+        print(cmd)
+        return cmd
 
     def export_data(self):
         for format,out_folder in self.out_data_formats.items():
@@ -406,7 +411,8 @@ class Exporter:
             elif format == 'protobuf':
                 self.export_protobuf_data(out_folder)
             elif format == 'flatbuffer':
-                log("Todo flatbuffer")
+                self.export_flat_json_data(out_folder+"_json")
+                self.export_flat_bin_data(out_folder)
             else:
                 raise ValueError("unknown export data format:",format,"lua or json or protobuf")
 
@@ -417,7 +423,14 @@ class Exporter:
             file_name = info.get_proto_name()
             json_file = json_dir + '/' + file_name
             self.save_to_json(json_file,info.get_value())
-            self.save_to_json(json_file+'lower',info.get_lower_value())
+
+    def export_flat_json_data(self, out_folder):
+        json_dir = out_folder
+        prepare_dir(json_dir)
+        for info in self.proto_infos:
+            file_name = info.get_proto_name()
+            json_file = json_dir + '/' + file_name
+            self.save_to_json(json_file,info.get_lower_value())
 
     def export_lua_data(self,out_folder):
         lua_dir = out_folder
@@ -437,6 +450,10 @@ class Exporter:
             for name in files:
                 if (name.endswith(".py")):
                     os.remove(os.path.join(root,name))
+
+    def export_flat_bin_data(self, out_folder):
+
+        pass
 
     def build_single_sheet_proto(self,export_mark_name,sheet):
         """

@@ -39,7 +39,5 @@ public struct Position3d : IFlatbufferObject
     int o = builder.EndTable();
     return new Offset<Position3d>(o);
   }
-  public static void FinishPosition3dBuffer(FlatBufferBuilder builder, Offset<Position3d> offset) { builder.Finish(offset.Value); }
-  public static void FinishSizePrefixedPosition3dBuffer(FlatBufferBuilder builder, Offset<Position3d> offset) { builder.FinishSizePrefixed(offset.Value); }
 };
 

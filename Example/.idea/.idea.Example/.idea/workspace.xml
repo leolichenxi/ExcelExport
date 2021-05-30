@@ -2,28 +2,28 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="eb76e1ed-6dc0-4ec9-9122-05eb743626b2" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.vs/Example/DesignTimeBuild/.dtbcache" beforeDir="false" afterPath="$PROJECT_DIR$/.vs/Example/DesignTimeBuild/.dtbcache" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.vs/Example/v16/.suo" beforeDir="false" afterPath="$PROJECT_DIR$/.vs/Example/v16/.suo" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.vs/Example/v16/Server/sqlite3/storage.ide" beforeDir="false" afterPath="$PROJECT_DIR$/.vs/Example/v16/Server/sqlite3/storage.ide" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.vs/Example/v16/Server/sqlite3/storage.ide-shm" beforeDir="false" afterPath="$PROJECT_DIR$/.vs/Example/v16/Server/sqlite3/storage.ide-shm" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.vs/Example/v16/Server/sqlite3/storage.ide-wal" beforeDir="false" afterPath="$PROJECT_DIR$/.vs/Example/v16/Server/sqlite3/storage.ide-wal" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/.idea.Example/.idea/.idea.Example.iml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/.idea.Example/.idea/contentModel.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/.idea.Example/.idea/indexLayout.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.Example/.idea/indexLayout.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/.idea.Example/.idea/modules.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/.idea.Example/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.Example/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/.idea.Example/riderModule.iml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Example.csproj" beforeDir="false" afterPath="$PROJECT_DIR$/Example.csproj" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Program.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Program.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/bin/Debug/netcoreapp3.1/Example.dll" beforeDir="false" afterPath="$PROJECT_DIR$/bin/Debug/netcoreapp3.1/Example.dll" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/bin/Debug/netcoreapp3.1/Example.pdb" beforeDir="false" afterPath="$PROJECT_DIR$/bin/Debug/netcoreapp3.1/Example.pdb" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/bin/Debug/netcoreapp3.1/out_json/TestGlobalTemplate.json" beforeDir="false" afterPath="$PROJECT_DIR$/bin/Debug/netcoreapp3.1/out_json/TestGlobalTemplate.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/bin/Debug/netcoreapp3.1/out_protobuf/TestGlobalTemplate.bytes" beforeDir="false" afterPath="$PROJECT_DIR$/bin/Debug/netcoreapp3.1/out_protobuf/TestGlobalTemplate.bytes" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/obj/Debug/netcoreapp3.1/Example.assets.cache" beforeDir="false" afterPath="$PROJECT_DIR$/obj/Debug/netcoreapp3.1/Example.assets.cache" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/obj/Debug/netcoreapp3.1/Example.csprojAssemblyReference.cache" beforeDir="false" afterPath="$PROJECT_DIR$/obj/Debug/netcoreapp3.1/Example.csprojAssemblyReference.cache" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/obj/Debug/netcoreapp3.1/Example.dll" beforeDir="false" afterPath="$PROJECT_DIR$/obj/Debug/netcoreapp3.1/Example.dll" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/obj/Debug/netcoreapp3.1/Example.pdb" beforeDir="false" afterPath="$PROJECT_DIR$/obj/Debug/netcoreapp3.1/Example.pdb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/obj/Example.csproj.nuget.cache" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/obj/Example.csproj.nuget.dgspec.json" beforeDir="false" afterPath="$PROJECT_DIR$/obj/Example.csproj.nuget.dgspec.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/obj/Example.csproj.nuget.g.props" beforeDir="false" afterPath="$PROJECT_DIR$/obj/Example.csproj.nuget.g.props" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out_csharp/TestGlobalTemplate.cs" beforeDir="false" afterPath="$PROJECT_DIR$/out_csharp/TestGlobalTemplate.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out_json/TestGlobalTemplate.json" beforeDir="false" afterPath="$PROJECT_DIR$/out_json/TestGlobalTemplate.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out_protobuf/TestGlobalTemplate.bytes" beforeDir="false" afterPath="$PROJECT_DIR$/out_protobuf/TestGlobalTemplate.bytes" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Exporter/custom.xlsx" beforeDir="false" afterPath="$PROJECT_DIR$/../Exporter/custom.xlsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/obj/project.assets.json" beforeDir="false" afterPath="$PROJECT_DIR$/obj/project.assets.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/obj/project.nuget.cache" beforeDir="false" afterPath="$PROJECT_DIR$/obj/project.nuget.cache" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/obj/project.packagespec.json" beforeDir="false" afterPath="$PROJECT_DIR$/obj/project.packagespec.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../Exporter/export.py" beforeDir="false" afterPath="$PROJECT_DIR$/../Exporter/export.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../Exporter/lua_api/BaseType.lua" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/../Exporter/lua_api/Position3d.lua" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Exporter/lua_api/Position3dInt.lua" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/../Exporter/lua_api/PositionArray3d.lua" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Exporter/lua_api/TestGlobal2Template.TestTypeInt_.lua" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/../Exporter/lua_api/TestGlobal2Template.lua" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/../Exporter/lua_api/TestGlobalTemplate.TestObj1_.lua" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/../Exporter/lua_api/TestGlobalTemplate.TestObjArray1_.lua" beforeDir="false" />
@@ -32,11 +32,27 @@
       <change beforePath="$PROJECT_DIR$/../Exporter/lua_api/TestGlobalTemplate.lua" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/../Exporter/lua_api/TestTableArrayTemplate.lua" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/../Exporter/lua_api/TestTableArraysTemplate.lua" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Exporter/out_cpp/protos/Position3d.pb.cc" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Exporter/out_cpp/protos/Position3d.pb.h" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Exporter/out_cpp/protos/Position3dInt.pb.cc" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Exporter/out_cpp/protos/Position3dInt.pb.h" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Exporter/out_cpp/protos/PositionArray3d.pb.cc" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Exporter/out_cpp/protos/PositionArray3d.pb.h" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Exporter/out_cpp/protos/TestGlobal2Template.pb.cc" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Exporter/out_cpp/protos/TestGlobal2Template.pb.h" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Exporter/out_cpp/protos/TestGlobalTemplate.pb.cc" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Exporter/out_cpp/protos/TestGlobalTemplate.pb.h" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/../Exporter/out_csharp/Position3D.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Exporter/out_csharp/Position3DInt.cs" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/../Exporter/out_csharp/PositionArray3D.cs" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/../Exporter/out_csharp/TestGlobal2Template.cs" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/../Exporter/out_csharp/TestGlobalTemplate.cs" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/../Exporter/out_csharp/TestTableArraysTemplate.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Exporter/out_java/Config/TestGlobal2TemplateOuterClass.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Exporter/out_java/Config/TestGlobalTemplateOuterClass.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Exporter/out_java/Position3D.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Exporter/out_java/Position3DInt.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Exporter/out_java/PositionArray3D.java" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/../Exporter/out_json/TestGlobal2Template.json" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/../Exporter/out_json/TestGlobalTemplate.json" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/../Exporter/out_json/TestTableArraysTemplate.json" beforeDir="false" />
@@ -46,15 +62,19 @@
       <change beforePath="$PROJECT_DIR$/../Exporter/out_protobuf/TestGlobal2Template.bytes" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/../Exporter/out_protobuf/TestGlobalTemplate.bytes" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/../Exporter/out_protobuf/TestTableArraysTemplate.bytes" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Exporter/out_python/protos/TestGlobal2Template_pb2.py" beforeDir="false" afterPath="$PROJECT_DIR$/../Exporter/out_python/protos/TestGlobal2Template_pb2.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Exporter/out_python/protos/TestGlobalTemplate_pb2.py" beforeDir="false" afterPath="$PROJECT_DIR$/../Exporter/out_python/protos/TestGlobalTemplate_pb2.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Exporter/out_python/protos/Position3dInt_pb2.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Exporter/out_python/protos/Position3d_pb2.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Exporter/out_python/protos/PositionArray3d_pb2.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Exporter/out_python/protos/TestGlobal2Template_pb2.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Exporter/out_python/protos/TestGlobalTemplate_pb2.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Exporter/out_python/protos/TestTableArraysTemplate_pb2.py" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/../Exporter/protos/Position3d.proto" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Exporter/protos/Position3dInt.proto" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/../Exporter/protos/PositionArray3d.proto" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/../Exporter/protos/TestGlobal2Template.proto" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/../Exporter/protos/TestGlobalTemplate.proto" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/../Exporter/protos/TestTableArraysTemplate.proto" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/../Exporter/tools/generator.py" beforeDir="false" afterPath="$PROJECT_DIR$/../Exporter/tools/generator.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Exporter/配置表1.xlsx" beforeDir="false" afterPath="$PROJECT_DIR$/../Exporter/配置表1.xlsx" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -77,6 +97,7 @@
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="vue.rearranger.settings.migration" value="true" />
   </component>
   <component name="RunManager">
     <configuration name="Example" type="DotNetProject" factoryName=".NET Project">
@@ -98,6 +119,7 @@
       </method>
     </configuration>
   </component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="SvnConfiguration">
     <configuration />
   </component>
@@ -110,10 +132,14 @@
       <updated>1617700342648</updated>
       <workItem from="1617700345468" duration="4000" />
       <workItem from="1617713236012" duration="7000" />
+      <workItem from="1622261684799" duration="1836000" />
     </task>
     <servers />
   </component>
-  <component name="UnityProjectConfiguration" hasMinimizedUI="null" />
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="3" />
+  </component>
+  <component name="UnityProjectConfiguration" hasMinimizedUI="false" />
   <component name="UnityUnitTestConfiguration" currentTestLauncher="NUnit" />
   <component name="VcsManagerConfiguration">
     <option name="CLEAR_INITIAL_COMMIT_MESSAGE" value="true" />

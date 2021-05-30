@@ -49,6 +49,9 @@
     <None Update="protobuf\TestTableArraysTemplate.byte">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </None>
+    <None Update="TestGlobalTemplatelower.bin">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
   </ItemGroup>
 
 </Project>
