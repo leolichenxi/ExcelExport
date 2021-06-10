@@ -404,7 +404,7 @@ class Exporter:
         :param out_folder:
         :return:
         '''
-        cmd = 'flatc --%s -o %s  -n %s/%s --gen-onefile' % (script_out,out_folder,get_export_global_flat_folder(), msg.get_flat_buffer_proto_file_name())
+        cmd = 'flatc --%s -o %s %s/%s --gen-onefile' % (script_out,out_folder,get_export_global_flat_folder(), msg.get_flat_buffer_proto_file_name())
         print(cmd)
         # cmd = 'flatc --%s -n %s --gen-onefile' % ('csharp', msg.get_flat_buffer_proto_file_name())
         return cmd

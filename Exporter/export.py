@@ -34,6 +34,7 @@ out_protobuf_script_formats = {
 
 out_flat_script_formats = {
     'csharp': 'out_flatbuffer_csharp',
+    'lua': 'out_flatbuffer_lua',
 }
 
 # 导出数据格式 ['json', 'lua', 'protobuf']

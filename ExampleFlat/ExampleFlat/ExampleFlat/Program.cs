@@ -22,8 +22,10 @@ namespace ExampleFlat
 
             
             var datas = File.ReadAllBytes("Config/TestTableArraysTemplate.bin");
+            
+            
             var bbs = new ByteBuffer(datas);
-            var ts = TestTableArraysTemplateList.GetRootAsTestTableArraysTemplateList(bbs);
+            var ts = TestTableArraysTemplateList.GetRootAsTestTableArraysTemplateList(bbs,new TestTableArraysTemplateList());
             Console.WriteLine(ts.TestTableArrays(0).Value.Id);
             Console.WriteLine(ts.TestTableArrays(0).Value.Icon);
             Console.WriteLine(ts.TestTableArrays(0).Value.MachineType);
