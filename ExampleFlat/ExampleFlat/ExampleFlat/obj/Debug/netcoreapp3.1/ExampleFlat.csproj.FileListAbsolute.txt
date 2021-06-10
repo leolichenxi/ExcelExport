@@ -13,4 +13,6 @@ F:\MyGitHub\ExcelExport\ExampleFlat\ExampleFlat\ExampleFlat\obj\Debug\netcoreapp
 F:\MyGitHub\ExcelExport\ExampleFlat\ExampleFlat\ExampleFlat\obj\Debug\netcoreapp3.1\ExampleFlat.dll
 F:\MyGitHub\ExcelExport\ExampleFlat\ExampleFlat\ExampleFlat\obj\Debug\netcoreapp3.1\ExampleFlat.pdb
 F:\MyGitHub\ExcelExport\ExampleFlat\ExampleFlat\ExampleFlat\obj\Debug\netcoreapp3.1\ExampleFlat.genruntimeconfig.cache
-F:\MyGitHub\ExcelExport\ExampleFlat\ExampleFlat\ExampleFlat\bin\Debug\netcoreapp3.1\TestGlobalTemplatelower.bin
+F:\MyGitHub\ExcelExport\ExampleFlat\ExampleFlat\ExampleFlat\bin\Debug\netcoreapp3.1\Config\TestGlobal2Template.bin
+F:\MyGitHub\ExcelExport\ExampleFlat\ExampleFlat\ExampleFlat\bin\Debug\netcoreapp3.1\Config\TestGlobalTemplate.bin
+F:\MyGitHub\ExcelExport\ExampleFlat\ExampleFlat\ExampleFlat\bin\Debug\netcoreapp3.1\Config\TestTableArraysTemplate.bin

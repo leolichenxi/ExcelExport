@@ -18,36 +18,40 @@ limitations under the License.
 
 import tools.generator
 import os
+
 # import copyconfig
 
-#要导出的配置文件
+# 要导出的配置文件
 export_files = [
     '配置表1.xlsx',
     '配置表2.xlsx',
 ]
 
-#导出的脚本和对应文件夹，key为protoc支持的， key is protoc cmd, value is out folder!
+# 导出的脚本和对应文件夹，key为protoc支持的， key is protoc cmd, value is out folder!
 out_protobuf_script_formats = {
     'csharp_out': 'out_protobuf_csharp',
 }
 
 out_flat_script_formats = {
-    'csharp': 'out_protobuf_csharp',
+    'csharp': 'out_flatbuffer_csharp',
 }
 
-#导出数据格式 ['json', 'lua', 'protobuf']
+# 导出数据格式 ['json', 'lua', 'protobuf']
 out_data_formats = {
     'json': 'out_json',
     'lua': 'out_lua',
     'protobuf': 'out_protobuf',
-    'flatbuffer':"out_flatbuffer"
+    'flatbuffer': "out_flatbuffer"
 }
+NameSpace = "Config"
+Suffix = "Template"
 
-#拷贝到工程的路径
+# 拷贝到工程的路径
 # out_script_path = os.path.abspath(os.path.join(os.getcwd(), "../../../ClientMaster/Assets/Scripts/Config/"))
 # out_config_path = os.path.abspath(os.path.join(os.getcwd(), "../../../ClientMaster/Assets/Bundles/Config/"))
 
 if __name__ == '__main__':
-    tools.generator.generator(export_files,out_protobuf_script_formats, out_data_formats, "Config", 'Template')
+    tools.generator.generator(export_files, out_protobuf_script_formats, out_flat_script_formats, out_data_formats,
+                              NameSpace, Suffix)
     os.system("pause")
     # copyconfig.copy(out_data_formats, out_script_formats, out_config_path, out_script_path)

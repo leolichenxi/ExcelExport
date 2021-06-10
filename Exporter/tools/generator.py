@@ -259,7 +259,7 @@ def get_global_sheet_info(sheet):
 
 
 class Exporter:
-    def __init__(self,file_list,out_scripts,out_data_formats,name_space,suffix):
+    def __init__(self,file_list,out_scripts,out_flatbuffer_scripts,out_data_formats,name_space,suffix):
         """
 
         :param file_list: 导出的excel 文件列表
@@ -275,6 +275,7 @@ class Exporter:
         self.name_space = name_space
         self.suffix = suffix
         self.script_out_dic = out_scripts
+        self.script_out_flatbuffer_dic = out_flatbuffer_scripts
         self.add_global_msg()
 
     def add_global_msg(self):
@@ -363,8 +364,8 @@ class Exporter:
                 self.execute_protoc_out_script(k,v)
 
     def export_flat_script(self):
-        if isinstance(self.script_out_dic,dict):
-            for k,v in self.script_out_dic.items():
+        if isinstance(self.script_out_flatbuffer_dic,dict):
+            for k,v in self.script_out_flatbuffer_dic.items():
                 prepare_dir(v)
                 self.execute_flat_buffer_out_script(k,v)
 
@@ -393,12 +394,19 @@ class Exporter:
         os.system(cmd)
 
     def get_protoc_cmd(self,msg,script_out,out_folder):
-        return 'protoc --%s=%s/ %s/%s' % (
-            script_out,out_folder,get_export_proto_folder(),msg.get_proto_file_name())
+        return 'protoc --%s=%s/ %s/%s' % (script_out,out_folder,get_export_proto_folder(),msg.get_proto_file_name())
 
     def get_flat_cmd(self, msg, script_out, out_folder):
-        cmd = 'flatc --%s -n %s/%s --gen-all' % ('csharp',get_export_global_flat_folder(), msg.get_flat_buffer_proto_file_name())
+        '''
+        --gen-onefile in a file
+        :param msg:
+        :param script_out:
+        :param out_folder:
+        :return:
+        '''
+        cmd = 'flatc --%s -o %s  -n %s/%s --gen-onefile' % (script_out,out_folder,get_export_global_flat_folder(), msg.get_flat_buffer_proto_file_name())
         print(cmd)
+        # cmd = 'flatc --%s -n %s --gen-onefile' % ('csharp', msg.get_flat_buffer_proto_file_name())
         return cmd
 
     def export_data(self):
@@ -412,7 +420,7 @@ class Exporter:
                 self.export_protobuf_data(out_folder)
             elif format == 'flatbuffer':
                 self.export_flat_json_data(out_folder+"_json")
-                self.export_flat_bin_data(out_folder)
+                self.export_flat_bin_data(out_folder+"_bin",out_folder+"_json")
             else:
                 raise ValueError("unknown export data format:",format,"lua or json or protobuf")
 
@@ -451,8 +459,14 @@ class Exporter:
                 if (name.endswith(".py")):
                     os.remove(os.path.join(root,name))
 
-    def export_flat_bin_data(self, out_folder):
-
+    def export_flat_bin_data(self, out_folder,json_dir):
+        for info in self.proto_infos:
+            file_name = info.get_proto_name()
+            json_file = json_dir + '/' + file_name +'.json'
+            fbs = info.get_flat_buffer_proto_file_name()
+            cmd = "flatc --binary -o %s %s/%s %s" %(out_folder,get_export_global_flat_folder(),fbs,json_file)
+            print(cmd)
+            os.system(cmd)
         pass
 
     def build_single_sheet_proto(self,export_mark_name,sheet):
@@ -757,7 +771,7 @@ class Message:
             list_define = add_line(list_define,'}')
             class_define = add_line(class_define,list_define)
         return class_define
-        pass
+
 
     def get_list_lua_api(self):
         if self.is_list_obj and not self.is_child_message():
@@ -794,7 +808,10 @@ class Message:
             info = add_line(info,"namespace %s;" % (self.name_space))
 
         info = add_line(info,self.get_msg_flat_scheme())
-        info = add_line(info,"root_type " + self.get_proto_name() +";")
+        if self.is_list_obj and not self.is_child_message():
+            info = add_line(info,"root_type " +self.get_proto_name()+ListSuffix +";")
+        else:
+            info = add_line(info,"root_type " + self.get_proto_name() +";")
         return info
 
 
@@ -1056,6 +1073,9 @@ class ProtoInfo:
     def get_proto_name(self):
         return self.message.get_proto_name()
 
+    def get_flat_buffer_proto_file_name(self):
+        return self.message.get_flat_buffer_proto_file_name()
+
     def get_message(self):
         return self.message
 
@@ -1088,7 +1108,7 @@ class Filed:
     def get_flat_buffer_filed_name(self):
         flat_filed_name = self.get_filed_name()
         flat_filed_name = convert_to_lower_snake_cake(flat_filed_name)
-        return  flat_filed_name
+        return flat_filed_name
 
 
     def get_filed_type(self):
@@ -1135,7 +1155,7 @@ class Filed:
         return json.dumps((self.get_filed_name(),self.get_filed_type()),ensure_ascii = False,indent = 2)
 
 
-def generator(file_list,out_scripts,out_data_formats,name_space,suffix):
+def generator(file_list,out_protobuf_scripts,out_flatbuffer_scripts, out_data_formats,name_space,suffix):
     """
 
     :param file_list:  Excel Exports
@@ -1145,5 +1165,5 @@ def generator(file_list,out_scripts,out_data_formats,name_space,suffix):
     :param suffix: ScriptClass Suffix
     :return:
     """
-    export = Exporter(file_list,out_scripts,out_data_formats,name_space,suffix)
+    export = Exporter(file_list,out_protobuf_scripts,out_flatbuffer_scripts,out_data_formats,name_space,suffix)
     export.export()

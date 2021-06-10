@@ -11,4 +11,4 @@ table TestTableArraysTemplate {
 table TestTableArraysTemplateList {
    test_table_arrays:[TestTableArraysTemplate] ; // List
 }
-root_type TestTableArraysTemplate;
+root_type TestTableArraysTemplateList;

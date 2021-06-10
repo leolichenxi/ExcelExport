@@ -176,5 +176,161 @@ public struct TestGlobalTemplate : IFlatbufferObject
   public static void FinishSizePrefixedTestGlobalTemplateBuffer(FlatBufferBuilder builder, Offset<Config.TestGlobalTemplate> offset) { builder.FinishSizePrefixed(offset.Value); }
 };
 
+public struct TestObj_ : IFlatbufferObject
+{
+  private Table __p;
+  public ByteBuffer ByteBuffer { get { return __p.bb; } }
+  public static void ValidateVersion() { FlatBufferConstants.FLATBUFFERS_2_0_0(); }
+  public static TestObj_ GetRootAsTestObj_(ByteBuffer _bb) { return GetRootAsTestObj_(_bb, new TestObj_()); }
+  public static TestObj_ GetRootAsTestObj_(ByteBuffer _bb, TestObj_ obj) { return (obj.__assign(_bb.GetInt(_bb.Position) + _bb.Position, _bb)); }
+  public void __init(int _i, ByteBuffer _bb) { __p = new Table(_i, _bb); }
+  public TestObj_ __assign(int _i, ByteBuffer _bb) { __init(_i, _bb); return this; }
+
+  public int A { get { int o = __p.__offset(4); return o != 0 ? __p.bb.GetInt(o + __p.bb_pos) : (int)0; } }
+  public float B { get { int o = __p.__offset(6); return o != 0 ? __p.bb.GetFloat(o + __p.bb_pos) : (float)0.0f; } }
+  public bool C { get { int o = __p.__offset(8); return o != 0 ? 0!=__p.bb.Get(o + __p.bb_pos) : (bool)false; } }
+
+  public static Offset<Config.TestObj_> CreateTestObj_(FlatBufferBuilder builder,
+      int a = 0,
+      float b = 0.0f,
+      bool c = false) {
+    builder.StartTable(3);
+    TestObj_.AddB(builder, b);
+    TestObj_.AddA(builder, a);
+    TestObj_.AddC(builder, c);
+    return TestObj_.EndTestObj_(builder);
+  }
+
+  public static void StartTestObj_(FlatBufferBuilder builder) { builder.StartTable(3); }
+  public static void AddA(FlatBufferBuilder builder, int a) { builder.AddInt(0, a, 0); }
+  public static void AddB(FlatBufferBuilder builder, float b) { builder.AddFloat(1, b, 0.0f); }
+  public static void AddC(FlatBufferBuilder builder, bool c) { builder.AddBool(2, c, false); }
+  public static Offset<Config.TestObj_> EndTestObj_(FlatBufferBuilder builder) {
+    int o = builder.EndTable();
+    return new Offset<Config.TestObj_>(o);
+  }
+};
+
+public struct TestObj1_ : IFlatbufferObject
+{
+  private Table __p;
+  public ByteBuffer ByteBuffer { get { return __p.bb; } }
+  public static void ValidateVersion() { FlatBufferConstants.FLATBUFFERS_2_0_0(); }
+  public static TestObj1_ GetRootAsTestObj1_(ByteBuffer _bb) { return GetRootAsTestObj1_(_bb, new TestObj1_()); }
+  public static TestObj1_ GetRootAsTestObj1_(ByteBuffer _bb, TestObj1_ obj) { return (obj.__assign(_bb.GetInt(_bb.Position) + _bb.Position, _bb)); }
+  public void __init(int _i, ByteBuffer _bb) { __p = new Table(_i, _bb); }
+  public TestObj1_ __assign(int _i, ByteBuffer _bb) { __init(_i, _bb); return this; }
+
+  public int A { get { int o = __p.__offset(4); return o != 0 ? __p.bb.GetInt(o + __p.bb_pos) : (int)0; } }
+  public float Bs(int j) { int o = __p.__offset(6); return o != 0 ? __p.bb.GetFloat(__p.__vector(o) + j * 4) : (float)0; }
+  public int BsLength { get { int o = __p.__offset(6); return o != 0 ? __p.__vector_len(o) : 0; } }
+#if ENABLE_SPAN_T
+  public Span<float> GetBsBytes() { return __p.__vector_as_span<float>(6, 4); }
+#else
+  public ArraySegment<byte>? GetBsBytes() { return __p.__vector_as_arraysegment(6); }
+#endif
+  public float[] GetBsArray() { return __p.__vector_as_array<float>(6); }
+  public bool V { get { int o = __p.__offset(8); return o != 0 ? 0!=__p.bb.Get(o + __p.bb_pos) : (bool)false; } }
+
+  public static Offset<Config.TestObj1_> CreateTestObj1_(FlatBufferBuilder builder,
+      int a = 0,
+      VectorOffset bsOffset = default(VectorOffset),
+      bool v = false) {
+    builder.StartTable(3);
+    TestObj1_.AddBs(builder, bsOffset);
+    TestObj1_.AddA(builder, a);
+    TestObj1_.AddV(builder, v);
+    return TestObj1_.EndTestObj1_(builder);
+  }
+
+  public static void StartTestObj1_(FlatBufferBuilder builder) { builder.StartTable(3); }
+  public static void AddA(FlatBufferBuilder builder, int a) { builder.AddInt(0, a, 0); }
+  public static void AddBs(FlatBufferBuilder builder, VectorOffset bsOffset) { builder.AddOffset(1, bsOffset.Value, 0); }
+  public static VectorOffset CreateBsVector(FlatBufferBuilder builder, float[] data) { builder.StartVector(4, data.Length, 4); for (int i = data.Length - 1; i >= 0; i--) builder.AddFloat(data[i]); return builder.EndVector(); }
+  public static VectorOffset CreateBsVectorBlock(FlatBufferBuilder builder, float[] data) { builder.StartVector(4, data.Length, 4); builder.Add(data); return builder.EndVector(); }
+  public static void StartBsVector(FlatBufferBuilder builder, int numElems) { builder.StartVector(4, numElems, 4); }
+  public static void AddV(FlatBufferBuilder builder, bool v) { builder.AddBool(2, v, false); }
+  public static Offset<Config.TestObj1_> EndTestObj1_(FlatBufferBuilder builder) {
+    int o = builder.EndTable();
+    return new Offset<Config.TestObj1_>(o);
+  }
+};
+
+public struct TestObjArray_ : IFlatbufferObject
+{
+  private Table __p;
+  public ByteBuffer ByteBuffer { get { return __p.bb; } }
+  public static void ValidateVersion() { FlatBufferConstants.FLATBUFFERS_2_0_0(); }
+  public static TestObjArray_ GetRootAsTestObjArray_(ByteBuffer _bb) { return GetRootAsTestObjArray_(_bb, new TestObjArray_()); }
+  public static TestObjArray_ GetRootAsTestObjArray_(ByteBuffer _bb, TestObjArray_ obj) { return (obj.__assign(_bb.GetInt(_bb.Position) + _bb.Position, _bb)); }
+  public void __init(int _i, ByteBuffer _bb) { __p = new Table(_i, _bb); }
+  public TestObjArray_ __assign(int _i, ByteBuffer _bb) { __init(_i, _bb); return this; }
+
+  public int A { get { int o = __p.__offset(4); return o != 0 ? __p.bb.GetInt(o + __p.bb_pos) : (int)0; } }
+  public int B { get { int o = __p.__offset(6); return o != 0 ? __p.bb.GetInt(o + __p.bb_pos) : (int)0; } }
+  public int C { get { int o = __p.__offset(8); return o != 0 ? __p.bb.GetInt(o + __p.bb_pos) : (int)0; } }
+
+  public static Offset<Config.TestObjArray_> CreateTestObjArray_(FlatBufferBuilder builder,
+      int a = 0,
+      int b = 0,
+      int c = 0) {
+    builder.StartTable(3);
+    TestObjArray_.AddC(builder, c);
+    TestObjArray_.AddB(builder, b);
+    TestObjArray_.AddA(builder, a);
+    return TestObjArray_.EndTestObjArray_(builder);
+  }
+
+  public static void StartTestObjArray_(FlatBufferBuilder builder) { builder.StartTable(3); }
+  public static void AddA(FlatBufferBuilder builder, int a) { builder.AddInt(0, a, 0); }
+  public static void AddB(FlatBufferBuilder builder, int b) { builder.AddInt(1, b, 0); }
+  public static void AddC(FlatBufferBuilder builder, int c) { builder.AddInt(2, c, 0); }
+  public static Offset<Config.TestObjArray_> EndTestObjArray_(FlatBufferBuilder builder) {
+    int o = builder.EndTable();
+    return new Offset<Config.TestObjArray_>(o);
+  }
+};
+
+public struct TestObjArray1_ : IFlatbufferObject
+{
+  private Table __p;
+  public ByteBuffer ByteBuffer { get { return __p.bb; } }
+  public static void ValidateVersion() { FlatBufferConstants.FLATBUFFERS_2_0_0(); }
+  public static TestObjArray1_ GetRootAsTestObjArray1_(ByteBuffer _bb) { return GetRootAsTestObjArray1_(_bb, new TestObjArray1_()); }
+  public static TestObjArray1_ GetRootAsTestObjArray1_(ByteBuffer _bb, TestObjArray1_ obj) { return (obj.__assign(_bb.GetInt(_bb.Position) + _bb.Position, _bb)); }
+  public void __init(int _i, ByteBuffer _bb) { __p = new Table(_i, _bb); }
+  public TestObjArray1_ __assign(int _i, ByteBuffer _bb) { __init(_i, _bb); return this; }
+
+  public int A { get { int o = __p.__offset(4); return o != 0 ? __p.bb.GetInt(o + __p.bb_pos) : (int)0; } }
+  public float Bs(int j) { int o = __p.__offset(6); return o != 0 ? __p.bb.GetFloat(__p.__vector(o) + j * 4) : (float)0; }
+  public int BsLength { get { int o = __p.__offset(6); return o != 0 ? __p.__vector_len(o) : 0; } }
+#if ENABLE_SPAN_T
+  public Span<float> GetBsBytes() { return __p.__vector_as_span<float>(6, 4); }
+#else
+  public ArraySegment<byte>? GetBsBytes() { return __p.__vector_as_arraysegment(6); }
+#endif
+  public float[] GetBsArray() { return __p.__vector_as_array<float>(6); }
+
+  public static Offset<Config.TestObjArray1_> CreateTestObjArray1_(FlatBufferBuilder builder,
+      int a = 0,
+      VectorOffset bsOffset = default(VectorOffset)) {
+    builder.StartTable(2);
+    TestObjArray1_.AddBs(builder, bsOffset);
+    TestObjArray1_.AddA(builder, a);
+    return TestObjArray1_.EndTestObjArray1_(builder);
+  }
+
+  public static void StartTestObjArray1_(FlatBufferBuilder builder) { builder.StartTable(2); }
+  public static void AddA(FlatBufferBuilder builder, int a) { builder.AddInt(0, a, 0); }
+  public static void AddBs(FlatBufferBuilder builder, VectorOffset bsOffset) { builder.AddOffset(1, bsOffset.Value, 0); }
+  public static VectorOffset CreateBsVector(FlatBufferBuilder builder, float[] data) { builder.StartVector(4, data.Length, 4); for (int i = data.Length - 1; i >= 0; i--) builder.AddFloat(data[i]); return builder.EndVector(); }
+  public static VectorOffset CreateBsVectorBlock(FlatBufferBuilder builder, float[] data) { builder.StartVector(4, data.Length, 4); builder.Add(data); return builder.EndVector(); }
+  public static void StartBsVector(FlatBufferBuilder builder, int numElems) { builder.StartVector(4, numElems, 4); }
+  public static Offset<Config.TestObjArray1_> EndTestObjArray1_(FlatBufferBuilder builder) {
+    int o = builder.EndTable();
+    return new Offset<Config.TestObjArray1_>(o);
+  }
+};
+
 
 }

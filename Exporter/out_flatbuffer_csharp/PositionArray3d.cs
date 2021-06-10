@@ -69,5 +69,7 @@ public struct PositionArray3d : IFlatbufferObject
     int o = builder.EndTable();
     return new Offset<PositionArray3d>(o);
   }
+  public static void FinishPositionArray3dBuffer(FlatBufferBuilder builder, Offset<PositionArray3d> offset) { builder.Finish(offset.Value); }
+  public static void FinishSizePrefixedPositionArray3dBuffer(FlatBufferBuilder builder, Offset<PositionArray3d> offset) { builder.FinishSizePrefixed(offset.Value); }
 };
 
