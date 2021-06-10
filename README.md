@@ -16,7 +16,7 @@ limitations under the License.
 '''
 
 # ExcelExport
-Excel to json,lua and protobuf datas,also export to script language which protoc support. Write by python.
+Excel to json,lua and protobuf datas,also export to script language which protoc support. Write by python. TODO: FlatBuffer
 
 ### 说明:
 
@@ -26,7 +26,8 @@ Excel to json,lua and protobuf datas,also export to script language which protoc
 1. 支持字段 int,float,string.bool类型，配置方式参考示例excel;
 2. 支持对象配置方式;
 3. 支持数组配置;
-4. 使用场景，unity游戏开发，服务端等;
+
+>使用场景，unity游戏开发，服务端等;
 
 >待完善 long,double 等；由于python3移除long数据转换，如有需求暂配置字符串，脚本中自定义转化。
 
@@ -45,7 +46,7 @@ Excel to json,lua and protobuf datas,also export to script language which protoc
 2. 基础类型支持： int float double string bool ;
 3. 数组配置间隔符号为,   int[] 可配置数据  1,2,5,10;
 4. 声明一个数据对象：例如  Position3D  {int x;int y;int[] z} 对应数据为 1;2;1,2,3 即 x = 1,y = 2, z = 1,2,3;
-5. 对象数组  Position3D[]  {int x;int y;int[] z}[] 对应数据举例 {1,2;2,6;3}{2;5;10,12} 用{}包围字段间用分号;隔开;
+5. 对象数组  Position3D[]  {int x;int y;int[] z}[] 对应数据举例 {1,2;2,6;3}{2;5;10,12} 用{}包围,字段间用分号;隔开;
 6. Excel 行第一个前加 #或者留空 此行不会被解析对象或加入数列;
 7. 列表连续空白三行之后的不会被加入数据;
 
