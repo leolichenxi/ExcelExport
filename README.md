@@ -20,7 +20,10 @@ Excel to json,lua and protobuf  flatbuffer datas,also export to script language 
 
 ### 说明:
 
-脚本主要为excel转数据和脚本。支持的转出数据格式为：lua json protobuf格式，依次储存在导出文件夹lua,json,protobuf中,生成脚本原理为excel转proto,在protos文件夹下,使用protoc 生成。可根据生成的.proto 自行导出各语言脚本,生成的lua也会创建一份基于emmylua插件规则的https://github.com/EmmyLua/IntelliJ-EmmyLua  luaAPI用于智能高亮。参考：https://developers.google.com/protocol-buffers
+脚本主要为excel转数据和脚本。支持的转出数据格式为：lua json protobuf,flatbuffer格式，依次储存在导出文件夹lua,json,protobuf,falt相关中,protobuf生成脚本原理为excel转proto,在protos文件夹下,使用protoc 生成。可根据生成的.proto 自行导出各语言脚本,生成的lua也会创建一份基于emmylua插件规则的https://github.com/EmmyLua/IntelliJ-EmmyLua  luaAPI用于智能高亮。
+flatbuffer 生成.fbs文件和要求的json,json格式数据再转成二进制文件。
+
+根据项目实际需求选择相应的数据。
 
 
 1. 支持字段 int,float,string.bool类型，配置方式参考示例excel;
