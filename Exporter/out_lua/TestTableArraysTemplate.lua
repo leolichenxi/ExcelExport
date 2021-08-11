@@ -8,6 +8,21 @@ local TestTableArraysTemplate = {
         1,
         3
       },
+      born_position = {
+        x = 1.0,
+        y = 2.0,
+        z = 3.0
+      },
+      TestTypes = {
+        {
+          type = 1,
+          id = 2
+        },
+        {
+          type = 1,
+          id = 2
+        }
+      },
       Model = "hero_chushi",
       Icon = "chushi",
       MachineType = "防御",
@@ -19,6 +34,21 @@ local TestTableArraysTemplate = {
         2,
         1,
         4
+      },
+      born_position = {
+        x = 1.0,
+        y = 2.0,
+        z = 3.0
+      },
+      TestTypes = {
+        {
+          type = 1,
+          id = 2
+        },
+        {
+          type = 1,
+          id = 3
+        }
       },
       Model = "hero_chushi",
       Icon = "chushi",
@@ -32,6 +62,21 @@ local TestTableArraysTemplate = {
         1,
         5
       },
+      born_position = {
+        x = 1.0,
+        y = 2.0,
+        z = 3.0
+      },
+      TestTypes = {
+        {
+          type = 1,
+          id = 2
+        },
+        {
+          type = 1,
+          id = 4
+        }
+      },
       Model = "hero_chushi",
       Icon = "chushi",
       MachineType = "防御",
@@ -43,6 +88,21 @@ local TestTableArraysTemplate = {
         2,
         1,
         6
+      },
+      born_position = {
+        x = 1.0,
+        y = 2.0,
+        z = 3.0
+      },
+      TestTypes = {
+        {
+          type = 1,
+          id = 2
+        },
+        {
+          type = 1,
+          id = 5
+        }
       },
       Model = "hero_chushi",
       Icon = "chushi",
@@ -56,6 +116,21 @@ local TestTableArraysTemplate = {
         1,
         7
       },
+      born_position = {
+        x = 1.0,
+        y = 2.0,
+        z = 3.0
+      },
+      TestTypes = {
+        {
+          type = 1,
+          id = 2
+        },
+        {
+          type = 1,
+          id = 6
+        }
+      },
       Model = "hero_chushi",
       Icon = "chushi",
       MachineType = "防御",
@@ -67,6 +142,21 @@ local TestTableArraysTemplate = {
         2,
         1,
         8
+      },
+      born_position = {
+        x = 1.0,
+        y = 2.0,
+        z = 4.0
+      },
+      TestTypes = {
+        {
+          type = 1,
+          id = 2
+        },
+        {
+          type = 1,
+          id = 7
+        }
       },
       Model = "hero_chushi",
       Icon = "chushi",
@@ -80,6 +170,21 @@ local TestTableArraysTemplate = {
         1,
         9
       },
+      born_position = {
+        x = 1.0,
+        y = 2.0,
+        z = 5.0
+      },
+      TestTypes = {
+        {
+          type = 1,
+          id = 2
+        },
+        {
+          type = 1,
+          id = 8
+        }
+      },
       Model = "hero_chushi",
       Icon = "chushi",
       MachineType = "防御",
@@ -91,6 +196,21 @@ local TestTableArraysTemplate = {
         2,
         1,
         10
+      },
+      born_position = {
+        x = 1.0,
+        y = 2.0,
+        z = 6.0
+      },
+      TestTypes = {
+        {
+          type = 1,
+          id = 2
+        },
+        {
+          type = 1,
+          id = 9
+        }
       },
       Model = "hero_chushi",
       Icon = "chushi",
@@ -104,6 +224,21 @@ local TestTableArraysTemplate = {
         1,
         11
       },
+      born_position = {
+        x = 1.0,
+        y = 2.0,
+        z = 7.0
+      },
+      TestTypes = {
+        {
+          type = 1,
+          id = 2
+        },
+        {
+          type = 1,
+          id = 10
+        }
+      },
       Model = "hero_chushi",
       Icon = "chushi",
       MachineType = "防御",
@@ -115,6 +250,21 @@ local TestTableArraysTemplate = {
         2,
         1,
         12
+      },
+      born_position = {
+        x = 1.0,
+        y = 2.0,
+        z = 8.0
+      },
+      TestTypes = {
+        {
+          type = 1,
+          id = 2
+        },
+        {
+          type = 1,
+          id = 11
+        }
       },
       Model = "hero_chushi",
       Icon = "chushi",

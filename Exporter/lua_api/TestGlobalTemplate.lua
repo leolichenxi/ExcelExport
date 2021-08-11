@@ -18,3 +18,5 @@
 ---@field  TestDefineFromGlobal2s Position3d[] @测试全局对象声明数组 
 ---@field  TestCustomObj PositionArray3d @测试全局配置数组字段 
 ---@field  TestCustomObjArrays PositionArray3d[] @测试全局配置含有数组字段的数组 
+---@field  Test1Int int32 @测试int类型 可以 但不建议字段命名含有数字 
+---@field  TestInt1 int32 @测试int类型 可以 但不建议字段命名含有数字 

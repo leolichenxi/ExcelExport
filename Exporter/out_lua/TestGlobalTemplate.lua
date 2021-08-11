@@ -128,6 +128,8 @@ local TestGlobalTemplate = {
         12.0
       }
     }
-  }
+  },
+  Test1Int = 7,
+  TestInt1 = 7
 }
 return TestGlobalTemplate

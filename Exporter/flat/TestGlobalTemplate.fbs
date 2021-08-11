@@ -22,6 +22,8 @@ table TestGlobalTemplate {
    test_define_from_global2s:[Position3d] ; // 测试全局对象声明数组
    test_custom_obj:PositionArray3d ; // 测试全局配置数组字段
    test_custom_obj_arrays:[PositionArray3d] ; // 测试全局配置含有数组字段的数组
+   test1_int:int32 ; // 测试int类型 可以 但不建议字段命名含有数字
+   test_int1:int32 ; // 测试int类型 可以 但不建议字段命名含有数字
 }
   table TestObj_ {
    a:int32 ; // a

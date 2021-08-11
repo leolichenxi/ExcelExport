@@ -1,12 +1,16 @@
 syntax = "proto3";
 package Config;
+import "protos/Position3d.proto";
+import "protos/CommonType.proto";
 message TestTableArraysTemplate {
    int32 Id = 1 ; // 英雄ID
    repeated int32 Weapons = 2 ; // 武器(武器Id)
-   string Model = 3 ; // 切片
-   string Icon = 4 ; // Icon
-   string MachineType = 5 ; // 机体类型
-   string MapType = 6 ; // 地形适应
+   Position3d born_position = 3 ; // 出生位置
+   repeated CommonType TestTypes = 4 ; // 测试类型
+   string Model = 5 ; // 切片
+   string Icon = 6 ; // Icon
+   string MachineType = 7 ; // 机体类型
+   string MapType = 8 ; // 地形适应
 }
 message TestTableArraysTemplateList {
    repeated TestTableArraysTemplate TestTableArrays = 1 ; // List

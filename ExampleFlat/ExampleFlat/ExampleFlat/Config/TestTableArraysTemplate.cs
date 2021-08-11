@@ -28,62 +28,74 @@ public struct TestTableArraysTemplate : IFlatbufferObject
   public ArraySegment<byte>? GetWeaponsBytes() { return __p.__vector_as_arraysegment(6); }
 #endif
   public int[] GetWeaponsArray() { return __p.__vector_as_array<int>(6); }
-  public string Model { get { int o = __p.__offset(8); return o != 0 ? __p.__string(o + __p.bb_pos) : null; } }
+  public Position3d? BornPosition { get { int o = __p.__offset(8); return o != 0 ? (Position3d?)(new Position3d()).__assign(__p.__indirect(o + __p.bb_pos), __p.bb) : null; } }
+  public CommonType? TestTypes(int j) { int o = __p.__offset(10); return o != 0 ? (CommonType?)(new CommonType()).__assign(__p.__indirect(__p.__vector(o) + j * 4), __p.bb) : null; }
+  public int TestTypesLength { get { int o = __p.__offset(10); return o != 0 ? __p.__vector_len(o) : 0; } }
+  public string Model { get { int o = __p.__offset(12); return o != 0 ? __p.__string(o + __p.bb_pos) : null; } }
 #if ENABLE_SPAN_T
-  public Span<byte> GetModelBytes() { return __p.__vector_as_span<byte>(8, 1); }
+  public Span<byte> GetModelBytes() { return __p.__vector_as_span<byte>(12, 1); }
 #else
-  public ArraySegment<byte>? GetModelBytes() { return __p.__vector_as_arraysegment(8); }
+  public ArraySegment<byte>? GetModelBytes() { return __p.__vector_as_arraysegment(12); }
 #endif
-  public byte[] GetModelArray() { return __p.__vector_as_array<byte>(8); }
-  public string Icon { get { int o = __p.__offset(10); return o != 0 ? __p.__string(o + __p.bb_pos) : null; } }
+  public byte[] GetModelArray() { return __p.__vector_as_array<byte>(12); }
+  public string Icon { get { int o = __p.__offset(14); return o != 0 ? __p.__string(o + __p.bb_pos) : null; } }
 #if ENABLE_SPAN_T
-  public Span<byte> GetIconBytes() { return __p.__vector_as_span<byte>(10, 1); }
+  public Span<byte> GetIconBytes() { return __p.__vector_as_span<byte>(14, 1); }
 #else
-  public ArraySegment<byte>? GetIconBytes() { return __p.__vector_as_arraysegment(10); }
+  public ArraySegment<byte>? GetIconBytes() { return __p.__vector_as_arraysegment(14); }
 #endif
-  public byte[] GetIconArray() { return __p.__vector_as_array<byte>(10); }
-  public string MachineType { get { int o = __p.__offset(12); return o != 0 ? __p.__string(o + __p.bb_pos) : null; } }
+  public byte[] GetIconArray() { return __p.__vector_as_array<byte>(14); }
+  public string MachineType { get { int o = __p.__offset(16); return o != 0 ? __p.__string(o + __p.bb_pos) : null; } }
 #if ENABLE_SPAN_T
-  public Span<byte> GetMachineTypeBytes() { return __p.__vector_as_span<byte>(12, 1); }
+  public Span<byte> GetMachineTypeBytes() { return __p.__vector_as_span<byte>(16, 1); }
 #else
-  public ArraySegment<byte>? GetMachineTypeBytes() { return __p.__vector_as_arraysegment(12); }
+  public ArraySegment<byte>? GetMachineTypeBytes() { return __p.__vector_as_arraysegment(16); }
 #endif
-  public byte[] GetMachineTypeArray() { return __p.__vector_as_array<byte>(12); }
-  public string MapType { get { int o = __p.__offset(14); return o != 0 ? __p.__string(o + __p.bb_pos) : null; } }
+  public byte[] GetMachineTypeArray() { return __p.__vector_as_array<byte>(16); }
+  public string MapType { get { int o = __p.__offset(18); return o != 0 ? __p.__string(o + __p.bb_pos) : null; } }
 #if ENABLE_SPAN_T
-  public Span<byte> GetMapTypeBytes() { return __p.__vector_as_span<byte>(14, 1); }
+  public Span<byte> GetMapTypeBytes() { return __p.__vector_as_span<byte>(18, 1); }
 #else
-  public ArraySegment<byte>? GetMapTypeBytes() { return __p.__vector_as_arraysegment(14); }
+  public ArraySegment<byte>? GetMapTypeBytes() { return __p.__vector_as_arraysegment(18); }
 #endif
-  public byte[] GetMapTypeArray() { return __p.__vector_as_array<byte>(14); }
+  public byte[] GetMapTypeArray() { return __p.__vector_as_array<byte>(18); }
 
   public static Offset<Config.TestTableArraysTemplate> CreateTestTableArraysTemplate(FlatBufferBuilder builder,
       int id = 0,
       VectorOffset weaponsOffset = default(VectorOffset),
+      Offset<Position3d> born_positionOffset = default(Offset<Position3d>),
+      VectorOffset test_typesOffset = default(VectorOffset),
       StringOffset modelOffset = default(StringOffset),
       StringOffset iconOffset = default(StringOffset),
       StringOffset machine_typeOffset = default(StringOffset),
       StringOffset map_typeOffset = default(StringOffset)) {
-    builder.StartTable(6);
+    builder.StartTable(8);
     TestTableArraysTemplate.AddMapType(builder, map_typeOffset);
     TestTableArraysTemplate.AddMachineType(builder, machine_typeOffset);
     TestTableArraysTemplate.AddIcon(builder, iconOffset);
     TestTableArraysTemplate.AddModel(builder, modelOffset);
+    TestTableArraysTemplate.AddTestTypes(builder, test_typesOffset);
+    TestTableArraysTemplate.AddBornPosition(builder, born_positionOffset);
     TestTableArraysTemplate.AddWeapons(builder, weaponsOffset);
     TestTableArraysTemplate.AddId(builder, id);
     return TestTableArraysTemplate.EndTestTableArraysTemplate(builder);
   }
 
-  public static void StartTestTableArraysTemplate(FlatBufferBuilder builder) { builder.StartTable(6); }
+  public static void StartTestTableArraysTemplate(FlatBufferBuilder builder) { builder.StartTable(8); }
   public static void AddId(FlatBufferBuilder builder, int id) { builder.AddInt(0, id, 0); }
   public static void AddWeapons(FlatBufferBuilder builder, VectorOffset weaponsOffset) { builder.AddOffset(1, weaponsOffset.Value, 0); }
   public static VectorOffset CreateWeaponsVector(FlatBufferBuilder builder, int[] data) { builder.StartVector(4, data.Length, 4); for (int i = data.Length - 1; i >= 0; i--) builder.AddInt(data[i]); return builder.EndVector(); }
   public static VectorOffset CreateWeaponsVectorBlock(FlatBufferBuilder builder, int[] data) { builder.StartVector(4, data.Length, 4); builder.Add(data); return builder.EndVector(); }
   public static void StartWeaponsVector(FlatBufferBuilder builder, int numElems) { builder.StartVector(4, numElems, 4); }
-  public static void AddModel(FlatBufferBuilder builder, StringOffset modelOffset) { builder.AddOffset(2, modelOffset.Value, 0); }
-  public static void AddIcon(FlatBufferBuilder builder, StringOffset iconOffset) { builder.AddOffset(3, iconOffset.Value, 0); }
-  public static void AddMachineType(FlatBufferBuilder builder, StringOffset machineTypeOffset) { builder.AddOffset(4, machineTypeOffset.Value, 0); }
-  public static void AddMapType(FlatBufferBuilder builder, StringOffset mapTypeOffset) { builder.AddOffset(5, mapTypeOffset.Value, 0); }
+  public static void AddBornPosition(FlatBufferBuilder builder, Offset<Position3d> bornPositionOffset) { builder.AddOffset(2, bornPositionOffset.Value, 0); }
+  public static void AddTestTypes(FlatBufferBuilder builder, VectorOffset testTypesOffset) { builder.AddOffset(3, testTypesOffset.Value, 0); }
+  public static VectorOffset CreateTestTypesVector(FlatBufferBuilder builder, Offset<CommonType>[] data) { builder.StartVector(4, data.Length, 4); for (int i = data.Length - 1; i >= 0; i--) builder.AddOffset(data[i].Value); return builder.EndVector(); }
+  public static VectorOffset CreateTestTypesVectorBlock(FlatBufferBuilder builder, Offset<CommonType>[] data) { builder.StartVector(4, data.Length, 4); builder.Add(data); return builder.EndVector(); }
+  public static void StartTestTypesVector(FlatBufferBuilder builder, int numElems) { builder.StartVector(4, numElems, 4); }
+  public static void AddModel(FlatBufferBuilder builder, StringOffset modelOffset) { builder.AddOffset(4, modelOffset.Value, 0); }
+  public static void AddIcon(FlatBufferBuilder builder, StringOffset iconOffset) { builder.AddOffset(5, iconOffset.Value, 0); }
+  public static void AddMachineType(FlatBufferBuilder builder, StringOffset machineTypeOffset) { builder.AddOffset(6, machineTypeOffset.Value, 0); }
+  public static void AddMapType(FlatBufferBuilder builder, StringOffset mapTypeOffset) { builder.AddOffset(7, mapTypeOffset.Value, 0); }
   public static Offset<Config.TestTableArraysTemplate> EndTestTableArraysTemplate(FlatBufferBuilder builder) {
     int o = builder.EndTable();
     return new Offset<Config.TestTableArraysTemplate>(o);

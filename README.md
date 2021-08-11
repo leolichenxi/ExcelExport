@@ -16,7 +16,7 @@ limitations under the License.
 '''
 
 # ExcelExport
-Excel to json,lua and protobuf  flatbuffer datas,also export to script language which protoc support. Write by python
+Excel to json,lua and protobuf  flatbuffer datas,also export to script language which protoc and flatc support. Write by python
 
 ### 说明:
 
@@ -84,6 +84,26 @@ protoc 支持proto3,proto2兼容性未测试
 python 依赖库： google,protobuf,xlrd,refection
 
 
+### 性能选择
+
+[Benchmark](http://google.github.io/flatbuffers/md__benchmarks.html)
+
+1. json小项目优选
+2. 中大型项目flatbuffer和protobuff 两者flatbuffer除了文件稍微比probof二进制文件稍微大些 其它完胜，但开发调用代码比protobuf冗余些，而且 在csharp中 flatbbufer 是作为值类型存在。意味着这作为参数传递会
+造成copy，但flatbuffer内部依赖ByteBuffer获取数组，可忽略。
+3. 对于数组类型，flatbuffer 获取数组会造成gc,使用数组时需注意，如果先获取length再进行遍历，不会产生GC,GetArray会产生GC,对原始数据只有Get,所以不会修改原始数据，比较nice,如果正确使用。游戏项目推荐使用FlatBuffer，对内存占用最少。
+4. Protobuf优势在于对数据压缩最少,对于一般项目protobuff 已经是很不错的选择。
+
+```
+        public T[] ToArray<T>(int pos, int len)
+            where T : struct
+        {
+            AssertOffsetAndLength(pos, len);
+            T[] arr = new T[len];
+            Buffer.BlockCopy(_buffer.Buffer, pos, arr, 0, ArraySize(arr));
+            return arr;
+        }
+```
 ##### 参考部分：
  * https://developers.google.com/protocol-buffers/docs/overview#scalar
  * https://github.com/EmmyLua

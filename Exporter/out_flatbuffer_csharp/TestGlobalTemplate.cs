@@ -77,6 +77,8 @@ public struct TestGlobalTemplate : IFlatbufferObject
   public PositionArray3d? TestCustomObj { get { int o = __p.__offset(38); return o != 0 ? (PositionArray3d?)(new PositionArray3d()).__assign(__p.__indirect(o + __p.bb_pos), __p.bb) : null; } }
   public PositionArray3d? TestCustomObjArrays(int j) { int o = __p.__offset(40); return o != 0 ? (PositionArray3d?)(new PositionArray3d()).__assign(__p.__indirect(__p.__vector(o) + j * 4), __p.bb) : null; }
   public int TestCustomObjArraysLength { get { int o = __p.__offset(40); return o != 0 ? __p.__vector_len(o) : 0; } }
+  public int Test1Int { get { int o = __p.__offset(42); return o != 0 ? __p.bb.GetInt(o + __p.bb_pos) : (int)0; } }
+  public int TestInt1 { get { int o = __p.__offset(44); return o != 0 ? __p.bb.GetInt(o + __p.bb_pos) : (int)0; } }
 
   public static Offset<Config.TestGlobalTemplate> CreateTestGlobalTemplate(FlatBufferBuilder builder,
       int test_int = 0,
@@ -97,10 +99,14 @@ public struct TestGlobalTemplate : IFlatbufferObject
       Offset<Position3d> test_define_from_globalOffset = default(Offset<Position3d>),
       VectorOffset test_define_from_global2sOffset = default(VectorOffset),
       Offset<PositionArray3d> test_custom_objOffset = default(Offset<PositionArray3d>),
-      VectorOffset test_custom_obj_arraysOffset = default(VectorOffset)) {
-    builder.StartTable(19);
+      VectorOffset test_custom_obj_arraysOffset = default(VectorOffset),
+      int test1_int = 0,
+      int test_int1 = 0) {
+    builder.StartTable(21);
     TestGlobalTemplate.AddTestDouble(builder, test_double);
     TestGlobalTemplate.AddTestString1(builder, test_string1);
+    TestGlobalTemplate.AddTestInt1(builder, test_int1);
+    TestGlobalTemplate.AddTest1Int(builder, test1_int);
     TestGlobalTemplate.AddTestCustomObjArrays(builder, test_custom_obj_arraysOffset);
     TestGlobalTemplate.AddTestCustomObj(builder, test_custom_objOffset);
     TestGlobalTemplate.AddTestDefineFromGlobal2s(builder, test_define_from_global2sOffset);
@@ -121,7 +127,7 @@ public struct TestGlobalTemplate : IFlatbufferObject
     return TestGlobalTemplate.EndTestGlobalTemplate(builder);
   }
 
-  public static void StartTestGlobalTemplate(FlatBufferBuilder builder) { builder.StartTable(19); }
+  public static void StartTestGlobalTemplate(FlatBufferBuilder builder) { builder.StartTable(21); }
   public static void AddTestInt(FlatBufferBuilder builder, int testInt) { builder.AddInt(0, testInt, 0); }
   public static void AddTestStringArrays(FlatBufferBuilder builder, VectorOffset testStringArraysOffset) { builder.AddOffset(1, testStringArraysOffset.Value, 0); }
   public static VectorOffset CreateTestStringArraysVector(FlatBufferBuilder builder, StringOffset[] data) { builder.StartVector(4, data.Length, 4); for (int i = data.Length - 1; i >= 0; i--) builder.AddOffset(data[i].Value); return builder.EndVector(); }
@@ -168,6 +174,8 @@ public struct TestGlobalTemplate : IFlatbufferObject
   public static VectorOffset CreateTestCustomObjArraysVector(FlatBufferBuilder builder, Offset<PositionArray3d>[] data) { builder.StartVector(4, data.Length, 4); for (int i = data.Length - 1; i >= 0; i--) builder.AddOffset(data[i].Value); return builder.EndVector(); }
   public static VectorOffset CreateTestCustomObjArraysVectorBlock(FlatBufferBuilder builder, Offset<PositionArray3d>[] data) { builder.StartVector(4, data.Length, 4); builder.Add(data); return builder.EndVector(); }
   public static void StartTestCustomObjArraysVector(FlatBufferBuilder builder, int numElems) { builder.StartVector(4, numElems, 4); }
+  public static void AddTest1Int(FlatBufferBuilder builder, int test1Int) { builder.AddInt(19, test1Int, 0); }
+  public static void AddTestInt1(FlatBufferBuilder builder, int testInt1) { builder.AddInt(20, testInt1, 0); }
   public static Offset<Config.TestGlobalTemplate> EndTestGlobalTemplate(FlatBufferBuilder builder) {
     int o = builder.EndTable();
     return new Offset<Config.TestGlobalTemplate>(o);

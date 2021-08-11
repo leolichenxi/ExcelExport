@@ -248,7 +248,21 @@ function TestGlobalTemplate_mt:TestCustomObjArraysLength()
     end
     return 0
 end
-function TestGlobalTemplate.Start(builder) builder:StartObject(19) end
+function TestGlobalTemplate_mt:Test1Int()
+    local o = self.view:Offset(42)
+    if o ~= 0 then
+        return self.view:Get(flatbuffers.N.Int32, o + self.view.pos)
+    end
+    return 0
+end
+function TestGlobalTemplate_mt:TestInt1()
+    local o = self.view:Offset(44)
+    if o ~= 0 then
+        return self.view:Get(flatbuffers.N.Int32, o + self.view.pos)
+    end
+    return 0
+end
+function TestGlobalTemplate.Start(builder) builder:StartObject(21) end
 function TestGlobalTemplate.AddTestInt(builder, testInt) builder:PrependInt32Slot(0, testInt, 0) end
 function TestGlobalTemplate.AddTestStringArrays(builder, testStringArrays) builder:PrependUOffsetTRelativeSlot(1, testStringArrays, 0) end
 function TestGlobalTemplate.StartTestStringArraysVector(builder, numElems) return builder:StartVector(4, numElems, 4) end
@@ -277,6 +291,8 @@ function TestGlobalTemplate.StartTestDefineFromGlobal2sVector(builder, numElems)
 function TestGlobalTemplate.AddTestCustomObj(builder, testCustomObj) builder:PrependUOffsetTRelativeSlot(17, testCustomObj, 0) end
 function TestGlobalTemplate.AddTestCustomObjArrays(builder, testCustomObjArrays) builder:PrependUOffsetTRelativeSlot(18, testCustomObjArrays, 0) end
 function TestGlobalTemplate.StartTestCustomObjArraysVector(builder, numElems) return builder:StartVector(4, numElems, 4) end
+function TestGlobalTemplate.AddTest1Int(builder, test1Int) builder:PrependInt32Slot(19, test1Int, 0) end
+function TestGlobalTemplate.AddTestInt1(builder, testInt1) builder:PrependInt32Slot(20, testInt1, 0) end
 function TestGlobalTemplate.End(builder) return builder:EndObject() end
 
 return TestGlobalTemplate -- return the module

@@ -25,15 +25,18 @@ namespace Config {
       byte[] descriptorData = global::System.Convert.FromBase64String(
           string.Concat(
             "CiRwcm90b3MvVGVzdFRhYmxlQXJyYXlzVGVtcGxhdGUucHJvdG8SBkNvbmZp",
-            "ZyJ5ChdUZXN0VGFibGVBcnJheXNUZW1wbGF0ZRIKCgJJZBgBIAEoBRIPCgdX",
-            "ZWFwb25zGAIgAygFEg0KBU1vZGVsGAMgASgJEgwKBEljb24YBCABKAkSEwoL",
-            "TWFjaGluZVR5cGUYBSABKAkSDwoHTWFwVHlwZRgGIAEoCSJXChtUZXN0VGFi",
-            "bGVBcnJheXNUZW1wbGF0ZUxpc3QSOAoPVGVzdFRhYmxlQXJyYXlzGAEgAygL",
-            "Mh8uQ29uZmlnLlRlc3RUYWJsZUFycmF5c1RlbXBsYXRlYgZwcm90bzM="));
+            "ZxoXcHJvdG9zL1Bvc2l0aW9uM2QucHJvdG8aF3Byb3Rvcy9Db21tb25UeXBl",
+            "LnByb3RvIr0BChdUZXN0VGFibGVBcnJheXNUZW1wbGF0ZRIKCgJJZBgBIAEo",
+            "BRIPCgdXZWFwb25zGAIgAygFEiIKDWJvcm5fcG9zaXRpb24YAyABKAsyCy5Q",
+            "b3NpdGlvbjNkEh4KCVRlc3RUeXBlcxgEIAMoCzILLkNvbW1vblR5cGUSDQoF",
+            "TW9kZWwYBSABKAkSDAoESWNvbhgGIAEoCRITCgtNYWNoaW5lVHlwZRgHIAEo",
+            "CRIPCgdNYXBUeXBlGAggASgJIlcKG1Rlc3RUYWJsZUFycmF5c1RlbXBsYXRl",
+            "TGlzdBI4Cg9UZXN0VGFibGVBcnJheXMYASADKAsyHy5Db25maWcuVGVzdFRh",
+            "YmxlQXJyYXlzVGVtcGxhdGViBnByb3RvMw=="));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
-          new pbr::FileDescriptor[] { },
+          new pbr::FileDescriptor[] { global::Position3DReflection.Descriptor, global::CommonTypeReflection.Descriptor, },
           new pbr::GeneratedClrTypeInfo(null, null, new pbr::GeneratedClrTypeInfo[] {
-            new pbr::GeneratedClrTypeInfo(typeof(global::Config.TestTableArraysTemplate), global::Config.TestTableArraysTemplate.Parser, new[]{ "Id", "Weapons", "Model", "Icon", "MachineType", "MapType" }, null, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Config.TestTableArraysTemplate), global::Config.TestTableArraysTemplate.Parser, new[]{ "Id", "Weapons", "BornPosition", "TestTypes", "Model", "Icon", "MachineType", "MapType" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Config.TestTableArraysTemplateList), global::Config.TestTableArraysTemplateList.Parser, new[]{ "TestTableArrays" }, null, null, null, null)
           }));
     }
@@ -72,6 +75,8 @@ namespace Config {
     public TestTableArraysTemplate(TestTableArraysTemplate other) : this() {
       id_ = other.id_;
       weapons_ = other.weapons_.Clone();
+      bornPosition_ = other.bornPosition_ != null ? other.bornPosition_.Clone() : null;
+      testTypes_ = other.testTypes_.Clone();
       model_ = other.model_;
       icon_ = other.icon_;
       machineType_ = other.machineType_;
@@ -111,8 +116,35 @@ namespace Config {
       get { return weapons_; }
     }
 
+    /// <summary>Field number for the "born_position" field.</summary>
+    public const int BornPositionFieldNumber = 3;
+    private global::Position3d bornPosition_;
+    /// <summary>
+    /// 出生位置
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public global::Position3d BornPosition {
+      get { return bornPosition_; }
+      set {
+        bornPosition_ = value;
+      }
+    }
+
+    /// <summary>Field number for the "TestTypes" field.</summary>
+    public const int TestTypesFieldNumber = 4;
+    private static readonly pb::FieldCodec<global::CommonType> _repeated_testTypes_codec
+        = pb::FieldCodec.ForMessage(34, global::CommonType.Parser);
+    private readonly pbc::RepeatedField<global::CommonType> testTypes_ = new pbc::RepeatedField<global::CommonType>();
+    /// <summary>
+    /// 测试类型
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public pbc::RepeatedField<global::CommonType> TestTypes {
+      get { return testTypes_; }
+    }
+
     /// <summary>Field number for the "Model" field.</summary>
-    public const int ModelFieldNumber = 3;
+    public const int ModelFieldNumber = 5;
     private string model_ = "";
     /// <summary>
     /// 切片
@@ -126,7 +158,7 @@ namespace Config {
     }
 
     /// <summary>Field number for the "Icon" field.</summary>
-    public const int IconFieldNumber = 4;
+    public const int IconFieldNumber = 6;
     private string icon_ = "";
     /// <summary>
     /// Icon
@@ -140,7 +172,7 @@ namespace Config {
     }
 
     /// <summary>Field number for the "MachineType" field.</summary>
-    public const int MachineTypeFieldNumber = 5;
+    public const int MachineTypeFieldNumber = 7;
     private string machineType_ = "";
     /// <summary>
     /// 机体类型
@@ -154,7 +186,7 @@ namespace Config {
     }
 
     /// <summary>Field number for the "MapType" field.</summary>
-    public const int MapTypeFieldNumber = 6;
+    public const int MapTypeFieldNumber = 8;
     private string mapType_ = "";
     /// <summary>
     /// 地形适应
@@ -182,6 +214,8 @@ namespace Config {
       }
       if (Id != other.Id) return false;
       if(!weapons_.Equals(other.weapons_)) return false;
+      if (!object.Equals(BornPosition, other.BornPosition)) return false;
+      if(!testTypes_.Equals(other.testTypes_)) return false;
       if (Model != other.Model) return false;
       if (Icon != other.Icon) return false;
       if (MachineType != other.MachineType) return false;
@@ -194,6 +228,8 @@ namespace Config {
       int hash = 1;
       if (Id != 0) hash ^= Id.GetHashCode();
       hash ^= weapons_.GetHashCode();
+      if (bornPosition_ != null) hash ^= BornPosition.GetHashCode();
+      hash ^= testTypes_.GetHashCode();
       if (Model.Length != 0) hash ^= Model.GetHashCode();
       if (Icon.Length != 0) hash ^= Icon.GetHashCode();
       if (MachineType.Length != 0) hash ^= MachineType.GetHashCode();
@@ -219,20 +255,25 @@ namespace Config {
         output.WriteInt32(Id);
       }
       weapons_.WriteTo(output, _repeated_weapons_codec);
-      if (Model.Length != 0) {
+      if (bornPosition_ != null) {
         output.WriteRawTag(26);
+        output.WriteMessage(BornPosition);
+      }
+      testTypes_.WriteTo(output, _repeated_testTypes_codec);
+      if (Model.Length != 0) {
+        output.WriteRawTag(42);
         output.WriteString(Model);
       }
       if (Icon.Length != 0) {
-        output.WriteRawTag(34);
+        output.WriteRawTag(50);
         output.WriteString(Icon);
       }
       if (MachineType.Length != 0) {
-        output.WriteRawTag(42);
+        output.WriteRawTag(58);
         output.WriteString(MachineType);
       }
       if (MapType.Length != 0) {
-        output.WriteRawTag(50);
+        output.WriteRawTag(66);
         output.WriteString(MapType);
       }
       if (_unknownFields != null) {
@@ -249,20 +290,25 @@ namespace Config {
         output.WriteInt32(Id);
       }
       weapons_.WriteTo(ref output, _repeated_weapons_codec);
-      if (Model.Length != 0) {
+      if (bornPosition_ != null) {
         output.WriteRawTag(26);
+        output.WriteMessage(BornPosition);
+      }
+      testTypes_.WriteTo(ref output, _repeated_testTypes_codec);
+      if (Model.Length != 0) {
+        output.WriteRawTag(42);
         output.WriteString(Model);
       }
       if (Icon.Length != 0) {
-        output.WriteRawTag(34);
+        output.WriteRawTag(50);
         output.WriteString(Icon);
       }
       if (MachineType.Length != 0) {
-        output.WriteRawTag(42);
+        output.WriteRawTag(58);
         output.WriteString(MachineType);
       }
       if (MapType.Length != 0) {
-        output.WriteRawTag(50);
+        output.WriteRawTag(66);
         output.WriteString(MapType);
       }
       if (_unknownFields != null) {
@@ -278,6 +324,10 @@ namespace Config {
         size += 1 + pb::CodedOutputStream.ComputeInt32Size(Id);
       }
       size += weapons_.CalculateSize(_repeated_weapons_codec);
+      if (bornPosition_ != null) {
+        size += 1 + pb::CodedOutputStream.ComputeMessageSize(BornPosition);
+      }
+      size += testTypes_.CalculateSize(_repeated_testTypes_codec);
       if (Model.Length != 0) {
         size += 1 + pb::CodedOutputStream.ComputeStringSize(Model);
       }
@@ -305,6 +355,13 @@ namespace Config {
         Id = other.Id;
       }
       weapons_.Add(other.weapons_);
+      if (other.bornPosition_ != null) {
+        if (bornPosition_ == null) {
+          BornPosition = new global::Position3d();
+        }
+        BornPosition.MergeFrom(other.BornPosition);
+      }
+      testTypes_.Add(other.testTypes_);
       if (other.Model.Length != 0) {
         Model = other.Model;
       }
@@ -341,18 +398,29 @@ namespace Config {
             break;
           }
           case 26: {
-            Model = input.ReadString();
+            if (bornPosition_ == null) {
+              BornPosition = new global::Position3d();
+            }
+            input.ReadMessage(BornPosition);
             break;
           }
           case 34: {
-            Icon = input.ReadString();
+            testTypes_.AddEntriesFrom(input, _repeated_testTypes_codec);
             break;
           }
           case 42: {
-            MachineType = input.ReadString();
+            Model = input.ReadString();
             break;
           }
           case 50: {
+            Icon = input.ReadString();
+            break;
+          }
+          case 58: {
+            MachineType = input.ReadString();
+            break;
+          }
+          case 66: {
             MapType = input.ReadString();
             break;
           }
@@ -380,18 +448,29 @@ namespace Config {
             break;
           }
           case 26: {
-            Model = input.ReadString();
+            if (bornPosition_ == null) {
+              BornPosition = new global::Position3d();
+            }
+            input.ReadMessage(BornPosition);
             break;
           }
           case 34: {
-            Icon = input.ReadString();
+            testTypes_.AddEntriesFrom(ref input, _repeated_testTypes_codec);
             break;
           }
           case 42: {
-            MachineType = input.ReadString();
+            Model = input.ReadString();
             break;
           }
           case 50: {
+            Icon = input.ReadString();
+            break;
+          }
+          case 58: {
+            MachineType = input.ReadString();
+            break;
+          }
+          case 66: {
             MapType = input.ReadString();
             break;
           }

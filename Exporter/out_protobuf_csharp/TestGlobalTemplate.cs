@@ -26,7 +26,7 @@ namespace Config {
           string.Concat(
             "Ch9wcm90b3MvVGVzdEdsb2JhbFRlbXBsYXRlLnByb3RvEgZDb25maWcaF3By",
             "b3Rvcy9Qb3NpdGlvbjNkLnByb3RvGhxwcm90b3MvUG9zaXRpb25BcnJheTNk",
-            "LnByb3RvItwGChJUZXN0R2xvYmFsVGVtcGxhdGUSDwoHVGVzdEludBgBIAEo",
+            "LnByb3RvIoAHChJUZXN0R2xvYmFsVGVtcGxhdGUSDwoHVGVzdEludBgBIAEo",
             "BRIYChBUZXN0U3RyaW5nQXJyYXlzGAIgAygJEhMKC1Rlc3RTdHJpbmcxGAMg",
             "ASgBEhIKClRlc3RTdHJpbmcYBCABKAkSEQoJVGVzdEZsb2F0GAUgASgCEhIK",
             "ClRlc3REb3VibGUYBiABKAESEAoIVGVzdEJvb2wYByABKAgSFQoNVGVzdElu",
@@ -41,15 +41,16 @@ namespace Config {
             "MgsuUG9zaXRpb24zZBIrChZUZXN0RGVmaW5lRnJvbUdsb2JhbDJzGBEgAygL",
             "MgsuUG9zaXRpb24zZBInCg1UZXN0Q3VzdG9tT2JqGBIgASgLMhAuUG9zaXRp",
             "b25BcnJheTNkEi0KE1Rlc3RDdXN0b21PYmpBcnJheXMYEyADKAsyEC5Qb3Np",
-            "dGlvbkFycmF5M2QaKwoIVGVzdE9ial8SCQoBYRgBIAEoBRIJCgFiGAIgASgC",
-            "EgkKAWMYAyABKAgaLQoJVGVzdE9iajFfEgkKAWEYASABKAUSCgoCYnMYAiAD",
-            "KAISCQoBdhgDIAEoCBowCg1UZXN0T2JqQXJyYXlfEgkKAWEYASABKAUSCQoB",
-            "YhgCIAEoBRIJCgFjGAMgASgFGicKDlRlc3RPYmpBcnJheTFfEgkKAWEYASAB",
-            "KAUSCgoCYnMYAiADKAJiBnByb3RvMw=="));
+            "dGlvbkFycmF5M2QSEAoIVGVzdDFJbnQYFCABKAUSEAoIVGVzdEludDEYFSAB",
+            "KAUaKwoIVGVzdE9ial8SCQoBYRgBIAEoBRIJCgFiGAIgASgCEgkKAWMYAyAB",
+            "KAgaLQoJVGVzdE9iajFfEgkKAWEYASABKAUSCgoCYnMYAiADKAISCQoBdhgD",
+            "IAEoCBowCg1UZXN0T2JqQXJyYXlfEgkKAWEYASABKAUSCQoBYhgCIAEoBRIJ",
+            "CgFjGAMgASgFGicKDlRlc3RPYmpBcnJheTFfEgkKAWEYASABKAUSCgoCYnMY",
+            "AiADKAJiBnByb3RvMw=="));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { global::Position3DReflection.Descriptor, global::PositionArray3DReflection.Descriptor, },
           new pbr::GeneratedClrTypeInfo(null, null, new pbr::GeneratedClrTypeInfo[] {
-            new pbr::GeneratedClrTypeInfo(typeof(global::Config.TestGlobalTemplate), global::Config.TestGlobalTemplate.Parser, new[]{ "TestInt", "TestStringArrays", "TestString1", "TestString", "TestFloat", "TestDouble", "TestBool", "TestIntArrays", "TestFloatArrays", "TestDoubleArrays", "TestBoolArrays", "TestObj", "TestObj1", "TestObjArrays", "TestObjArray1S", "TestDefineFromGlobal", "TestDefineFromGlobal2S", "TestCustomObj", "TestCustomObjArrays" }, null, null, null, new pbr::GeneratedClrTypeInfo[] { new pbr::GeneratedClrTypeInfo(typeof(global::Config.TestGlobalTemplate.Types.TestObj_), global::Config.TestGlobalTemplate.Types.TestObj_.Parser, new[]{ "A", "B", "C" }, null, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Config.TestGlobalTemplate), global::Config.TestGlobalTemplate.Parser, new[]{ "TestInt", "TestStringArrays", "TestString1", "TestString", "TestFloat", "TestDouble", "TestBool", "TestIntArrays", "TestFloatArrays", "TestDoubleArrays", "TestBoolArrays", "TestObj", "TestObj1", "TestObjArrays", "TestObjArray1S", "TestDefineFromGlobal", "TestDefineFromGlobal2S", "TestCustomObj", "TestCustomObjArrays", "Test1Int", "TestInt1" }, null, null, null, new pbr::GeneratedClrTypeInfo[] { new pbr::GeneratedClrTypeInfo(typeof(global::Config.TestGlobalTemplate.Types.TestObj_), global::Config.TestGlobalTemplate.Types.TestObj_.Parser, new[]{ "A", "B", "C" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Config.TestGlobalTemplate.Types.TestObj1_), global::Config.TestGlobalTemplate.Types.TestObj1_.Parser, new[]{ "A", "Bs", "V" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Config.TestGlobalTemplate.Types.TestObjArray_), global::Config.TestGlobalTemplate.Types.TestObjArray_.Parser, new[]{ "A", "B", "C" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Config.TestGlobalTemplate.Types.TestObjArray1_), global::Config.TestGlobalTemplate.Types.TestObjArray1_.Parser, new[]{ "A", "Bs" }, null, null, null, null)})
@@ -107,6 +108,8 @@ namespace Config {
       testDefineFromGlobal2S_ = other.testDefineFromGlobal2S_.Clone();
       testCustomObj_ = other.testCustomObj_ != null ? other.testCustomObj_.Clone() : null;
       testCustomObjArrays_ = other.testCustomObjArrays_.Clone();
+      test1Int_ = other.test1Int_;
+      testInt1_ = other.testInt1_;
       _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
     }
 
@@ -372,6 +375,34 @@ namespace Config {
       get { return testCustomObjArrays_; }
     }
 
+    /// <summary>Field number for the "Test1Int" field.</summary>
+    public const int Test1IntFieldNumber = 20;
+    private int test1Int_;
+    /// <summary>
+    /// 测试int类型 可以 但不建议字段命名含有数字
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public int Test1Int {
+      get { return test1Int_; }
+      set {
+        test1Int_ = value;
+      }
+    }
+
+    /// <summary>Field number for the "TestInt1" field.</summary>
+    public const int TestInt1FieldNumber = 21;
+    private int testInt1_;
+    /// <summary>
+    /// 测试int类型 可以 但不建议字段命名含有数字
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public int TestInt1 {
+      get { return testInt1_; }
+      set {
+        testInt1_ = value;
+      }
+    }
+
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public override bool Equals(object other) {
       return Equals(other as TestGlobalTemplate);
@@ -404,6 +435,8 @@ namespace Config {
       if(!testDefineFromGlobal2S_.Equals(other.testDefineFromGlobal2S_)) return false;
       if (!object.Equals(TestCustomObj, other.TestCustomObj)) return false;
       if(!testCustomObjArrays_.Equals(other.testCustomObjArrays_)) return false;
+      if (Test1Int != other.Test1Int) return false;
+      if (TestInt1 != other.TestInt1) return false;
       return Equals(_unknownFields, other._unknownFields);
     }
 
@@ -429,6 +462,8 @@ namespace Config {
       hash ^= testDefineFromGlobal2S_.GetHashCode();
       if (testCustomObj_ != null) hash ^= TestCustomObj.GetHashCode();
       hash ^= testCustomObjArrays_.GetHashCode();
+      if (Test1Int != 0) hash ^= Test1Int.GetHashCode();
+      if (TestInt1 != 0) hash ^= TestInt1.GetHashCode();
       if (_unknownFields != null) {
         hash ^= _unknownFields.GetHashCode();
       }
@@ -494,6 +529,14 @@ namespace Config {
         output.WriteMessage(TestCustomObj);
       }
       testCustomObjArrays_.WriteTo(output, _repeated_testCustomObjArrays_codec);
+      if (Test1Int != 0) {
+        output.WriteRawTag(160, 1);
+        output.WriteInt32(Test1Int);
+      }
+      if (TestInt1 != 0) {
+        output.WriteRawTag(168, 1);
+        output.WriteInt32(TestInt1);
+      }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(output);
       }
@@ -552,6 +595,14 @@ namespace Config {
         output.WriteMessage(TestCustomObj);
       }
       testCustomObjArrays_.WriteTo(ref output, _repeated_testCustomObjArrays_codec);
+      if (Test1Int != 0) {
+        output.WriteRawTag(160, 1);
+        output.WriteInt32(Test1Int);
+      }
+      if (TestInt1 != 0) {
+        output.WriteRawTag(168, 1);
+        output.WriteInt32(TestInt1);
+      }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(ref output);
       }
@@ -600,6 +651,12 @@ namespace Config {
         size += 2 + pb::CodedOutputStream.ComputeMessageSize(TestCustomObj);
       }
       size += testCustomObjArrays_.CalculateSize(_repeated_testCustomObjArrays_codec);
+      if (Test1Int != 0) {
+        size += 2 + pb::CodedOutputStream.ComputeInt32Size(Test1Int);
+      }
+      if (TestInt1 != 0) {
+        size += 2 + pb::CodedOutputStream.ComputeInt32Size(TestInt1);
+      }
       if (_unknownFields != null) {
         size += _unknownFields.CalculateSize();
       }
@@ -662,6 +719,12 @@ namespace Config {
         TestCustomObj.MergeFrom(other.TestCustomObj);
       }
       testCustomObjArrays_.Add(other.testCustomObjArrays_);
+      if (other.Test1Int != 0) {
+        Test1Int = other.Test1Int;
+      }
+      if (other.TestInt1 != 0) {
+        TestInt1 = other.TestInt1;
+      }
       _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
     }
 
@@ -768,6 +831,14 @@ namespace Config {
             testCustomObjArrays_.AddEntriesFrom(input, _repeated_testCustomObjArrays_codec);
             break;
           }
+          case 160: {
+            Test1Int = input.ReadInt32();
+            break;
+          }
+          case 168: {
+            TestInt1 = input.ReadInt32();
+            break;
+          }
         }
       }
     #endif
@@ -872,6 +943,14 @@ namespace Config {
           }
           case 154: {
             testCustomObjArrays_.AddEntriesFrom(ref input, _repeated_testCustomObjArrays_codec);
+            break;
+          }
+          case 160: {
+            Test1Int = input.ReadInt32();
+            break;
+          }
+          case 168: {
+            TestInt1 = input.ReadInt32();
             break;
           }
         }

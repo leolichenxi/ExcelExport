@@ -1,8 +1,12 @@
+include "Position3d.fbs";
+include "CommonType.fbs";
 attribute "priority";
 namespace Config;
 table TestTableArraysTemplate {
    id:int32 ; // 英雄ID
    weapons:[int32] ; // 武器(武器Id)
+   born_position:Position3d ; // 出生位置
+   test_types:[CommonType] ; // 测试类型
    model:string ; // 切片
    icon:string ; // Icon
    machine_type:string ; // 机体类型
