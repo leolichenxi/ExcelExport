@@ -33,6 +33,7 @@ import json
 import codecs
 import importlib
 from google.protobuf.descriptor import FieldDescriptor as FD
+import hashlib
 
 # Define Const Files
 Global_Sheet_Tile = ('name','type','value','description')
@@ -70,10 +71,22 @@ BooleanFalse = ('0','0.0','false','False','off','Off','','None')  #bool 类型 f
 BooleanTrue = ('1','1.0','true','True','on','On')                 #bool 类型 true 定义
 LogEnable = True
 
-
 def log(*args):
     if LogEnable:
         print(*args)
+
+def get_file_md5(filename):
+    if not os.path.isfile(filename):
+        return
+    myhash = hashlib.md5()
+    f = open(filename, 'rb')
+    while True:
+        b = f.read(8096)
+        if not b:
+            break
+        myhash.update(b)
+    f.close()
+    return myhash.hexdigest()
 
 def find_index(key,v_list):
     for index,item in enumerate(v_list):
@@ -404,7 +417,7 @@ class Exporter:
         :param out_folder:
         :return:
         '''
-        cmd = 'flatc --%s -o %s %s/%s --gen-onefile' % (script_out,out_folder,get_export_global_flat_folder(), msg.get_flat_buffer_proto_file_name())
+        cmd = 'flatc --%s --bfbs-comments -o %s %s/%s --gen-onefile' % (script_out,out_folder,get_export_global_flat_folder(), msg.get_flat_buffer_proto_file_name())
         print(cmd)
         # cmd = 'flatc --%s -n %s --gen-onefile' % ('csharp', msg.get_flat_buffer_proto_file_name())
         return cmd
@@ -558,6 +571,7 @@ class Exporter:
         value = get_json_data(obj)
         with codecs.open(file_name,'w','utf-8') as f:
             f.write(value)
+        print("md5:" + get_file_md5(file_name))
 
     def save_to_lua(self,out_dir,info):
         """
@@ -573,6 +587,8 @@ class Exporter:
         with codecs.open(lua_file,'w','utf-8') as f:
             f.write('---@type %s\n' % file_name)
             f.write('local %s = %s\n%s %s' % (file_name,lua_str,'return',file_name))
+        print("md5:" + get_file_md5(lua_file))
+
 
     def export_lua_api(self):
         api_dir = OutDir_Lua_Api
@@ -610,6 +626,7 @@ class Exporter:
             log("save protobuf data :",file_name)
             with codecs.open(file_name,'wb') as f:
                 f.write(proto.SerializeToString())
+            print("md5:" + get_file_md5(file_name))
         else:
             raise ValueError('export to protobuf error! proto:' + py_file)
 
@@ -617,17 +634,14 @@ class Exporter:
 def add_space_line(s,value):
     return '%s\n  %s' % (s,value)
 
-
 def add_line(s,value):
     return '%s\n%s' % (s,value)
-
 
 def fill_value(parent,filed_name,filed_value):
     if isinstance(parent,list):
         parent.append(filed_value)
     else:
         parent[filed_name] = filed_value
-
 
 def convert(base_type,value,filed_name = None):
     if base_type == BaseTypeBool:
