@@ -92,7 +92,7 @@ python 依赖库： google,protobuf,xlrd,refection
 2. 中大型项目flatbuffer和protobuff 两者flatbuffer除了文件稍微比probof二进制文件稍微大些 其它完胜，但开发调用代码比protobuf冗余些，而且 在csharp中 flatbbufer 是作为值类型存在。意味着这作为参数传递会
 造成copy，但flatbuffer内部依赖ByteBuffer获取数组，可忽略。
 3. 对于数组类型，flatbuffer 获取数组会造成gc,使用数组时需注意，如果先获取length再进行遍历，不会产生GC,GetArray会产生GC,对原始数据只有Get,所以不会修改原始数据，比较nice,如果正确使用。游戏项目推荐使用FlatBuffer，对内存占用最少。
-4. Protobuf优势在于对数据压缩最少,对于一般项目protobuff 已经是很不错的选择。
+4. Protobuf优势在于对数据压缩最大,对于一般项目protobuff 已经是很不错的选择。
 
 ```
         public T[] ToArray<T>(int pos, int len)
