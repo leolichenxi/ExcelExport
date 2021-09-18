@@ -66,9 +66,27 @@ public struct TestGlobalTemplate : IFlatbufferObject
 #endif
   public bool[] GetTestBoolArraysArray() { return __p.__vector_as_array<bool>(24); }
   public Config.TestObj_? TestObj { get { int o = __p.__offset(26); return o != 0 ? (Config.TestObj_?)(new Config.TestObj_()).__assign(__p.__indirect(o + __p.bb_pos), __p.bb) : null; } }
-  public Config.TestObj1_? TestObj1 { get { int o = __p.__offset(28); return o != 0 ? (Config.TestObj1_?)(new Config.TestObj1_()).__assign(__p.__indirect(o + __p.bb_pos), __p.bb) : null; } }
+
+  public Config.TestObj1_? TestObj1
+  {
+    get
+    {
+      int o = __p.__offset(28);
+      return o != 0 ? (Config.TestObj1_?) (new Config.TestObj1_()).__assign(__p.__indirect(o + __p.bb_pos), __p.bb) : null;
+    }
+  }
+
   public Config.TestObjArray_? TestObjArrays(int j) { int o = __p.__offset(30); return o != 0 ? (Config.TestObjArray_?)(new Config.TestObjArray_()).__assign(__p.__indirect(__p.__vector(o) + j * 4), __p.bb) : null; }
-  public int TestObjArraysLength { get { int o = __p.__offset(30); return o != 0 ? __p.__vector_len(o) : 0; } }
+
+  public int TestObjArraysLength
+  {
+    get
+    {
+      int o = __p.__offset(30);
+      return o != 0 ? __p.__vector_len(o) : 0;
+    }
+  }
+
   public Config.TestObjArray1_? TestObjArray1s(int j) { int o = __p.__offset(32); return o != 0 ? (Config.TestObjArray1_?)(new Config.TestObjArray1_()).__assign(__p.__indirect(__p.__vector(o) + j * 4), __p.bb) : null; }
   public int TestObjArray1sLength { get { int o = __p.__offset(32); return o != 0 ? __p.__vector_len(o) : 0; } }
   public Position3d? TestDefineFromGlobal { get { int o = __p.__offset(34); return o != 0 ? (Position3d?)(new Position3d()).__assign(__p.__indirect(o + __p.bb_pos), __p.bb) : null; } }

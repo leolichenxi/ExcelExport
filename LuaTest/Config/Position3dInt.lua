@@ -4,11 +4,9 @@
 
 local flatbuffers = require('flatbuffers')
 
----@class Position3dInt : Position3dInt__mt 
- local Position3dInt = {} -- the module
- ---@class Position3dInt__mt 
- local Position3dInt_mt = {} -- the class metatable
- 
+local Position3dInt = {} -- the module
+local Position3dInt_mt = {} -- the class metatable
+
 function Position3dInt.New()
     local o = {}
     setmetatable(o, {__index = Position3dInt_mt})

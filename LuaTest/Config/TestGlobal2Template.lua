@@ -4,11 +4,9 @@
 
 local flatbuffers = require('flatbuffers')
 
----@class TestGlobal2Template : TestGlobal2Template__mt 
- local TestGlobal2Template = {} -- the module
- ---@class TestGlobal2Template__mt 
- local TestGlobal2Template_mt = {} -- the class metatable
- 
+local TestGlobal2Template = {} -- the module
+local TestGlobal2Template_mt = {} -- the class metatable
+
 function TestGlobal2Template.New()
     local o = {}
     setmetatable(o, {__index = TestGlobal2Template_mt})

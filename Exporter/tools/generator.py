@@ -44,6 +44,8 @@ Index_Des = 3
 Index_Item_Des = 0   #列表的excel 第一行表示 注释
 Index_Item_Type = 1  #列表的excel 第二行表示 类型定义
 Index_Item_Name = 2  #列表的excel 第三行表示 字段名
+Index_Item_Rule = 3  #列表的excel 第四行表示 导出规则
+
 BaseTypeInt = "int32"         #protoc基础类型 int
 BaseTypeFloat = "float"       #protoc基础类型 float
 BaseTypeDouble = "double"     #protoc基础类型 double
@@ -381,6 +383,9 @@ class Exporter:
             for k,v in self.script_out_flatbuffer_dic.items():
                 prepare_dir(v)
                 self.execute_flat_buffer_out_script(k,v)
+                if k == "lua":
+                    self.to_faltbuffer_lua_api(v)
+                    pass
 
     def execute_protoc_out_script(self,script_out,folder):
         for msg in self.global_msgs:
@@ -602,6 +607,24 @@ class Exporter:
             log("export lua api file:",msg.get_proto_file_name())
             msg.to_lua_api(api_dir)
 
+    def to_faltbuffer_lua_api(self,lua_dir):
+        class_row = 6
+        class_meta_row = 7
+        for root, dirs, files in os.walk(lua_dir):
+            for name in files:
+                if (name.endswith(".lua")):
+                    filePath = os.path.join(root, name)
+                    data = None
+                    with open(filePath, "r") as f:
+                        data= f.readlines()
+                        class_name = name.replace(".lua","")
+                        class_meta_name = class_name + "__mt"
+                        data[class_row] = '---@class %s : %s \n %s ' % (class_name,class_meta_name,data[class_row])
+                        data[class_meta_row] = '---@class %s \n %s ' % (class_meta_name,data[class_meta_row])
+                    if data:
+                        with open(filePath, "w+") as f:
+                            f.writelines(data)
+
     def export_base_api(self,out_dir):
         file_name = ('%s/' % (out_dir) if len(out_dir) > 0 else '') + 'BaseType' + '.lua'
         base_int = '---@class int32 number'
@@ -794,6 +817,7 @@ class Message:
             api = add_line(api,filed.get_lua_api())
             return api
         return None
+
 
     def get_full_proto(self):
         info = 'syntax = "proto3";'

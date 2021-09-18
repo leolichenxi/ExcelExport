@@ -35,7 +35,7 @@ namespace ExampleFlat.Core
             _instance = null;
         }
 
-        protected virtual string FilePath => "data_bin/" + typeof(T1).Name + ".bin";
+        protected virtual string FilePath => "data_bin/" + typeof(T1).Name + ".bytes";
 
         public static void Release()
         {
@@ -53,7 +53,7 @@ namespace ExampleFlat.Core
         where K : struct
     {
         
-        protected override string FilePath => "data_bin/" + typeof(T2).Name + ".bin";
+        protected override string FilePath => "data_bin/" + typeof(T2).Name + ".bytes";
         private Dictionary<K, T2> _items;
         protected abstract K GetKey(T2 t);
         protected abstract int GetLength();

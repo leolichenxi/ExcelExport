@@ -4,11 +4,9 @@
 
 local flatbuffers = require('flatbuffers')
 
----@class CommonType : CommonType__mt 
- local CommonType = {} -- the module
- ---@class CommonType__mt 
- local CommonType_mt = {} -- the class metatable
- 
+local CommonType = {} -- the module
+local CommonType_mt = {} -- the class metatable
+
 function CommonType.New()
     local o = {}
     setmetatable(o, {__index = CommonType_mt})

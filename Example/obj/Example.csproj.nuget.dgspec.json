@@ -44,10 +44,6 @@
         "netcoreapp3.1": {
           "targetAlias": "netcoreapp3.1",
           "dependencies": {
-            "FlatBuffers.Core": {
-              "target": "Package",
-              "version": "[1.12.0, )"
-            },
             "Google.Protobuf": {
               "target": "Package",
               "version": "[3.14.0, )"

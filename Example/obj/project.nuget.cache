@@ -1,10 +1,9 @@
 {
   "version": 2,
-  "dgSpecHash": "B/PjYs8IrRqIYMdAFd9+qYMskBIkF7rf0Ci+/lDzMacFchL/+q8UmtE9LpJvktkW+w701FD8dvBnNz09LQP1Cw==",
+  "dgSpecHash": "6MqqyXij2gAR/PILUxu+UqjE+Y1gUVFV6Rop0kT90ZkRqBjescs9909kJ15PL/WA8pSlP5sGM7zRUkob4LjItw==",
   "success": true,
   "projectFilePath": "F:\\MyGitHub\\ExcelExport\\Example\\Example.csproj",
   "expectedPackageFiles": [
-    "C:\\Users\\lichenxi02\\.nuget\\packages\\flatbuffers.core\\1.12.0\\flatbuffers.core.1.12.0.nupkg.sha512",
     "C:\\Users\\lichenxi02\\.nuget\\packages\\google.protobuf\\3.14.0\\google.protobuf.3.14.0.nupkg.sha512",
     "C:\\Users\\lichenxi02\\.nuget\\packages\\system.memory\\4.5.3\\system.memory.4.5.3.nupkg.sha512",
     "C:\\Users\\lichenxi02\\.nuget\\packages\\system.runtime.compilerservices.unsafe\\4.5.2\\system.runtime.compilerservices.unsafe.4.5.2.nupkg.sha512"

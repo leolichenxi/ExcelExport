@@ -2,15 +2,6 @@
   "version": 3,
   "targets": {
     ".NETCoreApp,Version=v3.1": {
-      "FlatBuffers.Core/1.12.0": {
-        "type": "package",
-        "compile": {
-          "lib/netstandard2.0/FlatBuffers.Core.dll": {}
-        },
-        "runtime": {
-          "lib/netstandard2.0/FlatBuffers.Core.dll": {}
-        }
-      },
       "Google.Protobuf/3.14.0": {
         "type": "package",
         "dependencies": {
@@ -45,20 +36,6 @@
     }
   },
   "libraries": {
-    "FlatBuffers.Core/1.12.0": {
-      "sha512": "dLK23BHp0C1vy5DSGhJuHsEyCmZutNo8Q88A42pgnZaXq94e+X3QHM0fMlCB1xBckqYocNljvQXPZQ/BVX1thg==",
-      "type": "package",
-      "path": "flatbuffers.core/1.12.0",
-      "files": [
-        ".nupkg.metadata",
-        ".signature.p7s",
-        "LICENSE.txt",
-        "flatbuffers.core.1.12.0.nupkg.sha512",
-        "flatbuffers.core.nuspec",
-        "fpl_logo_small.png",
-        "lib/netstandard2.0/FlatBuffers.Core.dll"
-      ]
-    },
     "Google.Protobuf/3.14.0": {
       "sha512": "9AkodyGNmLI+wJJPbwpWLmh4BMHoXDQ9+8qvDPhQQi/BNsleqKMBn3OlyLwC6CALwan2kc5+Cenb8fJSITX3nQ==",
       "type": "package",
@@ -128,7 +105,6 @@
   },
   "projectFileDependencyGroups": {
     ".NETCoreApp,Version=v3.1": [
-      "FlatBuffers.Core >= 1.12.0",
       "Google.Protobuf >= 3.14.0"
     ]
   },
@@ -176,10 +152,6 @@
       "netcoreapp3.1": {
         "targetAlias": "netcoreapp3.1",
         "dependencies": {
-          "FlatBuffers.Core": {
-            "target": "Package",
-            "version": "[1.12.0, )"
-          },
           "Google.Protobuf": {
             "target": "Package",
             "version": "[3.14.0, )"

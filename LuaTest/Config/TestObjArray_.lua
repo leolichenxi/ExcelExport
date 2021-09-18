@@ -4,11 +4,9 @@
 
 local flatbuffers = require('flatbuffers')
 
----@class TestObjArray_ : TestObjArray___mt 
- local TestObjArray_ = {} -- the module
- ---@class TestObjArray___mt 
- local TestObjArray__mt = {} -- the class metatable
- 
+local TestObjArray_ = {} -- the module
+local TestObjArray__mt = {} -- the class metatable
+
 function TestObjArray_.New()
     local o = {}
     setmetatable(o, {__index = TestObjArray__mt})
