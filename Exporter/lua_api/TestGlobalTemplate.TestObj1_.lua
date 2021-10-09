@@ -1,4 +1,0 @@
----@class TestObj1_ 
----@field  a int32 @a 
----@field  bs float[] @b 
----@field  v bool @v 

@@ -1,3 +1,0 @@
----@class TestObjArray1_ 
----@field  a int32 @a 
----@field  bs float[] @b 

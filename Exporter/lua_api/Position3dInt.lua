@@ -1,4 +1,0 @@
----@class Position3dInt 
----@field  x int32 @x 
----@field  y int32 @y 
----@field  z int32 @z 

@@ -1,4 +1,0 @@
----@class TestObjArray_ 
----@field  a int32 @a 
----@field  b int32 @b 
----@field  c int32 @c 

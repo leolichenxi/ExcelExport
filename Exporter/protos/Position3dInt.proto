@@ -1,6 +1,0 @@
-syntax = "proto3";
-message Position3dInt {
-   int32 x = 1 ; // x
-   int32 y = 2 ; // y
-   int32 z = 3 ; // z
-}

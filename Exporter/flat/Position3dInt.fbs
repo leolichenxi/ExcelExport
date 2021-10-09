@@ -1,7 +1,0 @@
-attribute "priority";
-table Position3dInt {
-   x:int32 ; // x
-   y:int32 ; // y
-   z:int32 ; // z
-}
-root_type Position3dInt;

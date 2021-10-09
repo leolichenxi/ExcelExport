@@ -1,7 +1,0 @@
-attribute "priority";
-table PositionArray3d {
-   xs:[float] ; // x
-   ys:[float] ; // y
-   zs:[float] ; // z
-}
-root_type PositionArray3d;

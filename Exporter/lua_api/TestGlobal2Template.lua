@@ -1,2 +1,0 @@
----@class TestGlobal2Template 
----@field  TestFloat float @测试float类型 

@@ -1,3 +1,0 @@
----@class TestType_ 
----@field  type int32 @type 
----@field  id int32 @id 

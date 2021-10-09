@@ -243,9 +243,6 @@ def get_export_protobuf_folder():
 def get_export_global_flat_folder():
     return "flat"
 
-def get_export_flat_data_folder():
-    return "flat_data"
-
 def is_ignore_row(row):
     if len(row[0]) == 0:
         log('empty row!',row)
@@ -347,10 +344,10 @@ class Exporter:
                     self.proto_infos.append(info)
         self.export_proto()
         self.export_script()
-        self.export_data()
-
         self.export_flat_scheme()
         self.export_flat_script()
+        self.export_data()
+
 
     def export_proto(self):
         global_dir = get_export_global_proto_folder()
@@ -443,8 +440,9 @@ class Exporter:
             elif format == 'protobuf':
                 self.export_protobuf_data(out_folder)
             elif format == 'flatbuffer':
-                self.export_flat_json_data(out_folder+"_json")
-                self.export_flat_bin_data(out_folder+"_bin",out_folder+"_json")
+                out_flat_json = out_folder+"_json"
+                self.export_flat_json_data(out_flat_json)
+                self.export_flat_bin_data(out_folder+"_bin",out_flat_json)
             else:
                 raise ValueError("unknown export data format:",format,"lua or json or protobuf")
 
@@ -768,7 +766,7 @@ class Message:
 
     def get_proto_name(self):
         if self.is_list_obj:
-            return self.name + 's' + self.suffix
+            return self.name + 's' + self.suffix + ListSuffix
         return self.name + self.suffix
 
     def get_proto_file_name(self):

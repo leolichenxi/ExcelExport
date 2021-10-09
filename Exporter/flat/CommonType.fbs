@@ -1,6 +1,0 @@
-attribute "priority";
-table CommonType {
-   type:int32 ; // type
-   id:int32 ; // id
-}
-root_type CommonType;

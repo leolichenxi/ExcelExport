@@ -1,6 +1,0 @@
-attribute "priority";
-namespace Config;
-table TestGlobal2Template {
-   test_float:float ; // 测试float类型
-}
-root_type TestGlobal2Template;

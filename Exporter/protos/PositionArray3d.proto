@@ -1,6 +1,0 @@
-syntax = "proto3";
-message PositionArray3d {
-   repeated float xs = 1 ; // x
-   repeated float ys = 2 ; // y
-   repeated float zs = 3 ; // z
-}
