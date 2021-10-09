@@ -44,6 +44,7 @@ out_data_formats = {
     'protobuf': 'out_protobuf',
     'flatbuffer': "out_flatbuffer"
 }
+
 NameSpace = "Config"
 Suffix = "Template"
 
@@ -51,8 +52,8 @@ Suffix = "Template"
 # out_script_path = os.path.abspath(os.path.join(os.getcwd(), "../../../ClientMaster/Assets/Scripts/Config/"))
 # out_config_path = os.path.abspath(os.path.join(os.getcwd(), "../../../ClientMaster/Assets/Bundles/Config/"))
 
+
 if __name__ == '__main__':
-    tools.generator.generator(export_files, out_protobuf_script_formats, out_flat_script_formats, out_data_formats,
-                              NameSpace, Suffix)
+    tools.generator.generator(export_files, out_protobuf_script_formats, out_flat_script_formats, out_data_formats, NameSpace, Suffix)
     os.system("pause")
     # copyconfig.copy(out_data_formats, out_script_formats, out_config_path, out_script_path)

@@ -36,11 +36,13 @@ from google.protobuf.descriptor import FieldDescriptor as FD
 import hashlib
 
 # Define Const Files
-Global_Sheet_Tile = ('name','type','value','description')
+Global_Sheet_Tile = ('name','type','value','sign','description')
 Index_Name = 0
 Index_Type = 1
 Index_Value = 2
-Index_Des = 3
+Index_Rule = 3
+Index_Des = 4
+
 Index_Item_Des = 0   #列表的excel 第一行表示 注释
 Index_Item_Type = 1  #列表的excel 第二行表示 类型定义
 Index_Item_Name = 2  #列表的excel 第三行表示 字段名
@@ -264,14 +266,18 @@ def get_global_sheet_info(sheet):
     :return:
     """
     rows = sheet.row_values(0)
-    name_index = find_index(Global_Sheet_Tile[0],rows)
-    type_index = find_index(Global_Sheet_Tile[1],rows)
-    value_index = find_index(Global_Sheet_Tile[2],rows)
-    des_index = find_index(Global_Sheet_Tile[3],rows)
+    name_index = find_index(Global_Sheet_Tile[Index_Name],rows)
+    type_index = find_index(Global_Sheet_Tile[Index_Type],rows)
+    value_index = find_index(Global_Sheet_Tile[Index_Value],rows)
+    rule_index = find_index(Global_Sheet_Tile[Index_Rule],rows)
+    des_index = find_index(Global_Sheet_Tile[Index_Des],rows)
     if name_index == -1 or type_index == -1 or value_index == -1:
         return None
-    return (name_index,type_index,value_index,des_index)
+    return (name_index,type_index,value_index,rule_index,des_index)
 
+def is_match_rules(sheet_name,filed_name,rules):
+    print(sheet_name,filed_name,rules)
+    return True
 
 class Exporter:
     def __init__(self,file_list,out_scripts,out_flatbuffer_scripts,out_data_formats,name_space,suffix):
@@ -508,28 +514,37 @@ class Exporter:
             row_des = sheet.row_values(Index_Item_Des)
             row_types = sheet.row_values(Index_Item_Type)
             row_names = sheet.row_values(Index_Item_Name)
+            row_rules = sheet.row_values(Index_Item_Rule)
+
             filed_names = collections.OrderedDict()
             filed_types = collections.OrderedDict()
+
+            ### record fileds
             for index,value in enumerate(row_names):
                 filed_name = strip_filed(value)
                 if index < len(row_types):
                     filed_type = strip_filed(row_types[index])
                     if filed_name.isalpha and len(strip_filed(filed_name)) > 0:
-                        filed_names[index] = filed_name
-                        filed_types[index] = filed_type
-                        filed_des = row_des[index] if index < len(row_des) else filed_name
-                        msg.add_filed(filed_name,filed_type,filed_des)
+                        if is_match_rules(sheet.name,filed_name,row_rules[index]):
+                            filed_names[index] = filed_name
+                            filed_types[index] = filed_type
+                            filed_des = row_des[index] if index < len(row_des) else filed_name
+                            msg.add_filed(filed_name, filed_type, filed_des)
+
+            ### record datas
             export_obj_dic = collections.OrderedDict()
             export_obj = []
             space_row_count = 0
             for row_index in range(4,sheet.nrows):
                 row_values = sheet.row_values(row_index)
                 first_text = str(row_values[0]).strip()
+
                 if is_null_or_empty(first_text):
                     space_row_count += 1
                     if space_row_count >= 3:
                         break;
                 else:
+                    space_row_count = 0
                     if first_text[0] == '#':
                         continue
                     item_obj = collections.OrderedDict()
@@ -557,14 +572,18 @@ class Exporter:
                     filed_type = strip_filed(row[sheet_tile_info[Index_Type]])
                     filed_value = strip_filed(row[sheet_tile_info[Index_Value]])
                     filed_des = strip_filed(row[sheet_tile_info[Index_Des]])
-                    if not filed_name and not filed_value and not filed_value:
+                    filed_rule = strip_filed(row[sheet_tile_info[Index_Rule]])
+                    # if not filed_name and not filed_value and not filed_value:
+                    if not filed_name and not filed_value:
                         space_row_count += 1
                         if space_row_count >= SheetRowMaxSpaceCount:
                             break
                         continue
                     if filed_name and filed_type:
-                        msg.add_filed(filed_name,filed_type,filed_des)
-                        msg.record_internal_filed(export_obj,filed_name,filed_type,filed_value)
+                        space_row_count = 0
+                        if is_match_rules(sheet.name,filed_name,filed_rule):
+                            msg.add_filed(filed_name, filed_type, filed_des)
+                            msg.record_internal_filed(export_obj, filed_name, filed_type, filed_value)
 
             return msg,export_obj
         except Exception as e:

@@ -2,79 +2,77 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="eb76e1ed-6dc0-4ec9-9122-05eb743626b2" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/.idea.Example/.idea/.idea.Example.iml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/.idea.Example/.idea/contentModel.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/.idea.Example/.idea/indexLayout.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.Example/.idea/indexLayout.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/.idea.Example/.idea/modules.xml" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/.idea.Example/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.Example/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/.idea.Example/riderModule.iml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Example.csproj" beforeDir="false" afterPath="$PROJECT_DIR$/Example.csproj" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Program.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Program.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/_ReSharper.Caches/Rider211.Example.00/AspFileDataCache.dat" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/_ReSharper.Caches/Rider211.Example.00/AssemblyResolutionCache11.dat" beforeDir="false" afterPath="$PROJECT_DIR$/_ReSharper.Caches/Rider211.Example.00/AssemblyResolutionCache11.dat" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/_ReSharper.Caches/Rider211.Example.00/CompletionStatistics/Statistics.dat" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/_ReSharper.Caches/Rider211.Example.00/DPA.00/Db/000003.log" beforeDir="false" afterPath="$PROJECT_DIR$/_ReSharper.Caches/Rider211.Example.00/DPA.00/Db/000003.log" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/_ReSharper.Caches/Rider211.Example.00/DPA.00/Db/LOG" beforeDir="false" afterPath="$PROJECT_DIR$/_ReSharper.Caches/Rider211.Example.00/DPA.00/Db/LOG" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/_ReSharper.Caches/Rider211.Example.00/DPA.00/Db/MANIFEST-000002" beforeDir="false" afterPath="$PROJECT_DIR$/_ReSharper.Caches/Rider211.Example.00/DPA.00/Db/MANIFEST-000002" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/_ReSharper.Caches/Rider211.Example.00/Db/000037.ldb" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/_ReSharper.Caches/Rider211.Example.00/Db/000038.ldb" beforeDir="false" afterPath="$PROJECT_DIR$/_ReSharper.Caches/Rider211.Example.00/Db/000038.ldb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/_ReSharper.Caches/Rider211.Example.00/Db/000039.ldb" beforeDir="false" afterPath="$PROJECT_DIR$/_ReSharper.Caches/Rider211.Example.00/Db/000039.ldb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/_ReSharper.Caches/Rider211.Example.00/Db/000040.ldb" beforeDir="false" afterPath="$PROJECT_DIR$/_ReSharper.Caches/Rider211.Example.00/Db/000040.ldb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/_ReSharper.Caches/Rider211.Example.00/Db/000041.ldb" beforeDir="false" afterPath="$PROJECT_DIR$/_ReSharper.Caches/Rider211.Example.00/Db/000041.ldb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/_ReSharper.Caches/Rider211.Example.00/Db/000070.ldb" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/_ReSharper.Caches/Rider211.Example.00/Db/000071.ldb" beforeDir="false" afterPath="$PROJECT_DIR$/_ReSharper.Caches/Rider211.Example.00/Db/000071.ldb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/_ReSharper.Caches/Rider211.Example.00/Db/000072.ldb" beforeDir="false" afterPath="$PROJECT_DIR$/_ReSharper.Caches/Rider211.Example.00/Db/000072.ldb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/_ReSharper.Caches/Rider211.Example.00/Db/000073.ldb" beforeDir="false" afterPath="$PROJECT_DIR$/_ReSharper.Caches/Rider211.Example.00/Db/000073.ldb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/_ReSharper.Caches/Rider211.Example.00/Db/000074.ldb" beforeDir="false" afterPath="$PROJECT_DIR$/_ReSharper.Caches/Rider211.Example.00/Db/000074.ldb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/_ReSharper.Caches/Rider211.Example.00/Db/000075.ldb" beforeDir="false" afterPath="$PROJECT_DIR$/_ReSharper.Caches/Rider211.Example.00/Db/000075.ldb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/_ReSharper.Caches/Rider211.Example.00/Db/000076.ldb" beforeDir="false" afterPath="$PROJECT_DIR$/_ReSharper.Caches/Rider211.Example.00/Db/000076.ldb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/_ReSharper.Caches/Rider211.Example.00/Db/000086.ldb" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/_ReSharper.Caches/Rider211.Example.00/Db/000087.ldb" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/_ReSharper.Caches/Rider211.Example.00/Db/000088.ldb" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/_ReSharper.Caches/Rider211.Example.00/Db/000089.ldb" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/_ReSharper.Caches/Rider211.Example.00/Db/000090.ldb" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/_ReSharper.Caches/Rider211.Example.00/Db/000091.ldb" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/_ReSharper.Caches/Rider211.Example.00/Db/000092.ldb" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/_ReSharper.Caches/Rider211.Example.00/Db/000093.ldb" beforeDir="false" afterPath="$PROJECT_DIR$/_ReSharper.Caches/Rider211.Example.00/Db/000093.ldb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/_ReSharper.Caches/Rider211.Example.00/Db/000094.ldb" beforeDir="false" afterPath="$PROJECT_DIR$/_ReSharper.Caches/Rider211.Example.00/Db/000094.ldb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/_ReSharper.Caches/Rider211.Example.00/Db/000095.ldb" beforeDir="false" afterPath="$PROJECT_DIR$/_ReSharper.Caches/Rider211.Example.00/Db/000095.ldb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/_ReSharper.Caches/Rider211.Example.00/Db/000096.ldb" beforeDir="false" afterPath="$PROJECT_DIR$/_ReSharper.Caches/Rider211.Example.00/Db/000096.ldb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/_ReSharper.Caches/Rider211.Example.00/Db/000097.ldb" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/_ReSharper.Caches/Rider211.Example.00/Db/000098.ldb" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/_ReSharper.Caches/Rider211.Example.00/Db/000099.ldb" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/_ReSharper.Caches/Rider211.Example.00/Db/000100.ldb" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/_ReSharper.Caches/Rider211.Example.00/Db/000102.log" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/_ReSharper.Caches/Rider211.Example.00/Db/000104.ldb" beforeDir="false" afterPath="$PROJECT_DIR$/_ReSharper.Caches/Rider211.Example.00/Db/000104.ldb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/_ReSharper.Caches/Rider211.Example.00/Db/000105.ldb" beforeDir="false" afterPath="$PROJECT_DIR$/_ReSharper.Caches/Rider211.Example.00/Db/000105.ldb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/_ReSharper.Caches/Rider211.Example.00/Db/000107.ldb" beforeDir="false" afterPath="$PROJECT_DIR$/_ReSharper.Caches/Rider211.Example.00/Db/000107.ldb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/_ReSharper.Caches/Rider211.Example.00/Db/LOG" beforeDir="false" afterPath="$PROJECT_DIR$/_ReSharper.Caches/Rider211.Example.00/Db/LOG" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/_ReSharper.Caches/Rider211.Example.00/Db/MANIFEST-000002" beforeDir="false" afterPath="$PROJECT_DIR$/_ReSharper.Caches/Rider211.Example.00/Db/MANIFEST-000002" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/_ReSharper.Caches/Rider211.Example.00/ProjectFileDataCache/AdditionalProbingPathsInRuntimeConfigDevJsonDataProvider.cache.dat" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/_ReSharper.Caches/Rider211.Example.00/ProjectFileDataCache/BinaryOutputInProjectJsonDataProvider.cache.dat" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/_ReSharper.Caches/Rider211.Example.00/ProjectFileDataCache/BuildOptionsInProjectJsonDataProvider.cache.dat" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/_ReSharper.Caches/Rider211.Example.00/ProjectFileDataCache/DbgShimPathInDevJsonDataProvider.cache.dat" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/_ReSharper.Caches/Rider211.Example.00/ProjectFileDataCache/DotNetCoreLaunchSettingsJsonUrlDataProvider.cache.dat" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/_ReSharper.Caches/Rider211.Example.00/ProjectFileDataCache/DotNetCorePlatformsInRuntimeConfigJsonDataProvider.cache.dat" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/_ReSharper.Caches/Rider211.Example.00/ProjectFileDataCache/ExcludesByMaskInProjectJsonDataProvider.cache.dat" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/_ReSharper.Caches/Rider211.Example.00/ProjectFileDataCache/IncludesByMaskProjectFileDataProvider.cache.dat" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/_ReSharper.Caches/Rider211.Example.00/ProjectFileDataCache/PreprocessorSymbolsProvider.cache.dat" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/_ReSharper.Caches/Rider211.Example.00/ProjectFileDataCache/ProjectReferencesProvider.cache.dat" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/_ReSharper.Caches/Rider211.Example.00/ProjectFileDataCache/ProjectSdkDataProvider.cache.dat" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/_ReSharper.Caches/Rider211.Example.00/ProjectFileDataCache/ResourceDefaultLanguagePropertyProvider.cache.dat" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/_ReSharper.Caches/Rider211.Example.00/ProjectFileDataCache/TargetFrameworkIdDataProvider.cache.dat" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/_ReSharper.Caches/Rider211.Example.00/ProjectFileDataCache/TargetFrameworkIdsInProjectJsonProvider.cache.dat" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/_ReSharper.Caches/Rider211.Example.00/ProjectFileDataCache/UnityProjectFileCacheProvider.cache.dat" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/_ReSharper.Caches/Rider211.Example.00/RecentActions/RecentActions.dat" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/obj/Debug/netcoreapp3.1/Example.assets.cache" beforeDir="false" afterPath="$PROJECT_DIR$/obj/Debug/netcoreapp3.1/Example.assets.cache" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/obj/Debug/netcoreapp3.1/Example.csprojAssemblyReference.cache" beforeDir="false" afterPath="$PROJECT_DIR$/obj/Debug/netcoreapp3.1/Example.csprojAssemblyReference.cache" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/obj/Example.csproj.nuget.cache" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/obj/Example.csproj.nuget.dgspec.json" beforeDir="false" afterPath="$PROJECT_DIR$/obj/Example.csproj.nuget.dgspec.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/obj/Example.csproj.nuget.g.props" beforeDir="false" afterPath="$PROJECT_DIR$/obj/Example.csproj.nuget.g.props" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/obj/project.assets.json" beforeDir="false" afterPath="$PROJECT_DIR$/obj/project.assets.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/obj/project.nuget.cache" beforeDir="false" afterPath="$PROJECT_DIR$/obj/project.nuget.cache" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/obj/project.packagespec.json" beforeDir="false" afterPath="$PROJECT_DIR$/obj/project.packagespec.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Exporter/export.py" beforeDir="false" afterPath="$PROJECT_DIR$/../Exporter/export.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Exporter/lua_api/BaseType.lua" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Exporter/lua_api/Position3d.lua" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Exporter/lua_api/Position3dInt.lua" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Exporter/lua_api/PositionArray3d.lua" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Exporter/lua_api/TestGlobal2Template.TestTypeInt_.lua" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Exporter/lua_api/TestGlobal2Template.lua" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Exporter/lua_api/TestGlobalTemplate.TestObj1_.lua" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Exporter/lua_api/TestGlobalTemplate.TestObjArray1_.lua" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Exporter/lua_api/TestGlobalTemplate.TestObjArray_.lua" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Exporter/lua_api/TestGlobalTemplate.TestObj_.lua" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Exporter/lua_api/TestGlobalTemplate.lua" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Exporter/lua_api/TestTableArrayTemplate.lua" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Exporter/lua_api/TestTableArraysTemplate.lua" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Exporter/out_cpp/protos/Position3d.pb.cc" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Exporter/out_cpp/protos/Position3d.pb.h" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Exporter/out_cpp/protos/Position3dInt.pb.cc" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Exporter/out_cpp/protos/Position3dInt.pb.h" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Exporter/out_cpp/protos/PositionArray3d.pb.cc" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Exporter/out_cpp/protos/PositionArray3d.pb.h" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Exporter/out_cpp/protos/TestGlobal2Template.pb.cc" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Exporter/out_cpp/protos/TestGlobal2Template.pb.h" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Exporter/out_cpp/protos/TestGlobalTemplate.pb.cc" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Exporter/out_cpp/protos/TestGlobalTemplate.pb.h" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Exporter/out_csharp/Position3D.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Exporter/out_csharp/Position3DInt.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Exporter/out_csharp/PositionArray3D.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Exporter/out_csharp/TestGlobal2Template.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Exporter/out_csharp/TestGlobalTemplate.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Exporter/out_csharp/TestTableArraysTemplate.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Exporter/out_java/Config/TestGlobal2TemplateOuterClass.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Exporter/out_java/Config/TestGlobalTemplateOuterClass.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Exporter/out_java/Position3D.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Exporter/out_java/Position3DInt.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Exporter/out_java/PositionArray3D.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Exporter/out_json/TestGlobal2Template.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Exporter/out_json/TestGlobalTemplate.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Exporter/out_json/TestTableArraysTemplate.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Exporter/out_lua/TestGlobal2Template.lua" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Exporter/out_lua/TestGlobalTemplate.lua" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Exporter/out_lua/TestTableArraysTemplate.lua" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Exporter/out_protobuf/TestGlobal2Template.bytes" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Exporter/out_protobuf/TestGlobalTemplate.bytes" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Exporter/out_protobuf/TestTableArraysTemplate.bytes" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Exporter/out_python/protos/Position3dInt_pb2.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Exporter/out_python/protos/Position3d_pb2.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Exporter/out_python/protos/PositionArray3d_pb2.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Exporter/out_python/protos/TestGlobal2Template_pb2.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Exporter/out_python/protos/TestGlobalTemplate_pb2.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Exporter/out_python/protos/TestTableArraysTemplate_pb2.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Exporter/protos/Position3d.proto" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Exporter/protos/Position3dInt.proto" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Exporter/protos/PositionArray3d.proto" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Exporter/protos/TestGlobal2Template.proto" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Exporter/protos/TestGlobalTemplate.proto" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Exporter/protos/TestTableArraysTemplate.proto" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/obj/rider.project.restore.info" beforeDir="false" afterPath="$PROJECT_DIR$/obj/rider.project.restore.info" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../ExampleFlat/ExampleFlat/ExampleFlat/Config/TestGlobalTemplate.cs" beforeDir="false" afterPath="$PROJECT_DIR$/../ExampleFlat/ExampleFlat/ExampleFlat/Config/TestGlobalTemplate.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../ExampleFlat/ExampleFlat/ExampleFlat/Program.cs" beforeDir="false" afterPath="$PROJECT_DIR$/../ExampleFlat/ExampleFlat/ExampleFlat/Program.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../ExampleFlat/ExampleFlat/ExampleFlat/bin/Debug/netcoreapp3.1/ExampleFlat.dll" beforeDir="false" afterPath="$PROJECT_DIR$/../ExampleFlat/ExampleFlat/ExampleFlat/bin/Debug/netcoreapp3.1/ExampleFlat.dll" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../ExampleFlat/ExampleFlat/ExampleFlat/bin/Debug/netcoreapp3.1/ExampleFlat.pdb" beforeDir="false" afterPath="$PROJECT_DIR$/../ExampleFlat/ExampleFlat/ExampleFlat/bin/Debug/netcoreapp3.1/ExampleFlat.pdb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../ExampleFlat/ExampleFlat/ExampleFlat/obj/Debug/netcoreapp3.1/ExampleFlat.dll" beforeDir="false" afterPath="$PROJECT_DIR$/../ExampleFlat/ExampleFlat/ExampleFlat/obj/Debug/netcoreapp3.1/ExampleFlat.dll" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../ExampleFlat/ExampleFlat/ExampleFlat/obj/Debug/netcoreapp3.1/ExampleFlat.pdb" beforeDir="false" afterPath="$PROJECT_DIR$/../ExampleFlat/ExampleFlat/ExampleFlat/obj/Debug/netcoreapp3.1/ExampleFlat.pdb" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../Exporter/tools/generator.py" beforeDir="false" afterPath="$PROJECT_DIR$/../Exporter/tools/generator.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../LuaTest/Config/TestGlobalTemplate.lua" beforeDir="false" afterPath="$PROJECT_DIR$/../LuaTest/Config/TestGlobalTemplate.lua" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
