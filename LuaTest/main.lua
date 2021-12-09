@@ -4,16 +4,65 @@
 --- DateTime: 2021/8/25 15:47
 ---
 
-local TestGlobalTemplate =  require ("Config/TestGlobalTemplate")
+--local TestGlobalTemplate =  require ("Config/TestGlobalTemplate")
+--
+--local file = io.open("out_flatbuffer_bin/TestGlobalTemplate.bin")
+--local buff =  file:read("*a")
+--file:close()
+--local offset = 0
+-----@type TestGlobalTemplate
+--local t = TestGlobalTemplate.GetRootAsTestGlobalTemplate(buff,offset)
+--print(t:TestString1())
+--print(t:TestString())
+--local a = t:TestObj1():A()
+--t:TestObj1():A()
+--print(a)
 
-local file = io.open("out_flatbuffer_bin/TestGlobalTemplate.bin")
-local buff =  file:read("*a")
-file:close()
-local offset = 0
----@type TestGlobalTemplate
-local t = TestGlobalTemplate.GetRootAsTestGlobalTemplate(buff,offset)
-print(t:TestString1())
-print(t:TestString())
-local a = t:TestObj1():A()
-t:TestObj1():A()
-print(a)
+Logger = require("Logger")
+
+--local Position = {}
+--local Position__mt = {}
+--function Position.New()
+--    local o = {}
+--    setmetatable(o, {__index = Position__mt})
+--    return o
+--end
+--
+--local Template = {}
+--local Template__mt = {
+--    Id = 1,
+--    --Position = nil,
+--    --Test  = 22
+--}
+----
+--function Template__mt:GetId()
+--    return self.Id
+--end
+--
+--function Template__mt:GetId()
+--    return self.Id
+--end
+--
+--function Template.New()
+--    local o = {Id = 100}
+--    setmetatable(o, {__index = Template__mt,__newindex = function (t, k, v) error("error write to a read-only table with key = " .. tostring(k)..", value ="..tostring(v)) end,})
+--    --setmetatable(o, {__index = Template__mt})
+--    return o
+--end
+--
+--local test = Template.New()
+--local test1 = Template.New()
+--for k in ipairs(test) do
+--    print(k)
+--end
+--test.Id = 10
+--print((test1))
+--print(test:GetId())
+--print(test1:GetId())
+
+print("===========================")
+local  TestTableArraysTemplate = require("TestTableArraysTemplate")
+local t = TestTableArraysTemplate.GetTableByIndex(1)
+print(t.Id)
+
+

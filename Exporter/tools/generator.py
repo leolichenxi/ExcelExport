@@ -86,15 +86,15 @@ def log(*args):
 def get_file_md5(filename):
     if not os.path.isfile(filename):
         return
-    myhash = hashlib.md5()
+    my_hash = hashlib.md5()
     f = open(filename, 'rb')
     while True:
         b = f.read(8096)
         if not b:
             break
-        myhash.update(b)
+        my_hash.update(b)
     f.close()
-    return myhash.hexdigest()
+    return my_hash.hexdigest()
 
 
 def find_index(key, v_list):
@@ -191,29 +191,49 @@ def convert_to_lower_snake_cake(key):
     return key
 
 
-def get_lua_data(obj, indent=1):
+def to_list_data(obj):
+    if isinstance(obj, dict):
+        data = []
+        for k in obj.keys():
+            v = obj[k]
+            if isinstance(v, list):
+                for d in v:
+                    data.append(to_list_data(d))
+            else:
+                # data.append(to_list_data(v))
+                data.append(v)
+        return data
+    elif isinstance(obj, list):
+        data = []
+        for d in obj:
+            data.append(to_list_data(d))
+        return data
+    return obj
+
+
+def get_lua_data(obj, indent=1, lines=True):
     if is_base_type(obj):
         yield json.dumps(obj, ensure_ascii=False)
     else:
         yield '{'
         is_list = isinstance(obj, list)
         is_first = True
-
         for i in obj:
             if is_first:
                 is_first = False
             else:
                 yield ','
-            yield newline(indent)
+            if lines:  ##is_root
+                yield newline(indent)
             if not is_list:
                 k = i
                 i = obj[k]
                 yield k
                 yield ' = '
-            for part in get_lua_data(i, indent + 1):
+            for part in get_lua_data(i, indent + 1, lines):
                 yield part
-
-        yield newline(indent - 1)
+        if lines:  ##is_root
+            yield newline(indent - 1)
         yield '}'
 
 
@@ -517,9 +537,12 @@ class Exporter:
 
     def export_lua_data(self, out_folder):
         lua_dir = out_folder
+        lua_dir_list = out_folder + '_list/'
         prepare_dir(lua_dir)
+        prepare_dir(lua_dir + '_list/')
         for info in self.proto_infos:
             self.save_to_lua(lua_dir, info)
+            self.save_to_lua_list(lua_dir_list, info)
 
     def export_protobuf_data(self, out_folder):
         self.execute_protoc_out_script('python_out', '.')
@@ -547,7 +570,7 @@ class Exporter:
     def build_single_sheet_proto(self, export_mark_name, sheet):
         """
         :param export_mark_name: string
-        :param sheet_info: sheet
+        :param sheet: sheet
         :return:
         """
         global_sheet_info = get_global_sheet_info(sheet)
@@ -651,18 +674,108 @@ class Exporter:
     def save_to_lua(self, out_dir, info):
         """
         :param out_dir: 导出的所在的文件夹
-        :param info: ProtoInfo
+        :param  info:
         :return:
         """
         file_name = info.get_proto_name()
         lua_file = out_dir + '/' + file_name + '.lua'
         obj = info.get_value()
         log("save lua data :", lua_file)
-        lua_str = "".join(get_lua_data(obj))
+        lua_data = get_lua_data(obj)
+        # if not info.is_single():
+        #     list_data = obj[list(obj.keys())[0]]
+        #     lua_data = get_lua_data(list_data)
+        lua_str = "".join(lua_data)
         with codecs.open(lua_file, 'w', 'utf-8') as f:
             f.write('---@type %s\n' % file_name)
             f.write('local %s = %s\n%s %s' % (file_name, lua_str, 'return', file_name))
         print("md5:" + get_file_md5(lua_file))
+
+    def save_to_lua_list(self, out_dir, info):
+        file_name = info.get_proto_name()
+        lua_file = out_dir + file_name + '.lua'
+        obj = info.get_value()
+        is_list = not info.is_single()
+        lua_data = get_lua_data(obj)
+        lua_str = None
+        readonly_tip = "function (t, k, v) error('error write to a read-only table with key = ' .. tostring(k)..', " \
+                       "value ='..tostring(v)) end "
+        if is_list:
+            single_data = obj[list(obj.keys())[0]]
+            lua_str = String(self.get_list_lua_script(info.get_message(), file_name, single_data))
+        else:
+            lua_str = String("local %s = {}" % file_name)
+            fill = "".join(lua_data)
+            lua_str.add_line('local %s__mt = %s' % (file_name, fill))
+            lua_str.add_line(
+                'local %s__mt__mt = {__index= %s__mt,__newindex = %s}' % (file_name, file_name, readonly_tip))
+            lua_str.add_line('setmetatable(%s,%s__mt__mt)' % (file_name, file_name))
+            lua_str.add_line("return %s" % file_name)
+        with codecs.open(lua_file, 'w', 'utf-8') as f:
+            f.write(lua_str.get_value())
+            # f.write()
+        print("md5:" + get_file_md5(lua_file))
+
+    def get_list_lua_script(self, msg, file_name, single_data):
+        types = msg.get_msg_file_types()
+        filed_script = String("local Filed_Dic ={")
+        for i in range(len(types)):
+            filed_info = types[i]
+            filed_script.add_space_line("%s = %s," % (filed_info.get_filed_name(), i+1))
+        filed_script.add_line("}")
+        script = String('---@type %s' % file_name)
+        script.add_line(filed_script.get_value())
+        script.add_line("local T = {}")
+        index = 0
+        for row_data in single_data:
+            print(type(row_data))
+            index = index + 1
+            function = "function T.T%s()" % index
+            function_script = String(function)
+            table_data = "".join(get_lua_data(to_list_data(row_data),1,False))
+            function_script.add_space_line("return %s" % (table_data))
+            function_script.add_line("end")
+            script.add_line(function_script.get_value())
+
+        function_read_only = String("local function table_read_only(t)")
+        function_read_only.add_line("  local temp= {}")
+        function_read_only.add_line("  local mt = {")
+        function_read_only.add_line("    __index = t,")
+        function_read_only.add_line("    __newindex = function(t, k, v)")
+        function_read_only.add_line("        error('error write to a read-only table with key = ' .. tostring(k)"
+                                    "..', " "value ='..tostring(v))")
+        function_read_only.add_line("    end")
+        function_read_only.add_line("  }")
+        function_read_only.add_line("  setmetatable(temp, mt)")
+        function_read_only.add_line("  return temp")
+        function_read_only.add_line("end")
+        script.add_line(function_read_only.get_value())
+
+        function_new = String("local function New(data)")
+        function_new.add_space_line("local t = {}")
+        function_new.add_space_line("for k,v in pairs(Filed_Dic) do")
+        function_new.add_space_line("  t[k]= data[v]")
+        function_new.add_space_line("end")
+        function_new.add_space_line("return table_read_only(t)")
+        function_new.add_line_end()
+        script.add_line(function_new.get_value())
+
+        script.add_line('local %s = {\n  Values = {}\n}' % file_name)
+
+        script.add_line("---@return %s%s" %(msg.name, msg.suffix))
+        get_function = String("function %s.GetTableByIndex(index)" % file_name)
+        get_function.add_space_line("if %s.Values[index]==nil then" % file_name)
+        get_function.add_space_line(" %s.Values[index]=New(%s['T'..index]())" % (file_name, "T"))
+        get_function.add_space_line("end")
+        get_function.add_space_line("return %s.Values[index]" % file_name)
+        get_function.add_line_end()
+        script.add_line(get_function.get_value())
+
+        get_len_function = "function %s.GetLength()\n return %s" % (file_name, len(single_data))
+        script.add_line(get_len_function)
+        script.add_line("end")
+        script.add_line('return %s' % file_name)
+        return script.get_value()
 
     def export_lua_api(self):
         api_dir = OutDir_Lua_Api
@@ -834,7 +947,13 @@ class Message:
         api = '---@class %s ' % (self.name + self.suffix)
         for i, filed in enumerate(self.fileds_proto.values()):
             api = add_line(api, filed.get_lua_api())
+        print(self.get_lua_script())
         return api
+
+    def get_lua_script(self):
+        script_define = String("local %s = {}" % (self.get_proto_name()))
+        script_define.add_line("local %s__mt = {}" % (self.get_proto_name()))
+        return script_define.get_value()
 
     def get_msg_proto(self):
         """
@@ -856,6 +975,9 @@ class Message:
             list_define = add_line(list_define, '}')
             class_define = add_line(class_define, list_define)
         return class_define
+
+    def is_root_message(self):
+        return self.is_list_obj and not self.is_child_message()
 
     def get_msg_flat_scheme(self):
         """
@@ -971,12 +1093,6 @@ class Message:
         self.record_filed(export_obj, filed_name, filed_type, filed_value)
 
     def record_filed(self, export_data, filed_name, filed_type, filed_value):
-        ### 使用默认值 // 默认值保留 直接json  会有一定的冗余 导出json 纯json文本中优化
-        # if is_null_or_empty(filed_value):
-        #     return
-        # print(filed_name)
-        # print(type_define)
-        # print(filed_value)
         type_define = self.get_type_define(filed_type)
         if type_define == ETypeBase:
             self.record_base_value(export_data, filed_name, filed_type, filed_value)
@@ -1000,7 +1116,7 @@ class Message:
             if not is_null_or_empty(filed_value):
                 temps = str(filed_value).strip('[]').split(SplitArray)
                 for v in temps:
-                    values.append(convert(self.get_type_name(base_type,filed_name), v))
+                    values.append(convert(self.get_type_name(base_type, filed_name), v))
         elif type_define == ETypeObj:
             values = re.findall(SplitArrayObjValue,
                                 str(filed_value))  ##--str(filed_value).strip('[]').split(SplitObjArray)
@@ -1252,7 +1368,6 @@ class Filed:
         """
         example v:[float:3];
         name:string;
-        :param index:
         :return:
         """
         define_type = self.get_filed_type()
@@ -1266,8 +1381,28 @@ class Filed:
             r = '[]'
         return '%s %s %s%s @%s ' % ("---@field ", self.get_filed_name(), self.get_filed_type(), r, self.get_filed_des())
 
+    def get_lua_script(self):
+        pass
+
     def scheme_info(self):
         return json.dumps((self.get_filed_name(), self.get_filed_type()), ensure_ascii=False, indent=2)
+
+
+class String:
+    def __init__(self, value):
+        self.value = value
+
+    def add_line(self, v):
+        self.value = add_line(self.value, v)
+
+    def add_space_line(self, v):
+        self.value = add_space_line(self.value, v)
+
+    def add_line_end(self):
+        self.add_line("end")
+
+    def get_value(self):
+        return self.value
 
 
 def generator(file_list, out_protobuf_scripts, out_flatbuffer_scripts, out_data_formats, name_space, suffix):

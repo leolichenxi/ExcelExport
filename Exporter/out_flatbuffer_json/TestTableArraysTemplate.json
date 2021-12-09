@@ -1,0 +1,323 @@
+{
+  "test_table_arrays": [
+    {
+      "id": 1,
+      "weapons": [
+        2,
+        1,
+        3
+      ],
+      "born_position": {
+        "x": 1.0,
+        "y": 2.0,
+        "z": 3.0
+      },
+      "test_types": [],
+      "link_id": 1,
+      "model": "hero_chushi",
+      "icon": "chushi",
+      "machine_types": [],
+      "map_type": ""
+    },
+    {
+      "id": 2,
+      "weapons": [
+        2,
+        1,
+        4
+      ],
+      "born_position": {
+        "x": 1.0,
+        "y": 2.0,
+        "z": 3.0
+      },
+      "test_types": [
+        {
+          "types": [],
+          "id": 2
+        },
+        {
+          "types": [
+            1
+          ],
+          "id": 3
+        }
+      ],
+      "link_id": 1,
+      "model": "hero_chushi",
+      "icon": "chushi",
+      "machine_types": [
+        "防御"
+      ],
+      "map_type": "平原"
+    },
+    {
+      "id": 3,
+      "weapons": [
+        2,
+        1,
+        5
+      ],
+      "born_position": {
+        "x": 1.0,
+        "y": 2.0,
+        "z": 3.0
+      },
+      "test_types": [
+        {
+          "types": [
+            1
+          ],
+          "id": 2
+        },
+        {
+          "types": [
+            1
+          ],
+          "id": 4
+        }
+      ],
+      "link_id": 1,
+      "model": "hero_chushi",
+      "icon": "chushi",
+      "machine_types": [
+        "防御"
+      ],
+      "map_type": "平原"
+    },
+    {
+      "id": 4,
+      "weapons": [
+        2,
+        1,
+        6
+      ],
+      "born_position": {
+        "x": 1.0,
+        "y": 2.0,
+        "z": 3.0
+      },
+      "test_types": [
+        {
+          "types": [],
+          "id": 0
+        },
+        {
+          "types": [],
+          "id": 0
+        }
+      ],
+      "link_id": 1,
+      "model": "hero_chushi",
+      "icon": "chushi",
+      "machine_types": [
+        "防御"
+      ],
+      "map_type": "平原"
+    },
+    {
+      "id": 5,
+      "weapons": [
+        2,
+        1,
+        7
+      ],
+      "born_position": {
+        "x": 1.0,
+        "y": 2.0,
+        "z": 3.0
+      },
+      "test_types": [
+        {
+          "types": [
+            1
+          ],
+          "id": 2
+        },
+        {
+          "types": [
+            1
+          ],
+          "id": 6
+        }
+      ],
+      "link_id": 1,
+      "model": "hero_chushi",
+      "icon": "chushi",
+      "machine_types": [
+        "防御"
+      ],
+      "map_type": "平原"
+    },
+    {
+      "id": 6,
+      "weapons": [
+        2,
+        1,
+        8
+      ],
+      "born_position": {
+        "x": 1.0,
+        "y": 2.0,
+        "z": 4.0
+      },
+      "test_types": [
+        {
+          "types": [
+            1
+          ],
+          "id": 2
+        },
+        {
+          "types": [
+            1
+          ],
+          "id": 7
+        }
+      ],
+      "link_id": 1,
+      "model": "hero_chushi",
+      "icon": "chushi",
+      "machine_types": [
+        "防御"
+      ],
+      "map_type": "平原"
+    },
+    {
+      "id": 7,
+      "weapons": [
+        2,
+        1,
+        9
+      ],
+      "born_position": {
+        "x": 1.0,
+        "y": 2.0,
+        "z": 5.0
+      },
+      "test_types": [
+        {
+          "types": [
+            1
+          ],
+          "id": 2
+        },
+        {
+          "types": [
+            1
+          ],
+          "id": 8
+        }
+      ],
+      "link_id": 1,
+      "model": "hero_chushi",
+      "icon": "chushi",
+      "machine_types": [
+        "防御"
+      ],
+      "map_type": "平原"
+    },
+    {
+      "id": 8,
+      "weapons": [
+        2,
+        1,
+        10
+      ],
+      "born_position": {
+        "x": 1.0,
+        "y": 2.0,
+        "z": 6.0
+      },
+      "test_types": [
+        {
+          "types": [
+            1
+          ],
+          "id": 2
+        },
+        {
+          "types": [
+            1
+          ],
+          "id": 9
+        }
+      ],
+      "link_id": 1,
+      "model": "hero_chushi",
+      "icon": "chushi",
+      "machine_types": [
+        "防御"
+      ],
+      "map_type": "平原"
+    },
+    {
+      "id": 9,
+      "weapons": [
+        2,
+        1,
+        11
+      ],
+      "born_position": {
+        "x": 1.0,
+        "y": 2.0,
+        "z": 7.0
+      },
+      "test_types": [
+        {
+          "types": [
+            1
+          ],
+          "id": 2
+        },
+        {
+          "types": [
+            1
+          ],
+          "id": 10
+        }
+      ],
+      "link_id": 1,
+      "model": "hero_chushi",
+      "icon": "chushi",
+      "machine_types": [
+        "防御"
+      ],
+      "map_type": "平原"
+    },
+    {
+      "id": 10,
+      "weapons": [
+        2,
+        1,
+        12
+      ],
+      "born_position": {
+        "x": 1.0,
+        "y": 2.0,
+        "z": 8.0
+      },
+      "test_types": [
+        {
+          "types": [
+            1
+          ],
+          "id": 2
+        },
+        {
+          "types": [
+            1
+          ],
+          "id": 11
+        }
+      ],
+      "link_id": 1,
+      "model": "hero_chushi",
+      "icon": "chushi",
+      "machine_types": [
+        "防御"
+      ],
+      "map_type": "平原"
+    }
+  ]
+}

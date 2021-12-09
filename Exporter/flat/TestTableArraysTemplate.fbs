@@ -1,0 +1,22 @@
+include "Position3d.fbs";
+attribute "priority";
+namespace Config;
+table TestTableArraysTemplate {
+   id:int32 ; // 英雄ID
+   weapons:[int32] ; // 武器(武器Id)
+   born_position:Position3d ; // 出生位置
+   test_types:[TestType_] ; // 测试类型
+   link_id:int32 ; // 
+   model:string ; // 切片
+   icon:string ; // Icon
+   machine_types:[string] ; // 机体类型
+   map_type:string ; // 地形适应
+}
+  table TestType_ {
+   types:[int32] ; // type
+   id:int32 ; // id
+  }
+table TestTableArraysTemplateList {
+   test_table_arrays:[TestTableArraysTemplate] ; // List
+}
+root_type TestTableArraysTemplateList;

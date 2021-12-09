@@ -1,0 +1,4 @@
+---@class Position3d 
+---@field  x float @x 
+---@field  y float @y 
+---@field  z float @z 

@@ -1,0 +1,5 @@
+syntax = "proto3";
+message CommonType {
+   int32 type = 1 ; // type
+   int32 id = 2 ; // id
+}
