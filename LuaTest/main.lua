@@ -61,8 +61,21 @@ Logger = require("Logger")
 --print(test1:GetId())
 
 print("===========================")
-local  TestTableArraysTemplate = require("TestTableArraysTemplate")
-local t = TestTableArraysTemplate.GetTableByIndex(1)
-print(t.Id)
 
+--collectgarbage("stop")
+--local a = collectgarbage("count")
+----local TestTableArraysTemplate = require("TestTableArraysTemplate1")
+----local  TestGlobalTemplate = require("TestGlobalTemplate1")
+----local  TestGlobalTemplate = require("TestGlobalTemplate")
+----for i = 1,10 do
+----    local x = TestTableArraysTemplate.GetTableByIndex(i)
+----end
+----for i = 1,10 do
+----    local x = TestTableArraysTemplate.GetTableByIndex(i)
+----end
+--local b = collectgarbage("count")
+---@type TestTableArraysTemplate
+local TestTableArraysTemplate = require("TestTableArraysTemplate1")
 
+local t = TestTableArraysTemplate.GetTableByIndex(5)
+Logger.LogInfo(t.born_position.x) 

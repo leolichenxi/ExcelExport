@@ -1,5 +1,5 @@
-local TestGlobalTemplate = {}
-local TestGlobalTemplate__mt = {
+---@type TestGlobalTemplate
+local TestGlobalTemplate = {
   TestInt = 7,
   TestStringArrays = {
     "哈",
@@ -134,6 +134,4 @@ local TestGlobalTemplate__mt = {
   Test1Int = 7,
   TestInt1 = 7
 }
-local TestGlobalTemplate__mt__mt = {__index= TestGlobalTemplate__mt,__newindex = function (t, k, v) error('error write to a read-only table with key = ' .. tostring(k)..', value ='..tostring(v)) end}
-setmetatable(TestGlobalTemplate,TestGlobalTemplate__mt__mt)
-return TestGlobalTemplate__mt
+return TestGlobalTemplate

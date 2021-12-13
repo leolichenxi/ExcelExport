@@ -1,5 +1,5 @@
 ---@type TestTableArraysTemplate
-local Filed_Dic ={
+local TestTableArraysTemplateFieldsIndex ={
   Id = 1,
   Weapons = 2,
   born_position = 3,
@@ -10,36 +10,49 @@ local Filed_Dic ={
   MachineTypes = 8,
   MapType = 9,
 }
+local Position3dFieldsIndex ={
+  x = 1,
+  y = 2,
+  z = 3,
+}
+local TestType_FieldsIndex ={
+  types = 1,
+  id = 2,
+}
+local TestTableArraysTemplateCustom ={
+  born_position = {0,Position3dFieldsIndex},
+  TestTypes = {1,TestType_FieldsIndex},
+}
 local T = {}
 function T.T1()
-  return {1,2,1,3,{x = 1.0,y = 2.0,z = 3.0},1,"hero_chushi","chushi",""}
+  return {1,{2,1,3},nil,nil,1,"hero_chushi","chushi",nil,"222.0"}
 end
 function T.T2()
-  return {2,2,1,4,{x = 1.0,y = 2.0,z = 3.0},{2},{1,3},1,"hero_chushi","chushi","防御","平原"}
+  return {2,{2,1,4},nil,{{nil,2},{{1},3}},1,"hero_chushi","chushi",{"防御"},"平原"}
 end
 function T.T3()
-  return {3,2,1,5,{x = 1.0,y = 2.0,z = 3.0},{1,2},{1,4},1,"hero_chushi","chushi","防御","平原"}
+  return {3,{2,1,5},nil,{{{1},2},{{1},4}},1,"hero_chushi","chushi",{"防御"},"平原"}
 end
 function T.T4()
-  return {4,2,1,6,{x = 1.0,y = 2.0,z = 3.0},{0},{0},1,"hero_chushi","chushi","防御","平原"}
+  return {4,{2,1,6},nil,{{nil,0},{nil,0}},1,"hero_chushi","chushi",{"防御"},"平原"}
 end
 function T.T5()
-  return {5,2,1,7,{x = 1.0,y = 2.0,z = 3.0},{1,2},{1,6},1,"hero_chushi","chushi","防御","平原"}
+  return {5,{2,1,7},{1.0,2.0,3.0},{{{1},2},{{1},6}},1,"hero_chushi","chushi",{"防御"},"平原"}
 end
 function T.T6()
-  return {6,2,1,8,{x = 1.0,y = 2.0,z = 4.0},{1,2},{1,7},1,"hero_chushi","chushi","防御","平原"}
+  return {6,{2,1,8},{1.0,2.0,4.0},{{{1},2},{{1},7}},1,"hero_chushi","chushi",{"防御"},"平原"}
 end
 function T.T7()
-  return {7,2,1,9,{x = 1.0,y = 2.0,z = 5.0},{1,2},{1,8},1,"hero_chushi","chushi","防御","平原"}
+  return {7,{2,1,9},{1.0,2.0,5.0},{{{1},2},{{1},8}},1,"hero_chushi","chushi",{"防御"},"平原"}
 end
 function T.T8()
-  return {8,2,1,10,{x = 1.0,y = 2.0,z = 6.0},{1,2},{1,9},1,"hero_chushi","chushi","防御","平原"}
+  return {8,{2,1,10},{1.0,2.0,6.0},{{{1},2},{{1},9}},1,"hero_chushi","chushi",{"防御"},"平原"}
 end
 function T.T9()
-  return {9,2,1,11,{x = 1.0,y = 2.0,z = 7.0},{1,2},{1,10},1,"hero_chushi","chushi","防御","平原"}
+  return {9,{2,1,11},{1.0,2.0,7.0},{{{1},2},{{1},10}},1,"hero_chushi","chushi",{"防御"},"平原"}
 end
 function T.T10()
-  return {10,2,1,12,{x = 1.0,y = 2.0,z = 8.0},{1,2},{1,11},1,"hero_chushi","chushi","防御","平原"}
+  return {10,{2,1,12},{1.0,2.0,8.0},{{{1},2},{{1},11}},1,"hero_chushi","chushi",{"防御"},"平原"}
 end
 local function table_read_only(t)
   local temp= {}
@@ -52,10 +65,27 @@ local function table_read_only(t)
   setmetatable(temp, mt)
   return temp
 end
-local function New(data)
+local function New(data,tableIndexes)
+  if data == nil then
+    return nil
+  end
   local t = {}
-  for k,v in pairs(Filed_Dic) do
-    t[k]= data[v]
+  for k,v in pairs(tableIndexes) do
+    local c = TestTableArraysTemplateCustom[k]
+    local d = data[v]
+    if c == nil then
+      t[k]= d
+    else
+      if c[1] == 1 then
+        local t_c = {}
+        for index = 1,#d do
+          table.insert(t_c, New(d[index],c[2]))
+        end
+        t[k] = t_c
+      else
+        t[k] = New(d,c[2])
+      end
+    end
   end
   return table_read_only(t)
 end
@@ -65,9 +95,9 @@ local TestTableArraysTemplate = {
 ---@return TestTableArrayTemplate
 function TestTableArraysTemplate.GetTableByIndex(index)
   if TestTableArraysTemplate.Values[index]==nil then
-    TestTableArraysTemplate.Values[index]=New(T['T'..index]())
+    TestTableArraysTemplate.Values[index]=New(T['T'..index](),TestTableArraysTemplateFieldsIndex)
   end
-  return  TestTableArraysTemplate.Values[index]
+  return TestTableArraysTemplate.Values[index]
 end
 function TestTableArraysTemplate.GetLength()
   return 10

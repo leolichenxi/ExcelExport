@@ -7,17 +7,13 @@
         1,
         3
       ],
-      "born_position": {
-        "x": 1.0,
-        "y": 2.0,
-        "z": 3.0
-      },
+      "born_position": null,
       "TestTypes": [],
       "LinkId": 1,
       "Model": "hero_chushi",
       "Icon": "chushi",
       "MachineTypes": [],
-      "MapType": ""
+      "MapType": "222.0"
     },
     {
       "Id": 2,
@@ -26,11 +22,7 @@
         1,
         4
       ],
-      "born_position": {
-        "x": 1.0,
-        "y": 2.0,
-        "z": 3.0
-      },
+      "born_position": null,
       "TestTypes": [
         {
           "types": [],
@@ -58,11 +50,7 @@
         1,
         5
       ],
-      "born_position": {
-        "x": 1.0,
-        "y": 2.0,
-        "z": 3.0
-      },
+      "born_position": null,
       "TestTypes": [
         {
           "types": [
@@ -92,11 +80,7 @@
         1,
         6
       ],
-      "born_position": {
-        "x": 1.0,
-        "y": 2.0,
-        "z": 3.0
-      },
+      "born_position": null,
       "TestTypes": [
         {
           "types": [],
