@@ -8,11 +8,7 @@ local TestTableArraysTemplate = {
         1,
         3
       },
-      born_position = {
-        x = 1.0,
-        y = 2.0,
-        z = 3.0
-      },
+      born_position = nil,
       TestTypes = {
       },
       LinkId = 1,
@@ -20,7 +16,7 @@ local TestTableArraysTemplate = {
       Icon = "chushi",
       MachineTypes = {
       },
-      MapType = ""
+      MapType = "222.0"
     },
     {
       Id = 2,
@@ -29,11 +25,7 @@ local TestTableArraysTemplate = {
         1,
         4
       },
-      born_position = {
-        x = 1.0,
-        y = 2.0,
-        z = 3.0
-      },
+      born_position = nil,
       TestTypes = {
         {
           types = {
@@ -62,11 +54,7 @@ local TestTableArraysTemplate = {
         1,
         5
       },
-      born_position = {
-        x = 1.0,
-        y = 2.0,
-        z = 3.0
-      },
+      born_position = nil,
       TestTypes = {
         {
           types = {
@@ -96,11 +84,7 @@ local TestTableArraysTemplate = {
         1,
         6
       },
-      born_position = {
-        x = 1.0,
-        y = 2.0,
-        z = 3.0
-      },
+      born_position = nil,
       TestTypes = {
         {
           types = {
