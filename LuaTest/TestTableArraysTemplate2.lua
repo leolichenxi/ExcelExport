@@ -54,20 +54,52 @@ end
 function T.T10()
   return {10,{2,1,12},{1.0,2.0,8.0},{{{1},2},{{1},11}},1,"hero_chushi","chushi",{"防御"},"平原"}
 end
+local function table_read_only(t)
+  local temp= {}
+  local mt = {
+    __index = t,
+    __newindex = function(t, k, v)
+      error('error write to a read-only table with key = ' .. tostring(k)..', value ='..tostring(v))
+    end
+  }
+  setmetatable(temp, mt)
+  return temp
+end
+local function New(data,tableIndexes)
+  if data == nil then
+    return nil
+  end
+  local t = {}
+  for k,v in pairs(tableIndexes) do
+    local c = TestTableArraysTemplateCustom[k]
+    local d = data[v]
+    if c == nil then
+      t[k]= d
+    else
+      if c[1] == 1 then
+        local t_c = {}
+        for index = 1,#d do
+          table.insert(t_c, New(d[index],c[2]))
+        end
+        t[k] = t_c
+      else
+        t[k] = New(d,c[2])
+      end
+    end
+  end
+  return table_read_only(t)
+end
 local TestTableArraysTemplate = {
   Values = {}
 }
 ---@return TestTableArrayTemplate
 function TestTableArraysTemplate.GetTableByIndex(index)
   if TestTableArraysTemplate.Values[index]==nil then
-   TestTableArraysTemplate.Values[index]=New_Config(T['T'..index](),TestTableArraysTemplateFieldsIndex,TestTableArraysTemplateCustom)
+    TestTableArraysTemplate.Values[index]=New(T['T'..index](),TestTableArraysTemplateFieldsIndex)
   end
   return TestTableArraysTemplate.Values[index]
 end
 function TestTableArraysTemplate.GetLength()
- return 10
-end
-function TestTableArraysTemplate.Dispose()
- TestTableArraysTemplate.Values={}
+  return 10
 end
 return TestTableArraysTemplate

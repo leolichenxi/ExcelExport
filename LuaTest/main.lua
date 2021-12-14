@@ -62,20 +62,37 @@ Logger = require("Logger")
 
 print("===========================")
 
---collectgarbage("stop")
---local a = collectgarbage("count")
-----local TestTableArraysTemplate = require("TestTableArraysTemplate1")
-----local  TestGlobalTemplate = require("TestGlobalTemplate1")
-----local  TestGlobalTemplate = require("TestGlobalTemplate")
-----for i = 1,10 do
-----    local x = TestTableArraysTemplate.GetTableByIndex(i)
-----end
-----for i = 1,10 do
-----    local x = TestTableArraysTemplate.GetTableByIndex(i)
-----end
---local b = collectgarbage("count")
----@type TestTableArraysTemplate
-local TestTableArraysTemplate = require("TestTableArraysTemplate1")
+collectgarbage("collect")
+collectgarbage("stop")
+local a = collectgarbage("count")
+local TestTableArraysTemplate = require("TestTableArraysTemplate2")
+----local  TestGlobalTemplate = require("TestGlobalTemplate2")
+--local  TestGlobalTemplate = require("TestTableArraysTemplate")
+local t = {
+}
+--t.t1 = {70031,35,70,150,150,200,260,310,300,350,700,950,1150,1200,1000,1500,1500,1500,1550,1550,1005,9999,0}
+--
+--t.t1 = function()
+--    return  {70031,35,70,150,150,200,260,310,300,350,700,950,1150,1200,1000,1500,1500,1500,1550,1550,1005,9999,0}
+--end
+--local t2 = {
+--    [1] =t.t1
+--}
 
-local t = TestTableArraysTemplate.GetTableByIndex(5)
-Logger.LogInfo(t.born_position.x) 
+t.t1 = {70031,35,70,150,150,200,260,310,300,350,700,950,1150,1200,1000,1500,1500,1500,1550,1550,1005,9999,0}
+
+--table.remove(t, 1)
+--t.t1 = nil
+collectgarbage("collect")
+--
+
+local b = collectgarbage("count")
+
+print(TestTableArraysTemplate.GetTableByIndex(5).born_position.y)
+
+
+---@type TestTableArraysTemplate
+--local TestTableArraysTemplate = require("TestTableArraysTemplate1")
+--
+--local t = TestTableArraysTemplate.GetTableByIndex(5)
+--Logger.LogInfo(t.born_position.x)

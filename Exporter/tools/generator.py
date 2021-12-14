@@ -31,58 +31,23 @@ import collections
 import json
 import codecs
 import importlib
-import logging
 import tools.utility as utility
 import tools.script_exporter as script_exporter
 import tools.string_script as string_script
 import tools.custom_filed as custom_filed
 
 # Define Const Files
-Global_Sheet_Tile = ('name', 'type', 'value', 'sign', 'description')
-Index_Name = 0
-Index_Type = 1
-Index_Value = 2
-Index_Rule = 3
-Index_Des = 4
 
-Index_Item_Des = 0  # 列表的excel 第一行表示 注释
-Index_Item_Type = 1  # 列表的excel 第二行表示 类型定义
-Index_Item_Name = 2  # 列表的excel 第三行表示 字段名
-Index_Item_Rule = 3  # 列表的excel 第四行表示 导出规则
-
-BaseTypeInt = "int32"  # protoc基础类型 int
-BaseTypeFloat = "float"  # protoc基础类型 float
-BaseTypeDouble = "double"  # protoc基础类型 double
-BaseTypeString = "string"  # protoc基础类型 string
-BaseTypeBool = "bool"  # protoc基础类型 bool
-BaseTypes = {'int': BaseTypeInt, 'float': BaseTypeFloat, 'double': BaseTypeDouble, 'string': BaseTypeString,
-             'bool': BaseTypeBool}
-BaseProtoTypes = {'int32': 'int'}
-ETypeList = 'list'  # 标识枚举 数组类型
-ETypeObj = 'obj'  # 标识枚举 对象类型
-ETypeBase = 'base'  # 标识枚举 基础类型
-SplitArray = ','  # 配置的
-SplitObjArray = ';'  # 配置的
-SplitTypeFiled = ';'  # 对象类型的字段数组分割  int a : int b
-SplitValueFiled = ';'  # 对象类型的字段数组分割  10 : 100
-SheetRowMaxSpaceCount = 3  # 连续空白几行  余下的不读取
-IgnoreSign = '#'  # 注释行标识符
-SplitArrayObjValue = r"{.*?}"  # 分割对象数组
 OutDir_Protos = 'protos'  # 导出的proto文件所在的文件夹
 OutDir_Jsons = 'json'  # 导出的json文件所在的文件夹
 OutDir_Lua = 'lua'  # 导出的lua文件所在的文件夹
 OutDir_Protobuf = 'protobuf'  # 导出的protobuf文件所在的文件夹
 OutDir_Lua_Api = 'lua_api'  # 导出的LuaAPI文件所在的文件夹
 ListSuffix = 'List'  # 列表类型尾缀
-BooleanFalse = ('0', '0.0', 'false', 'False', 'off', 'Off', '', 'None')  # bool 类型 false 定义
-BooleanTrue = ('1', '1.0', 'true', 'True', 'on', 'On')  # bool 类型 true 定义
 LogEnable = True
 
-logging.basicConfig(level=logging.DEBUG,
-                    format='%(asctime)s - %(filename)s[line:%(lineno)d] - %(levelname)s: %(message)s')  # logging.basicConfig函数对日志的输出格式及方式做相关配置
-
-
 # 由于日志基本配置中级别设置为DEBUG，所以一下打印信息将会全部显示在控制台上
+
 
 def log(*args):
     if LogEnable:
@@ -342,14 +307,9 @@ class Exporter:
         try:
             msg = Message(proto_name, self.name_space, self.suffix, None, True)
             msg.add_global_msg(self.global_msgs)
-            row_des = sheet.row_values(Index_Item_Des)
-            row_types = sheet.row_values(Index_Item_Type)
-            row_names = sheet.row_values(Index_Item_Name)
-            row_rules = sheet.row_values(Index_Item_Rule)
-
+            row_des, row_types, row_names, row_rules = script_exporter.get_list_table_title(sheet)
             filed_names = collections.OrderedDict()
             filed_types = collections.OrderedDict()
-
             ### record fileds
             for index, value in enumerate(row_names):
                 filed_name = utility.strip_filed(value)
@@ -399,15 +359,10 @@ class Exporter:
             for filed_index in range(1, sheet.nrows):
                 row = sheet.row_values(filed_index)
                 if not script_exporter.is_ignore_row(row):
-                    filed_name = utility.strip_filed(row[sheet_tile_info[Index_Name]])
-                    filed_type = utility.strip_filed(row[sheet_tile_info[Index_Type]])
-                    filed_value = utility.strip_filed(row[sheet_tile_info[Index_Value]])
-                    filed_des = utility.strip_filed(row[sheet_tile_info[Index_Des]])
-                    filed_rule = utility.strip_filed(row[sheet_tile_info[Index_Rule]])
-                    # if not filed_name and not filed_value and not filed_value:
+                    filed_name, filed_type, filed_value, filed_des, filed_rule = script_exporter.get_global_table_title(row, sheet_tile_info)
                     if not filed_name and not filed_value:
                         space_row_count += 1
-                        if space_row_count >= SheetRowMaxSpaceCount:
+                        if space_row_count >= script_exporter.SheetRowMaxSpaceCount:
                             break
                         continue
                     if filed_name and filed_type:
@@ -732,11 +687,11 @@ class Message:
 
     def record_filed(self, export_data, filed_name, filed_type, filed_value):
         type_define = self.get_type_define(filed_type)
-        if type_define == ETypeBase:
+        if type_define == script_exporter.ETypeBase:
             self.record_base_value(export_data, filed_name, filed_type, filed_value)
-        elif type_define == ETypeList:
+        elif type_define == script_exporter.ETypeList:
             self.record_list_value(export_data, filed_name, filed_type, filed_value)
-        elif type_define == ETypeObj:
+        elif type_define == script_exporter.ETypeObj:
             self.record_obj_value(export_data, filed_name, filed_type, filed_value)
 
     def record_base_value(self, parent, filed_name, filed_type, filed_value):
@@ -748,14 +703,14 @@ class Message:
         base_type, type_define = self.get_list_filed_info(filed_type)
         list_values = []
         values = []
-        if type_define == ETypeList:
+        if type_define == script_exporter.ETypeList:
             raise ValueError('bug here!', filed_name, filed_type, filed_value)
-        elif type_define == ETypeBase:
+        elif type_define == script_exporter.ETypeBase:
             if not utility.is_null_or_empty(filed_value):
-                temps = str(filed_value).strip('[]').split(SplitArray)
+                temps = script_exporter.get_list_values(filed_value)
                 for v in temps:
                     values.append(script_exporter.convert(self.get_type_name(base_type, filed_name), v))
-        elif type_define == ETypeObj:
+        elif type_define == script_exporter.ETypeObj:
             values = script_exporter.get_obj_value(filed_value)
         for v in values:
             self.record_filed(list_values, filed_name, base_type, v)
@@ -771,7 +726,7 @@ class Message:
                 filed_types.append(field.get_defined_type() + ' ' + field.get_name())
         else:
             filed_types.extend(script_exporter.get_obj_file_types(filed_type))
-        values = str(filed_value).strip('{}').split(SplitValueFiled)
+        values = script_exporter.get_obj_list_values(filed_value)
         if not utility.is_null_or_empty(values):
             for i in range(0, len(filed_types)):
                 item_filed_type, item_filed_name = script_exporter.split_space(filed_types[i])
@@ -798,19 +753,19 @@ class Message:
 
     def build_filed(self, filed_name, filed_type, filed_des, is_array=False):
         type_define = self.get_type_define(filed_type)
-        if type_define == ETypeBase:
+        if type_define == script_exporter.ETypeBase:
             proto_type = self.get_type_name(filed_type, filed_name)
             self.build_filed_proto(filed_name, proto_type, filed_des, is_array)
-        elif type_define == ETypeList:
+        elif type_define == script_exporter.ETypeList:
             self.build_list_filed(filed_name, filed_type, filed_des)
-        elif type_define == ETypeObj:
+        elif type_define == script_exporter.ETypeObj:
             self.build_obj_filed(filed_name, filed_type, filed_des, is_array)
 
     def build_list_filed(self, filed_name, filed_type, filed_des):
         base_type, type_define = self.get_list_filed_info(filed_type)
-        if type_define == ETypeBase:
+        if type_define == script_exporter.ETypeBase:
             self.build_filed(filed_name, base_type, filed_des, True)
-        elif type_define == ETypeObj:
+        elif type_define == script_exporter.ETypeObj:
             self.build_obj_filed(filed_name, base_type, filed_des, True)
 
     def get_list_filed_info(self, filed_type):

@@ -33,6 +33,7 @@ BaseProtoTypes = {'int32': 'int'}
 ETypeList = 'list'  # 标识枚举 数组类型
 ETypeObj = 'obj'  # 标识枚举 对象类型
 ETypeBase = 'base'  # 标识枚举 基础类型
+
 SplitArray = ','  # 配置的
 SplitObjArray = ';'  # 配置的
 SplitTypeFiled = ';'  # 对象类型的字段数组分割  int a : int b
@@ -201,6 +202,14 @@ def build_lower_obj(source_obj):
     return des_obj
 
 
+def get_list_values(filed_value):
+    return str(filed_value).strip('[]').split(SplitArray)
+
+
+def get_obj_list_values(filed_value):
+    return str(filed_value).strip('{}').split(SplitValueFiled)
+
+
 def record_obj_to_lower(key, value, dest_obj):
     key = utility.convert_to_lower_snake_cake(key)
     if isinstance(value, dict):
@@ -215,6 +224,23 @@ def record_obj_to_lower(key, value, dest_obj):
         fill_value(dest_obj, key, list_value)
     else:
         fill_value(dest_obj, key, value)
+
+
+def get_global_table_title(row, sheet_tile_info):
+    filed_name = utility.strip_filed(row[sheet_tile_info[Index_Name]])
+    filed_type = utility.strip_filed(row[sheet_tile_info[Index_Type]])
+    filed_value = utility.strip_filed(row[sheet_tile_info[Index_Value]])
+    filed_des = utility.strip_filed(row[sheet_tile_info[Index_Des]])
+    filed_rule = utility.strip_filed(row[sheet_tile_info[Index_Rule]])
+    return filed_name, filed_type, filed_value, filed_des, filed_rule
+
+
+def get_list_table_title(sheet):
+    row_des = sheet.row_values(Index_Item_Des)
+    row_types = sheet.row_values(Index_Item_Type)
+    row_names = sheet.row_values(Index_Item_Name)
+    row_rules = sheet.row_values(Index_Item_Rule)
+    return row_des, row_types, row_names, row_rules
 
 
 def get_import_proto_define(msg_name):
