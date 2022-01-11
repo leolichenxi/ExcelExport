@@ -380,7 +380,8 @@ class Exporter:
         value = script_exporter.get_json_data(obj)
         with codecs.open(file_name, 'w', 'utf-8') as f:
             f.write(value)
-        print("md5:" + utility.get_file_md5(file_name))
+        # print("md5:" + utility.get_file_md5(file_name))
+
 
     def save_to_lua(self, out_dir, info):
         """
@@ -397,7 +398,7 @@ class Exporter:
         with codecs.open(lua_file, 'w', 'utf-8') as f:
             f.write('---@type %s\n' % file_name)
             f.write('local %s = %s\n%s %s' % (file_name, lua_str, 'return', file_name))
-        print("md5:" + utility.get_file_md5(lua_file))
+        # print("md5:" + utility.get_file_md5(lua_file))
 
     def save_to_lua_list(self, out_dir, info):
         file_name = info.get_proto_name()
@@ -421,7 +422,7 @@ class Exporter:
         with codecs.open(lua_file, 'w', 'utf-8') as f:
             f.write(lua_str.get_value())
             # f.write()
-        print("md5:" + utility.get_file_md5(lua_file))
+        # print("md5:" + utility.get_file_md5(lua_file))
 
     def export_lua_api(self):
         api_dir = OutDir_Lua_Api
