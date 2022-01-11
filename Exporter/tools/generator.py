@@ -26,7 +26,6 @@ else:
     print('python version:', sys.version_info)
 import os
 import xlrd
-import re
 import collections
 import json
 import codecs
@@ -67,7 +66,7 @@ def get_export_global_flat_folder():
 
 
 def is_match_rules(sheet_name, filed_name, rules):
-    print(sheet_name, filed_name, rules)
+    print(sheet_name, filed_name, "TODO", rules)
     return True
 
 
@@ -261,7 +260,7 @@ class Exporter:
         lua_dir = out_folder
         lua_dir_list = out_folder + '_list/'
         utility.prepare_dir(lua_dir)
-        utility.prepare_dir(lua_dir + '_list/')
+        utility.prepare_dir(lua_dir_list)
         for info in self.proto_infos:
             self.save_to_lua(lua_dir, info)
             self.save_to_lua_list(lua_dir_list, info)

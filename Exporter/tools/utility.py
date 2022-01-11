@@ -93,6 +93,7 @@ def convert_to_lower_snake_cake(key):
         return new_key
     return key
 
+
 def strip_filed(value):
     return str(value).strip()
 
