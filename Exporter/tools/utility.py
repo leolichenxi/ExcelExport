@@ -1,7 +1,7 @@
 # coding:utf-8
 import hashlib
 import logging
-from logging.handlers import RotatingFileHandler # 按文件大小滚动备份
+from logging.handlers import RotatingFileHandler  # 按文件大小滚动备份
 import colorlog  # 控制台日志输入颜色
 import time
 import datetime
@@ -19,6 +19,7 @@ log_colors_config = {
     'ERROR': 'red',
     'CRITICAL': 'red',
 }
+
 
 class Log:
     def __init__(self):
@@ -46,8 +47,8 @@ class Log:
 
     def handle_logs(self):
         """处理日志过期天数和文件数量"""
-        dir_log = 'logs' # 要删除文件的目录名
-        dir_path = os.path.abspath(os.path.dirname(os.path.dirname(__file__))) + '\\' + dir_log  #拼接删除目录完整路径
+        dir_log = 'logs'  # 要删除文件的目录名
+        dir_path = os.path.abspath(os.path.dirname(os.path.dirname(__file__))) + '\\' + dir_log  # 拼接删除目录完整路径
         file_list = self.get_file_sorted(dir_path)  # 返回按修改时间排序的文件list
         if file_list:  # 目录下没有日志文件
             for i in file_list:
@@ -115,6 +116,10 @@ CLog = Log()
 
 def log(*args):
     CLog.debug(args)
+
+
+def log_error(*args):
+    CLog.error(args)
 
 
 def is_null_or_empty(v):

@@ -34,6 +34,7 @@ import tools.utility as utility
 import tools.script_exporter as script_exporter
 import tools.string_script as string_script
 import tools.custom_filed as custom_filed
+import tools.rule_handler as rule_handler
 
 # Define Const Files
 
@@ -45,12 +46,18 @@ OutDir_Lua_Api = 'lua_api'  # 导出的LuaAPI文件所在的文件夹
 ListSuffix = 'List'  # 列表类型尾缀
 LogEnable = True
 
+
 # 由于日志基本配置中级别设置为DEBUG，所以一下打印信息将会全部显示在控制台上
 
 
 def log(*args):
     if LogEnable:
         utility.log(args)
+
+
+def log_error(*args):
+    if LogEnable:
+        utility.log_error(args)
 
 
 def get_export_global_proto_folder():
@@ -66,8 +73,7 @@ def get_export_global_flat_folder():
 
 
 def is_match_rules(sheet_name, filed_name, rules):
-    print(sheet_name, filed_name, "TODO", rules)
-    return True
+    return rule_handler.is_match_rules(sheet_name,filed_name,rules);
 
 
 class Exporter:
@@ -96,22 +102,25 @@ class Exporter:
 
     def add_global_file_msg(self, file):
         if not os.path.exists(file):
-            log("if need a custom type,create a custom.xlsx file.")
+            log("if need a custom type,create a custom.xlsx file. define their")
             return
-        try:
-            excel_info = xlrd.open_workbook(file)
-            sheet = excel_info.sheets()[0]
-            msgs = Message("GlobalDefine", '', '', None, False)
-            for index in range(1, sheet.nrows):
-                row = sheet.row_values(index)
-                if not script_exporter.is_ignore_row(row):
+
+        excel_info = xlrd.open_workbook(file)
+        sheet = excel_info.sheets()[0]
+        msgs = Message("GlobalDefine", '', '', None, False)
+        for index in range(1, sheet.nrows):
+            row = sheet.row_values(index)
+            if not script_exporter.is_ignore_row(row):
+                try:
                     msgs.add_filed(row[0], row[1], row[2])
-            for msg in msgs.child_msgs:
-                msg.parent_msg = None
-                msg.set_name(msg.get_name()[:-1])
-                self.global_msgs.append(msg)
-        except Exception as e:
-            raise ValueError('export global fail!', e)
+                except Exception as e:
+                    log_error("export  custom.xlsx failed: rowinfo:" + row);
+                    raise ValueError('export global fail!', e)
+
+        for msg in msgs.child_msgs:
+            msg.parent_msg = None
+            msg.set_name(msg.get_name()[:-1])
+            self.global_msgs.append(msg)
 
     # def register_global_msg(self):
     #     msgs = []
@@ -148,11 +157,11 @@ class Exporter:
         utility.prepare_dir(global_dir)
         utility.prepare_dir(proto_dir)
         for msg in self.global_msgs:
-            log("export global proto file:", msg.get_proto_file_name())
+            log("export global protobuf proto file success:", msg.get_proto_file_name())
             msg.to_protobuf_proto(global_dir)
         for info in self.proto_infos:
             msg = info.get_message()
-            log("export proto file:", msg.get_proto_file_name())
+            log("export protobuf proto file success:", msg.get_proto_file_name())
             msg.to_protobuf_proto(proto_dir)
 
     def export_flat_scheme(self):
@@ -161,11 +170,11 @@ class Exporter:
         utility.prepare_dir(global_dir)
         utility.prepare_dir(proto_dir)
         for msg in self.global_msgs:
-            log("export global proto file:", msg.get_proto_file_name())
+            log("export flat proto file success:", msg.get_proto_file_name())
             msg.to_flat_scheme(global_dir)
         for info in self.proto_infos:
             msg = info.get_message()
-            log("export flat file:", msg.get_proto_file_name())
+            log("export flat proto file success:", msg.get_proto_file_name())
             msg.to_flat_scheme(proto_dir)
 
     def export_script(self):
@@ -198,17 +207,22 @@ class Exporter:
             self.export_flat_script_item(msg, script_out, folder)
 
     def export_script_item(self, msg, script_out, out_folder):
-        log("generate protobuff script :", msg.get_proto_name())
         cmd = self.get_protoc_cmd(msg, script_out, out_folder)
+        log("excute protobuf cmd:", cmd)
         os.system(cmd)
+        log("generate protobuf script success:", msg.get_proto_name())
+
 
     def export_flat_script_item(self, msg, script_out, out_folder):
-        log("generate flatbuff script :", msg.get_proto_name())
         cmd = self.get_flat_cmd(msg, script_out, out_folder)
+        log("excute flatbuffer cmd:", cmd)
         os.system(cmd)
+        log("generate flat buffer script success:", msg.get_proto_name())
+
 
     def get_protoc_cmd(self, msg, script_out, out_folder):
-        return 'protoc --%s=%s/ %s/%s' % (script_out, out_folder, script_exporter.get_export_proto_folder(), msg.get_proto_file_name())
+        return 'protoc --%s=%s/ %s/%s' % (
+            script_out, out_folder, script_exporter.get_export_proto_folder(), msg.get_proto_file_name())
 
     def get_flat_cmd(self, msg, script_out, out_folder):
         '''
@@ -220,7 +234,7 @@ class Exporter:
         '''
         cmd = 'flatc --%s --bfbs-comments -o %s %s/%s --gen-onefile' % (
             script_out, out_folder, get_export_global_flat_folder(), msg.get_flat_buffer_proto_file_name())
-        print(cmd)
+        # log(cmd)
         # cmd = 'flatc --%s -n %s --gen-onefile' % ('csharp', msg.get_flat_buffer_proto_file_name())
         return cmd
 
@@ -284,7 +298,7 @@ class Exporter:
             json_file = json_dir + '/' + file_name + '.json'
             fbs = info.get_flat_buffer_proto_file_name()
             cmd = "flatc --binary -o %s %s/%s %s" % (out_folder, get_export_global_flat_folder(), fbs, json_file)
-            print(cmd)
+            log("excute flat cmd："+ cmd)
             os.system(cmd)
         pass
 
@@ -303,51 +317,57 @@ class Exporter:
             return ProtoInfo(msg, obj, False)
 
     def build_item_proto(self, proto_name, sheet):
-        try:
-            msg = Message(proto_name, self.name_space, self.suffix, None, True)
-            msg.add_global_msg(self.global_msgs)
-            row_des, row_types, row_names, row_rules = script_exporter.get_list_table_title(sheet)
-            filed_names = collections.OrderedDict()
-            filed_types = collections.OrderedDict()
-            ### record fileds
-            for index, value in enumerate(row_names):
-                filed_name = utility.strip_filed(value)
-                if index < len(row_types):
-                    filed_type = utility.strip_filed(row_types[index])
-                    if filed_name.isalpha and len(utility.strip_filed(filed_name)) > 0:
-                        if is_match_rules(sheet.name, filed_name, row_rules[index]):
-                            filed_names[index] = filed_name
-                            filed_types[index] = filed_type
-                            filed_des = row_des[index] if index < len(row_des) else filed_name
+        msg = Message(proto_name, self.name_space, self.suffix, None, True)
+        msg.add_global_msg(self.global_msgs)
+        row_des, row_types, row_names, row_rules = script_exporter.get_list_table_title(sheet)
+        filed_names = collections.OrderedDict()
+        filed_types = collections.OrderedDict()
+        ### record fileds
+        for index, value in enumerate(row_names):
+            filed_name = utility.strip_filed(value)
+            if index < len(row_types):
+                filed_type = utility.strip_filed(row_types[index])
+                if filed_name.isalpha and len(filed_name) > 0 and len(filed_type) > 0:
+                    if is_match_rules(sheet.name, filed_name, row_rules[index]):
+                        filed_names[index] = filed_name
+                        filed_types[index] = filed_type
+                        filed_des = row_des[index] if index < len(row_des) else filed_name
+                        try:
                             msg.add_filed(filed_name, filed_type, filed_des)
+                        except Exception as e:
+                            log_error("export sheet fail: %s %s %s %s "% (sheet.name, filed_name, filed_type,filed_des))
+                            raise ValueError(e)
 
-            ### record datas
-            export_obj_dic = collections.OrderedDict()
-            export_obj = []
-            space_row_count = 0
-            for row_index in range(4, sheet.nrows):
-                row_values = sheet.row_values(row_index)
-                first_text = str(row_values[0]).strip()
+        ### record datas
+        export_obj_dic = collections.OrderedDict()
+        export_obj = []
+        space_row_count = 0
+        for row_index in range(4, sheet.nrows):
+            row_values = sheet.row_values(row_index)
+            first_text = str(row_values[0]).strip()
 
-                if utility.is_null_or_empty(first_text):
-                    space_row_count += 1
-                    if space_row_count >= 3:
-                        break;
-                else:
-                    space_row_count = 0
-                    if first_text[0] == '#':
-                        continue
-                    item_obj = collections.OrderedDict()
-                    for key, value in filed_names.items():
-                        filed_name = value
-                        filed_type = filed_types[key]
-                        filed_value = row_values[key] if len(row_values) > key else ''
+            if utility.is_null_or_empty(first_text):
+                space_row_count += 1
+                if space_row_count >= 3:
+                    break;
+            else:
+                space_row_count = 0
+                if first_text[0] == '#':
+                    continue
+                item_obj = collections.OrderedDict()
+                for key, value in filed_names.items():
+                    filed_name = value
+                    filed_type = filed_types[key]
+                    filed_value = row_values[key] if len(row_values) > key else ''
+                    try:
                         msg.record_internal_filed(item_obj, filed_name, filed_type, filed_value)
-                    export_obj.append(item_obj)
-            export_obj_dic[msg.get_name()] = export_obj
-            return msg, export_obj_dic
-        except Exception as e:
-            raise e
+                    except Exception as e:
+                        log_error("export sheet fail: %s %s %s %s " % (sheet.name, filed_name, filed_type, filed_value))
+                        raise ValueError(e)
+                export_obj.append(item_obj)
+        export_obj_dic[msg.get_name()] = export_obj
+        return msg, export_obj_dic
+
 
     def build_global_proto(self, proto_name, sheet, sheet_tile_info):
         try:
@@ -358,7 +378,8 @@ class Exporter:
             for filed_index in range(1, sheet.nrows):
                 row = sheet.row_values(filed_index)
                 if not script_exporter.is_ignore_row(row):
-                    filed_name, filed_type, filed_value, filed_des, filed_rule = script_exporter.get_global_table_title(row, sheet_tile_info)
+                    filed_name, filed_type, filed_value, filed_des, filed_rule = script_exporter.get_global_table_title(
+                        row, sheet_tile_info)
                     if not filed_name and not filed_value:
                         space_row_count += 1
                         if space_row_count >= script_exporter.SheetRowMaxSpaceCount:
@@ -376,12 +397,11 @@ class Exporter:
 
     def save_to_json(self, out_file_name, obj):
         file_name = out_file_name + '.json'
-        log("save json data :", file_name)
+        log("export json data success:", file_name)
         value = script_exporter.get_json_data(obj)
         with codecs.open(file_name, 'w', 'utf-8') as f:
             f.write(value)
         # print("md5:" + utility.get_file_md5(file_name))
-
 
     def save_to_lua(self, out_dir, info):
         """
@@ -392,12 +412,12 @@ class Exporter:
         file_name = info.get_proto_name()
         lua_file = out_dir + '/' + file_name + '.lua'
         obj = info.get_value()
-        log("save lua data :", lua_file)
         lua_data = script_exporter.get_lua_data(obj)
         lua_str = "".join(lua_data)
         with codecs.open(lua_file, 'w', 'utf-8') as f:
             f.write('---@type %s\n' % file_name)
             f.write('local %s = %s\n%s %s' % (file_name, lua_str, 'return', file_name))
+            log("export lua data success :", lua_file)
         # print("md5:" + utility.get_file_md5(lua_file))
 
     def save_to_lua_list(self, out_dir, info):
@@ -421,6 +441,7 @@ class Exporter:
             lua_str.add_line("return %s" % file_name)
         with codecs.open(lua_file, 'w', 'utf-8') as f:
             f.write(lua_str.get_value())
+            log("export new lua data success :", lua_file)
             # f.write()
         # print("md5:" + utility.get_file_md5(lua_file))
 
@@ -478,7 +499,7 @@ class Exporter:
             log("save protobuf data :", file_name)
             with codecs.open(file_name, 'wb') as f:
                 f.write(proto.SerializeToString())
-            print("md5:" + utility.get_file_md5(file_name))
+            log("md5:" + utility.get_file_md5(file_name))
         else:
             raise ValueError('export to protobuf error! proto:' + py_file)
 
@@ -653,9 +674,9 @@ class Message:
         :return:
         """
         file_name = ('%s/' % (out_dir) if len(out_dir) > 0 else '') + self.get_flat_buffer_proto_file_name()
-        log(file_name)
         with codecs.open(file_name, 'w', 'utf-8') as f:
             f.write(self.get_full_flat_scheme())
+            log("export flat buff scheme file success:" + file_name)
 
     def to_lua_api(self, out_dir=''):
         list_sheet_api = self.get_list_lua_api()
@@ -663,18 +684,21 @@ class Message:
         if list_sheet_api:
             with codecs.open(file_name, 'w', 'utf-8') as f:
                 f.write(list_sheet_api)
+                log("export lua api file success:" + file_name)
 
             template_api_name = self.name + self.suffix
             file_name = ('%s/' % (out_dir) if len(out_dir) > 0 else '') + template_api_name + '.lua'
 
         with codecs.open(file_name, 'w', 'utf-8') as f:
             f.write(self.get_msg_lua_api())
+            log("export lua api file success:" + file_name)
 
         file_name = ('%s/' % (out_dir) if len(out_dir) > 0 else '') + self.get_proto_name() + '.'
         for msg in self.child_msgs:
             child_file_name = file_name + msg.get_proto_name() + '.lua'
             with codecs.open(child_file_name, 'w', 'utf-8') as f:
                 f.write(msg.get_msg_lua_api())
+                log("export lua api file success:" + child_file_name)
 
     def get_class_info(self):
         info = []
@@ -823,11 +847,13 @@ class Message:
         all_msgs = collections.OrderedDict()
         for msg in self.get_import_msgs():
             if all_msgs.__contains__(msg.get_proto_name()):
-                raise ValueError("%s is already add in msg,may be define is same Name!!!" % msg.get_proto_name())
+                raise ValueError(" file: %s-%s is already add in other ,may be define is same Name!!!" % (
+                    self.name, msg.get_proto_name()))
             all_msgs[msg.get_proto_name()] = msg
         for msg in self.child_msgs:
             if all_msgs.__contains__(msg.get_proto_name()):
-                raise ValueError("%s is already add in msg,may be define is same Name!!!" % msg.get_proto_name())
+                raise ValueError(" file: %s - %s is already add in this file ,may be define is same Name!!!" % (
+                    self.name, msg.get_proto_name()))
             all_msgs[msg.get_proto_name()] = msg
         return all_msgs
 
