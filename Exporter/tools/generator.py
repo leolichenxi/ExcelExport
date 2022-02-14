@@ -73,7 +73,7 @@ def get_export_global_flat_folder():
 
 
 def is_match_rules(sheet_name, filed_name, rules):
-    return rule_handler.is_match_rules(sheet_name,filed_name,rules);
+    return rule_handler.is_match_rules(sheet_name, filed_name, rules);
 
 
 class Exporter:
@@ -212,13 +212,11 @@ class Exporter:
         os.system(cmd)
         log("generate protobuf script success:", msg.get_proto_name())
 
-
     def export_flat_script_item(self, msg, script_out, out_folder):
         cmd = self.get_flat_cmd(msg, script_out, out_folder)
         log("excute flatbuffer cmd:", cmd)
         os.system(cmd)
         log("generate flat buffer script success:", msg.get_proto_name())
-
 
     def get_protoc_cmd(self, msg, script_out, out_folder):
         return 'protoc --%s=%s/ %s/%s' % (
@@ -298,7 +296,7 @@ class Exporter:
             json_file = json_dir + '/' + file_name + '.json'
             fbs = info.get_flat_buffer_proto_file_name()
             cmd = "flatc --binary -o %s %s/%s %s" % (out_folder, get_export_global_flat_folder(), fbs, json_file)
-            log("excute flat cmd："+ cmd)
+            log("excute flat cmd：" + cmd)
             os.system(cmd)
         pass
 
@@ -317,6 +315,7 @@ class Exporter:
             return ProtoInfo(msg, obj, False)
 
     def build_item_proto(self, proto_name, sheet):
+        log("build list sheet :" + sheet.name)
         msg = Message(proto_name, self.name_space, self.suffix, None, True)
         msg.add_global_msg(self.global_msgs)
         row_des, row_types, row_names, row_rules = script_exporter.get_list_table_title(sheet)
@@ -335,7 +334,7 @@ class Exporter:
                         try:
                             msg.add_filed(filed_name, filed_type, filed_des)
                         except Exception as e:
-                            log_error("export sheet fail: %s %s %s %s "% (sheet.name, filed_name, filed_type,filed_des))
+                            log_error("export sheet fail: %s %s %s %s " % (sheet.name, filed_name, filed_type, filed_des))
                             raise ValueError(e)
 
         ### record datas
@@ -368,8 +367,8 @@ class Exporter:
         export_obj_dic[msg.get_name()] = export_obj
         return msg, export_obj_dic
 
-
     def build_global_proto(self, proto_name, sheet, sheet_tile_info):
+        log("build single sheet :" + sheet.name)
         try:
             msg = Message(proto_name, self.name_space, self.suffix, None, False)  # 创建一个Message Proto
             msg.add_global_msg(self.global_msgs)
@@ -390,10 +389,9 @@ class Exporter:
                         if is_match_rules(sheet.name, filed_name, filed_rule):
                             msg.add_filed(filed_name, filed_type, filed_des)
                             msg.record_internal_filed(export_obj, filed_name, filed_type, filed_value)
-
             return msg, export_obj
         except Exception as e:
-            raise e
+            raise ValueError(e)
 
     def save_to_json(self, out_file_name, obj):
         file_name = out_file_name + '.json'

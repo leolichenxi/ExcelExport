@@ -236,11 +236,17 @@ def get_global_table_title(row, sheet_tile_info):
 
 
 def get_list_table_title(sheet):
-    row_des = sheet.row_values(Index_Item_Des)
-    row_types = sheet.row_values(Index_Item_Type)
-    row_names = sheet.row_values(Index_Item_Name)
-    row_rules = sheet.row_values(Index_Item_Rule)
-    return row_des, row_types, row_names, row_rules
+    try:
+        row_des = sheet.row_values(Index_Item_Des)
+        row_types = sheet.row_values(Index_Item_Type)
+        row_names = sheet.row_values(Index_Item_Name)
+        row_rules = [""]
+        if sheet.nrows > Index_Item_Rule :
+            sheet.row_values(Index_Item_Rule)
+        return row_des, row_types, row_names, row_rules
+    except Exception as e:
+        utility.log_error("export sheet fail: %s " % (sheet.name))
+        raise ValueError(e)
 
 
 def get_import_proto_define(msg_name):

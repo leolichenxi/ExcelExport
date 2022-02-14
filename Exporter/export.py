@@ -52,6 +52,12 @@ Suffix = "Template"
 
 
 if __name__ == '__main__':
-    tools.generator.generator(export_files, out_protobuf_script_formats, out_flat_script_formats, out_data_formats, NameSpace, Suffix)
-    os.system("pause")
+    try:
+        tools.generator.generator(export_files, out_protobuf_script_formats, out_flat_script_formats, out_data_formats,
+                                  NameSpace, Suffix)
+    except Exception as e:
+        os.system("pause")
+        raise ValueError(e)
+
+    # os.system("pause")
     # copyconfig.copy(out_data_formats, out_script_formats, out_config_path, out_script_path)
