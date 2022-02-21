@@ -5,7 +5,7 @@ local TestTableArraysTemplateFieldsIndex ={
   born_position = 3,
   TestTypes = 4,
   LinkId = 5,
-  Model = 6,
+  ModeL = 6,
   Icon = 7,
   MachineTypes = 8,
   MapType = 9,
@@ -25,10 +25,10 @@ local TestTableArraysTemplateCustom ={
 }
 local T = {}
 function T.T1()
-  return {1,{2,1,3},nil,nil,1,"hero_chushi","chushi",nil,"222.0"}
+  return {1,{2,1,3},{1.0,0,3.0},nil,1,"hero_chushi","chushi",nil,"222.0"}
 end
 function T.T2()
-  return {2,{2,1,4},nil,{{nil,2},{{1},3}},1,"hero_chushi","chushi",{"防御"},"平原"}
+  return {2,{2,1,4},nil,{{nil,2},{{1},2}},1,"hero_chushi","chushi",{"防御"},"平原"}
 end
 function T.T3()
   return {3,{2,1,5},nil,{{{1},2},{{1},4}},1,"hero_chushi","chushi",{"防御"},"平原"}

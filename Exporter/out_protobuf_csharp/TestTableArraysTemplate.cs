@@ -29,7 +29,7 @@ namespace Config {
             "c1RlbXBsYXRlEgoKAklkGAEgASgFEg8KB1dlYXBvbnMYAiADKAUSIgoNYm9y",
             "bl9wb3NpdGlvbhgDIAEoCzILLlBvc2l0aW9uM2QSPAoJVGVzdFR5cGVzGAQg",
             "AygLMikuQ29uZmlnLlRlc3RUYWJsZUFycmF5c1RlbXBsYXRlLlRlc3RUeXBl",
-            "XxIOCgZMaW5rSWQYBSABKAUSDQoFTW9kZWwYBiABKAkSDAoESWNvbhgHIAEo",
+            "XxIOCgZMaW5rSWQYBSABKAUSDQoFTW9kZUwYBiABKAkSDAoESWNvbhgHIAEo",
             "CRIUCgxNYWNoaW5lVHlwZXMYCCADKAkSDwoHTWFwVHlwZRgJIAEoCRomCglU",
             "ZXN0VHlwZV8SDQoFdHlwZXMYASADKAUSCgoCaWQYAiABKAUiVwobVGVzdFRh",
             "YmxlQXJyYXlzVGVtcGxhdGVMaXN0EjgKD1Rlc3RUYWJsZUFycmF5cxgBIAMo",
@@ -37,7 +37,7 @@ namespace Config {
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { global::Position3DReflection.Descriptor, },
           new pbr::GeneratedClrTypeInfo(null, null, new pbr::GeneratedClrTypeInfo[] {
-            new pbr::GeneratedClrTypeInfo(typeof(global::Config.TestTableArraysTemplate), global::Config.TestTableArraysTemplate.Parser, new[]{ "Id", "Weapons", "BornPosition", "TestTypes", "LinkId", "Model", "Icon", "MachineTypes", "MapType" }, null, null, null, new pbr::GeneratedClrTypeInfo[] { new pbr::GeneratedClrTypeInfo(typeof(global::Config.TestTableArraysTemplate.Types.TestType_), global::Config.TestTableArraysTemplate.Types.TestType_.Parser, new[]{ "Types_", "Id" }, null, null, null, null)}),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Config.TestTableArraysTemplate), global::Config.TestTableArraysTemplate.Parser, new[]{ "Id", "Weapons", "BornPosition", "TestTypes", "LinkId", "ModeL", "Icon", "MachineTypes", "MapType" }, null, null, null, new pbr::GeneratedClrTypeInfo[] { new pbr::GeneratedClrTypeInfo(typeof(global::Config.TestTableArraysTemplate.Types.TestType_), global::Config.TestTableArraysTemplate.Types.TestType_.Parser, new[]{ "Types_", "Id" }, null, null, null, null)}),
             new pbr::GeneratedClrTypeInfo(typeof(global::Config.TestTableArraysTemplateList), global::Config.TestTableArraysTemplateList.Parser, new[]{ "TestTableArrays" }, null, null, null, null)
           }));
     }
@@ -79,7 +79,7 @@ namespace Config {
       bornPosition_ = other.bornPosition_ != null ? other.bornPosition_.Clone() : null;
       testTypes_ = other.testTypes_.Clone();
       linkId_ = other.linkId_;
-      model_ = other.model_;
+      modeL_ = other.modeL_;
       icon_ = other.icon_;
       machineTypes_ = other.machineTypes_.Clone();
       mapType_ = other.mapType_;
@@ -159,17 +159,17 @@ namespace Config {
       }
     }
 
-    /// <summary>Field number for the "Model" field.</summary>
-    public const int ModelFieldNumber = 6;
-    private string model_ = "";
+    /// <summary>Field number for the "ModeL" field.</summary>
+    public const int ModeLFieldNumber = 6;
+    private string modeL_ = "";
     /// <summary>
     /// 切片
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public string Model {
-      get { return model_; }
+    public string ModeL {
+      get { return modeL_; }
       set {
-        model_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
+        modeL_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
       }
     }
 
@@ -232,7 +232,7 @@ namespace Config {
       if (!object.Equals(BornPosition, other.BornPosition)) return false;
       if(!testTypes_.Equals(other.testTypes_)) return false;
       if (LinkId != other.LinkId) return false;
-      if (Model != other.Model) return false;
+      if (ModeL != other.ModeL) return false;
       if (Icon != other.Icon) return false;
       if(!machineTypes_.Equals(other.machineTypes_)) return false;
       if (MapType != other.MapType) return false;
@@ -247,7 +247,7 @@ namespace Config {
       if (bornPosition_ != null) hash ^= BornPosition.GetHashCode();
       hash ^= testTypes_.GetHashCode();
       if (LinkId != 0) hash ^= LinkId.GetHashCode();
-      if (Model.Length != 0) hash ^= Model.GetHashCode();
+      if (ModeL.Length != 0) hash ^= ModeL.GetHashCode();
       if (Icon.Length != 0) hash ^= Icon.GetHashCode();
       hash ^= machineTypes_.GetHashCode();
       if (MapType.Length != 0) hash ^= MapType.GetHashCode();
@@ -281,9 +281,9 @@ namespace Config {
         output.WriteRawTag(40);
         output.WriteInt32(LinkId);
       }
-      if (Model.Length != 0) {
+      if (ModeL.Length != 0) {
         output.WriteRawTag(50);
-        output.WriteString(Model);
+        output.WriteString(ModeL);
       }
       if (Icon.Length != 0) {
         output.WriteRawTag(58);
@@ -317,9 +317,9 @@ namespace Config {
         output.WriteRawTag(40);
         output.WriteInt32(LinkId);
       }
-      if (Model.Length != 0) {
+      if (ModeL.Length != 0) {
         output.WriteRawTag(50);
-        output.WriteString(Model);
+        output.WriteString(ModeL);
       }
       if (Icon.Length != 0) {
         output.WriteRawTag(58);
@@ -350,8 +350,8 @@ namespace Config {
       if (LinkId != 0) {
         size += 1 + pb::CodedOutputStream.ComputeInt32Size(LinkId);
       }
-      if (Model.Length != 0) {
-        size += 1 + pb::CodedOutputStream.ComputeStringSize(Model);
+      if (ModeL.Length != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeStringSize(ModeL);
       }
       if (Icon.Length != 0) {
         size += 1 + pb::CodedOutputStream.ComputeStringSize(Icon);
@@ -385,8 +385,8 @@ namespace Config {
       if (other.LinkId != 0) {
         LinkId = other.LinkId;
       }
-      if (other.Model.Length != 0) {
-        Model = other.Model;
+      if (other.ModeL.Length != 0) {
+        ModeL = other.ModeL;
       }
       if (other.Icon.Length != 0) {
         Icon = other.Icon;
@@ -434,7 +434,7 @@ namespace Config {
             break;
           }
           case 50: {
-            Model = input.ReadString();
+            ModeL = input.ReadString();
             break;
           }
           case 58: {
@@ -488,7 +488,7 @@ namespace Config {
             break;
           }
           case 50: {
-            Model = input.ReadString();
+            ModeL = input.ReadString();
             break;
           }
           case 58: {

@@ -4,6 +4,26 @@
 --- DateTime: 2021/8/25 15:47
 ---
 
+
+function table_read_only(t)
+    local temp= {}
+    local mt = {
+        __index = t,
+        __newindex = function(t, k, v)
+            error('error write to a read-only table with key = ' .. tostring(k)..', value ='..tostring(v))
+        end
+    }
+    setmetatable(temp, mt)
+    return temp
+end
+
+function NewConfig(data,tableIndexes)
+    local t = {}
+    for k,v in pairs(tableIndexes) do
+        t[k] = data[v]
+    end
+    return t
+end
 --local TestGlobalTemplate =  require ("Config/TestGlobalTemplate")
 --
 --local file = io.open("out_flatbuffer_bin/TestGlobalTemplate.bin")
@@ -60,37 +80,26 @@ Logger = require("Logger")
 --print(test:GetId())
 --print(test1:GetId())
 
-print("===========================")
-
 collectgarbage("collect")
 collectgarbage("stop")
 local a = collectgarbage("count")
-local TestTableArraysTemplate = require("TestTableArraysTemplate2")
-----local  TestGlobalTemplate = require("TestGlobalTemplate2")
---local  TestGlobalTemplate = require("TestTableArraysTemplate")
-local t = {
-}
---t.t1 = {70031,35,70,150,150,200,260,310,300,350,700,950,1150,1200,1000,1500,1500,1500,1550,1550,1005,9999,0}
---
---t.t1 = function()
---    return  {70031,35,70,150,150,200,260,310,300,350,700,950,1150,1200,1000,1500,1500,1500,1550,1550,1005,9999,0}
---end
---local t2 = {
---    [1] =t.t1
---}
+--local StoryCfgConfig = require("StoryCfgConfig1")
+--local y = StoryCfgConfig.GetConfig(99990041)
+--y.CacheCount = 100
+--y = table_read_only(y)
+--print(y.CacheCount )
+--print(y.CacheCount)
 
-t.t1 = {70031,35,70,150,150,200,260,310,300,350,700,950,1150,1200,1000,1500,1500,1500,1550,1550,1005,9999,0}
-
---table.remove(t, 1)
---t.t1 = nil
-collectgarbage("collect")
---
-
+ size =  {}
+size.a = 10
+size.aa = 10
+--size[1] = nil
+--size[2] = nil
+--table.remove(size,1)
+--table.remove(size,1)
 local b = collectgarbage("count")
-
-print(TestTableArraysTemplate.GetTableByIndex(5).born_position.y)
-
-
+local size = (b-a)
+print(size .. " mb")
 ---@type TestTableArraysTemplate
 --local TestTableArraysTemplate = require("TestTableArraysTemplate1")
 --

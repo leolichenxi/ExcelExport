@@ -32,13 +32,13 @@ public struct TestTableArraysTemplate : IFlatbufferObject
   public Config.TestType_? TestTypes(int j) { int o = __p.__offset(10); return o != 0 ? (Config.TestType_?)(new Config.TestType_()).__assign(__p.__indirect(__p.__vector(o) + j * 4), __p.bb) : null; }
   public int TestTypesLength { get { int o = __p.__offset(10); return o != 0 ? __p.__vector_len(o) : 0; } }
   public int LinkId { get { int o = __p.__offset(12); return o != 0 ? __p.bb.GetInt(o + __p.bb_pos) : (int)0; } }
-  public string Model { get { int o = __p.__offset(14); return o != 0 ? __p.__string(o + __p.bb_pos) : null; } }
+  public string ModeL { get { int o = __p.__offset(14); return o != 0 ? __p.__string(o + __p.bb_pos) : null; } }
 #if ENABLE_SPAN_T
-  public Span<byte> GetModelBytes() { return __p.__vector_as_span<byte>(14, 1); }
+  public Span<byte> GetModeLBytes() { return __p.__vector_as_span<byte>(14, 1); }
 #else
-  public ArraySegment<byte>? GetModelBytes() { return __p.__vector_as_arraysegment(14); }
+  public ArraySegment<byte>? GetModeLBytes() { return __p.__vector_as_arraysegment(14); }
 #endif
-  public byte[] GetModelArray() { return __p.__vector_as_array<byte>(14); }
+  public byte[] GetModeLArray() { return __p.__vector_as_array<byte>(14); }
   public string Icon { get { int o = __p.__offset(16); return o != 0 ? __p.__string(o + __p.bb_pos) : null; } }
 #if ENABLE_SPAN_T
   public Span<byte> GetIconBytes() { return __p.__vector_as_span<byte>(16, 1); }
@@ -62,7 +62,7 @@ public struct TestTableArraysTemplate : IFlatbufferObject
       Offset<Position3d> born_positionOffset = default(Offset<Position3d>),
       VectorOffset test_typesOffset = default(VectorOffset),
       int link_id = 0,
-      StringOffset modelOffset = default(StringOffset),
+      StringOffset mode_lOffset = default(StringOffset),
       StringOffset iconOffset = default(StringOffset),
       VectorOffset machine_typesOffset = default(VectorOffset),
       StringOffset map_typeOffset = default(StringOffset)) {
@@ -70,7 +70,7 @@ public struct TestTableArraysTemplate : IFlatbufferObject
     TestTableArraysTemplate.AddMapType(builder, map_typeOffset);
     TestTableArraysTemplate.AddMachineTypes(builder, machine_typesOffset);
     TestTableArraysTemplate.AddIcon(builder, iconOffset);
-    TestTableArraysTemplate.AddModel(builder, modelOffset);
+    TestTableArraysTemplate.AddModeL(builder, mode_lOffset);
     TestTableArraysTemplate.AddLinkId(builder, link_id);
     TestTableArraysTemplate.AddTestTypes(builder, test_typesOffset);
     TestTableArraysTemplate.AddBornPosition(builder, born_positionOffset);
@@ -91,7 +91,7 @@ public struct TestTableArraysTemplate : IFlatbufferObject
   public static VectorOffset CreateTestTypesVectorBlock(FlatBufferBuilder builder, Offset<Config.TestType_>[] data) { builder.StartVector(4, data.Length, 4); builder.Add(data); return builder.EndVector(); }
   public static void StartTestTypesVector(FlatBufferBuilder builder, int numElems) { builder.StartVector(4, numElems, 4); }
   public static void AddLinkId(FlatBufferBuilder builder, int linkId) { builder.AddInt(4, linkId, 0); }
-  public static void AddModel(FlatBufferBuilder builder, StringOffset modelOffset) { builder.AddOffset(5, modelOffset.Value, 0); }
+  public static void AddModeL(FlatBufferBuilder builder, StringOffset modeLOffset) { builder.AddOffset(5, modeLOffset.Value, 0); }
   public static void AddIcon(FlatBufferBuilder builder, StringOffset iconOffset) { builder.AddOffset(6, iconOffset.Value, 0); }
   public static void AddMachineTypes(FlatBufferBuilder builder, VectorOffset machineTypesOffset) { builder.AddOffset(7, machineTypesOffset.Value, 0); }
   public static VectorOffset CreateMachineTypesVector(FlatBufferBuilder builder, StringOffset[] data) { builder.StartVector(4, data.Length, 4); for (int i = data.Length - 1; i >= 0; i--) builder.AddOffset(data[i].Value); return builder.EndVector(); }

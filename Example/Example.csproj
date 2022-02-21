@@ -10,6 +10,9 @@
   </ItemGroup>
 
   <ItemGroup>
+    <None Update="1.txt">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
     <None Update="json\TestGlobal2Template.json">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </None>

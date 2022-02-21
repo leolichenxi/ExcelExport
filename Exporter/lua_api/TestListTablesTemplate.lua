@@ -1,0 +1,2 @@
+---@class TestListTablesTemplate 
+---@field  TestListTables TestListTableTemplate[] @List 

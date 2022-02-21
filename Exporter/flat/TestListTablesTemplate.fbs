@@ -1,0 +1,9 @@
+attribute "priority";
+namespace Config;
+table TestListTablesTemplate {
+   key:string ; // Key
+}
+table TestListTablesTemplateList {
+   test_list_tables:[TestListTablesTemplate] ; // List
+}
+root_type TestListTablesTemplateList;

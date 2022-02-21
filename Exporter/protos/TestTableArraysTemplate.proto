@@ -7,7 +7,7 @@ message TestTableArraysTemplate {
    Position3d born_position = 3 ; // 出生位置
    repeated TestType_ TestTypes = 4 ; // 测试类型
    int32 LinkId = 5 ; // 
-   string Model = 6 ; // 切片
+   string ModeL = 6 ; // 切片
    string Icon = 7 ; // Icon
    repeated string MachineTypes = 8 ; // 机体类型
    string MapType = 9 ; // 地形适应

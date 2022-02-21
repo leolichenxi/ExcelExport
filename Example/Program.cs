@@ -7,7 +7,15 @@ namespace Example
     {
         static void Main(string[] args)
         {
+            string[] s = File.ReadAllLines("1.txt");
+            for (int i = 0; i < s.Length; i++)
+            {
+                Console.WriteLine("{" + s[i].Replace("|", "}{") + "}");
+                s[i] = "{" + s[i].Replace("|", "}{") + "}";
+            }
+            File.WriteAllLines("rs.txt", s);
 
+            return;
             TestJson();
             TestProtobuf();
 

@@ -8,11 +8,15 @@ local TestTableArraysTemplate = {
         1,
         3
       },
-      born_position = nil,
+      born_position = {
+        x = 1.0,
+        y = 0,
+        z = 3.0
+      },
       TestTypes = {
       },
       LinkId = 1,
-      Model = "hero_chushi",
+      ModeL = "hero_chushi",
       Icon = "chushi",
       MachineTypes = {
       },
@@ -36,11 +40,11 @@ local TestTableArraysTemplate = {
           types = {
             1
           },
-          id = 3
+          id = 2
         }
       },
       LinkId = 1,
-      Model = "hero_chushi",
+      ModeL = "hero_chushi",
       Icon = "chushi",
       MachineTypes = {
         "防御"
@@ -70,7 +74,7 @@ local TestTableArraysTemplate = {
         }
       },
       LinkId = 1,
-      Model = "hero_chushi",
+      ModeL = "hero_chushi",
       Icon = "chushi",
       MachineTypes = {
         "防御"
@@ -98,7 +102,7 @@ local TestTableArraysTemplate = {
         }
       },
       LinkId = 1,
-      Model = "hero_chushi",
+      ModeL = "hero_chushi",
       Icon = "chushi",
       MachineTypes = {
         "防御"
@@ -132,7 +136,7 @@ local TestTableArraysTemplate = {
         }
       },
       LinkId = 1,
-      Model = "hero_chushi",
+      ModeL = "hero_chushi",
       Icon = "chushi",
       MachineTypes = {
         "防御"
@@ -166,7 +170,7 @@ local TestTableArraysTemplate = {
         }
       },
       LinkId = 1,
-      Model = "hero_chushi",
+      ModeL = "hero_chushi",
       Icon = "chushi",
       MachineTypes = {
         "防御"
@@ -200,7 +204,7 @@ local TestTableArraysTemplate = {
         }
       },
       LinkId = 1,
-      Model = "hero_chushi",
+      ModeL = "hero_chushi",
       Icon = "chushi",
       MachineTypes = {
         "防御"
@@ -234,7 +238,7 @@ local TestTableArraysTemplate = {
         }
       },
       LinkId = 1,
-      Model = "hero_chushi",
+      ModeL = "hero_chushi",
       Icon = "chushi",
       MachineTypes = {
         "防御"
@@ -268,7 +272,7 @@ local TestTableArraysTemplate = {
         }
       },
       LinkId = 1,
-      Model = "hero_chushi",
+      ModeL = "hero_chushi",
       Icon = "chushi",
       MachineTypes = {
         "防御"
@@ -302,7 +306,7 @@ local TestTableArraysTemplate = {
         }
       },
       LinkId = 1,
-      Model = "hero_chushi",
+      ModeL = "hero_chushi",
       Icon = "chushi",
       MachineTypes = {
         "防御"

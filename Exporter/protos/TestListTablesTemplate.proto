@@ -1,0 +1,8 @@
+syntax = "proto3";
+package Config;
+message TestListTablesTemplate {
+   string key = 1 ; // Key
+}
+message TestListTablesTemplateList {
+   repeated TestListTablesTemplate TestListTables = 1 ; // List
+}

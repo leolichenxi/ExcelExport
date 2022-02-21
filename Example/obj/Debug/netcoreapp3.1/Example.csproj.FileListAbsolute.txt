@@ -18,3 +18,6 @@ F:\MyGitHub\ExcelExport\Example\bin\Debug\netcoreapp3.1\out_json\TestTableArrays
 F:\MyGitHub\ExcelExport\Example\bin\Debug\netcoreapp3.1\out_protobuf\TestGlobal2Template.bytes
 F:\MyGitHub\ExcelExport\Example\bin\Debug\netcoreapp3.1\out_protobuf\TestGlobalTemplate.bytes
 F:\MyGitHub\ExcelExport\Example\bin\Debug\netcoreapp3.1\out_protobuf\TestTableArraysTemplate.bytes
+F:\MyGitHub\ExcelExport\Example\bin\Debug\netcoreapp3.1\1.txt
+F:\MyGitHub\ExcelExport\Example\bin\Debug\netcoreapp3.1\TestGlobalTemplatelower.bin
+F:\MyGitHub\ExcelExport\Example\obj\Debug\netcoreapp3.1\Example.csproj.CoreCompileInputs.cache

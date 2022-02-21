@@ -82,7 +82,7 @@ function TestTableArraysTemplate_mt:LinkId()
     end
     return 0
 end
-function TestTableArraysTemplate_mt:Model()
+function TestTableArraysTemplate_mt:ModeL()
     local o = self.view:Offset(14)
     if o ~= 0 then
         return self.view:String(o + self.view.pos)
@@ -123,7 +123,7 @@ function TestTableArraysTemplate.AddBornPosition(builder, bornPosition) builder:
 function TestTableArraysTemplate.AddTestTypes(builder, testTypes) builder:PrependUOffsetTRelativeSlot(3, testTypes, 0) end
 function TestTableArraysTemplate.StartTestTypesVector(builder, numElems) return builder:StartVector(4, numElems, 4) end
 function TestTableArraysTemplate.AddLinkId(builder, linkId) builder:PrependInt32Slot(4, linkId, 0) end
-function TestTableArraysTemplate.AddModel(builder, model) builder:PrependUOffsetTRelativeSlot(5, model, 0) end
+function TestTableArraysTemplate.AddModeL(builder, modeL) builder:PrependUOffsetTRelativeSlot(5, modeL, 0) end
 function TestTableArraysTemplate.AddIcon(builder, icon) builder:PrependUOffsetTRelativeSlot(6, icon, 0) end
 function TestTableArraysTemplate.AddMachineTypes(builder, machineTypes) builder:PrependUOffsetTRelativeSlot(7, machineTypes, 0) end
 function TestTableArraysTemplate.StartMachineTypesVector(builder, numElems) return builder:StartVector(4, numElems, 4) end

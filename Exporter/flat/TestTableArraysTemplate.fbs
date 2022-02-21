@@ -7,7 +7,7 @@ table TestTableArraysTemplate {
    born_position:Position3d ; // 出生位置
    test_types:[TestType_] ; // 测试类型
    link_id:int32 ; // 
-   model:string ; // 切片
+   mode_l:string ; // 切片
    icon:string ; // Icon
    machine_types:[string] ; // 机体类型
    map_type:string ; // 地形适应
