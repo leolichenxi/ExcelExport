@@ -242,7 +242,7 @@ def get_list_table_title(sheet):
         row_names = sheet.row_values(Index_Item_Name)
         row_rules = [""]
         if sheet.nrows > Index_Item_Rule :
-            sheet.row_values(Index_Item_Rule)
+            row_rules = sheet.row_values(Index_Item_Rule)
         return row_des, row_types, row_names, row_rules
     except Exception as e:
         utility.log_error("export sheet fail: %s " % (sheet.name))

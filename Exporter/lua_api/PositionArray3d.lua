@@ -1,4 +1,0 @@
----@class PositionArray3d 
----@field  xs float[] @x 
----@field  ys float[] @y 
----@field  zs float[] @z 

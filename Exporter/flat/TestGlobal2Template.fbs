@@ -1,5 +1,5 @@
 attribute "priority";
-namespace Config;
+namespace Logic.Config;
 table TestGlobal2Template {
    test_float:float ; // 测试float类型
 }

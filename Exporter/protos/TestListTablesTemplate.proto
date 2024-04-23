@@ -1,5 +1,5 @@
 syntax = "proto3";
-package Config;
+package Logic.Config;
 message TestListTablesTemplate {
    string key = 1 ; // Key
 }

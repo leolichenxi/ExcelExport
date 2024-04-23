@@ -1,5 +1,5 @@
 syntax = "proto3";
-package Config;
+package Logic.Config;
 message TestGlobal2Template {
    float TestFloat = 1 ; // 测试float类型
 }

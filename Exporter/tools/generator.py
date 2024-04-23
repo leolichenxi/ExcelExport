@@ -35,7 +35,6 @@ import tools.script_exporter as script_exporter
 import tools.string_script as string_script
 import tools.custom_filed as custom_filed
 import tools.rule_handler as rule_handler
-
 # Define Const Files
 
 OutDir_Protos = 'protos'  # 导出的proto文件所在的文件夹
@@ -46,6 +45,14 @@ OutDir_Lua_Api = 'lua_api'  # 导出的LuaAPI文件所在的文件夹
 ListSuffix = 'List'  # 列表类型尾缀
 LogEnable = True
 
+## 后续适配mac
+ProtocPath = "tools/protoc/win64/bin/protoc.exe"
+ProtocPath = os.path.abspath(ProtocPath)
+print(ProtocPath)
+
+FlatcPath = "tools/flatc/flatc.exe"
+FlatcPath = os.path.abspath(FlatcPath)
+print(FlatcPath)
 
 # 由于日志基本配置中级别设置为DEBUG，所以一下打印信息将会全部显示在控制台上
 
@@ -104,10 +111,9 @@ class Exporter:
         if not os.path.exists(file):
             log("if need a custom type,create a custom.xlsx file. define their")
             return
-
         excel_info = xlrd.open_workbook(file)
         sheet = excel_info.sheets()[0]
-        msgs = Message("GlobalDefine", '', '', None, False)
+        msgs = Message("GlobalDefine", self.name_space, self.suffix, None, False)
         for index in range(1, sheet.nrows):
             row = sheet.row_values(index)
             if not script_exporter.is_ignore_row(row):
@@ -208,18 +214,19 @@ class Exporter:
 
     def export_script_item(self, msg, script_out, out_folder):
         cmd = self.get_protoc_cmd(msg, script_out, out_folder)
-        log("excute protobuf cmd:", cmd)
-        os.system(cmd)
+        log("execute protobuf cmd:", cmd)
+        x = os.system(cmd)
+        print(x)
         log("generate protobuf script success:", msg.get_proto_name())
 
     def export_flat_script_item(self, msg, script_out, out_folder):
         cmd = self.get_flat_cmd(msg, script_out, out_folder)
-        log("excute flatbuffer cmd:", cmd)
+        log("execute flatbuffer cmd:", cmd)
         os.system(cmd)
         log("generate flat buffer script success:", msg.get_proto_name())
 
     def get_protoc_cmd(self, msg, script_out, out_folder):
-        return 'protoc --%s=%s/ %s/%s' % (
+        return '%s --%s=%s/ %s/%s' % (ProtocPath,
             script_out, out_folder, script_exporter.get_export_proto_folder(), msg.get_proto_file_name())
 
     def get_flat_cmd(self, msg, script_out, out_folder):
@@ -230,8 +237,7 @@ class Exporter:
         :param out_folder:
         :return:
         '''
-        cmd = 'flatc --%s --bfbs-comments -o %s %s/%s --gen-onefile' % (
-            script_out, out_folder, get_export_global_flat_folder(), msg.get_flat_buffer_proto_file_name())
+        cmd = '%s --%s --bfbs-comments -o %s %s/%s --gen-onefile' % (FlatcPath, script_out, out_folder, get_export_global_flat_folder(), msg.get_flat_buffer_proto_file_name())
         # log(cmd)
         # cmd = 'flatc --%s -n %s --gen-onefile' % ('csharp', msg.get_flat_buffer_proto_file_name())
         return cmd

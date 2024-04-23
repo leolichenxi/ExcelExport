@@ -1,5 +1,5 @@
 syntax = "proto3";
-package Config;
+package Logic.Config;
 import "protos/Position3d.proto";
 message TestTableArraysTemplate {
    int32 Id = 1 ; // 英雄ID

@@ -1,7 +1,7 @@
 include "Position3d.fbs";
 include "PositionArray3d.fbs";
 attribute "priority";
-namespace Config;
+namespace Logic.Config;
 table TestGlobalTemplate {
    test_int:int32 ; // 测试int类型
    test_string_arrays:[string] ; // 测试string[]类型

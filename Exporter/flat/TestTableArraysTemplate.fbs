@@ -1,6 +1,6 @@
 include "Position3d.fbs";
 attribute "priority";
-namespace Config;
+namespace Logic.Config;
 table TestTableArraysTemplate {
    id:int32 ; // 英雄ID
    weapons:[int32] ; // 武器(武器Id)

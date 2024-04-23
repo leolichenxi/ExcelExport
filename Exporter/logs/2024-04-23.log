@@ -1,0 +1,1004 @@
+[36m[2024-04-23 14:38:21,688] [utility.py:91] [utility:__console] [DEBUG]- (('build single sheet :测试全局表|TestGlobal',),)[0m
+[36m[2024-04-23 14:38:21,691] [utility.py:91] [utility:__console] [DEBUG]- (('build single sheet :测试全局表2|TestGlobal2',),)[0m
+[36m[2024-04-23 14:38:21,692] [utility.py:91] [utility:__console] [DEBUG]- (('build list sheet :测试列表3|TestListTable',),)[0m
+[36m[2024-04-23 14:38:21,699] [utility.py:91] [utility:__console] [DEBUG]- (('build list sheet :测试单表|TestTableArray',),)[0m
+[36m[2024-04-23 14:38:21,702] [utility.py:91] [utility:__console] [DEBUG]- (('export global protobuf proto file success:', 'Position3d.proto'),)[0m
+[36m[2024-04-23 14:38:21,704] [utility.py:91] [utility:__console] [DEBUG]- (('export global protobuf proto file success:', 'PositionArray3d.proto'),)[0m
+[36m[2024-04-23 14:38:21,705] [utility.py:91] [utility:__console] [DEBUG]- (('export global protobuf proto file success:', 'Position3dInt.proto'),)[0m
+[36m[2024-04-23 14:38:21,707] [utility.py:91] [utility:__console] [DEBUG]- (('export global protobuf proto file success:', 'CommonType.proto'),)[0m
+[36m[2024-04-23 14:38:21,708] [utility.py:91] [utility:__console] [DEBUG]- (('export protobuf proto file success:', 'TestGlobalTemplate.proto'),)[0m
+[36m[2024-04-23 14:38:21,710] [utility.py:91] [utility:__console] [DEBUG]- (('export protobuf proto file success:', 'TestGlobal2Template.proto'),)[0m
+[36m[2024-04-23 14:38:21,711] [utility.py:91] [utility:__console] [DEBUG]- (('export protobuf proto file success:', 'TestListTablesTemplate.proto'),)[0m
+[36m[2024-04-23 14:38:21,714] [utility.py:91] [utility:__console] [DEBUG]- (('export protobuf proto file success:', 'TestTableArraysTemplate.proto'),)[0m
+[36m[2024-04-23 14:38:21,716] [utility.py:91] [utility:__console] [DEBUG]- (('execute protobuf cmd:', 'tools/protoc/win64/bin/protoc.exe --csharp_out=out_protobuf_csharp/ protos/Position3d.proto'),)[0m
+[36m[2024-04-23 14:38:21,745] [utility.py:91] [utility:__console] [DEBUG]- (('generate protobuf script success:', 'Position3d'),)[0m
+[36m[2024-04-23 14:38:21,747] [utility.py:91] [utility:__console] [DEBUG]- (('execute protobuf cmd:', 'tools/protoc/win64/bin/protoc.exe --csharp_out=out_protobuf_csharp/ protos/PositionArray3d.proto'),)[0m
+[36m[2024-04-23 14:38:21,776] [utility.py:91] [utility:__console] [DEBUG]- (('generate protobuf script success:', 'PositionArray3d'),)[0m
+[36m[2024-04-23 14:38:21,779] [utility.py:91] [utility:__console] [DEBUG]- (('execute protobuf cmd:', 'tools/protoc/win64/bin/protoc.exe --csharp_out=out_protobuf_csharp/ protos/Position3dInt.proto'),)[0m
+[36m[2024-04-23 14:38:21,807] [utility.py:91] [utility:__console] [DEBUG]- (('generate protobuf script success:', 'Position3dInt'),)[0m
+[36m[2024-04-23 14:38:21,811] [utility.py:91] [utility:__console] [DEBUG]- (('execute protobuf cmd:', 'tools/protoc/win64/bin/protoc.exe --csharp_out=out_protobuf_csharp/ protos/CommonType.proto'),)[0m
+[36m[2024-04-23 14:38:21,840] [utility.py:91] [utility:__console] [DEBUG]- (('generate protobuf script success:', 'CommonType'),)[0m
+[36m[2024-04-23 14:38:21,842] [utility.py:91] [utility:__console] [DEBUG]- (('execute protobuf cmd:', 'tools/protoc/win64/bin/protoc.exe --csharp_out=out_protobuf_csharp/ protos/TestGlobalTemplate.proto'),)[0m
+[36m[2024-04-23 14:38:21,871] [utility.py:91] [utility:__console] [DEBUG]- (('generate protobuf script success:', 'TestGlobalTemplate'),)[0m
+[36m[2024-04-23 14:38:21,874] [utility.py:91] [utility:__console] [DEBUG]- (('execute protobuf cmd:', 'tools/protoc/win64/bin/protoc.exe --csharp_out=out_protobuf_csharp/ protos/TestGlobal2Template.proto'),)[0m
+[36m[2024-04-23 14:38:21,902] [utility.py:91] [utility:__console] [DEBUG]- (('generate protobuf script success:', 'TestGlobal2Template'),)[0m
+[36m[2024-04-23 14:38:21,905] [utility.py:91] [utility:__console] [DEBUG]- (('execute protobuf cmd:', 'tools/protoc/win64/bin/protoc.exe --csharp_out=out_protobuf_csharp/ protos/TestListTablesTemplate.proto'),)[0m
+[36m[2024-04-23 14:38:21,934] [utility.py:91] [utility:__console] [DEBUG]- (('generate protobuf script success:', 'TestListTablesTemplate'),)[0m
+[36m[2024-04-23 14:38:21,937] [utility.py:91] [utility:__console] [DEBUG]- (('execute protobuf cmd:', 'tools/protoc/win64/bin/protoc.exe --csharp_out=out_protobuf_csharp/ protos/TestTableArraysTemplate.proto'),)[0m
+[36m[2024-04-23 14:38:21,967] [utility.py:91] [utility:__console] [DEBUG]- (('generate protobuf script success:', 'TestTableArraysTemplate'),)[0m
+[36m[2024-04-23 14:38:21,969] [utility.py:91] [utility:__console] [DEBUG]- (('export flat proto file success:', 'Position3d.proto'),)[0m
+[36m[2024-04-23 14:38:21,971] [utility.py:91] [utility:__console] [DEBUG]- (('export flat buff scheme file success:flat/Position3d.fbs',),)[0m
+[36m[2024-04-23 14:38:21,972] [utility.py:91] [utility:__console] [DEBUG]- (('export flat proto file success:', 'PositionArray3d.proto'),)[0m
+[36m[2024-04-23 14:38:21,974] [utility.py:91] [utility:__console] [DEBUG]- (('export flat buff scheme file success:flat/PositionArray3d.fbs',),)[0m
+[36m[2024-04-23 14:38:21,975] [utility.py:91] [utility:__console] [DEBUG]- (('export flat proto file success:', 'Position3dInt.proto'),)[0m
+[36m[2024-04-23 14:38:21,977] [utility.py:91] [utility:__console] [DEBUG]- (('export flat buff scheme file success:flat/Position3dInt.fbs',),)[0m
+[36m[2024-04-23 14:38:21,978] [utility.py:91] [utility:__console] [DEBUG]- (('export flat proto file success:', 'CommonType.proto'),)[0m
+[36m[2024-04-23 14:38:21,980] [utility.py:91] [utility:__console] [DEBUG]- (('export flat buff scheme file success:flat/CommonType.fbs',),)[0m
+[36m[2024-04-23 14:38:21,981] [utility.py:91] [utility:__console] [DEBUG]- (('export flat proto file success:', 'TestGlobalTemplate.proto'),)[0m
+[36m[2024-04-23 14:38:21,985] [utility.py:91] [utility:__console] [DEBUG]- (('export flat buff scheme file success:flat/TestGlobalTemplate.fbs',),)[0m
+[36m[2024-04-23 14:38:21,986] [utility.py:91] [utility:__console] [DEBUG]- (('export flat proto file success:', 'TestGlobal2Template.proto'),)[0m
+[36m[2024-04-23 14:38:21,989] [utility.py:91] [utility:__console] [DEBUG]- (('export flat buff scheme file success:flat/TestGlobal2Template.fbs',),)[0m
+[36m[2024-04-23 14:38:21,990] [utility.py:91] [utility:__console] [DEBUG]- (('export flat proto file success:', 'TestListTablesTemplate.proto'),)[0m
+[36m[2024-04-23 14:38:21,992] [utility.py:91] [utility:__console] [DEBUG]- (('export flat buff scheme file success:flat/TestListTablesTemplate.fbs',),)[0m
+[36m[2024-04-23 14:38:21,993] [utility.py:91] [utility:__console] [DEBUG]- (('export flat proto file success:', 'TestTableArraysTemplate.proto'),)[0m
+[36m[2024-04-23 14:38:21,994] [utility.py:91] [utility:__console] [DEBUG]- (('export flat buff scheme file success:flat/TestTableArraysTemplate.fbs',),)[0m
+[36m[2024-04-23 14:38:21,997] [utility.py:91] [utility:__console] [DEBUG]- (('execute flatbuffer cmd:', 'flatc --csharp --bfbs-comments -o out_flatbuffer_csharp flat/Position3d.fbs --gen-onefile'),)[0m
+[36m[2024-04-23 14:38:22,027] [utility.py:91] [utility:__console] [DEBUG]- (('generate flat buffer script success:', 'Position3d'),)[0m
+[36m[2024-04-23 14:38:22,028] [utility.py:91] [utility:__console] [DEBUG]- (('execute flatbuffer cmd:', 'flatc --csharp --bfbs-comments -o out_flatbuffer_csharp flat/PositionArray3d.fbs --gen-onefile'),)[0m
+[36m[2024-04-23 14:38:22,057] [utility.py:91] [utility:__console] [DEBUG]- (('generate flat buffer script success:', 'PositionArray3d'),)[0m
+[36m[2024-04-23 14:38:22,058] [utility.py:91] [utility:__console] [DEBUG]- (('execute flatbuffer cmd:', 'flatc --csharp --bfbs-comments -o out_flatbuffer_csharp flat/Position3dInt.fbs --gen-onefile'),)[0m
+[36m[2024-04-23 14:38:22,088] [utility.py:91] [utility:__console] [DEBUG]- (('generate flat buffer script success:', 'Position3dInt'),)[0m
+[36m[2024-04-23 14:38:22,089] [utility.py:91] [utility:__console] [DEBUG]- (('execute flatbuffer cmd:', 'flatc --csharp --bfbs-comments -o out_flatbuffer_csharp flat/CommonType.fbs --gen-onefile'),)[0m
+[36m[2024-04-23 14:38:22,120] [utility.py:91] [utility:__console] [DEBUG]- (('generate flat buffer script success:', 'CommonType'),)[0m
+[36m[2024-04-23 14:38:22,121] [utility.py:91] [utility:__console] [DEBUG]- (('execute flatbuffer cmd:', 'flatc --csharp --bfbs-comments -o out_flatbuffer_csharp flat/TestGlobalTemplate.fbs --gen-onefile'),)[0m
+[36m[2024-04-23 14:38:22,151] [utility.py:91] [utility:__console] [DEBUG]- (('generate flat buffer script success:', 'TestGlobalTemplate'),)[0m
+[36m[2024-04-23 14:38:22,153] [utility.py:91] [utility:__console] [DEBUG]- (('execute flatbuffer cmd:', 'flatc --csharp --bfbs-comments -o out_flatbuffer_csharp flat/TestGlobal2Template.fbs --gen-onefile'),)[0m
+[36m[2024-04-23 14:38:22,183] [utility.py:91] [utility:__console] [DEBUG]- (('generate flat buffer script success:', 'TestGlobal2Template'),)[0m
+[36m[2024-04-23 14:38:22,185] [utility.py:91] [utility:__console] [DEBUG]- (('execute flatbuffer cmd:', 'flatc --csharp --bfbs-comments -o out_flatbuffer_csharp flat/TestListTablesTemplate.fbs --gen-onefile'),)[0m
+[36m[2024-04-23 14:38:22,217] [utility.py:91] [utility:__console] [DEBUG]- (('generate flat buffer script success:', 'TestListTablesTemplate'),)[0m
+[36m[2024-04-23 14:38:22,218] [utility.py:91] [utility:__console] [DEBUG]- (('execute flatbuffer cmd:', 'flatc --csharp --bfbs-comments -o out_flatbuffer_csharp flat/TestTableArraysTemplate.fbs --gen-onefile'),)[0m
+[36m[2024-04-23 14:38:22,248] [utility.py:91] [utility:__console] [DEBUG]- (('generate flat buffer script success:', 'TestTableArraysTemplate'),)[0m
+[36m[2024-04-23 14:38:22,252] [utility.py:91] [utility:__console] [DEBUG]- (('export json data success:', 'out_json/TestGlobalTemplate.json'),)[0m
+[36m[2024-04-23 14:38:22,254] [utility.py:91] [utility:__console] [DEBUG]- (('export json data success:', 'out_json/TestGlobal2Template.json'),)[0m
+[36m[2024-04-23 14:38:22,256] [utility.py:91] [utility:__console] [DEBUG]- (('export json data success:', 'out_json/TestListTablesTemplate.json'),)[0m
+[36m[2024-04-23 14:38:22,258] [utility.py:91] [utility:__console] [DEBUG]- (('export json data success:', 'out_json/TestTableArraysTemplate.json'),)[0m
+[36m[2024-04-23 14:51:19,390] [utility.py:91] [utility:__console] [DEBUG]- (('build single sheet :测试全局表|TestGlobal',),)[0m
+[36m[2024-04-23 14:51:19,402] [utility.py:91] [utility:__console] [DEBUG]- (('build single sheet :测试全局表2|TestGlobal2',),)[0m
+[36m[2024-04-23 14:51:19,405] [utility.py:91] [utility:__console] [DEBUG]- (('build list sheet :测试列表3|TestListTable',),)[0m
+[36m[2024-04-23 14:51:19,413] [utility.py:91] [utility:__console] [DEBUG]- (('build list sheet :测试单表|TestTableArray',),)[0m
+[36m[2024-04-23 14:51:19,416] [utility.py:91] [utility:__console] [DEBUG]- (('export global protobuf proto file success:', 'Position3d.proto'),)[0m
+[36m[2024-04-23 14:51:19,418] [utility.py:91] [utility:__console] [DEBUG]- (('export global protobuf proto file success:', 'PositionArray3d.proto'),)[0m
+[36m[2024-04-23 14:51:19,420] [utility.py:91] [utility:__console] [DEBUG]- (('export global protobuf proto file success:', 'Position3dInt.proto'),)[0m
+[36m[2024-04-23 14:51:19,423] [utility.py:91] [utility:__console] [DEBUG]- (('export global protobuf proto file success:', 'CommonType.proto'),)[0m
+[36m[2024-04-23 14:51:19,428] [utility.py:91] [utility:__console] [DEBUG]- (('export protobuf proto file success:', 'TestGlobalTemplate.proto'),)[0m
+[36m[2024-04-23 14:51:19,432] [utility.py:91] [utility:__console] [DEBUG]- (('export protobuf proto file success:', 'TestGlobal2Template.proto'),)[0m
+[36m[2024-04-23 14:51:19,436] [utility.py:91] [utility:__console] [DEBUG]- (('export protobuf proto file success:', 'TestListTablesTemplate.proto'),)[0m
+[36m[2024-04-23 14:51:19,440] [utility.py:91] [utility:__console] [DEBUG]- (('export protobuf proto file success:', 'TestTableArraysTemplate.proto'),)[0m
+[36m[2024-04-23 14:51:19,442] [utility.py:91] [utility:__console] [DEBUG]- (('execute protobuf cmd:', 'tools/protoc/win64/bin/protoc.exe --csharp_out=out_protobuf_csharp/ protos/Position3d.proto'),)[0m
+[36m[2024-04-23 14:51:19,583] [utility.py:91] [utility:__console] [DEBUG]- (('generate protobuf script success:', 'Position3d'),)[0m
+[36m[2024-04-23 14:51:19,590] [utility.py:91] [utility:__console] [DEBUG]- (('execute protobuf cmd:', 'tools/protoc/win64/bin/protoc.exe --csharp_out=out_protobuf_csharp/ protos/PositionArray3d.proto'),)[0m
+[36m[2024-04-23 14:51:19,751] [utility.py:91] [utility:__console] [DEBUG]- (('generate protobuf script success:', 'PositionArray3d'),)[0m
+[36m[2024-04-23 14:51:19,752] [utility.py:91] [utility:__console] [DEBUG]- (('execute protobuf cmd:', 'tools/protoc/win64/bin/protoc.exe --csharp_out=out_protobuf_csharp/ protos/Position3dInt.proto'),)[0m
+[36m[2024-04-23 14:51:19,907] [utility.py:91] [utility:__console] [DEBUG]- (('generate protobuf script success:', 'Position3dInt'),)[0m
+[36m[2024-04-23 14:51:19,908] [utility.py:91] [utility:__console] [DEBUG]- (('execute protobuf cmd:', 'tools/protoc/win64/bin/protoc.exe --csharp_out=out_protobuf_csharp/ protos/CommonType.proto'),)[0m
+[36m[2024-04-23 14:51:19,988] [utility.py:91] [utility:__console] [DEBUG]- (('generate protobuf script success:', 'CommonType'),)[0m
+[36m[2024-04-23 14:51:19,989] [utility.py:91] [utility:__console] [DEBUG]- (('execute protobuf cmd:', 'tools/protoc/win64/bin/protoc.exe --csharp_out=out_protobuf_csharp/ protos/TestGlobalTemplate.proto'),)[0m
+[36m[2024-04-23 14:51:20,033] [utility.py:91] [utility:__console] [DEBUG]- (('generate protobuf script success:', 'TestGlobalTemplate'),)[0m
+[36m[2024-04-23 14:51:20,036] [utility.py:91] [utility:__console] [DEBUG]- (('execute protobuf cmd:', 'tools/protoc/win64/bin/protoc.exe --csharp_out=out_protobuf_csharp/ protos/TestGlobal2Template.proto'),)[0m
+[36m[2024-04-23 14:51:20,085] [utility.py:91] [utility:__console] [DEBUG]- (('generate protobuf script success:', 'TestGlobal2Template'),)[0m
+[36m[2024-04-23 14:51:20,086] [utility.py:91] [utility:__console] [DEBUG]- (('execute protobuf cmd:', 'tools/protoc/win64/bin/protoc.exe --csharp_out=out_protobuf_csharp/ protos/TestListTablesTemplate.proto'),)[0m
+[36m[2024-04-23 14:51:20,249] [utility.py:91] [utility:__console] [DEBUG]- (('generate protobuf script success:', 'TestListTablesTemplate'),)[0m
+[36m[2024-04-23 14:51:20,250] [utility.py:91] [utility:__console] [DEBUG]- (('execute protobuf cmd:', 'tools/protoc/win64/bin/protoc.exe --csharp_out=out_protobuf_csharp/ protos/TestTableArraysTemplate.proto'),)[0m
+[36m[2024-04-23 14:51:20,299] [utility.py:91] [utility:__console] [DEBUG]- (('generate protobuf script success:', 'TestTableArraysTemplate'),)[0m
+[36m[2024-04-23 14:51:20,300] [utility.py:91] [utility:__console] [DEBUG]- (('export flat proto file success:', 'Position3d.proto'),)[0m
+[36m[2024-04-23 14:51:20,302] [utility.py:91] [utility:__console] [DEBUG]- (('export flat buff scheme file success:flat/Position3d.fbs',),)[0m
+[36m[2024-04-23 14:51:20,302] [utility.py:91] [utility:__console] [DEBUG]- (('export flat proto file success:', 'PositionArray3d.proto'),)[0m
+[36m[2024-04-23 14:51:20,304] [utility.py:91] [utility:__console] [DEBUG]- (('export flat buff scheme file success:flat/PositionArray3d.fbs',),)[0m
+[36m[2024-04-23 14:51:20,305] [utility.py:91] [utility:__console] [DEBUG]- (('export flat proto file success:', 'Position3dInt.proto'),)[0m
+[36m[2024-04-23 14:51:20,308] [utility.py:91] [utility:__console] [DEBUG]- (('export flat buff scheme file success:flat/Position3dInt.fbs',),)[0m
+[36m[2024-04-23 14:51:20,309] [utility.py:91] [utility:__console] [DEBUG]- (('export flat proto file success:', 'CommonType.proto'),)[0m
+[36m[2024-04-23 14:51:20,310] [utility.py:91] [utility:__console] [DEBUG]- (('export flat buff scheme file success:flat/CommonType.fbs',),)[0m
+[36m[2024-04-23 14:51:20,312] [utility.py:91] [utility:__console] [DEBUG]- (('export flat proto file success:', 'TestGlobalTemplate.proto'),)[0m
+[36m[2024-04-23 14:51:20,313] [utility.py:91] [utility:__console] [DEBUG]- (('export flat buff scheme file success:flat/TestGlobalTemplate.fbs',),)[0m
+[36m[2024-04-23 14:51:20,336] [utility.py:91] [utility:__console] [DEBUG]- (('export flat proto file success:', 'TestGlobal2Template.proto'),)[0m
+[36m[2024-04-23 14:51:20,340] [utility.py:91] [utility:__console] [DEBUG]- (('export flat buff scheme file success:flat/TestGlobal2Template.fbs',),)[0m
+[36m[2024-04-23 14:51:20,341] [utility.py:91] [utility:__console] [DEBUG]- (('export flat proto file success:', 'TestListTablesTemplate.proto'),)[0m
+[36m[2024-04-23 14:51:20,343] [utility.py:91] [utility:__console] [DEBUG]- (('export flat buff scheme file success:flat/TestListTablesTemplate.fbs',),)[0m
+[36m[2024-04-23 14:51:20,344] [utility.py:91] [utility:__console] [DEBUG]- (('export flat proto file success:', 'TestTableArraysTemplate.proto'),)[0m
+[36m[2024-04-23 14:51:20,345] [utility.py:91] [utility:__console] [DEBUG]- (('export flat buff scheme file success:flat/TestTableArraysTemplate.fbs',),)[0m
+[36m[2024-04-23 14:51:20,347] [utility.py:91] [utility:__console] [DEBUG]- (('execute flatbuffer cmd:', 'flatc --csharp --bfbs-comments -o out_flatbuffer_csharp flat/Position3d.fbs --gen-onefile'),)[0m
+[36m[2024-04-23 14:51:20,380] [utility.py:91] [utility:__console] [DEBUG]- (('generate flat buffer script success:', 'Position3d'),)[0m
+[36m[2024-04-23 14:51:20,381] [utility.py:91] [utility:__console] [DEBUG]- (('execute flatbuffer cmd:', 'flatc --csharp --bfbs-comments -o out_flatbuffer_csharp flat/PositionArray3d.fbs --gen-onefile'),)[0m
+[36m[2024-04-23 14:51:20,408] [utility.py:91] [utility:__console] [DEBUG]- (('generate flat buffer script success:', 'PositionArray3d'),)[0m
+[36m[2024-04-23 14:51:20,409] [utility.py:91] [utility:__console] [DEBUG]- (('execute flatbuffer cmd:', 'flatc --csharp --bfbs-comments -o out_flatbuffer_csharp flat/Position3dInt.fbs --gen-onefile'),)[0m
+[36m[2024-04-23 14:51:20,436] [utility.py:91] [utility:__console] [DEBUG]- (('generate flat buffer script success:', 'Position3dInt'),)[0m
+[36m[2024-04-23 14:51:20,437] [utility.py:91] [utility:__console] [DEBUG]- (('execute flatbuffer cmd:', 'flatc --csharp --bfbs-comments -o out_flatbuffer_csharp flat/CommonType.fbs --gen-onefile'),)[0m
+[36m[2024-04-23 14:51:20,488] [utility.py:91] [utility:__console] [DEBUG]- (('generate flat buffer script success:', 'CommonType'),)[0m
+[36m[2024-04-23 14:51:20,492] [utility.py:91] [utility:__console] [DEBUG]- (('execute flatbuffer cmd:', 'flatc --csharp --bfbs-comments -o out_flatbuffer_csharp flat/TestGlobalTemplate.fbs --gen-onefile'),)[0m
+[36m[2024-04-23 14:51:20,541] [utility.py:91] [utility:__console] [DEBUG]- (('generate flat buffer script success:', 'TestGlobalTemplate'),)[0m
+[36m[2024-04-23 14:51:20,546] [utility.py:91] [utility:__console] [DEBUG]- (('execute flatbuffer cmd:', 'flatc --csharp --bfbs-comments -o out_flatbuffer_csharp flat/TestGlobal2Template.fbs --gen-onefile'),)[0m
+[36m[2024-04-23 14:51:20,589] [utility.py:91] [utility:__console] [DEBUG]- (('generate flat buffer script success:', 'TestGlobal2Template'),)[0m
+[36m[2024-04-23 14:51:20,592] [utility.py:91] [utility:__console] [DEBUG]- (('execute flatbuffer cmd:', 'flatc --csharp --bfbs-comments -o out_flatbuffer_csharp flat/TestListTablesTemplate.fbs --gen-onefile'),)[0m
+[36m[2024-04-23 14:51:20,625] [utility.py:91] [utility:__console] [DEBUG]- (('generate flat buffer script success:', 'TestListTablesTemplate'),)[0m
+[36m[2024-04-23 14:51:20,626] [utility.py:91] [utility:__console] [DEBUG]- (('execute flatbuffer cmd:', 'flatc --csharp --bfbs-comments -o out_flatbuffer_csharp flat/TestTableArraysTemplate.fbs --gen-onefile'),)[0m
+[36m[2024-04-23 14:51:20,657] [utility.py:91] [utility:__console] [DEBUG]- (('generate flat buffer script success:', 'TestTableArraysTemplate'),)[0m
+[36m[2024-04-23 14:51:20,658] [utility.py:91] [utility:__console] [DEBUG]- (('export json data success:', 'out_json/TestGlobalTemplate.json'),)[0m
+[36m[2024-04-23 14:51:20,661] [utility.py:91] [utility:__console] [DEBUG]- (('export json data success:', 'out_json/TestGlobal2Template.json'),)[0m
+[36m[2024-04-23 14:51:20,663] [utility.py:91] [utility:__console] [DEBUG]- (('export json data success:', 'out_json/TestListTablesTemplate.json'),)[0m
+[36m[2024-04-23 14:51:20,665] [utility.py:91] [utility:__console] [DEBUG]- (('export json data success:', 'out_json/TestTableArraysTemplate.json'),)[0m
+[36m[2024-04-23 14:53:32,098] [utility.py:91] [utility:__console] [DEBUG]- (('build single sheet :测试全局表|TestGlobal',),)[0m
+[36m[2024-04-23 14:53:32,107] [utility.py:91] [utility:__console] [DEBUG]- (('build single sheet :测试全局表2|TestGlobal2',),)[0m
+[36m[2024-04-23 14:53:32,108] [utility.py:91] [utility:__console] [DEBUG]- (('build list sheet :测试列表3|TestListTable',),)[0m
+[36m[2024-04-23 14:53:32,116] [utility.py:91] [utility:__console] [DEBUG]- (('build list sheet :测试单表|TestTableArray',),)[0m
+[36m[2024-04-23 14:53:32,119] [utility.py:91] [utility:__console] [DEBUG]- (('export global protobuf proto file success:', 'Position3d.proto'),)[0m
+[36m[2024-04-23 14:53:32,121] [utility.py:91] [utility:__console] [DEBUG]- (('export global protobuf proto file success:', 'PositionArray3d.proto'),)[0m
+[36m[2024-04-23 14:53:32,123] [utility.py:91] [utility:__console] [DEBUG]- (('export global protobuf proto file success:', 'Position3dInt.proto'),)[0m
+[36m[2024-04-23 14:53:32,125] [utility.py:91] [utility:__console] [DEBUG]- (('export global protobuf proto file success:', 'CommonType.proto'),)[0m
+[36m[2024-04-23 14:53:32,126] [utility.py:91] [utility:__console] [DEBUG]- (('export protobuf proto file success:', 'TestGlobalTemplate.proto'),)[0m
+[36m[2024-04-23 14:53:32,129] [utility.py:91] [utility:__console] [DEBUG]- (('export protobuf proto file success:', 'TestGlobal2Template.proto'),)[0m
+[36m[2024-04-23 14:53:32,132] [utility.py:91] [utility:__console] [DEBUG]- (('export protobuf proto file success:', 'TestListTablesTemplate.proto'),)[0m
+[36m[2024-04-23 14:53:32,133] [utility.py:91] [utility:__console] [DEBUG]- (('export protobuf proto file success:', 'TestTableArraysTemplate.proto'),)[0m
+[36m[2024-04-23 14:53:32,136] [utility.py:91] [utility:__console] [DEBUG]- (('execute protobuf cmd:', 'tools/protoc/win64/bin/protoc.exe --csharp_out=out_protobuf_csharp/ protos/Position3d.proto'),)[0m
+[36m[2024-04-23 14:53:32,218] [utility.py:91] [utility:__console] [DEBUG]- (('generate protobuf script success:', 'Position3d'),)[0m
+[36m[2024-04-23 14:53:32,219] [utility.py:91] [utility:__console] [DEBUG]- (('execute protobuf cmd:', 'tools/protoc/win64/bin/protoc.exe --csharp_out=out_protobuf_csharp/ protos/PositionArray3d.proto'),)[0m
+[36m[2024-04-23 14:53:32,248] [utility.py:91] [utility:__console] [DEBUG]- (('generate protobuf script success:', 'PositionArray3d'),)[0m
+[36m[2024-04-23 14:53:32,249] [utility.py:91] [utility:__console] [DEBUG]- (('execute protobuf cmd:', 'tools/protoc/win64/bin/protoc.exe --csharp_out=out_protobuf_csharp/ protos/Position3dInt.proto'),)[0m
+[36m[2024-04-23 14:53:32,276] [utility.py:91] [utility:__console] [DEBUG]- (('generate protobuf script success:', 'Position3dInt'),)[0m
+[36m[2024-04-23 14:53:32,277] [utility.py:91] [utility:__console] [DEBUG]- (('execute protobuf cmd:', 'tools/protoc/win64/bin/protoc.exe --csharp_out=out_protobuf_csharp/ protos/CommonType.proto'),)[0m
+[36m[2024-04-23 14:53:32,305] [utility.py:91] [utility:__console] [DEBUG]- (('generate protobuf script success:', 'CommonType'),)[0m
+[36m[2024-04-23 14:53:32,306] [utility.py:91] [utility:__console] [DEBUG]- (('execute protobuf cmd:', 'tools/protoc/win64/bin/protoc.exe --csharp_out=out_protobuf_csharp/ protos/TestGlobalTemplate.proto'),)[0m
+[36m[2024-04-23 14:53:32,341] [utility.py:91] [utility:__console] [DEBUG]- (('generate protobuf script success:', 'TestGlobalTemplate'),)[0m
+[36m[2024-04-23 14:53:32,344] [utility.py:91] [utility:__console] [DEBUG]- (('execute protobuf cmd:', 'tools/protoc/win64/bin/protoc.exe --csharp_out=out_protobuf_csharp/ protos/TestGlobal2Template.proto'),)[0m
+[36m[2024-04-23 14:53:32,397] [utility.py:91] [utility:__console] [DEBUG]- (('generate protobuf script success:', 'TestGlobal2Template'),)[0m
+[36m[2024-04-23 14:53:32,399] [utility.py:91] [utility:__console] [DEBUG]- (('execute protobuf cmd:', 'tools/protoc/win64/bin/protoc.exe --csharp_out=out_protobuf_csharp/ protos/TestListTablesTemplate.proto'),)[0m
+[36m[2024-04-23 14:53:32,437] [utility.py:91] [utility:__console] [DEBUG]- (('generate protobuf script success:', 'TestListTablesTemplate'),)[0m
+[36m[2024-04-23 14:53:32,438] [utility.py:91] [utility:__console] [DEBUG]- (('execute protobuf cmd:', 'tools/protoc/win64/bin/protoc.exe --csharp_out=out_protobuf_csharp/ protos/TestTableArraysTemplate.proto'),)[0m
+[36m[2024-04-23 14:53:32,467] [utility.py:91] [utility:__console] [DEBUG]- (('generate protobuf script success:', 'TestTableArraysTemplate'),)[0m
+[36m[2024-04-23 14:53:32,468] [utility.py:91] [utility:__console] [DEBUG]- (('export flat proto file success:', 'Position3d.proto'),)[0m
+[36m[2024-04-23 14:53:32,469] [utility.py:91] [utility:__console] [DEBUG]- (('export flat buff scheme file success:flat/Position3d.fbs',),)[0m
+[36m[2024-04-23 14:53:32,470] [utility.py:91] [utility:__console] [DEBUG]- (('export flat proto file success:', 'PositionArray3d.proto'),)[0m
+[36m[2024-04-23 14:53:32,471] [utility.py:91] [utility:__console] [DEBUG]- (('export flat buff scheme file success:flat/PositionArray3d.fbs',),)[0m
+[36m[2024-04-23 14:53:32,472] [utility.py:91] [utility:__console] [DEBUG]- (('export flat proto file success:', 'Position3dInt.proto'),)[0m
+[36m[2024-04-23 14:53:32,473] [utility.py:91] [utility:__console] [DEBUG]- (('export flat buff scheme file success:flat/Position3dInt.fbs',),)[0m
+[36m[2024-04-23 14:53:32,474] [utility.py:91] [utility:__console] [DEBUG]- (('export flat proto file success:', 'CommonType.proto'),)[0m
+[36m[2024-04-23 14:53:32,476] [utility.py:91] [utility:__console] [DEBUG]- (('export flat buff scheme file success:flat/CommonType.fbs',),)[0m
+[36m[2024-04-23 14:53:32,477] [utility.py:91] [utility:__console] [DEBUG]- (('export flat proto file success:', 'TestGlobalTemplate.proto'),)[0m
+[36m[2024-04-23 14:53:32,478] [utility.py:91] [utility:__console] [DEBUG]- (('export flat buff scheme file success:flat/TestGlobalTemplate.fbs',),)[0m
+[36m[2024-04-23 14:53:32,479] [utility.py:91] [utility:__console] [DEBUG]- (('export flat proto file success:', 'TestGlobal2Template.proto'),)[0m
+[36m[2024-04-23 14:53:32,480] [utility.py:91] [utility:__console] [DEBUG]- (('export flat buff scheme file success:flat/TestGlobal2Template.fbs',),)[0m
+[36m[2024-04-23 14:53:32,481] [utility.py:91] [utility:__console] [DEBUG]- (('export flat proto file success:', 'TestListTablesTemplate.proto'),)[0m
+[36m[2024-04-23 14:53:32,482] [utility.py:91] [utility:__console] [DEBUG]- (('export flat buff scheme file success:flat/TestListTablesTemplate.fbs',),)[0m
+[36m[2024-04-23 14:53:32,483] [utility.py:91] [utility:__console] [DEBUG]- (('export flat proto file success:', 'TestTableArraysTemplate.proto'),)[0m
+[36m[2024-04-23 14:53:32,484] [utility.py:91] [utility:__console] [DEBUG]- (('export flat buff scheme file success:flat/TestTableArraysTemplate.fbs',),)[0m
+[36m[2024-04-23 14:53:32,486] [utility.py:91] [utility:__console] [DEBUG]- (('execute flatbuffer cmd:', 'flatc --csharp --bfbs-comments -o out_flatbuffer_csharp flat/Position3d.fbs --gen-onefile'),)[0m
+[36m[2024-04-23 14:53:32,523] [utility.py:91] [utility:__console] [DEBUG]- (('generate flat buffer script success:', 'Position3d'),)[0m
+[36m[2024-04-23 14:53:32,525] [utility.py:91] [utility:__console] [DEBUG]- (('execute flatbuffer cmd:', 'flatc --csharp --bfbs-comments -o out_flatbuffer_csharp flat/PositionArray3d.fbs --gen-onefile'),)[0m
+[36m[2024-04-23 14:53:32,574] [utility.py:91] [utility:__console] [DEBUG]- (('generate flat buffer script success:', 'PositionArray3d'),)[0m
+[36m[2024-04-23 14:53:32,576] [utility.py:91] [utility:__console] [DEBUG]- (('execute flatbuffer cmd:', 'flatc --csharp --bfbs-comments -o out_flatbuffer_csharp flat/Position3dInt.fbs --gen-onefile'),)[0m
+[36m[2024-04-23 14:53:32,614] [utility.py:91] [utility:__console] [DEBUG]- (('generate flat buffer script success:', 'Position3dInt'),)[0m
+[36m[2024-04-23 14:53:32,615] [utility.py:91] [utility:__console] [DEBUG]- (('execute flatbuffer cmd:', 'flatc --csharp --bfbs-comments -o out_flatbuffer_csharp flat/CommonType.fbs --gen-onefile'),)[0m
+[36m[2024-04-23 14:53:32,642] [utility.py:91] [utility:__console] [DEBUG]- (('generate flat buffer script success:', 'CommonType'),)[0m
+[36m[2024-04-23 14:53:32,643] [utility.py:91] [utility:__console] [DEBUG]- (('execute flatbuffer cmd:', 'flatc --csharp --bfbs-comments -o out_flatbuffer_csharp flat/TestGlobalTemplate.fbs --gen-onefile'),)[0m
+[36m[2024-04-23 14:53:32,669] [utility.py:91] [utility:__console] [DEBUG]- (('generate flat buffer script success:', 'TestGlobalTemplate'),)[0m
+[36m[2024-04-23 14:53:32,670] [utility.py:91] [utility:__console] [DEBUG]- (('execute flatbuffer cmd:', 'flatc --csharp --bfbs-comments -o out_flatbuffer_csharp flat/TestGlobal2Template.fbs --gen-onefile'),)[0m
+[36m[2024-04-23 14:53:32,697] [utility.py:91] [utility:__console] [DEBUG]- (('generate flat buffer script success:', 'TestGlobal2Template'),)[0m
+[36m[2024-04-23 14:53:32,698] [utility.py:91] [utility:__console] [DEBUG]- (('execute flatbuffer cmd:', 'flatc --csharp --bfbs-comments -o out_flatbuffer_csharp flat/TestListTablesTemplate.fbs --gen-onefile'),)[0m
+[36m[2024-04-23 14:53:32,726] [utility.py:91] [utility:__console] [DEBUG]- (('generate flat buffer script success:', 'TestListTablesTemplate'),)[0m
+[36m[2024-04-23 14:53:32,729] [utility.py:91] [utility:__console] [DEBUG]- (('execute flatbuffer cmd:', 'flatc --csharp --bfbs-comments -o out_flatbuffer_csharp flat/TestTableArraysTemplate.fbs --gen-onefile'),)[0m
+[36m[2024-04-23 14:53:32,765] [utility.py:91] [utility:__console] [DEBUG]- (('generate flat buffer script success:', 'TestTableArraysTemplate'),)[0m
+[36m[2024-04-23 14:53:32,767] [utility.py:91] [utility:__console] [DEBUG]- (('export json data success:', 'out_json/TestGlobalTemplate.json'),)[0m
+[36m[2024-04-23 14:53:32,770] [utility.py:91] [utility:__console] [DEBUG]- (('export json data success:', 'out_json/TestGlobal2Template.json'),)[0m
+[36m[2024-04-23 14:53:32,773] [utility.py:91] [utility:__console] [DEBUG]- (('export json data success:', 'out_json/TestListTablesTemplate.json'),)[0m
+[36m[2024-04-23 14:53:32,777] [utility.py:91] [utility:__console] [DEBUG]- (('export json data success:', 'out_json/TestTableArraysTemplate.json'),)[0m
+[36m[2024-04-23 14:54:23,346] [utility.py:91] [utility:__console] [DEBUG]- (('build single sheet :测试全局表|TestGlobal',),)[0m
+[36m[2024-04-23 14:54:23,349] [utility.py:91] [utility:__console] [DEBUG]- (('build single sheet :测试全局表2|TestGlobal2',),)[0m
+[36m[2024-04-23 14:54:23,350] [utility.py:91] [utility:__console] [DEBUG]- (('build list sheet :测试列表3|TestListTable',),)[0m
+[36m[2024-04-23 14:54:23,357] [utility.py:91] [utility:__console] [DEBUG]- (('build list sheet :测试单表|TestTableArray',),)[0m
+[36m[2024-04-23 14:54:23,360] [utility.py:91] [utility:__console] [DEBUG]- (('export global protobuf proto file success:', 'Position3d.proto'),)[0m
+[36m[2024-04-23 14:54:23,482] [utility.py:91] [utility:__console] [DEBUG]- (('export global protobuf proto file success:', 'PositionArray3d.proto'),)[0m
+[36m[2024-04-23 14:54:23,590] [utility.py:91] [utility:__console] [DEBUG]- (('export global protobuf proto file success:', 'Position3dInt.proto'),)[0m
+[36m[2024-04-23 14:54:23,636] [utility.py:91] [utility:__console] [DEBUG]- (('export global protobuf proto file success:', 'CommonType.proto'),)[0m
+[36m[2024-04-23 14:54:23,650] [utility.py:91] [utility:__console] [DEBUG]- (('export protobuf proto file success:', 'TestGlobalTemplate.proto'),)[0m
+[36m[2024-04-23 14:54:23,653] [utility.py:91] [utility:__console] [DEBUG]- (('export protobuf proto file success:', 'TestGlobal2Template.proto'),)[0m
+[36m[2024-04-23 14:54:23,675] [utility.py:91] [utility:__console] [DEBUG]- (('export protobuf proto file success:', 'TestListTablesTemplate.proto'),)[0m
+[36m[2024-04-23 14:54:23,683] [utility.py:91] [utility:__console] [DEBUG]- (('export protobuf proto file success:', 'TestTableArraysTemplate.proto'),)[0m
+[36m[2024-04-23 14:54:23,688] [utility.py:91] [utility:__console] [DEBUG]- (('execute protobuf cmd:', 'tools/protoc/win64/bin/protoc.exe --csharp_out=out_protobuf_csharp/ protos/Position3d.proto'),)[0m
+[36m[2024-04-23 14:54:23,975] [utility.py:91] [utility:__console] [DEBUG]- (('generate protobuf script success:', 'Position3d'),)[0m
+[36m[2024-04-23 14:54:23,993] [utility.py:91] [utility:__console] [DEBUG]- (('execute protobuf cmd:', 'tools/protoc/win64/bin/protoc.exe --csharp_out=out_protobuf_csharp/ protos/PositionArray3d.proto'),)[0m
+[36m[2024-04-23 14:54:24,066] [utility.py:91] [utility:__console] [DEBUG]- (('generate protobuf script success:', 'PositionArray3d'),)[0m
+[36m[2024-04-23 14:54:24,067] [utility.py:91] [utility:__console] [DEBUG]- (('execute protobuf cmd:', 'tools/protoc/win64/bin/protoc.exe --csharp_out=out_protobuf_csharp/ protos/Position3dInt.proto'),)[0m
+[36m[2024-04-23 14:54:24,112] [utility.py:91] [utility:__console] [DEBUG]- (('generate protobuf script success:', 'Position3dInt'),)[0m
+[36m[2024-04-23 14:54:24,116] [utility.py:91] [utility:__console] [DEBUG]- (('execute protobuf cmd:', 'tools/protoc/win64/bin/protoc.exe --csharp_out=out_protobuf_csharp/ protos/CommonType.proto'),)[0m
+[36m[2024-04-23 14:54:24,165] [utility.py:91] [utility:__console] [DEBUG]- (('generate protobuf script success:', 'CommonType'),)[0m
+[36m[2024-04-23 14:54:24,168] [utility.py:91] [utility:__console] [DEBUG]- (('execute protobuf cmd:', 'tools/protoc/win64/bin/protoc.exe --csharp_out=out_protobuf_csharp/ protos/TestGlobalTemplate.proto'),)[0m
+[36m[2024-04-23 14:54:24,356] [utility.py:91] [utility:__console] [DEBUG]- (('generate protobuf script success:', 'TestGlobalTemplate'),)[0m
+[36m[2024-04-23 14:54:24,358] [utility.py:91] [utility:__console] [DEBUG]- (('execute protobuf cmd:', 'tools/protoc/win64/bin/protoc.exe --csharp_out=out_protobuf_csharp/ protos/TestGlobal2Template.proto'),)[0m
+[36m[2024-04-23 14:54:24,450] [utility.py:91] [utility:__console] [DEBUG]- (('generate protobuf script success:', 'TestGlobal2Template'),)[0m
+[36m[2024-04-23 14:54:24,451] [utility.py:91] [utility:__console] [DEBUG]- (('execute protobuf cmd:', 'tools/protoc/win64/bin/protoc.exe --csharp_out=out_protobuf_csharp/ protos/TestListTablesTemplate.proto'),)[0m
+[36m[2024-04-23 14:54:24,491] [utility.py:91] [utility:__console] [DEBUG]- (('generate protobuf script success:', 'TestListTablesTemplate'),)[0m
+[36m[2024-04-23 14:54:24,497] [utility.py:91] [utility:__console] [DEBUG]- (('execute protobuf cmd:', 'tools/protoc/win64/bin/protoc.exe --csharp_out=out_protobuf_csharp/ protos/TestTableArraysTemplate.proto'),)[0m
+[36m[2024-04-23 14:54:24,529] [utility.py:91] [utility:__console] [DEBUG]- (('generate protobuf script success:', 'TestTableArraysTemplate'),)[0m
+[36m[2024-04-23 14:54:24,530] [utility.py:91] [utility:__console] [DEBUG]- (('export flat proto file success:', 'Position3d.proto'),)[0m
+[36m[2024-04-23 14:54:24,531] [utility.py:91] [utility:__console] [DEBUG]- (('export flat buff scheme file success:flat/Position3d.fbs',),)[0m
+[36m[2024-04-23 14:54:24,532] [utility.py:91] [utility:__console] [DEBUG]- (('export flat proto file success:', 'PositionArray3d.proto'),)[0m
+[36m[2024-04-23 14:54:24,533] [utility.py:91] [utility:__console] [DEBUG]- (('export flat buff scheme file success:flat/PositionArray3d.fbs',),)[0m
+[36m[2024-04-23 14:54:24,534] [utility.py:91] [utility:__console] [DEBUG]- (('export flat proto file success:', 'Position3dInt.proto'),)[0m
+[36m[2024-04-23 14:54:24,535] [utility.py:91] [utility:__console] [DEBUG]- (('export flat buff scheme file success:flat/Position3dInt.fbs',),)[0m
+[36m[2024-04-23 14:54:24,536] [utility.py:91] [utility:__console] [DEBUG]- (('export flat proto file success:', 'CommonType.proto'),)[0m
+[36m[2024-04-23 14:54:24,537] [utility.py:91] [utility:__console] [DEBUG]- (('export flat buff scheme file success:flat/CommonType.fbs',),)[0m
+[36m[2024-04-23 14:54:24,538] [utility.py:91] [utility:__console] [DEBUG]- (('export flat proto file success:', 'TestGlobalTemplate.proto'),)[0m
+[36m[2024-04-23 14:54:24,540] [utility.py:91] [utility:__console] [DEBUG]- (('export flat buff scheme file success:flat/TestGlobalTemplate.fbs',),)[0m
+[36m[2024-04-23 14:54:24,540] [utility.py:91] [utility:__console] [DEBUG]- (('export flat proto file success:', 'TestGlobal2Template.proto'),)[0m
+[36m[2024-04-23 14:54:24,542] [utility.py:91] [utility:__console] [DEBUG]- (('export flat buff scheme file success:flat/TestGlobal2Template.fbs',),)[0m
+[36m[2024-04-23 14:54:24,542] [utility.py:91] [utility:__console] [DEBUG]- (('export flat proto file success:', 'TestListTablesTemplate.proto'),)[0m
+[36m[2024-04-23 14:54:24,544] [utility.py:91] [utility:__console] [DEBUG]- (('export flat buff scheme file success:flat/TestListTablesTemplate.fbs',),)[0m
+[36m[2024-04-23 14:54:24,544] [utility.py:91] [utility:__console] [DEBUG]- (('export flat proto file success:', 'TestTableArraysTemplate.proto'),)[0m
+[36m[2024-04-23 14:54:24,546] [utility.py:91] [utility:__console] [DEBUG]- (('export flat buff scheme file success:flat/TestTableArraysTemplate.fbs',),)[0m
+[36m[2024-04-23 14:54:24,547] [utility.py:91] [utility:__console] [DEBUG]- (('execute flatbuffer cmd:', 'flatc --csharp --bfbs-comments -o out_flatbuffer_csharp flat/Position3d.fbs --gen-onefile'),)[0m
+[36m[2024-04-23 14:54:24,573] [utility.py:91] [utility:__console] [DEBUG]- (('generate flat buffer script success:', 'Position3d'),)[0m
+[36m[2024-04-23 14:54:24,574] [utility.py:91] [utility:__console] [DEBUG]- (('execute flatbuffer cmd:', 'flatc --csharp --bfbs-comments -o out_flatbuffer_csharp flat/PositionArray3d.fbs --gen-onefile'),)[0m
+[36m[2024-04-23 14:54:24,601] [utility.py:91] [utility:__console] [DEBUG]- (('generate flat buffer script success:', 'PositionArray3d'),)[0m
+[36m[2024-04-23 14:54:24,602] [utility.py:91] [utility:__console] [DEBUG]- (('execute flatbuffer cmd:', 'flatc --csharp --bfbs-comments -o out_flatbuffer_csharp flat/Position3dInt.fbs --gen-onefile'),)[0m
+[36m[2024-04-23 14:54:24,630] [utility.py:91] [utility:__console] [DEBUG]- (('generate flat buffer script success:', 'Position3dInt'),)[0m
+[36m[2024-04-23 14:54:24,633] [utility.py:91] [utility:__console] [DEBUG]- (('execute flatbuffer cmd:', 'flatc --csharp --bfbs-comments -o out_flatbuffer_csharp flat/CommonType.fbs --gen-onefile'),)[0m
+[36m[2024-04-23 14:54:24,662] [utility.py:91] [utility:__console] [DEBUG]- (('generate flat buffer script success:', 'CommonType'),)[0m
+[36m[2024-04-23 14:54:24,663] [utility.py:91] [utility:__console] [DEBUG]- (('execute flatbuffer cmd:', 'flatc --csharp --bfbs-comments -o out_flatbuffer_csharp flat/TestGlobalTemplate.fbs --gen-onefile'),)[0m
+[36m[2024-04-23 14:54:24,779] [utility.py:91] [utility:__console] [DEBUG]- (('generate flat buffer script success:', 'TestGlobalTemplate'),)[0m
+[36m[2024-04-23 14:54:24,782] [utility.py:91] [utility:__console] [DEBUG]- (('execute flatbuffer cmd:', 'flatc --csharp --bfbs-comments -o out_flatbuffer_csharp flat/TestGlobal2Template.fbs --gen-onefile'),)[0m
+[36m[2024-04-23 14:54:24,821] [utility.py:91] [utility:__console] [DEBUG]- (('generate flat buffer script success:', 'TestGlobal2Template'),)[0m
+[36m[2024-04-23 14:54:24,822] [utility.py:91] [utility:__console] [DEBUG]- (('execute flatbuffer cmd:', 'flatc --csharp --bfbs-comments -o out_flatbuffer_csharp flat/TestListTablesTemplate.fbs --gen-onefile'),)[0m
+[36m[2024-04-23 14:54:24,855] [utility.py:91] [utility:__console] [DEBUG]- (('generate flat buffer script success:', 'TestListTablesTemplate'),)[0m
+[36m[2024-04-23 14:54:24,856] [utility.py:91] [utility:__console] [DEBUG]- (('execute flatbuffer cmd:', 'flatc --csharp --bfbs-comments -o out_flatbuffer_csharp flat/TestTableArraysTemplate.fbs --gen-onefile'),)[0m
+[36m[2024-04-23 14:54:24,966] [utility.py:91] [utility:__console] [DEBUG]- (('generate flat buffer script success:', 'TestTableArraysTemplate'),)[0m
+[36m[2024-04-23 14:54:24,968] [utility.py:91] [utility:__console] [DEBUG]- (('export json data success:', 'out_json/TestGlobalTemplate.json'),)[0m
+[36m[2024-04-23 14:54:24,971] [utility.py:91] [utility:__console] [DEBUG]- (('export json data success:', 'out_json/TestGlobal2Template.json'),)[0m
+[36m[2024-04-23 14:54:24,972] [utility.py:91] [utility:__console] [DEBUG]- (('export json data success:', 'out_json/TestListTablesTemplate.json'),)[0m
+[36m[2024-04-23 14:54:24,976] [utility.py:91] [utility:__console] [DEBUG]- (('export json data success:', 'out_json/TestTableArraysTemplate.json'),)[0m
+[36m[2024-04-23 14:55:07,200] [utility.py:91] [utility:__console] [DEBUG]- (('build single sheet :测试全局表|TestGlobal',),)[0m
+[36m[2024-04-23 14:55:07,203] [utility.py:91] [utility:__console] [DEBUG]- (('build single sheet :测试全局表2|TestGlobal2',),)[0m
+[36m[2024-04-23 14:55:07,204] [utility.py:91] [utility:__console] [DEBUG]- (('build list sheet :测试列表3|TestListTable',),)[0m
+[36m[2024-04-23 14:55:07,210] [utility.py:91] [utility:__console] [DEBUG]- (('build list sheet :测试单表|TestTableArray',),)[0m
+[36m[2024-04-23 14:55:07,213] [utility.py:91] [utility:__console] [DEBUG]- (('export global protobuf proto file success:', 'Position3d.proto'),)[0m
+[36m[2024-04-23 14:55:07,214] [utility.py:91] [utility:__console] [DEBUG]- (('export global protobuf proto file success:', 'PositionArray3d.proto'),)[0m
+[36m[2024-04-23 14:55:07,215] [utility.py:91] [utility:__console] [DEBUG]- (('export global protobuf proto file success:', 'Position3dInt.proto'),)[0m
+[36m[2024-04-23 14:55:07,217] [utility.py:91] [utility:__console] [DEBUG]- (('export global protobuf proto file success:', 'CommonType.proto'),)[0m
+[36m[2024-04-23 14:55:07,219] [utility.py:91] [utility:__console] [DEBUG]- (('export protobuf proto file success:', 'TestGlobalTemplate.proto'),)[0m
+[36m[2024-04-23 14:55:07,221] [utility.py:91] [utility:__console] [DEBUG]- (('export protobuf proto file success:', 'TestGlobal2Template.proto'),)[0m
+[36m[2024-04-23 14:55:07,222] [utility.py:91] [utility:__console] [DEBUG]- (('export protobuf proto file success:', 'TestListTablesTemplate.proto'),)[0m
+[36m[2024-04-23 14:55:07,224] [utility.py:91] [utility:__console] [DEBUG]- (('export protobuf proto file success:', 'TestTableArraysTemplate.proto'),)[0m
+[36m[2024-04-23 14:55:07,225] [utility.py:91] [utility:__console] [DEBUG]- (('execute protobuf cmd:', 'tools/protoc/win64/bin/protoc.exe --csharp_out=out_protobuf_csharp/ protos/Position3d.proto'),)[0m
+[36m[2024-04-23 14:55:07,287] [utility.py:91] [utility:__console] [DEBUG]- (('generate protobuf script success:', 'Position3d'),)[0m
+[36m[2024-04-23 14:55:07,288] [utility.py:91] [utility:__console] [DEBUG]- (('execute protobuf cmd:', 'tools/protoc/win64/bin/protoc.exe --csharp_out=out_protobuf_csharp/ protos/PositionArray3d.proto'),)[0m
+[36m[2024-04-23 14:55:07,315] [utility.py:91] [utility:__console] [DEBUG]- (('generate protobuf script success:', 'PositionArray3d'),)[0m
+[36m[2024-04-23 14:55:07,316] [utility.py:91] [utility:__console] [DEBUG]- (('execute protobuf cmd:', 'tools/protoc/win64/bin/protoc.exe --csharp_out=out_protobuf_csharp/ protos/Position3dInt.proto'),)[0m
+[36m[2024-04-23 14:55:07,344] [utility.py:91] [utility:__console] [DEBUG]- (('generate protobuf script success:', 'Position3dInt'),)[0m
+[36m[2024-04-23 14:55:07,345] [utility.py:91] [utility:__console] [DEBUG]- (('execute protobuf cmd:', 'tools/protoc/win64/bin/protoc.exe --csharp_out=out_protobuf_csharp/ protos/CommonType.proto'),)[0m
+[36m[2024-04-23 14:55:07,374] [utility.py:91] [utility:__console] [DEBUG]- (('generate protobuf script success:', 'CommonType'),)[0m
+[36m[2024-04-23 14:55:07,375] [utility.py:91] [utility:__console] [DEBUG]- (('execute protobuf cmd:', 'tools/protoc/win64/bin/protoc.exe --csharp_out=out_protobuf_csharp/ protos/TestGlobalTemplate.proto'),)[0m
+[36m[2024-04-23 14:55:07,403] [utility.py:91] [utility:__console] [DEBUG]- (('generate protobuf script success:', 'TestGlobalTemplate'),)[0m
+[36m[2024-04-23 14:55:07,404] [utility.py:91] [utility:__console] [DEBUG]- (('execute protobuf cmd:', 'tools/protoc/win64/bin/protoc.exe --csharp_out=out_protobuf_csharp/ protos/TestGlobal2Template.proto'),)[0m
+[36m[2024-04-23 14:55:07,432] [utility.py:91] [utility:__console] [DEBUG]- (('generate protobuf script success:', 'TestGlobal2Template'),)[0m
+[36m[2024-04-23 14:55:07,433] [utility.py:91] [utility:__console] [DEBUG]- (('execute protobuf cmd:', 'tools/protoc/win64/bin/protoc.exe --csharp_out=out_protobuf_csharp/ protos/TestListTablesTemplate.proto'),)[0m
+[36m[2024-04-23 14:55:07,469] [utility.py:91] [utility:__console] [DEBUG]- (('generate protobuf script success:', 'TestListTablesTemplate'),)[0m
+[36m[2024-04-23 14:55:07,471] [utility.py:91] [utility:__console] [DEBUG]- (('execute protobuf cmd:', 'tools/protoc/win64/bin/protoc.exe --csharp_out=out_protobuf_csharp/ protos/TestTableArraysTemplate.proto'),)[0m
+[36m[2024-04-23 14:55:07,524] [utility.py:91] [utility:__console] [DEBUG]- (('generate protobuf script success:', 'TestTableArraysTemplate'),)[0m
+[36m[2024-04-23 14:55:07,526] [utility.py:91] [utility:__console] [DEBUG]- (('export flat proto file success:', 'Position3d.proto'),)[0m
+[36m[2024-04-23 14:55:07,527] [utility.py:91] [utility:__console] [DEBUG]- (('export flat buff scheme file success:flat/Position3d.fbs',),)[0m
+[36m[2024-04-23 14:55:07,530] [utility.py:91] [utility:__console] [DEBUG]- (('export flat proto file success:', 'PositionArray3d.proto'),)[0m
+[36m[2024-04-23 14:55:07,532] [utility.py:91] [utility:__console] [DEBUG]- (('export flat buff scheme file success:flat/PositionArray3d.fbs',),)[0m
+[36m[2024-04-23 14:55:07,534] [utility.py:91] [utility:__console] [DEBUG]- (('export flat proto file success:', 'Position3dInt.proto'),)[0m
+[36m[2024-04-23 14:55:07,535] [utility.py:91] [utility:__console] [DEBUG]- (('export flat buff scheme file success:flat/Position3dInt.fbs',),)[0m
+[36m[2024-04-23 14:55:07,536] [utility.py:91] [utility:__console] [DEBUG]- (('export flat proto file success:', 'CommonType.proto'),)[0m
+[36m[2024-04-23 14:55:07,539] [utility.py:91] [utility:__console] [DEBUG]- (('export flat buff scheme file success:flat/CommonType.fbs',),)[0m
+[36m[2024-04-23 14:55:07,540] [utility.py:91] [utility:__console] [DEBUG]- (('export flat proto file success:', 'TestGlobalTemplate.proto'),)[0m
+[36m[2024-04-23 14:55:07,542] [utility.py:91] [utility:__console] [DEBUG]- (('export flat buff scheme file success:flat/TestGlobalTemplate.fbs',),)[0m
+[36m[2024-04-23 14:55:07,544] [utility.py:91] [utility:__console] [DEBUG]- (('export flat proto file success:', 'TestGlobal2Template.proto'),)[0m
+[36m[2024-04-23 14:55:07,547] [utility.py:91] [utility:__console] [DEBUG]- (('export flat buff scheme file success:flat/TestGlobal2Template.fbs',),)[0m
+[36m[2024-04-23 14:55:07,548] [utility.py:91] [utility:__console] [DEBUG]- (('export flat proto file success:', 'TestListTablesTemplate.proto'),)[0m
+[36m[2024-04-23 14:55:07,549] [utility.py:91] [utility:__console] [DEBUG]- (('export flat buff scheme file success:flat/TestListTablesTemplate.fbs',),)[0m
+[36m[2024-04-23 14:55:07,550] [utility.py:91] [utility:__console] [DEBUG]- (('export flat proto file success:', 'TestTableArraysTemplate.proto'),)[0m
+[36m[2024-04-23 14:55:07,552] [utility.py:91] [utility:__console] [DEBUG]- (('export flat buff scheme file success:flat/TestTableArraysTemplate.fbs',),)[0m
+[36m[2024-04-23 14:55:07,553] [utility.py:91] [utility:__console] [DEBUG]- (('execute flatbuffer cmd:', 'flatc --csharp --bfbs-comments -o out_flatbuffer_csharp flat/Position3d.fbs --gen-onefile'),)[0m
+[36m[2024-04-23 14:55:07,581] [utility.py:91] [utility:__console] [DEBUG]- (('generate flat buffer script success:', 'Position3d'),)[0m
+[36m[2024-04-23 14:55:07,582] [utility.py:91] [utility:__console] [DEBUG]- (('execute flatbuffer cmd:', 'flatc --csharp --bfbs-comments -o out_flatbuffer_csharp flat/PositionArray3d.fbs --gen-onefile'),)[0m
+[36m[2024-04-23 14:55:07,609] [utility.py:91] [utility:__console] [DEBUG]- (('generate flat buffer script success:', 'PositionArray3d'),)[0m
+[36m[2024-04-23 14:55:07,610] [utility.py:91] [utility:__console] [DEBUG]- (('execute flatbuffer cmd:', 'flatc --csharp --bfbs-comments -o out_flatbuffer_csharp flat/Position3dInt.fbs --gen-onefile'),)[0m
+[36m[2024-04-23 14:55:07,637] [utility.py:91] [utility:__console] [DEBUG]- (('generate flat buffer script success:', 'Position3dInt'),)[0m
+[36m[2024-04-23 14:55:07,638] [utility.py:91] [utility:__console] [DEBUG]- (('execute flatbuffer cmd:', 'flatc --csharp --bfbs-comments -o out_flatbuffer_csharp flat/CommonType.fbs --gen-onefile'),)[0m
+[36m[2024-04-23 14:55:07,673] [utility.py:91] [utility:__console] [DEBUG]- (('generate flat buffer script success:', 'CommonType'),)[0m
+[36m[2024-04-23 14:55:07,675] [utility.py:91] [utility:__console] [DEBUG]- (('execute flatbuffer cmd:', 'flatc --csharp --bfbs-comments -o out_flatbuffer_csharp flat/TestGlobalTemplate.fbs --gen-onefile'),)[0m
+[36m[2024-04-23 14:55:07,708] [utility.py:91] [utility:__console] [DEBUG]- (('generate flat buffer script success:', 'TestGlobalTemplate'),)[0m
+[36m[2024-04-23 14:55:07,710] [utility.py:91] [utility:__console] [DEBUG]- (('execute flatbuffer cmd:', 'flatc --csharp --bfbs-comments -o out_flatbuffer_csharp flat/TestGlobal2Template.fbs --gen-onefile'),)[0m
+[36m[2024-04-23 14:55:07,758] [utility.py:91] [utility:__console] [DEBUG]- (('generate flat buffer script success:', 'TestGlobal2Template'),)[0m
+[36m[2024-04-23 14:55:07,759] [utility.py:91] [utility:__console] [DEBUG]- (('execute flatbuffer cmd:', 'flatc --csharp --bfbs-comments -o out_flatbuffer_csharp flat/TestListTablesTemplate.fbs --gen-onefile'),)[0m
+[36m[2024-04-23 14:55:07,789] [utility.py:91] [utility:__console] [DEBUG]- (('generate flat buffer script success:', 'TestListTablesTemplate'),)[0m
+[36m[2024-04-23 14:55:07,789] [utility.py:91] [utility:__console] [DEBUG]- (('execute flatbuffer cmd:', 'flatc --csharp --bfbs-comments -o out_flatbuffer_csharp flat/TestTableArraysTemplate.fbs --gen-onefile'),)[0m
+[36m[2024-04-23 14:55:07,816] [utility.py:91] [utility:__console] [DEBUG]- (('generate flat buffer script success:', 'TestTableArraysTemplate'),)[0m
+[36m[2024-04-23 14:55:07,817] [utility.py:91] [utility:__console] [DEBUG]- (('export json data success:', 'out_json/TestGlobalTemplate.json'),)[0m
+[36m[2024-04-23 14:55:07,819] [utility.py:91] [utility:__console] [DEBUG]- (('export json data success:', 'out_json/TestGlobal2Template.json'),)[0m
+[36m[2024-04-23 14:55:07,821] [utility.py:91] [utility:__console] [DEBUG]- (('export json data success:', 'out_json/TestListTablesTemplate.json'),)[0m
+[36m[2024-04-23 14:55:07,822] [utility.py:91] [utility:__console] [DEBUG]- (('export json data success:', 'out_json/TestTableArraysTemplate.json'),)[0m
+[36m[2024-04-23 14:58:18,005] [utility.py:91] [utility:__console] [DEBUG]- (('build single sheet :测试全局表|TestGlobal',),)[0m
+[36m[2024-04-23 14:58:18,020] [utility.py:91] [utility:__console] [DEBUG]- (('build single sheet :测试全局表2|TestGlobal2',),)[0m
+[36m[2024-04-23 14:58:18,021] [utility.py:91] [utility:__console] [DEBUG]- (('build list sheet :测试列表3|TestListTable',),)[0m
+[36m[2024-04-23 14:58:18,028] [utility.py:91] [utility:__console] [DEBUG]- (('build list sheet :测试单表|TestTableArray',),)[0m
+[36m[2024-04-23 14:58:18,031] [utility.py:91] [utility:__console] [DEBUG]- (('export global protobuf proto file success:', 'Position3d.proto'),)[0m
+[36m[2024-04-23 14:58:18,032] [utility.py:91] [utility:__console] [DEBUG]- (('export global protobuf proto file success:', 'PositionArray3d.proto'),)[0m
+[36m[2024-04-23 14:58:18,033] [utility.py:91] [utility:__console] [DEBUG]- (('export global protobuf proto file success:', 'Position3dInt.proto'),)[0m
+[36m[2024-04-23 14:58:18,035] [utility.py:91] [utility:__console] [DEBUG]- (('export global protobuf proto file success:', 'CommonType.proto'),)[0m
+[36m[2024-04-23 14:58:18,036] [utility.py:91] [utility:__console] [DEBUG]- (('export protobuf proto file success:', 'TestGlobalTemplate.proto'),)[0m
+[36m[2024-04-23 14:58:18,038] [utility.py:91] [utility:__console] [DEBUG]- (('export protobuf proto file success:', 'TestGlobal2Template.proto'),)[0m
+[36m[2024-04-23 14:58:18,039] [utility.py:91] [utility:__console] [DEBUG]- (('export protobuf proto file success:', 'TestListTablesTemplate.proto'),)[0m
+[36m[2024-04-23 14:58:18,040] [utility.py:91] [utility:__console] [DEBUG]- (('export protobuf proto file success:', 'TestTableArraysTemplate.proto'),)[0m
+[36m[2024-04-23 14:58:18,043] [utility.py:91] [utility:__console] [DEBUG]- (('execute protobuf cmd:', 'tools/protoc/win64/bin/protoc.exe --csharp_out=out_protobuf_csharp/ protos/Position3d.proto'),)[0m
+[36m[2024-04-23 14:58:18,175] [utility.py:91] [utility:__console] [DEBUG]- (('generate protobuf script success:', 'Position3d'),)[0m
+[36m[2024-04-23 14:58:18,176] [utility.py:91] [utility:__console] [DEBUG]- (('execute protobuf cmd:', 'tools/protoc/win64/bin/protoc.exe --csharp_out=out_protobuf_csharp/ protos/PositionArray3d.proto'),)[0m
+[36m[2024-04-23 14:58:18,281] [utility.py:91] [utility:__console] [DEBUG]- (('generate protobuf script success:', 'PositionArray3d'),)[0m
+[36m[2024-04-23 14:58:18,283] [utility.py:91] [utility:__console] [DEBUG]- (('execute protobuf cmd:', 'tools/protoc/win64/bin/protoc.exe --csharp_out=out_protobuf_csharp/ protos/Position3dInt.proto'),)[0m
+[36m[2024-04-23 14:58:18,353] [utility.py:91] [utility:__console] [DEBUG]- (('generate protobuf script success:', 'Position3dInt'),)[0m
+[36m[2024-04-23 14:58:18,354] [utility.py:91] [utility:__console] [DEBUG]- (('execute protobuf cmd:', 'tools/protoc/win64/bin/protoc.exe --csharp_out=out_protobuf_csharp/ protos/CommonType.proto'),)[0m
+[36m[2024-04-23 14:58:18,443] [utility.py:91] [utility:__console] [DEBUG]- (('generate protobuf script success:', 'CommonType'),)[0m
+[36m[2024-04-23 14:58:18,444] [utility.py:91] [utility:__console] [DEBUG]- (('execute protobuf cmd:', 'tools/protoc/win64/bin/protoc.exe --csharp_out=out_protobuf_csharp/ protos/TestGlobalTemplate.proto'),)[0m
+[36m[2024-04-23 14:58:18,618] [utility.py:91] [utility:__console] [DEBUG]- (('generate protobuf script success:', 'TestGlobalTemplate'),)[0m
+[36m[2024-04-23 14:58:18,621] [utility.py:91] [utility:__console] [DEBUG]- (('execute protobuf cmd:', 'tools/protoc/win64/bin/protoc.exe --csharp_out=out_protobuf_csharp/ protos/TestGlobal2Template.proto'),)[0m
+[36m[2024-04-23 14:58:18,722] [utility.py:91] [utility:__console] [DEBUG]- (('generate protobuf script success:', 'TestGlobal2Template'),)[0m
+[36m[2024-04-23 14:58:18,724] [utility.py:91] [utility:__console] [DEBUG]- (('execute protobuf cmd:', 'tools/protoc/win64/bin/protoc.exe --csharp_out=out_protobuf_csharp/ protos/TestListTablesTemplate.proto'),)[0m
+[36m[2024-04-23 14:58:18,821] [utility.py:91] [utility:__console] [DEBUG]- (('generate protobuf script success:', 'TestListTablesTemplate'),)[0m
+[36m[2024-04-23 14:58:18,823] [utility.py:91] [utility:__console] [DEBUG]- (('execute protobuf cmd:', 'tools/protoc/win64/bin/protoc.exe --csharp_out=out_protobuf_csharp/ protos/TestTableArraysTemplate.proto'),)[0m
+[36m[2024-04-23 14:58:18,906] [utility.py:91] [utility:__console] [DEBUG]- (('generate protobuf script success:', 'TestTableArraysTemplate'),)[0m
+[36m[2024-04-23 14:58:18,907] [utility.py:91] [utility:__console] [DEBUG]- (('export flat proto file success:', 'Position3d.proto'),)[0m
+[36m[2024-04-23 14:58:18,908] [utility.py:91] [utility:__console] [DEBUG]- (('export flat buff scheme file success:flat/Position3d.fbs',),)[0m
+[36m[2024-04-23 14:58:18,909] [utility.py:91] [utility:__console] [DEBUG]- (('export flat proto file success:', 'PositionArray3d.proto'),)[0m
+[36m[2024-04-23 14:58:18,910] [utility.py:91] [utility:__console] [DEBUG]- (('export flat buff scheme file success:flat/PositionArray3d.fbs',),)[0m
+[36m[2024-04-23 14:58:18,911] [utility.py:91] [utility:__console] [DEBUG]- (('export flat proto file success:', 'Position3dInt.proto'),)[0m
+[36m[2024-04-23 14:58:18,912] [utility.py:91] [utility:__console] [DEBUG]- (('export flat buff scheme file success:flat/Position3dInt.fbs',),)[0m
+[36m[2024-04-23 14:58:18,913] [utility.py:91] [utility:__console] [DEBUG]- (('export flat proto file success:', 'CommonType.proto'),)[0m
+[36m[2024-04-23 14:58:18,915] [utility.py:91] [utility:__console] [DEBUG]- (('export flat buff scheme file success:flat/CommonType.fbs',),)[0m
+[36m[2024-04-23 14:58:18,916] [utility.py:91] [utility:__console] [DEBUG]- (('export flat proto file success:', 'TestGlobalTemplate.proto'),)[0m
+[36m[2024-04-23 14:58:18,917] [utility.py:91] [utility:__console] [DEBUG]- (('export flat buff scheme file success:flat/TestGlobalTemplate.fbs',),)[0m
+[36m[2024-04-23 14:58:18,918] [utility.py:91] [utility:__console] [DEBUG]- (('export flat proto file success:', 'TestGlobal2Template.proto'),)[0m
+[36m[2024-04-23 14:58:18,919] [utility.py:91] [utility:__console] [DEBUG]- (('export flat buff scheme file success:flat/TestGlobal2Template.fbs',),)[0m
+[36m[2024-04-23 14:58:18,920] [utility.py:91] [utility:__console] [DEBUG]- (('export flat proto file success:', 'TestListTablesTemplate.proto'),)[0m
+[36m[2024-04-23 14:58:18,921] [utility.py:91] [utility:__console] [DEBUG]- (('export flat buff scheme file success:flat/TestListTablesTemplate.fbs',),)[0m
+[36m[2024-04-23 14:58:18,922] [utility.py:91] [utility:__console] [DEBUG]- (('export flat proto file success:', 'TestTableArraysTemplate.proto'),)[0m
+[36m[2024-04-23 14:58:18,923] [utility.py:91] [utility:__console] [DEBUG]- (('export flat buff scheme file success:flat/TestTableArraysTemplate.fbs',),)[0m
+[36m[2024-04-23 14:58:18,924] [utility.py:91] [utility:__console] [DEBUG]- (('execute flatbuffer cmd:', 'flatc --csharp --bfbs-comments -o out_flatbuffer_csharp flat/Position3d.fbs --gen-onefile'),)[0m
+[36m[2024-04-23 14:58:19,011] [utility.py:91] [utility:__console] [DEBUG]- (('generate flat buffer script success:', 'Position3d'),)[0m
+[36m[2024-04-23 14:58:19,012] [utility.py:91] [utility:__console] [DEBUG]- (('execute flatbuffer cmd:', 'flatc --csharp --bfbs-comments -o out_flatbuffer_csharp flat/PositionArray3d.fbs --gen-onefile'),)[0m
+[36m[2024-04-23 14:58:19,096] [utility.py:91] [utility:__console] [DEBUG]- (('generate flat buffer script success:', 'PositionArray3d'),)[0m
+[36m[2024-04-23 14:58:19,097] [utility.py:91] [utility:__console] [DEBUG]- (('execute flatbuffer cmd:', 'flatc --csharp --bfbs-comments -o out_flatbuffer_csharp flat/Position3dInt.fbs --gen-onefile'),)[0m
+[36m[2024-04-23 14:58:19,196] [utility.py:91] [utility:__console] [DEBUG]- (('generate flat buffer script success:', 'Position3dInt'),)[0m
+[36m[2024-04-23 14:58:19,200] [utility.py:91] [utility:__console] [DEBUG]- (('execute flatbuffer cmd:', 'flatc --csharp --bfbs-comments -o out_flatbuffer_csharp flat/CommonType.fbs --gen-onefile'),)[0m
+[36m[2024-04-23 14:58:19,266] [utility.py:91] [utility:__console] [DEBUG]- (('generate flat buffer script success:', 'CommonType'),)[0m
+[36m[2024-04-23 14:58:19,267] [utility.py:91] [utility:__console] [DEBUG]- (('execute flatbuffer cmd:', 'flatc --csharp --bfbs-comments -o out_flatbuffer_csharp flat/TestGlobalTemplate.fbs --gen-onefile'),)[0m
+[36m[2024-04-23 14:58:19,347] [utility.py:91] [utility:__console] [DEBUG]- (('generate flat buffer script success:', 'TestGlobalTemplate'),)[0m
+[36m[2024-04-23 14:58:19,350] [utility.py:91] [utility:__console] [DEBUG]- (('execute flatbuffer cmd:', 'flatc --csharp --bfbs-comments -o out_flatbuffer_csharp flat/TestGlobal2Template.fbs --gen-onefile'),)[0m
+[36m[2024-04-23 14:58:19,422] [utility.py:91] [utility:__console] [DEBUG]- (('generate flat buffer script success:', 'TestGlobal2Template'),)[0m
+[36m[2024-04-23 14:58:19,423] [utility.py:91] [utility:__console] [DEBUG]- (('execute flatbuffer cmd:', 'flatc --csharp --bfbs-comments -o out_flatbuffer_csharp flat/TestListTablesTemplate.fbs --gen-onefile'),)[0m
+[36m[2024-04-23 14:58:19,488] [utility.py:91] [utility:__console] [DEBUG]- (('generate flat buffer script success:', 'TestListTablesTemplate'),)[0m
+[36m[2024-04-23 14:58:19,489] [utility.py:91] [utility:__console] [DEBUG]- (('execute flatbuffer cmd:', 'flatc --csharp --bfbs-comments -o out_flatbuffer_csharp flat/TestTableArraysTemplate.fbs --gen-onefile'),)[0m
+[36m[2024-04-23 14:58:19,555] [utility.py:91] [utility:__console] [DEBUG]- (('generate flat buffer script success:', 'TestTableArraysTemplate'),)[0m
+[36m[2024-04-23 14:58:19,559] [utility.py:91] [utility:__console] [DEBUG]- (('export json data success:', 'out_json/TestGlobalTemplate.json'),)[0m
+[36m[2024-04-23 14:58:19,562] [utility.py:91] [utility:__console] [DEBUG]- (('export json data success:', 'out_json/TestGlobal2Template.json'),)[0m
+[36m[2024-04-23 14:58:19,566] [utility.py:91] [utility:__console] [DEBUG]- (('export json data success:', 'out_json/TestListTablesTemplate.json'),)[0m
+[36m[2024-04-23 14:58:19,572] [utility.py:91] [utility:__console] [DEBUG]- (('export json data success:', 'out_json/TestTableArraysTemplate.json'),)[0m
+[36m[2024-04-23 14:58:47,380] [utility.py:91] [utility:__console] [DEBUG]- (('build single sheet :测试全局表|TestGlobal',),)[0m
+[36m[2024-04-23 14:58:47,383] [utility.py:91] [utility:__console] [DEBUG]- (('build single sheet :测试全局表2|TestGlobal2',),)[0m
+[36m[2024-04-23 14:58:47,384] [utility.py:91] [utility:__console] [DEBUG]- (('build list sheet :测试列表3|TestListTable',),)[0m
+[36m[2024-04-23 14:58:47,391] [utility.py:91] [utility:__console] [DEBUG]- (('build list sheet :测试单表|TestTableArray',),)[0m
+[36m[2024-04-23 14:58:47,395] [utility.py:91] [utility:__console] [DEBUG]- (('export global protobuf proto file success:', 'Position3d.proto'),)[0m
+[36m[2024-04-23 14:58:47,396] [utility.py:91] [utility:__console] [DEBUG]- (('export global protobuf proto file success:', 'PositionArray3d.proto'),)[0m
+[36m[2024-04-23 14:58:47,398] [utility.py:91] [utility:__console] [DEBUG]- (('export global protobuf proto file success:', 'Position3dInt.proto'),)[0m
+[36m[2024-04-23 14:58:47,399] [utility.py:91] [utility:__console] [DEBUG]- (('export global protobuf proto file success:', 'CommonType.proto'),)[0m
+[36m[2024-04-23 14:58:47,401] [utility.py:91] [utility:__console] [DEBUG]- (('export protobuf proto file success:', 'TestGlobalTemplate.proto'),)[0m
+[36m[2024-04-23 14:58:47,403] [utility.py:91] [utility:__console] [DEBUG]- (('export protobuf proto file success:', 'TestGlobal2Template.proto'),)[0m
+[36m[2024-04-23 14:58:47,405] [utility.py:91] [utility:__console] [DEBUG]- (('export protobuf proto file success:', 'TestListTablesTemplate.proto'),)[0m
+[36m[2024-04-23 14:58:47,406] [utility.py:91] [utility:__console] [DEBUG]- (('export protobuf proto file success:', 'TestTableArraysTemplate.proto'),)[0m
+[36m[2024-04-23 14:58:47,407] [utility.py:91] [utility:__console] [DEBUG]- (('execute protobuf cmd:', 'tools/protoc/win64/bin/protoc.exe --csharp_out=out_protobuf_csharp/ protos/Position3d.proto'),)[0m
+[36m[2024-04-23 14:58:47,484] [utility.py:91] [utility:__console] [DEBUG]- (('generate protobuf script success:', 'Position3d'),)[0m
+[36m[2024-04-23 14:58:47,485] [utility.py:91] [utility:__console] [DEBUG]- (('execute protobuf cmd:', 'tools/protoc/win64/bin/protoc.exe --csharp_out=out_protobuf_csharp/ protos/PositionArray3d.proto'),)[0m
+[36m[2024-04-23 14:58:47,513] [utility.py:91] [utility:__console] [DEBUG]- (('generate protobuf script success:', 'PositionArray3d'),)[0m
+[36m[2024-04-23 14:58:47,514] [utility.py:91] [utility:__console] [DEBUG]- (('execute protobuf cmd:', 'tools/protoc/win64/bin/protoc.exe --csharp_out=out_protobuf_csharp/ protos/Position3dInt.proto'),)[0m
+[36m[2024-04-23 14:58:47,541] [utility.py:91] [utility:__console] [DEBUG]- (('generate protobuf script success:', 'Position3dInt'),)[0m
+[36m[2024-04-23 14:58:47,542] [utility.py:91] [utility:__console] [DEBUG]- (('execute protobuf cmd:', 'tools/protoc/win64/bin/protoc.exe --csharp_out=out_protobuf_csharp/ protos/CommonType.proto'),)[0m
+[36m[2024-04-23 14:58:47,568] [utility.py:91] [utility:__console] [DEBUG]- (('generate protobuf script success:', 'CommonType'),)[0m
+[36m[2024-04-23 14:58:47,570] [utility.py:91] [utility:__console] [DEBUG]- (('execute protobuf cmd:', 'tools/protoc/win64/bin/protoc.exe --csharp_out=out_protobuf_csharp/ protos/TestGlobalTemplate.proto'),)[0m
+[36m[2024-04-23 14:58:47,597] [utility.py:91] [utility:__console] [DEBUG]- (('generate protobuf script success:', 'TestGlobalTemplate'),)[0m
+[36m[2024-04-23 14:58:47,598] [utility.py:91] [utility:__console] [DEBUG]- (('execute protobuf cmd:', 'tools/protoc/win64/bin/protoc.exe --csharp_out=out_protobuf_csharp/ protos/TestGlobal2Template.proto'),)[0m
+[36m[2024-04-23 14:58:47,625] [utility.py:91] [utility:__console] [DEBUG]- (('generate protobuf script success:', 'TestGlobal2Template'),)[0m
+[36m[2024-04-23 14:58:47,626] [utility.py:91] [utility:__console] [DEBUG]- (('execute protobuf cmd:', 'tools/protoc/win64/bin/protoc.exe --csharp_out=out_protobuf_csharp/ protos/TestListTablesTemplate.proto'),)[0m
+[36m[2024-04-23 14:58:47,654] [utility.py:91] [utility:__console] [DEBUG]- (('generate protobuf script success:', 'TestListTablesTemplate'),)[0m
+[36m[2024-04-23 14:58:47,655] [utility.py:91] [utility:__console] [DEBUG]- (('execute protobuf cmd:', 'tools/protoc/win64/bin/protoc.exe --csharp_out=out_protobuf_csharp/ protos/TestTableArraysTemplate.proto'),)[0m
+[36m[2024-04-23 14:58:47,682] [utility.py:91] [utility:__console] [DEBUG]- (('generate protobuf script success:', 'TestTableArraysTemplate'),)[0m
+[36m[2024-04-23 14:58:47,683] [utility.py:91] [utility:__console] [DEBUG]- (('export flat proto file success:', 'Position3d.proto'),)[0m
+[36m[2024-04-23 14:58:47,684] [utility.py:91] [utility:__console] [DEBUG]- (('export flat buff scheme file success:flat/Position3d.fbs',),)[0m
+[36m[2024-04-23 14:58:47,692] [utility.py:91] [utility:__console] [DEBUG]- (('export flat proto file success:', 'PositionArray3d.proto'),)[0m
+[36m[2024-04-23 14:58:47,695] [utility.py:91] [utility:__console] [DEBUG]- (('export flat buff scheme file success:flat/PositionArray3d.fbs',),)[0m
+[36m[2024-04-23 14:58:47,697] [utility.py:91] [utility:__console] [DEBUG]- (('export flat proto file success:', 'Position3dInt.proto'),)[0m
+[36m[2024-04-23 14:58:47,700] [utility.py:91] [utility:__console] [DEBUG]- (('export flat buff scheme file success:flat/Position3dInt.fbs',),)[0m
+[36m[2024-04-23 14:58:47,706] [utility.py:91] [utility:__console] [DEBUG]- (('export flat proto file success:', 'CommonType.proto'),)[0m
+[36m[2024-04-23 14:58:47,709] [utility.py:91] [utility:__console] [DEBUG]- (('export flat buff scheme file success:flat/CommonType.fbs',),)[0m
+[36m[2024-04-23 14:58:47,711] [utility.py:91] [utility:__console] [DEBUG]- (('export flat proto file success:', 'TestGlobalTemplate.proto'),)[0m
+[36m[2024-04-23 14:58:47,715] [utility.py:91] [utility:__console] [DEBUG]- (('export flat buff scheme file success:flat/TestGlobalTemplate.fbs',),)[0m
+[36m[2024-04-23 14:58:47,717] [utility.py:91] [utility:__console] [DEBUG]- (('export flat proto file success:', 'TestGlobal2Template.proto'),)[0m
+[36m[2024-04-23 14:58:47,722] [utility.py:91] [utility:__console] [DEBUG]- (('export flat buff scheme file success:flat/TestGlobal2Template.fbs',),)[0m
+[36m[2024-04-23 14:58:47,724] [utility.py:91] [utility:__console] [DEBUG]- (('export flat proto file success:', 'TestListTablesTemplate.proto'),)[0m
+[36m[2024-04-23 14:58:47,727] [utility.py:91] [utility:__console] [DEBUG]- (('export flat buff scheme file success:flat/TestListTablesTemplate.fbs',),)[0m
+[36m[2024-04-23 14:58:47,729] [utility.py:91] [utility:__console] [DEBUG]- (('export flat proto file success:', 'TestTableArraysTemplate.proto'),)[0m
+[36m[2024-04-23 14:58:47,735] [utility.py:91] [utility:__console] [DEBUG]- (('export flat buff scheme file success:flat/TestTableArraysTemplate.fbs',),)[0m
+[36m[2024-04-23 14:58:47,740] [utility.py:91] [utility:__console] [DEBUG]- (('execute flatbuffer cmd:', 'flatc --csharp --bfbs-comments -o out_flatbuffer_csharp flat/Position3d.fbs --gen-onefile'),)[0m
+[36m[2024-04-23 14:58:47,795] [utility.py:91] [utility:__console] [DEBUG]- (('generate flat buffer script success:', 'Position3d'),)[0m
+[36m[2024-04-23 14:58:47,796] [utility.py:91] [utility:__console] [DEBUG]- (('execute flatbuffer cmd:', 'flatc --csharp --bfbs-comments -o out_flatbuffer_csharp flat/PositionArray3d.fbs --gen-onefile'),)[0m
+[36m[2024-04-23 14:58:47,824] [utility.py:91] [utility:__console] [DEBUG]- (('generate flat buffer script success:', 'PositionArray3d'),)[0m
+[36m[2024-04-23 14:58:47,825] [utility.py:91] [utility:__console] [DEBUG]- (('execute flatbuffer cmd:', 'flatc --csharp --bfbs-comments -o out_flatbuffer_csharp flat/Position3dInt.fbs --gen-onefile'),)[0m
+[36m[2024-04-23 14:58:47,851] [utility.py:91] [utility:__console] [DEBUG]- (('generate flat buffer script success:', 'Position3dInt'),)[0m
+[36m[2024-04-23 14:58:47,852] [utility.py:91] [utility:__console] [DEBUG]- (('execute flatbuffer cmd:', 'flatc --csharp --bfbs-comments -o out_flatbuffer_csharp flat/CommonType.fbs --gen-onefile'),)[0m
+[36m[2024-04-23 14:58:47,879] [utility.py:91] [utility:__console] [DEBUG]- (('generate flat buffer script success:', 'CommonType'),)[0m
+[36m[2024-04-23 14:58:47,880] [utility.py:91] [utility:__console] [DEBUG]- (('execute flatbuffer cmd:', 'flatc --csharp --bfbs-comments -o out_flatbuffer_csharp flat/TestGlobalTemplate.fbs --gen-onefile'),)[0m
+[36m[2024-04-23 14:58:47,914] [utility.py:91] [utility:__console] [DEBUG]- (('generate flat buffer script success:', 'TestGlobalTemplate'),)[0m
+[36m[2024-04-23 14:58:47,917] [utility.py:91] [utility:__console] [DEBUG]- (('execute flatbuffer cmd:', 'flatc --csharp --bfbs-comments -o out_flatbuffer_csharp flat/TestGlobal2Template.fbs --gen-onefile'),)[0m
+[36m[2024-04-23 14:58:47,960] [utility.py:91] [utility:__console] [DEBUG]- (('generate flat buffer script success:', 'TestGlobal2Template'),)[0m
+[36m[2024-04-23 14:58:47,961] [utility.py:91] [utility:__console] [DEBUG]- (('execute flatbuffer cmd:', 'flatc --csharp --bfbs-comments -o out_flatbuffer_csharp flat/TestListTablesTemplate.fbs --gen-onefile'),)[0m
+[36m[2024-04-23 14:58:47,995] [utility.py:91] [utility:__console] [DEBUG]- (('generate flat buffer script success:', 'TestListTablesTemplate'),)[0m
+[36m[2024-04-23 14:58:47,996] [utility.py:91] [utility:__console] [DEBUG]- (('execute flatbuffer cmd:', 'flatc --csharp --bfbs-comments -o out_flatbuffer_csharp flat/TestTableArraysTemplate.fbs --gen-onefile'),)[0m
+[36m[2024-04-23 14:58:48,023] [utility.py:91] [utility:__console] [DEBUG]- (('generate flat buffer script success:', 'TestTableArraysTemplate'),)[0m
+[36m[2024-04-23 14:58:48,024] [utility.py:91] [utility:__console] [DEBUG]- (('export json data success:', 'out_json/TestGlobalTemplate.json'),)[0m
+[36m[2024-04-23 14:58:48,025] [utility.py:91] [utility:__console] [DEBUG]- (('export json data success:', 'out_json/TestGlobal2Template.json'),)[0m
+[36m[2024-04-23 14:58:48,027] [utility.py:91] [utility:__console] [DEBUG]- (('export json data success:', 'out_json/TestListTablesTemplate.json'),)[0m
+[36m[2024-04-23 14:58:48,028] [utility.py:91] [utility:__console] [DEBUG]- (('export json data success:', 'out_json/TestTableArraysTemplate.json'),)[0m
+[36m[2024-04-23 15:03:43,432] [utility.py:91] [utility:__console] [DEBUG]- (('build single sheet :测试全局表|TestGlobal',),)[0m
+[36m[2024-04-23 15:03:43,448] [utility.py:91] [utility:__console] [DEBUG]- (('build single sheet :测试全局表2|TestGlobal2',),)[0m
+[36m[2024-04-23 15:03:43,449] [utility.py:91] [utility:__console] [DEBUG]- (('build list sheet :测试列表3|TestListTable',),)[0m
+[36m[2024-04-23 15:03:43,460] [utility.py:91] [utility:__console] [DEBUG]- (('build list sheet :测试单表|TestTableArray',),)[0m
+[36m[2024-04-23 15:03:43,463] [utility.py:91] [utility:__console] [DEBUG]- (('export global protobuf proto file success:', 'Position3d.proto'),)[0m
+[36m[2024-04-23 15:03:43,483] [utility.py:91] [utility:__console] [DEBUG]- (('export global protobuf proto file success:', 'PositionArray3d.proto'),)[0m
+[36m[2024-04-23 15:03:43,484] [utility.py:91] [utility:__console] [DEBUG]- (('export global protobuf proto file success:', 'Position3dInt.proto'),)[0m
+[36m[2024-04-23 15:03:43,493] [utility.py:91] [utility:__console] [DEBUG]- (('export global protobuf proto file success:', 'CommonType.proto'),)[0m
+[36m[2024-04-23 15:03:43,494] [utility.py:91] [utility:__console] [DEBUG]- (('export protobuf proto file success:', 'TestGlobalTemplate.proto'),)[0m
+[36m[2024-04-23 15:03:43,501] [utility.py:91] [utility:__console] [DEBUG]- (('export protobuf proto file success:', 'TestGlobal2Template.proto'),)[0m
+[36m[2024-04-23 15:03:43,502] [utility.py:91] [utility:__console] [DEBUG]- (('export protobuf proto file success:', 'TestListTablesTemplate.proto'),)[0m
+[36m[2024-04-23 15:03:43,519] [utility.py:91] [utility:__console] [DEBUG]- (('export protobuf proto file success:', 'TestTableArraysTemplate.proto'),)[0m
+[36m[2024-04-23 15:03:43,523] [utility.py:91] [utility:__console] [DEBUG]- (('execute protobuf cmd:', 'tools/protoc/win64/bin/protoc.exe --csharp_out=out_protobuf_csharp/ protos/Position3d.proto'),)[0m
+[36m[2024-04-23 15:03:43,726] [utility.py:91] [utility:__console] [DEBUG]- (('generate protobuf script success:', 'Position3d'),)[0m
+[36m[2024-04-23 15:03:43,727] [utility.py:91] [utility:__console] [DEBUG]- (('execute protobuf cmd:', 'tools/protoc/win64/bin/protoc.exe --csharp_out=out_protobuf_csharp/ protos/PositionArray3d.proto'),)[0m
+[36m[2024-04-23 15:03:43,807] [utility.py:91] [utility:__console] [DEBUG]- (('generate protobuf script success:', 'PositionArray3d'),)[0m
+[36m[2024-04-23 15:03:43,811] [utility.py:91] [utility:__console] [DEBUG]- (('execute protobuf cmd:', 'tools/protoc/win64/bin/protoc.exe --csharp_out=out_protobuf_csharp/ protos/Position3dInt.proto'),)[0m
+[36m[2024-04-23 15:03:43,887] [utility.py:91] [utility:__console] [DEBUG]- (('generate protobuf script success:', 'Position3dInt'),)[0m
+[36m[2024-04-23 15:03:43,888] [utility.py:91] [utility:__console] [DEBUG]- (('execute protobuf cmd:', 'tools/protoc/win64/bin/protoc.exe --csharp_out=out_protobuf_csharp/ protos/CommonType.proto'),)[0m
+[36m[2024-04-23 15:03:44,333] [utility.py:91] [utility:__console] [DEBUG]- (('generate protobuf script success:', 'CommonType'),)[0m
+[36m[2024-04-23 15:03:44,334] [utility.py:91] [utility:__console] [DEBUG]- (('execute protobuf cmd:', 'tools/protoc/win64/bin/protoc.exe --csharp_out=out_protobuf_csharp/ protos/TestGlobalTemplate.proto'),)[0m
+[36m[2024-04-23 15:03:44,411] [utility.py:91] [utility:__console] [DEBUG]- (('generate protobuf script success:', 'TestGlobalTemplate'),)[0m
+[36m[2024-04-23 15:03:44,411] [utility.py:91] [utility:__console] [DEBUG]- (('execute protobuf cmd:', 'tools/protoc/win64/bin/protoc.exe --csharp_out=out_protobuf_csharp/ protos/TestGlobal2Template.proto'),)[0m
+[36m[2024-04-23 15:03:44,490] [utility.py:91] [utility:__console] [DEBUG]- (('generate protobuf script success:', 'TestGlobal2Template'),)[0m
+[36m[2024-04-23 15:03:44,490] [utility.py:91] [utility:__console] [DEBUG]- (('execute protobuf cmd:', 'tools/protoc/win64/bin/protoc.exe --csharp_out=out_protobuf_csharp/ protos/TestListTablesTemplate.proto'),)[0m
+[36m[2024-04-23 15:03:44,668] [utility.py:91] [utility:__console] [DEBUG]- (('generate protobuf script success:', 'TestListTablesTemplate'),)[0m
+[36m[2024-04-23 15:03:44,668] [utility.py:91] [utility:__console] [DEBUG]- (('execute protobuf cmd:', 'tools/protoc/win64/bin/protoc.exe --csharp_out=out_protobuf_csharp/ protos/TestTableArraysTemplate.proto'),)[0m
+[36m[2024-04-23 15:03:44,785] [utility.py:91] [utility:__console] [DEBUG]- (('generate protobuf script success:', 'TestTableArraysTemplate'),)[0m
+[36m[2024-04-23 15:03:44,786] [utility.py:91] [utility:__console] [DEBUG]- (('export flat proto file success:', 'Position3d.proto'),)[0m
+[36m[2024-04-23 15:03:44,787] [utility.py:91] [utility:__console] [DEBUG]- (('export flat buff scheme file success:flat/Position3d.fbs',),)[0m
+[36m[2024-04-23 15:03:44,789] [utility.py:91] [utility:__console] [DEBUG]- (('export flat proto file success:', 'PositionArray3d.proto'),)[0m
+[36m[2024-04-23 15:03:44,792] [utility.py:91] [utility:__console] [DEBUG]- (('export flat buff scheme file success:flat/PositionArray3d.fbs',),)[0m
+[36m[2024-04-23 15:03:44,793] [utility.py:91] [utility:__console] [DEBUG]- (('export flat proto file success:', 'Position3dInt.proto'),)[0m
+[36m[2024-04-23 15:03:44,794] [utility.py:91] [utility:__console] [DEBUG]- (('export flat buff scheme file success:flat/Position3dInt.fbs',),)[0m
+[36m[2024-04-23 15:03:44,795] [utility.py:91] [utility:__console] [DEBUG]- (('export flat proto file success:', 'CommonType.proto'),)[0m
+[36m[2024-04-23 15:03:44,796] [utility.py:91] [utility:__console] [DEBUG]- (('export flat buff scheme file success:flat/CommonType.fbs',),)[0m
+[36m[2024-04-23 15:03:44,799] [utility.py:91] [utility:__console] [DEBUG]- (('export flat proto file success:', 'TestGlobalTemplate.proto'),)[0m
+[36m[2024-04-23 15:03:44,801] [utility.py:91] [utility:__console] [DEBUG]- (('export flat buff scheme file success:flat/TestGlobalTemplate.fbs',),)[0m
+[36m[2024-04-23 15:03:44,802] [utility.py:91] [utility:__console] [DEBUG]- (('export flat proto file success:', 'TestGlobal2Template.proto'),)[0m
+[36m[2024-04-23 15:03:44,803] [utility.py:91] [utility:__console] [DEBUG]- (('export flat buff scheme file success:flat/TestGlobal2Template.fbs',),)[0m
+[36m[2024-04-23 15:03:44,804] [utility.py:91] [utility:__console] [DEBUG]- (('export flat proto file success:', 'TestListTablesTemplate.proto'),)[0m
+[36m[2024-04-23 15:03:44,805] [utility.py:91] [utility:__console] [DEBUG]- (('export flat buff scheme file success:flat/TestListTablesTemplate.fbs',),)[0m
+[36m[2024-04-23 15:03:44,807] [utility.py:91] [utility:__console] [DEBUG]- (('export flat proto file success:', 'TestTableArraysTemplate.proto'),)[0m
+[36m[2024-04-23 15:03:44,808] [utility.py:91] [utility:__console] [DEBUG]- (('export flat buff scheme file success:flat/TestTableArraysTemplate.fbs',),)[0m
+[36m[2024-04-23 15:03:44,810] [utility.py:91] [utility:__console] [DEBUG]- (('execute flatbuffer cmd:', 'flatc --csharp --bfbs-comments -o out_flatbuffer_csharp flat/Position3d.fbs --gen-onefile'),)[0m
+[36m[2024-04-23 15:03:44,854] [utility.py:91] [utility:__console] [DEBUG]- (('generate flat buffer script success:', 'Position3d'),)[0m
+[36m[2024-04-23 15:03:44,856] [utility.py:91] [utility:__console] [DEBUG]- (('execute flatbuffer cmd:', 'flatc --csharp --bfbs-comments -o out_flatbuffer_csharp flat/PositionArray3d.fbs --gen-onefile'),)[0m
+[36m[2024-04-23 15:03:44,899] [utility.py:91] [utility:__console] [DEBUG]- (('generate flat buffer script success:', 'PositionArray3d'),)[0m
+[36m[2024-04-23 15:03:44,904] [utility.py:91] [utility:__console] [DEBUG]- (('execute flatbuffer cmd:', 'flatc --csharp --bfbs-comments -o out_flatbuffer_csharp flat/Position3dInt.fbs --gen-onefile'),)[0m
+[36m[2024-04-23 15:03:45,028] [utility.py:91] [utility:__console] [DEBUG]- (('generate flat buffer script success:', 'Position3dInt'),)[0m
+[36m[2024-04-23 15:03:45,029] [utility.py:91] [utility:__console] [DEBUG]- (('execute flatbuffer cmd:', 'flatc --csharp --bfbs-comments -o out_flatbuffer_csharp flat/CommonType.fbs --gen-onefile'),)[0m
+[36m[2024-04-23 15:03:45,067] [utility.py:91] [utility:__console] [DEBUG]- (('generate flat buffer script success:', 'CommonType'),)[0m
+[36m[2024-04-23 15:03:45,067] [utility.py:91] [utility:__console] [DEBUG]- (('execute flatbuffer cmd:', 'flatc --csharp --bfbs-comments -o out_flatbuffer_csharp flat/TestGlobalTemplate.fbs --gen-onefile'),)[0m
+[36m[2024-04-23 15:03:45,150] [utility.py:91] [utility:__console] [DEBUG]- (('generate flat buffer script success:', 'TestGlobalTemplate'),)[0m
+[36m[2024-04-23 15:03:45,151] [utility.py:91] [utility:__console] [DEBUG]- (('execute flatbuffer cmd:', 'flatc --csharp --bfbs-comments -o out_flatbuffer_csharp flat/TestGlobal2Template.fbs --gen-onefile'),)[0m
+[36m[2024-04-23 15:03:45,220] [utility.py:91] [utility:__console] [DEBUG]- (('generate flat buffer script success:', 'TestGlobal2Template'),)[0m
+[36m[2024-04-23 15:03:45,221] [utility.py:91] [utility:__console] [DEBUG]- (('execute flatbuffer cmd:', 'flatc --csharp --bfbs-comments -o out_flatbuffer_csharp flat/TestListTablesTemplate.fbs --gen-onefile'),)[0m
+[36m[2024-04-23 15:03:45,258] [utility.py:91] [utility:__console] [DEBUG]- (('generate flat buffer script success:', 'TestListTablesTemplate'),)[0m
+[36m[2024-04-23 15:03:45,259] [utility.py:91] [utility:__console] [DEBUG]- (('execute flatbuffer cmd:', 'flatc --csharp --bfbs-comments -o out_flatbuffer_csharp flat/TestTableArraysTemplate.fbs --gen-onefile'),)[0m
+[36m[2024-04-23 15:03:45,292] [utility.py:91] [utility:__console] [DEBUG]- (('generate flat buffer script success:', 'TestTableArraysTemplate'),)[0m
+[36m[2024-04-23 15:03:45,293] [utility.py:91] [utility:__console] [DEBUG]- (('export json data success:', 'out_json/TestGlobalTemplate.json'),)[0m
+[36m[2024-04-23 15:03:45,295] [utility.py:91] [utility:__console] [DEBUG]- (('export json data success:', 'out_json/TestGlobal2Template.json'),)[0m
+[36m[2024-04-23 15:03:45,296] [utility.py:91] [utility:__console] [DEBUG]- (('export json data success:', 'out_json/TestListTablesTemplate.json'),)[0m
+[36m[2024-04-23 15:03:45,298] [utility.py:91] [utility:__console] [DEBUG]- (('export json data success:', 'out_json/TestTableArraysTemplate.json'),)[0m
+[36m[2024-04-23 15:04:04,948] [utility.py:91] [utility:__console] [DEBUG]- (('build single sheet :测试全局表|TestGlobal',),)[0m
+[36m[2024-04-23 15:04:04,951] [utility.py:91] [utility:__console] [DEBUG]- (('build single sheet :测试全局表2|TestGlobal2',),)[0m
+[36m[2024-04-23 15:04:04,952] [utility.py:91] [utility:__console] [DEBUG]- (('build list sheet :测试列表3|TestListTable',),)[0m
+[36m[2024-04-23 15:04:04,958] [utility.py:91] [utility:__console] [DEBUG]- (('build list sheet :测试单表|TestTableArray',),)[0m
+[36m[2024-04-23 15:04:04,969] [utility.py:91] [utility:__console] [DEBUG]- (('export global protobuf proto file success:', 'Position3d.proto'),)[0m
+[36m[2024-04-23 15:04:04,971] [utility.py:91] [utility:__console] [DEBUG]- (('export global protobuf proto file success:', 'PositionArray3d.proto'),)[0m
+[36m[2024-04-23 15:04:04,973] [utility.py:91] [utility:__console] [DEBUG]- (('export global protobuf proto file success:', 'Position3dInt.proto'),)[0m
+[36m[2024-04-23 15:04:04,984] [utility.py:91] [utility:__console] [DEBUG]- (('export global protobuf proto file success:', 'CommonType.proto'),)[0m
+[36m[2024-04-23 15:04:04,986] [utility.py:91] [utility:__console] [DEBUG]- (('export protobuf proto file success:', 'TestGlobalTemplate.proto'),)[0m
+[36m[2024-04-23 15:04:04,988] [utility.py:91] [utility:__console] [DEBUG]- (('export protobuf proto file success:', 'TestGlobal2Template.proto'),)[0m
+[36m[2024-04-23 15:04:04,990] [utility.py:91] [utility:__console] [DEBUG]- (('export protobuf proto file success:', 'TestListTablesTemplate.proto'),)[0m
+[36m[2024-04-23 15:04:04,993] [utility.py:91] [utility:__console] [DEBUG]- (('export protobuf proto file success:', 'TestTableArraysTemplate.proto'),)[0m
+[36m[2024-04-23 15:04:04,996] [utility.py:91] [utility:__console] [DEBUG]- (('execute protobuf cmd:', 'tools/protoc/win64/bin/protoc.exe --csharp_out=out_protobuf_csharp/ protos/Position3d.proto'),)[0m
+[36m[2024-04-23 15:04:05,093] [utility.py:91] [utility:__console] [DEBUG]- (('generate protobuf script success:', 'Position3d'),)[0m
+[36m[2024-04-23 15:04:05,094] [utility.py:91] [utility:__console] [DEBUG]- (('execute protobuf cmd:', 'tools/protoc/win64/bin/protoc.exe --csharp_out=out_protobuf_csharp/ protos/PositionArray3d.proto'),)[0m
+[36m[2024-04-23 15:04:05,122] [utility.py:91] [utility:__console] [DEBUG]- (('generate protobuf script success:', 'PositionArray3d'),)[0m
+[36m[2024-04-23 15:04:05,124] [utility.py:91] [utility:__console] [DEBUG]- (('execute protobuf cmd:', 'tools/protoc/win64/bin/protoc.exe --csharp_out=out_protobuf_csharp/ protos/Position3dInt.proto'),)[0m
+[36m[2024-04-23 15:04:05,153] [utility.py:91] [utility:__console] [DEBUG]- (('generate protobuf script success:', 'Position3dInt'),)[0m
+[36m[2024-04-23 15:04:05,154] [utility.py:91] [utility:__console] [DEBUG]- (('execute protobuf cmd:', 'tools/protoc/win64/bin/protoc.exe --csharp_out=out_protobuf_csharp/ protos/CommonType.proto'),)[0m
+[36m[2024-04-23 15:04:05,228] [utility.py:91] [utility:__console] [DEBUG]- (('generate protobuf script success:', 'CommonType'),)[0m
+[36m[2024-04-23 15:04:05,229] [utility.py:91] [utility:__console] [DEBUG]- (('execute protobuf cmd:', 'tools/protoc/win64/bin/protoc.exe --csharp_out=out_protobuf_csharp/ protos/TestGlobalTemplate.proto'),)[0m
+[36m[2024-04-23 15:04:05,262] [utility.py:91] [utility:__console] [DEBUG]- (('generate protobuf script success:', 'TestGlobalTemplate'),)[0m
+[36m[2024-04-23 15:04:05,263] [utility.py:91] [utility:__console] [DEBUG]- (('execute protobuf cmd:', 'tools/protoc/win64/bin/protoc.exe --csharp_out=out_protobuf_csharp/ protos/TestGlobal2Template.proto'),)[0m
+[36m[2024-04-23 15:04:05,290] [utility.py:91] [utility:__console] [DEBUG]- (('generate protobuf script success:', 'TestGlobal2Template'),)[0m
+[36m[2024-04-23 15:04:05,291] [utility.py:91] [utility:__console] [DEBUG]- (('execute protobuf cmd:', 'tools/protoc/win64/bin/protoc.exe --csharp_out=out_protobuf_csharp/ protos/TestListTablesTemplate.proto'),)[0m
+[36m[2024-04-23 15:04:05,317] [utility.py:91] [utility:__console] [DEBUG]- (('generate protobuf script success:', 'TestListTablesTemplate'),)[0m
+[36m[2024-04-23 15:04:05,318] [utility.py:91] [utility:__console] [DEBUG]- (('execute protobuf cmd:', 'tools/protoc/win64/bin/protoc.exe --csharp_out=out_protobuf_csharp/ protos/TestTableArraysTemplate.proto'),)[0m
+[36m[2024-04-23 15:04:05,345] [utility.py:91] [utility:__console] [DEBUG]- (('generate protobuf script success:', 'TestTableArraysTemplate'),)[0m
+[36m[2024-04-23 15:04:05,346] [utility.py:91] [utility:__console] [DEBUG]- (('export flat proto file success:', 'Position3d.proto'),)[0m
+[36m[2024-04-23 15:04:05,347] [utility.py:91] [utility:__console] [DEBUG]- (('export flat buff scheme file success:flat/Position3d.fbs',),)[0m
+[36m[2024-04-23 15:04:05,348] [utility.py:91] [utility:__console] [DEBUG]- (('export flat proto file success:', 'PositionArray3d.proto'),)[0m
+[36m[2024-04-23 15:04:05,349] [utility.py:91] [utility:__console] [DEBUG]- (('export flat buff scheme file success:flat/PositionArray3d.fbs',),)[0m
+[36m[2024-04-23 15:04:05,350] [utility.py:91] [utility:__console] [DEBUG]- (('export flat proto file success:', 'Position3dInt.proto'),)[0m
+[36m[2024-04-23 15:04:05,351] [utility.py:91] [utility:__console] [DEBUG]- (('export flat buff scheme file success:flat/Position3dInt.fbs',),)[0m
+[36m[2024-04-23 15:04:05,352] [utility.py:91] [utility:__console] [DEBUG]- (('export flat proto file success:', 'CommonType.proto'),)[0m
+[36m[2024-04-23 15:04:05,353] [utility.py:91] [utility:__console] [DEBUG]- (('export flat buff scheme file success:flat/CommonType.fbs',),)[0m
+[36m[2024-04-23 15:04:05,354] [utility.py:91] [utility:__console] [DEBUG]- (('export flat proto file success:', 'TestGlobalTemplate.proto'),)[0m
+[36m[2024-04-23 15:04:05,356] [utility.py:91] [utility:__console] [DEBUG]- (('export flat buff scheme file success:flat/TestGlobalTemplate.fbs',),)[0m
+[36m[2024-04-23 15:04:05,357] [utility.py:91] [utility:__console] [DEBUG]- (('export flat proto file success:', 'TestGlobal2Template.proto'),)[0m
+[36m[2024-04-23 15:04:05,359] [utility.py:91] [utility:__console] [DEBUG]- (('export flat buff scheme file success:flat/TestGlobal2Template.fbs',),)[0m
+[36m[2024-04-23 15:04:05,360] [utility.py:91] [utility:__console] [DEBUG]- (('export flat proto file success:', 'TestListTablesTemplate.proto'),)[0m
+[36m[2024-04-23 15:04:05,362] [utility.py:91] [utility:__console] [DEBUG]- (('export flat buff scheme file success:flat/TestListTablesTemplate.fbs',),)[0m
+[36m[2024-04-23 15:04:05,363] [utility.py:91] [utility:__console] [DEBUG]- (('export flat proto file success:', 'TestTableArraysTemplate.proto'),)[0m
+[36m[2024-04-23 15:04:05,365] [utility.py:91] [utility:__console] [DEBUG]- (('export flat buff scheme file success:flat/TestTableArraysTemplate.fbs',),)[0m
+[36m[2024-04-23 15:04:05,367] [utility.py:91] [utility:__console] [DEBUG]- (('execute flatbuffer cmd:', 'flatc --csharp --bfbs-comments -o out_flatbuffer_csharp flat/Position3d.fbs --gen-onefile'),)[0m
+[36m[2024-04-23 15:04:05,411] [utility.py:91] [utility:__console] [DEBUG]- (('generate flat buffer script success:', 'Position3d'),)[0m
+[36m[2024-04-23 15:04:05,412] [utility.py:91] [utility:__console] [DEBUG]- (('execute flatbuffer cmd:', 'flatc --csharp --bfbs-comments -o out_flatbuffer_csharp flat/PositionArray3d.fbs --gen-onefile'),)[0m
+[36m[2024-04-23 15:04:05,451] [utility.py:91] [utility:__console] [DEBUG]- (('generate flat buffer script success:', 'PositionArray3d'),)[0m
+[36m[2024-04-23 15:04:05,453] [utility.py:91] [utility:__console] [DEBUG]- (('execute flatbuffer cmd:', 'flatc --csharp --bfbs-comments -o out_flatbuffer_csharp flat/Position3dInt.fbs --gen-onefile'),)[0m
+[36m[2024-04-23 15:04:05,482] [utility.py:91] [utility:__console] [DEBUG]- (('generate flat buffer script success:', 'Position3dInt'),)[0m
+[36m[2024-04-23 15:04:05,483] [utility.py:91] [utility:__console] [DEBUG]- (('execute flatbuffer cmd:', 'flatc --csharp --bfbs-comments -o out_flatbuffer_csharp flat/CommonType.fbs --gen-onefile'),)[0m
+[36m[2024-04-23 15:04:05,509] [utility.py:91] [utility:__console] [DEBUG]- (('generate flat buffer script success:', 'CommonType'),)[0m
+[36m[2024-04-23 15:04:05,510] [utility.py:91] [utility:__console] [DEBUG]- (('execute flatbuffer cmd:', 'flatc --csharp --bfbs-comments -o out_flatbuffer_csharp flat/TestGlobalTemplate.fbs --gen-onefile'),)[0m
+[36m[2024-04-23 15:04:05,537] [utility.py:91] [utility:__console] [DEBUG]- (('generate flat buffer script success:', 'TestGlobalTemplate'),)[0m
+[36m[2024-04-23 15:04:05,538] [utility.py:91] [utility:__console] [DEBUG]- (('execute flatbuffer cmd:', 'flatc --csharp --bfbs-comments -o out_flatbuffer_csharp flat/TestGlobal2Template.fbs --gen-onefile'),)[0m
+[36m[2024-04-23 15:04:05,566] [utility.py:91] [utility:__console] [DEBUG]- (('generate flat buffer script success:', 'TestGlobal2Template'),)[0m
+[36m[2024-04-23 15:04:05,567] [utility.py:91] [utility:__console] [DEBUG]- (('execute flatbuffer cmd:', 'flatc --csharp --bfbs-comments -o out_flatbuffer_csharp flat/TestListTablesTemplate.fbs --gen-onefile'),)[0m
+[36m[2024-04-23 15:04:05,599] [utility.py:91] [utility:__console] [DEBUG]- (('generate flat buffer script success:', 'TestListTablesTemplate'),)[0m
+[36m[2024-04-23 15:04:05,601] [utility.py:91] [utility:__console] [DEBUG]- (('execute flatbuffer cmd:', 'flatc --csharp --bfbs-comments -o out_flatbuffer_csharp flat/TestTableArraysTemplate.fbs --gen-onefile'),)[0m
+[36m[2024-04-23 15:04:05,633] [utility.py:91] [utility:__console] [DEBUG]- (('generate flat buffer script success:', 'TestTableArraysTemplate'),)[0m
+[36m[2024-04-23 15:04:05,635] [utility.py:91] [utility:__console] [DEBUG]- (('export json data success:', 'out_json/TestGlobalTemplate.json'),)[0m
+[36m[2024-04-23 15:04:05,639] [utility.py:91] [utility:__console] [DEBUG]- (('export json data success:', 'out_json/TestGlobal2Template.json'),)[0m
+[36m[2024-04-23 15:04:05,644] [utility.py:91] [utility:__console] [DEBUG]- (('export json data success:', 'out_json/TestListTablesTemplate.json'),)[0m
+[36m[2024-04-23 15:04:05,649] [utility.py:91] [utility:__console] [DEBUG]- (('export json data success:', 'out_json/TestTableArraysTemplate.json'),)[0m
+[36m[2024-04-23 15:08:58,861] [utility.py:91] [utility:__console] [DEBUG]- (('build single sheet :测试全局表|TestGlobal',),)[0m
+[36m[2024-04-23 15:08:58,873] [utility.py:91] [utility:__console] [DEBUG]- (('build single sheet :测试全局表2|TestGlobal2',),)[0m
+[36m[2024-04-23 15:08:58,874] [utility.py:91] [utility:__console] [DEBUG]- (('build list sheet :测试列表3|TestListTable',),)[0m
+[36m[2024-04-23 15:08:58,940] [utility.py:91] [utility:__console] [DEBUG]- (('build list sheet :测试单表|TestTableArray',),)[0m
+[36m[2024-04-23 15:08:58,969] [utility.py:91] [utility:__console] [DEBUG]- (('export global protobuf proto file success:', 'Position3d.proto'),)[0m
+[36m[2024-04-23 15:08:59,023] [utility.py:91] [utility:__console] [DEBUG]- (('export global protobuf proto file success:', 'PositionArray3d.proto'),)[0m
+[36m[2024-04-23 15:08:59,025] [utility.py:91] [utility:__console] [DEBUG]- (('export global protobuf proto file success:', 'Position3dInt.proto'),)[0m
+[36m[2024-04-23 15:08:59,031] [utility.py:91] [utility:__console] [DEBUG]- (('export global protobuf proto file success:', 'CommonType.proto'),)[0m
+[36m[2024-04-23 15:08:59,033] [utility.py:91] [utility:__console] [DEBUG]- (('export protobuf proto file success:', 'TestGlobalTemplate.proto'),)[0m
+[36m[2024-04-23 15:08:59,034] [utility.py:91] [utility:__console] [DEBUG]- (('export protobuf proto file success:', 'TestGlobal2Template.proto'),)[0m
+[36m[2024-04-23 15:08:59,038] [utility.py:91] [utility:__console] [DEBUG]- (('export protobuf proto file success:', 'TestListTablesTemplate.proto'),)[0m
+[36m[2024-04-23 15:08:59,149] [utility.py:91] [utility:__console] [DEBUG]- (('export protobuf proto file success:', 'TestTableArraysTemplate.proto'),)[0m
+[36m[2024-04-23 15:08:59,151] [utility.py:91] [utility:__console] [DEBUG]- (('execute protobuf cmd:', 'tools/protoc/win64/bin/protoc.exe --csharp_out=out_protobuf_csharp/ protos/Position3d.proto'),)[0m
+[36m[2024-04-23 15:08:59,563] [utility.py:91] [utility:__console] [DEBUG]- (('generate protobuf script success:', 'Position3d'),)[0m
+[36m[2024-04-23 15:08:59,564] [utility.py:91] [utility:__console] [DEBUG]- (('execute protobuf cmd:', 'tools/protoc/win64/bin/protoc.exe --csharp_out=out_protobuf_csharp/ protos/PositionArray3d.proto'),)[0m
+[36m[2024-04-23 15:08:59,702] [utility.py:91] [utility:__console] [DEBUG]- (('generate protobuf script success:', 'PositionArray3d'),)[0m
+[36m[2024-04-23 15:08:59,703] [utility.py:91] [utility:__console] [DEBUG]- (('execute protobuf cmd:', 'tools/protoc/win64/bin/protoc.exe --csharp_out=out_protobuf_csharp/ protos/Position3dInt.proto'),)[0m
+[36m[2024-04-23 15:08:59,755] [utility.py:91] [utility:__console] [DEBUG]- (('generate protobuf script success:', 'Position3dInt'),)[0m
+[36m[2024-04-23 15:08:59,756] [utility.py:91] [utility:__console] [DEBUG]- (('execute protobuf cmd:', 'tools/protoc/win64/bin/protoc.exe --csharp_out=out_protobuf_csharp/ protos/CommonType.proto'),)[0m
+[36m[2024-04-23 15:08:59,976] [utility.py:91] [utility:__console] [DEBUG]- (('generate protobuf script success:', 'CommonType'),)[0m
+[36m[2024-04-23 15:08:59,977] [utility.py:91] [utility:__console] [DEBUG]- (('execute protobuf cmd:', 'tools/protoc/win64/bin/protoc.exe --csharp_out=out_protobuf_csharp/ protos/TestGlobalTemplate.proto'),)[0m
+[36m[2024-04-23 15:09:00,666] [utility.py:91] [utility:__console] [DEBUG]- (('generate protobuf script success:', 'TestGlobalTemplate'),)[0m
+[36m[2024-04-23 15:09:00,667] [utility.py:91] [utility:__console] [DEBUG]- (('execute protobuf cmd:', 'tools/protoc/win64/bin/protoc.exe --csharp_out=out_protobuf_csharp/ protos/TestGlobal2Template.proto'),)[0m
+[36m[2024-04-23 15:09:01,741] [utility.py:91] [utility:__console] [DEBUG]- (('generate protobuf script success:', 'TestGlobal2Template'),)[0m
+[36m[2024-04-23 15:09:01,742] [utility.py:91] [utility:__console] [DEBUG]- (('execute protobuf cmd:', 'tools/protoc/win64/bin/protoc.exe --csharp_out=out_protobuf_csharp/ protos/TestListTablesTemplate.proto'),)[0m
+[36m[2024-04-23 15:09:02,753] [utility.py:91] [utility:__console] [DEBUG]- (('generate protobuf script success:', 'TestListTablesTemplate'),)[0m
+[36m[2024-04-23 15:09:02,754] [utility.py:91] [utility:__console] [DEBUG]- (('execute protobuf cmd:', 'tools/protoc/win64/bin/protoc.exe --csharp_out=out_protobuf_csharp/ protos/TestTableArraysTemplate.proto'),)[0m
+[36m[2024-04-23 15:09:02,801] [utility.py:91] [utility:__console] [DEBUG]- (('generate protobuf script success:', 'TestTableArraysTemplate'),)[0m
+[36m[2024-04-23 15:09:02,802] [utility.py:91] [utility:__console] [DEBUG]- (('export flat proto file success:', 'Position3d.proto'),)[0m
+[36m[2024-04-23 15:09:02,803] [utility.py:91] [utility:__console] [DEBUG]- (('export flat buff scheme file success:flat/Position3d.fbs',),)[0m
+[36m[2024-04-23 15:09:02,806] [utility.py:91] [utility:__console] [DEBUG]- (('export flat proto file success:', 'PositionArray3d.proto'),)[0m
+[36m[2024-04-23 15:09:02,808] [utility.py:91] [utility:__console] [DEBUG]- (('export flat buff scheme file success:flat/PositionArray3d.fbs',),)[0m
+[36m[2024-04-23 15:09:02,811] [utility.py:91] [utility:__console] [DEBUG]- (('export flat proto file success:', 'Position3dInt.proto'),)[0m
+[36m[2024-04-23 15:09:02,813] [utility.py:91] [utility:__console] [DEBUG]- (('export flat buff scheme file success:flat/Position3dInt.fbs',),)[0m
+[36m[2024-04-23 15:09:02,814] [utility.py:91] [utility:__console] [DEBUG]- (('export flat proto file success:', 'CommonType.proto'),)[0m
+[36m[2024-04-23 15:09:02,815] [utility.py:91] [utility:__console] [DEBUG]- (('export flat buff scheme file success:flat/CommonType.fbs',),)[0m
+[36m[2024-04-23 15:09:02,816] [utility.py:91] [utility:__console] [DEBUG]- (('export flat proto file success:', 'TestGlobalTemplate.proto'),)[0m
+[36m[2024-04-23 15:09:02,818] [utility.py:91] [utility:__console] [DEBUG]- (('export flat buff scheme file success:flat/TestGlobalTemplate.fbs',),)[0m
+[36m[2024-04-23 15:09:02,819] [utility.py:91] [utility:__console] [DEBUG]- (('export flat proto file success:', 'TestGlobal2Template.proto'),)[0m
+[36m[2024-04-23 15:09:02,821] [utility.py:91] [utility:__console] [DEBUG]- (('export flat buff scheme file success:flat/TestGlobal2Template.fbs',),)[0m
+[36m[2024-04-23 15:09:02,822] [utility.py:91] [utility:__console] [DEBUG]- (('export flat proto file success:', 'TestListTablesTemplate.proto'),)[0m
+[36m[2024-04-23 15:09:02,824] [utility.py:91] [utility:__console] [DEBUG]- (('export flat buff scheme file success:flat/TestListTablesTemplate.fbs',),)[0m
+[36m[2024-04-23 15:09:02,826] [utility.py:91] [utility:__console] [DEBUG]- (('export flat proto file success:', 'TestTableArraysTemplate.proto'),)[0m
+[36m[2024-04-23 15:09:02,829] [utility.py:91] [utility:__console] [DEBUG]- (('export flat buff scheme file success:flat/TestTableArraysTemplate.fbs',),)[0m
+[36m[2024-04-23 15:09:02,830] [utility.py:91] [utility:__console] [DEBUG]- (('execute flatbuffer cmd:', 'flatc --csharp --bfbs-comments -o out_flatbuffer_csharp flat/Position3d.fbs --gen-onefile'),)[0m
+[36m[2024-04-23 15:09:02,869] [utility.py:91] [utility:__console] [DEBUG]- (('generate flat buffer script success:', 'Position3d'),)[0m
+[36m[2024-04-23 15:09:02,870] [utility.py:91] [utility:__console] [DEBUG]- (('execute flatbuffer cmd:', 'flatc --csharp --bfbs-comments -o out_flatbuffer_csharp flat/PositionArray3d.fbs --gen-onefile'),)[0m
+[36m[2024-04-23 15:09:02,919] [utility.py:91] [utility:__console] [DEBUG]- (('generate flat buffer script success:', 'PositionArray3d'),)[0m
+[36m[2024-04-23 15:09:02,920] [utility.py:91] [utility:__console] [DEBUG]- (('execute flatbuffer cmd:', 'flatc --csharp --bfbs-comments -o out_flatbuffer_csharp flat/Position3dInt.fbs --gen-onefile'),)[0m
+[36m[2024-04-23 15:09:02,955] [utility.py:91] [utility:__console] [DEBUG]- (('generate flat buffer script success:', 'Position3dInt'),)[0m
+[36m[2024-04-23 15:09:02,982] [utility.py:91] [utility:__console] [DEBUG]- (('execute flatbuffer cmd:', 'flatc --csharp --bfbs-comments -o out_flatbuffer_csharp flat/CommonType.fbs --gen-onefile'),)[0m
+[36m[2024-04-23 15:09:04,337] [utility.py:91] [utility:__console] [DEBUG]- (('generate flat buffer script success:', 'CommonType'),)[0m
+[36m[2024-04-23 15:09:04,338] [utility.py:91] [utility:__console] [DEBUG]- (('execute flatbuffer cmd:', 'flatc --csharp --bfbs-comments -o out_flatbuffer_csharp flat/TestGlobalTemplate.fbs --gen-onefile'),)[0m
+[36m[2024-04-23 15:09:04,402] [utility.py:91] [utility:__console] [DEBUG]- (('generate flat buffer script success:', 'TestGlobalTemplate'),)[0m
+[36m[2024-04-23 15:09:04,408] [utility.py:91] [utility:__console] [DEBUG]- (('execute flatbuffer cmd:', 'flatc --csharp --bfbs-comments -o out_flatbuffer_csharp flat/TestGlobal2Template.fbs --gen-onefile'),)[0m
+[36m[2024-04-23 15:09:04,459] [utility.py:91] [utility:__console] [DEBUG]- (('generate flat buffer script success:', 'TestGlobal2Template'),)[0m
+[36m[2024-04-23 15:09:04,464] [utility.py:91] [utility:__console] [DEBUG]- (('execute flatbuffer cmd:', 'flatc --csharp --bfbs-comments -o out_flatbuffer_csharp flat/TestListTablesTemplate.fbs --gen-onefile'),)[0m
+[36m[2024-04-23 15:09:04,522] [utility.py:91] [utility:__console] [DEBUG]- (('generate flat buffer script success:', 'TestListTablesTemplate'),)[0m
+[36m[2024-04-23 15:09:04,523] [utility.py:91] [utility:__console] [DEBUG]- (('execute flatbuffer cmd:', 'flatc --csharp --bfbs-comments -o out_flatbuffer_csharp flat/TestTableArraysTemplate.fbs --gen-onefile'),)[0m
+[36m[2024-04-23 15:09:04,769] [utility.py:91] [utility:__console] [DEBUG]- (('generate flat buffer script success:', 'TestTableArraysTemplate'),)[0m
+[36m[2024-04-23 15:09:04,771] [utility.py:91] [utility:__console] [DEBUG]- (('export json data success:', 'out_json/TestGlobalTemplate.json'),)[0m
+[36m[2024-04-23 15:09:04,773] [utility.py:91] [utility:__console] [DEBUG]- (('export json data success:', 'out_json/TestGlobal2Template.json'),)[0m
+[36m[2024-04-23 15:09:04,785] [utility.py:91] [utility:__console] [DEBUG]- (('export json data success:', 'out_json/TestListTablesTemplate.json'),)[0m
+[36m[2024-04-23 15:09:04,790] [utility.py:91] [utility:__console] [DEBUG]- (('export json data success:', 'out_json/TestTableArraysTemplate.json'),)[0m
+[36m[2024-04-23 15:11:07,874] [utility.py:91] [utility:__console] [DEBUG]- (('build single sheet :测试全局表|TestGlobal',),)[0m
+[36m[2024-04-23 15:11:07,878] [utility.py:91] [utility:__console] [DEBUG]- (('build single sheet :测试全局表2|TestGlobal2',),)[0m
+[36m[2024-04-23 15:11:07,879] [utility.py:91] [utility:__console] [DEBUG]- (('build list sheet :测试列表3|TestListTable',),)[0m
+[36m[2024-04-23 15:11:07,885] [utility.py:91] [utility:__console] [DEBUG]- (('build list sheet :测试单表|TestTableArray',),)[0m
+[36m[2024-04-23 15:11:07,888] [utility.py:91] [utility:__console] [DEBUG]- (('export global protobuf proto file success:', 'Position3d.proto'),)[0m
+[36m[2024-04-23 15:11:07,889] [utility.py:91] [utility:__console] [DEBUG]- (('export global protobuf proto file success:', 'PositionArray3d.proto'),)[0m
+[36m[2024-04-23 15:11:07,890] [utility.py:91] [utility:__console] [DEBUG]- (('export global protobuf proto file success:', 'Position3dInt.proto'),)[0m
+[36m[2024-04-23 15:11:07,892] [utility.py:91] [utility:__console] [DEBUG]- (('export global protobuf proto file success:', 'CommonType.proto'),)[0m
+[36m[2024-04-23 15:11:07,894] [utility.py:91] [utility:__console] [DEBUG]- (('export protobuf proto file success:', 'TestGlobalTemplate.proto'),)[0m
+[36m[2024-04-23 15:11:07,895] [utility.py:91] [utility:__console] [DEBUG]- (('export protobuf proto file success:', 'TestGlobal2Template.proto'),)[0m
+[36m[2024-04-23 15:11:07,896] [utility.py:91] [utility:__console] [DEBUG]- (('export protobuf proto file success:', 'TestListTablesTemplate.proto'),)[0m
+[36m[2024-04-23 15:11:07,898] [utility.py:91] [utility:__console] [DEBUG]- (('export protobuf proto file success:', 'TestTableArraysTemplate.proto'),)[0m
+[36m[2024-04-23 15:11:07,899] [utility.py:91] [utility:__console] [DEBUG]- (('execute protobuf cmd:', 'tools/protoc/win64/bin/protoc.exe --csharp_out=out_protobuf_csharp/ protos/Position3d.proto'),)[0m
+[36m[2024-04-23 15:11:07,984] [utility.py:91] [utility:__console] [DEBUG]- (('generate protobuf script success:', 'Position3d'),)[0m
+[36m[2024-04-23 15:11:07,986] [utility.py:91] [utility:__console] [DEBUG]- (('execute protobuf cmd:', 'tools/protoc/win64/bin/protoc.exe --csharp_out=out_protobuf_csharp/ protos/PositionArray3d.proto'),)[0m
+[36m[2024-04-23 15:11:08,032] [utility.py:91] [utility:__console] [DEBUG]- (('generate protobuf script success:', 'PositionArray3d'),)[0m
+[36m[2024-04-23 15:11:08,033] [utility.py:91] [utility:__console] [DEBUG]- (('execute protobuf cmd:', 'tools/protoc/win64/bin/protoc.exe --csharp_out=out_protobuf_csharp/ protos/Position3dInt.proto'),)[0m
+[36m[2024-04-23 15:11:08,074] [utility.py:91] [utility:__console] [DEBUG]- (('generate protobuf script success:', 'Position3dInt'),)[0m
+[36m[2024-04-23 15:11:08,076] [utility.py:91] [utility:__console] [DEBUG]- (('execute protobuf cmd:', 'tools/protoc/win64/bin/protoc.exe --csharp_out=out_protobuf_csharp/ protos/CommonType.proto'),)[0m
+[36m[2024-04-23 15:11:08,106] [utility.py:91] [utility:__console] [DEBUG]- (('generate protobuf script success:', 'CommonType'),)[0m
+[36m[2024-04-23 15:11:08,108] [utility.py:91] [utility:__console] [DEBUG]- (('execute protobuf cmd:', 'tools/protoc/win64/bin/protoc.exe --csharp_out=out_protobuf_csharp/ protos/TestGlobalTemplate.proto'),)[0m
+[36m[2024-04-23 15:11:08,137] [utility.py:91] [utility:__console] [DEBUG]- (('generate protobuf script success:', 'TestGlobalTemplate'),)[0m
+[36m[2024-04-23 15:11:08,138] [utility.py:91] [utility:__console] [DEBUG]- (('execute protobuf cmd:', 'tools/protoc/win64/bin/protoc.exe --csharp_out=out_protobuf_csharp/ protos/TestGlobal2Template.proto'),)[0m
+[36m[2024-04-23 15:11:08,170] [utility.py:91] [utility:__console] [DEBUG]- (('generate protobuf script success:', 'TestGlobal2Template'),)[0m
+[36m[2024-04-23 15:11:08,171] [utility.py:91] [utility:__console] [DEBUG]- (('execute protobuf cmd:', 'tools/protoc/win64/bin/protoc.exe --csharp_out=out_protobuf_csharp/ protos/TestListTablesTemplate.proto'),)[0m
+[36m[2024-04-23 15:11:08,213] [utility.py:91] [utility:__console] [DEBUG]- (('generate protobuf script success:', 'TestListTablesTemplate'),)[0m
+[36m[2024-04-23 15:11:08,214] [utility.py:91] [utility:__console] [DEBUG]- (('execute protobuf cmd:', 'tools/protoc/win64/bin/protoc.exe --csharp_out=out_protobuf_csharp/ protos/TestTableArraysTemplate.proto'),)[0m
+[36m[2024-04-23 15:11:08,259] [utility.py:91] [utility:__console] [DEBUG]- (('generate protobuf script success:', 'TestTableArraysTemplate'),)[0m
+[36m[2024-04-23 15:11:08,261] [utility.py:91] [utility:__console] [DEBUG]- (('export flat proto file success:', 'Position3d.proto'),)[0m
+[36m[2024-04-23 15:11:08,264] [utility.py:91] [utility:__console] [DEBUG]- (('export flat buff scheme file success:flat/Position3d.fbs',),)[0m
+[36m[2024-04-23 15:11:08,267] [utility.py:91] [utility:__console] [DEBUG]- (('export flat proto file success:', 'PositionArray3d.proto'),)[0m
+[36m[2024-04-23 15:11:08,269] [utility.py:91] [utility:__console] [DEBUG]- (('export flat buff scheme file success:flat/PositionArray3d.fbs',),)[0m
+[36m[2024-04-23 15:11:08,272] [utility.py:91] [utility:__console] [DEBUG]- (('export flat proto file success:', 'Position3dInt.proto'),)[0m
+[36m[2024-04-23 15:11:08,274] [utility.py:91] [utility:__console] [DEBUG]- (('export flat buff scheme file success:flat/Position3dInt.fbs',),)[0m
+[36m[2024-04-23 15:11:08,276] [utility.py:91] [utility:__console] [DEBUG]- (('export flat proto file success:', 'CommonType.proto'),)[0m
+[36m[2024-04-23 15:11:08,278] [utility.py:91] [utility:__console] [DEBUG]- (('export flat buff scheme file success:flat/CommonType.fbs',),)[0m
+[36m[2024-04-23 15:11:08,280] [utility.py:91] [utility:__console] [DEBUG]- (('export flat proto file success:', 'TestGlobalTemplate.proto'),)[0m
+[36m[2024-04-23 15:11:08,283] [utility.py:91] [utility:__console] [DEBUG]- (('export flat buff scheme file success:flat/TestGlobalTemplate.fbs',),)[0m
+[36m[2024-04-23 15:11:08,285] [utility.py:91] [utility:__console] [DEBUG]- (('export flat proto file success:', 'TestGlobal2Template.proto'),)[0m
+[36m[2024-04-23 15:11:08,288] [utility.py:91] [utility:__console] [DEBUG]- (('export flat buff scheme file success:flat/TestGlobal2Template.fbs',),)[0m
+[36m[2024-04-23 15:11:08,290] [utility.py:91] [utility:__console] [DEBUG]- (('export flat proto file success:', 'TestListTablesTemplate.proto'),)[0m
+[36m[2024-04-23 15:11:08,293] [utility.py:91] [utility:__console] [DEBUG]- (('export flat buff scheme file success:flat/TestListTablesTemplate.fbs',),)[0m
+[36m[2024-04-23 15:11:08,294] [utility.py:91] [utility:__console] [DEBUG]- (('export flat proto file success:', 'TestTableArraysTemplate.proto'),)[0m
+[36m[2024-04-23 15:11:08,298] [utility.py:91] [utility:__console] [DEBUG]- (('export flat buff scheme file success:flat/TestTableArraysTemplate.fbs',),)[0m
+[36m[2024-04-23 15:11:08,301] [utility.py:91] [utility:__console] [DEBUG]- (('execute flatbuffer cmd:', 'flatc --csharp --bfbs-comments -o out_flatbuffer_csharp flat/Position3d.fbs --gen-onefile'),)[0m
+[36m[2024-04-23 15:11:08,334] [utility.py:91] [utility:__console] [DEBUG]- (('generate flat buffer script success:', 'Position3d'),)[0m
+[36m[2024-04-23 15:11:08,335] [utility.py:91] [utility:__console] [DEBUG]- (('execute flatbuffer cmd:', 'flatc --csharp --bfbs-comments -o out_flatbuffer_csharp flat/PositionArray3d.fbs --gen-onefile'),)[0m
+[36m[2024-04-23 15:11:08,366] [utility.py:91] [utility:__console] [DEBUG]- (('generate flat buffer script success:', 'PositionArray3d'),)[0m
+[36m[2024-04-23 15:11:08,367] [utility.py:91] [utility:__console] [DEBUG]- (('execute flatbuffer cmd:', 'flatc --csharp --bfbs-comments -o out_flatbuffer_csharp flat/Position3dInt.fbs --gen-onefile'),)[0m
+[36m[2024-04-23 15:11:08,393] [utility.py:91] [utility:__console] [DEBUG]- (('generate flat buffer script success:', 'Position3dInt'),)[0m
+[36m[2024-04-23 15:11:08,394] [utility.py:91] [utility:__console] [DEBUG]- (('execute flatbuffer cmd:', 'flatc --csharp --bfbs-comments -o out_flatbuffer_csharp flat/CommonType.fbs --gen-onefile'),)[0m
+[36m[2024-04-23 15:11:08,430] [utility.py:91] [utility:__console] [DEBUG]- (('generate flat buffer script success:', 'CommonType'),)[0m
+[36m[2024-04-23 15:11:08,431] [utility.py:91] [utility:__console] [DEBUG]- (('execute flatbuffer cmd:', 'flatc --csharp --bfbs-comments -o out_flatbuffer_csharp flat/TestGlobalTemplate.fbs --gen-onefile'),)[0m
+[36m[2024-04-23 15:11:08,473] [utility.py:91] [utility:__console] [DEBUG]- (('generate flat buffer script success:', 'TestGlobalTemplate'),)[0m
+[36m[2024-04-23 15:11:08,474] [utility.py:91] [utility:__console] [DEBUG]- (('execute flatbuffer cmd:', 'flatc --csharp --bfbs-comments -o out_flatbuffer_csharp flat/TestGlobal2Template.fbs --gen-onefile'),)[0m
+[36m[2024-04-23 15:11:08,526] [utility.py:91] [utility:__console] [DEBUG]- (('generate flat buffer script success:', 'TestGlobal2Template'),)[0m
+[36m[2024-04-23 15:11:08,527] [utility.py:91] [utility:__console] [DEBUG]- (('execute flatbuffer cmd:', 'flatc --csharp --bfbs-comments -o out_flatbuffer_csharp flat/TestListTablesTemplate.fbs --gen-onefile'),)[0m
+[36m[2024-04-23 15:11:08,576] [utility.py:91] [utility:__console] [DEBUG]- (('generate flat buffer script success:', 'TestListTablesTemplate'),)[0m
+[36m[2024-04-23 15:11:08,577] [utility.py:91] [utility:__console] [DEBUG]- (('execute flatbuffer cmd:', 'flatc --csharp --bfbs-comments -o out_flatbuffer_csharp flat/TestTableArraysTemplate.fbs --gen-onefile'),)[0m
+[36m[2024-04-23 15:11:08,604] [utility.py:91] [utility:__console] [DEBUG]- (('generate flat buffer script success:', 'TestTableArraysTemplate'),)[0m
+[36m[2024-04-23 15:11:08,605] [utility.py:91] [utility:__console] [DEBUG]- (('export json data success:', 'out_json/TestGlobalTemplate.json'),)[0m
+[36m[2024-04-23 15:11:08,606] [utility.py:91] [utility:__console] [DEBUG]- (('export json data success:', 'out_json/TestGlobal2Template.json'),)[0m
+[36m[2024-04-23 15:11:08,608] [utility.py:91] [utility:__console] [DEBUG]- (('export json data success:', 'out_json/TestListTablesTemplate.json'),)[0m
+[36m[2024-04-23 15:11:08,609] [utility.py:91] [utility:__console] [DEBUG]- (('export json data success:', 'out_json/TestTableArraysTemplate.json'),)[0m
+[36m[2024-04-23 15:11:26,526] [utility.py:91] [utility:__console] [DEBUG]- (('build single sheet :测试全局表|TestGlobal',),)[0m
+[36m[2024-04-23 15:11:26,530] [utility.py:91] [utility:__console] [DEBUG]- (('build single sheet :测试全局表2|TestGlobal2',),)[0m
+[36m[2024-04-23 15:11:26,532] [utility.py:91] [utility:__console] [DEBUG]- (('build list sheet :测试列表3|TestListTable',),)[0m
+[36m[2024-04-23 15:11:26,541] [utility.py:91] [utility:__console] [DEBUG]- (('build list sheet :测试单表|TestTableArray',),)[0m
+[36m[2024-04-23 15:11:26,544] [utility.py:91] [utility:__console] [DEBUG]- (('export global protobuf proto file success:', 'Position3d.proto'),)[0m
+[36m[2024-04-23 15:11:26,545] [utility.py:91] [utility:__console] [DEBUG]- (('export global protobuf proto file success:', 'PositionArray3d.proto'),)[0m
+[36m[2024-04-23 15:11:26,547] [utility.py:91] [utility:__console] [DEBUG]- (('export global protobuf proto file success:', 'Position3dInt.proto'),)[0m
+[36m[2024-04-23 15:11:26,549] [utility.py:91] [utility:__console] [DEBUG]- (('export global protobuf proto file success:', 'CommonType.proto'),)[0m
+[36m[2024-04-23 15:11:26,550] [utility.py:91] [utility:__console] [DEBUG]- (('export protobuf proto file success:', 'TestGlobalTemplate.proto'),)[0m
+[36m[2024-04-23 15:11:26,552] [utility.py:91] [utility:__console] [DEBUG]- (('export protobuf proto file success:', 'TestGlobal2Template.proto'),)[0m
+[36m[2024-04-23 15:11:26,553] [utility.py:91] [utility:__console] [DEBUG]- (('export protobuf proto file success:', 'TestListTablesTemplate.proto'),)[0m
+[36m[2024-04-23 15:11:26,555] [utility.py:91] [utility:__console] [DEBUG]- (('export protobuf proto file success:', 'TestTableArraysTemplate.proto'),)[0m
+[36m[2024-04-23 15:11:26,558] [utility.py:91] [utility:__console] [DEBUG]- (('execute protobuf cmd:', 'tools/protoc/win64/bin/protoc.exe --csharp_out=out_protobuf_csharp/ protos/Position3d.proto'),)[0m
+[36m[2024-04-23 15:11:26,631] [utility.py:91] [utility:__console] [DEBUG]- (('generate protobuf script success:', 'Position3d'),)[0m
+[36m[2024-04-23 15:11:26,632] [utility.py:91] [utility:__console] [DEBUG]- (('execute protobuf cmd:', 'tools/protoc/win64/bin/protoc.exe --csharp_out=out_protobuf_csharp/ protos/PositionArray3d.proto'),)[0m
+[36m[2024-04-23 15:11:26,661] [utility.py:91] [utility:__console] [DEBUG]- (('generate protobuf script success:', 'PositionArray3d'),)[0m
+[36m[2024-04-23 15:11:26,663] [utility.py:91] [utility:__console] [DEBUG]- (('execute protobuf cmd:', 'tools/protoc/win64/bin/protoc.exe --csharp_out=out_protobuf_csharp/ protos/Position3dInt.proto'),)[0m
+[36m[2024-04-23 15:11:26,694] [utility.py:91] [utility:__console] [DEBUG]- (('generate protobuf script success:', 'Position3dInt'),)[0m
+[36m[2024-04-23 15:11:26,695] [utility.py:91] [utility:__console] [DEBUG]- (('execute protobuf cmd:', 'tools/protoc/win64/bin/protoc.exe --csharp_out=out_protobuf_csharp/ protos/CommonType.proto'),)[0m
+[36m[2024-04-23 15:11:26,726] [utility.py:91] [utility:__console] [DEBUG]- (('generate protobuf script success:', 'CommonType'),)[0m
+[36m[2024-04-23 15:11:26,727] [utility.py:91] [utility:__console] [DEBUG]- (('execute protobuf cmd:', 'tools/protoc/win64/bin/protoc.exe --csharp_out=out_protobuf_csharp/ protos/TestGlobalTemplate.proto'),)[0m
+[36m[2024-04-23 15:11:26,757] [utility.py:91] [utility:__console] [DEBUG]- (('generate protobuf script success:', 'TestGlobalTemplate'),)[0m
+[36m[2024-04-23 15:11:26,758] [utility.py:91] [utility:__console] [DEBUG]- (('execute protobuf cmd:', 'tools/protoc/win64/bin/protoc.exe --csharp_out=out_protobuf_csharp/ protos/TestGlobal2Template.proto'),)[0m
+[36m[2024-04-23 15:11:26,803] [utility.py:91] [utility:__console] [DEBUG]- (('generate protobuf script success:', 'TestGlobal2Template'),)[0m
+[36m[2024-04-23 15:11:26,804] [utility.py:91] [utility:__console] [DEBUG]- (('execute protobuf cmd:', 'tools/protoc/win64/bin/protoc.exe --csharp_out=out_protobuf_csharp/ protos/TestListTablesTemplate.proto'),)[0m
+[36m[2024-04-23 15:11:26,850] [utility.py:91] [utility:__console] [DEBUG]- (('generate protobuf script success:', 'TestListTablesTemplate'),)[0m
+[36m[2024-04-23 15:11:26,851] [utility.py:91] [utility:__console] [DEBUG]- (('execute protobuf cmd:', 'tools/protoc/win64/bin/protoc.exe --csharp_out=out_protobuf_csharp/ protos/TestTableArraysTemplate.proto'),)[0m
+[36m[2024-04-23 15:11:26,886] [utility.py:91] [utility:__console] [DEBUG]- (('generate protobuf script success:', 'TestTableArraysTemplate'),)[0m
+[36m[2024-04-23 15:11:26,887] [utility.py:91] [utility:__console] [DEBUG]- (('export flat proto file success:', 'Position3d.proto'),)[0m
+[36m[2024-04-23 15:11:26,888] [utility.py:91] [utility:__console] [DEBUG]- (('export flat buff scheme file success:flat/Position3d.fbs',),)[0m
+[36m[2024-04-23 15:11:26,889] [utility.py:91] [utility:__console] [DEBUG]- (('export flat proto file success:', 'PositionArray3d.proto'),)[0m
+[36m[2024-04-23 15:11:26,890] [utility.py:91] [utility:__console] [DEBUG]- (('export flat buff scheme file success:flat/PositionArray3d.fbs',),)[0m
+[36m[2024-04-23 15:11:26,891] [utility.py:91] [utility:__console] [DEBUG]- (('export flat proto file success:', 'Position3dInt.proto'),)[0m
+[36m[2024-04-23 15:11:26,893] [utility.py:91] [utility:__console] [DEBUG]- (('export flat buff scheme file success:flat/Position3dInt.fbs',),)[0m
+[36m[2024-04-23 15:11:26,894] [utility.py:91] [utility:__console] [DEBUG]- (('export flat proto file success:', 'CommonType.proto'),)[0m
+[36m[2024-04-23 15:11:26,895] [utility.py:91] [utility:__console] [DEBUG]- (('export flat buff scheme file success:flat/CommonType.fbs',),)[0m
+[36m[2024-04-23 15:11:26,896] [utility.py:91] [utility:__console] [DEBUG]- (('export flat proto file success:', 'TestGlobalTemplate.proto'),)[0m
+[36m[2024-04-23 15:11:26,897] [utility.py:91] [utility:__console] [DEBUG]- (('export flat buff scheme file success:flat/TestGlobalTemplate.fbs',),)[0m
+[36m[2024-04-23 15:11:26,898] [utility.py:91] [utility:__console] [DEBUG]- (('export flat proto file success:', 'TestGlobal2Template.proto'),)[0m
+[36m[2024-04-23 15:11:26,899] [utility.py:91] [utility:__console] [DEBUG]- (('export flat buff scheme file success:flat/TestGlobal2Template.fbs',),)[0m
+[36m[2024-04-23 15:11:26,900] [utility.py:91] [utility:__console] [DEBUG]- (('export flat proto file success:', 'TestListTablesTemplate.proto'),)[0m
+[36m[2024-04-23 15:11:26,901] [utility.py:91] [utility:__console] [DEBUG]- (('export flat buff scheme file success:flat/TestListTablesTemplate.fbs',),)[0m
+[36m[2024-04-23 15:11:26,902] [utility.py:91] [utility:__console] [DEBUG]- (('export flat proto file success:', 'TestTableArraysTemplate.proto'),)[0m
+[36m[2024-04-23 15:11:26,903] [utility.py:91] [utility:__console] [DEBUG]- (('export flat buff scheme file success:flat/TestTableArraysTemplate.fbs',),)[0m
+[36m[2024-04-23 15:11:26,904] [utility.py:91] [utility:__console] [DEBUG]- (('execute flatbuffer cmd:', 'flatc --csharp --bfbs-comments -o out_flatbuffer_csharp flat/Position3d.fbs --gen-onefile'),)[0m
+[36m[2024-04-23 15:11:26,930] [utility.py:91] [utility:__console] [DEBUG]- (('generate flat buffer script success:', 'Position3d'),)[0m
+[36m[2024-04-23 15:11:26,931] [utility.py:91] [utility:__console] [DEBUG]- (('execute flatbuffer cmd:', 'flatc --csharp --bfbs-comments -o out_flatbuffer_csharp flat/PositionArray3d.fbs --gen-onefile'),)[0m
+[36m[2024-04-23 15:11:26,956] [utility.py:91] [utility:__console] [DEBUG]- (('generate flat buffer script success:', 'PositionArray3d'),)[0m
+[36m[2024-04-23 15:11:26,957] [utility.py:91] [utility:__console] [DEBUG]- (('execute flatbuffer cmd:', 'flatc --csharp --bfbs-comments -o out_flatbuffer_csharp flat/Position3dInt.fbs --gen-onefile'),)[0m
+[36m[2024-04-23 15:11:26,990] [utility.py:91] [utility:__console] [DEBUG]- (('generate flat buffer script success:', 'Position3dInt'),)[0m
+[36m[2024-04-23 15:11:26,991] [utility.py:91] [utility:__console] [DEBUG]- (('execute flatbuffer cmd:', 'flatc --csharp --bfbs-comments -o out_flatbuffer_csharp flat/CommonType.fbs --gen-onefile'),)[0m
+[36m[2024-04-23 15:11:27,031] [utility.py:91] [utility:__console] [DEBUG]- (('generate flat buffer script success:', 'CommonType'),)[0m
+[36m[2024-04-23 15:11:27,032] [utility.py:91] [utility:__console] [DEBUG]- (('execute flatbuffer cmd:', 'flatc --csharp --bfbs-comments -o out_flatbuffer_csharp flat/TestGlobalTemplate.fbs --gen-onefile'),)[0m
+[36m[2024-04-23 15:11:27,072] [utility.py:91] [utility:__console] [DEBUG]- (('generate flat buffer script success:', 'TestGlobalTemplate'),)[0m
+[36m[2024-04-23 15:11:27,073] [utility.py:91] [utility:__console] [DEBUG]- (('execute flatbuffer cmd:', 'flatc --csharp --bfbs-comments -o out_flatbuffer_csharp flat/TestGlobal2Template.fbs --gen-onefile'),)[0m
+[36m[2024-04-23 15:11:27,101] [utility.py:91] [utility:__console] [DEBUG]- (('generate flat buffer script success:', 'TestGlobal2Template'),)[0m
+[36m[2024-04-23 15:11:27,102] [utility.py:91] [utility:__console] [DEBUG]- (('execute flatbuffer cmd:', 'flatc --csharp --bfbs-comments -o out_flatbuffer_csharp flat/TestListTablesTemplate.fbs --gen-onefile'),)[0m
+[36m[2024-04-23 15:11:27,130] [utility.py:91] [utility:__console] [DEBUG]- (('generate flat buffer script success:', 'TestListTablesTemplate'),)[0m
+[36m[2024-04-23 15:11:27,130] [utility.py:91] [utility:__console] [DEBUG]- (('execute flatbuffer cmd:', 'flatc --csharp --bfbs-comments -o out_flatbuffer_csharp flat/TestTableArraysTemplate.fbs --gen-onefile'),)[0m
+[36m[2024-04-23 15:11:27,157] [utility.py:91] [utility:__console] [DEBUG]- (('generate flat buffer script success:', 'TestTableArraysTemplate'),)[0m
+[36m[2024-04-23 15:11:27,158] [utility.py:91] [utility:__console] [DEBUG]- (('export json data success:', 'out_json/TestGlobalTemplate.json'),)[0m
+[36m[2024-04-23 15:11:27,159] [utility.py:91] [utility:__console] [DEBUG]- (('export json data success:', 'out_json/TestGlobal2Template.json'),)[0m
+[36m[2024-04-23 15:11:27,160] [utility.py:91] [utility:__console] [DEBUG]- (('export json data success:', 'out_json/TestListTablesTemplate.json'),)[0m
+[36m[2024-04-23 15:11:27,162] [utility.py:91] [utility:__console] [DEBUG]- (('export json data success:', 'out_json/TestTableArraysTemplate.json'),)[0m
+[36m[2024-04-23 15:12:14,946] [utility.py:91] [utility:__console] [DEBUG]- (('build single sheet :测试全局表|TestGlobal',),)[0m
+[36m[2024-04-23 15:12:14,949] [utility.py:91] [utility:__console] [DEBUG]- (('build single sheet :测试全局表2|TestGlobal2',),)[0m
+[36m[2024-04-23 15:12:14,950] [utility.py:91] [utility:__console] [DEBUG]- (('build list sheet :测试列表3|TestListTable',),)[0m
+[36m[2024-04-23 15:12:14,958] [utility.py:91] [utility:__console] [DEBUG]- (('build list sheet :测试单表|TestTableArray',),)[0m
+[36m[2024-04-23 15:12:14,960] [utility.py:91] [utility:__console] [DEBUG]- (('export global protobuf proto file success:', 'Position3d.proto'),)[0m
+[36m[2024-04-23 15:12:14,962] [utility.py:91] [utility:__console] [DEBUG]- (('export global protobuf proto file success:', 'PositionArray3d.proto'),)[0m
+[36m[2024-04-23 15:12:14,964] [utility.py:91] [utility:__console] [DEBUG]- (('export global protobuf proto file success:', 'Position3dInt.proto'),)[0m
+[36m[2024-04-23 15:12:14,965] [utility.py:91] [utility:__console] [DEBUG]- (('export global protobuf proto file success:', 'CommonType.proto'),)[0m
+[36m[2024-04-23 15:12:14,966] [utility.py:91] [utility:__console] [DEBUG]- (('export protobuf proto file success:', 'TestGlobalTemplate.proto'),)[0m
+[36m[2024-04-23 15:12:14,968] [utility.py:91] [utility:__console] [DEBUG]- (('export protobuf proto file success:', 'TestGlobal2Template.proto'),)[0m
+[36m[2024-04-23 15:12:14,969] [utility.py:91] [utility:__console] [DEBUG]- (('export protobuf proto file success:', 'TestListTablesTemplate.proto'),)[0m
+[36m[2024-04-23 15:12:14,970] [utility.py:91] [utility:__console] [DEBUG]- (('export protobuf proto file success:', 'TestTableArraysTemplate.proto'),)[0m
+[36m[2024-04-23 15:12:14,972] [utility.py:91] [utility:__console] [DEBUG]- (('execute protobuf cmd:', 'tools/protoc/win64/bin/protoc.exe --csharp_out=out_protobuf_csharp/ protos/Position3d.proto'),)[0m
+[36m[2024-04-23 15:12:15,015] [utility.py:91] [utility:__console] [DEBUG]- (('generate protobuf script success:', 'Position3d'),)[0m
+[36m[2024-04-23 15:12:15,015] [utility.py:91] [utility:__console] [DEBUG]- (('execute protobuf cmd:', 'tools/protoc/win64/bin/protoc.exe --csharp_out=out_protobuf_csharp/ protos/PositionArray3d.proto'),)[0m
+[36m[2024-04-23 15:12:15,049] [utility.py:91] [utility:__console] [DEBUG]- (('generate protobuf script success:', 'PositionArray3d'),)[0m
+[36m[2024-04-23 15:12:15,050] [utility.py:91] [utility:__console] [DEBUG]- (('execute protobuf cmd:', 'tools/protoc/win64/bin/protoc.exe --csharp_out=out_protobuf_csharp/ protos/Position3dInt.proto'),)[0m
+[36m[2024-04-23 15:12:15,079] [utility.py:91] [utility:__console] [DEBUG]- (('generate protobuf script success:', 'Position3dInt'),)[0m
+[36m[2024-04-23 15:12:15,080] [utility.py:91] [utility:__console] [DEBUG]- (('execute protobuf cmd:', 'tools/protoc/win64/bin/protoc.exe --csharp_out=out_protobuf_csharp/ protos/CommonType.proto'),)[0m
+[36m[2024-04-23 15:12:15,110] [utility.py:91] [utility:__console] [DEBUG]- (('generate protobuf script success:', 'CommonType'),)[0m
+[36m[2024-04-23 15:12:15,111] [utility.py:91] [utility:__console] [DEBUG]- (('execute protobuf cmd:', 'tools/protoc/win64/bin/protoc.exe --csharp_out=out_protobuf_csharp/ protos/TestGlobalTemplate.proto'),)[0m
+[36m[2024-04-23 15:12:15,142] [utility.py:91] [utility:__console] [DEBUG]- (('generate protobuf script success:', 'TestGlobalTemplate'),)[0m
+[36m[2024-04-23 15:12:15,143] [utility.py:91] [utility:__console] [DEBUG]- (('execute protobuf cmd:', 'tools/protoc/win64/bin/protoc.exe --csharp_out=out_protobuf_csharp/ protos/TestGlobal2Template.proto'),)[0m
+[36m[2024-04-23 15:12:15,175] [utility.py:91] [utility:__console] [DEBUG]- (('generate protobuf script success:', 'TestGlobal2Template'),)[0m
+[36m[2024-04-23 15:12:15,176] [utility.py:91] [utility:__console] [DEBUG]- (('execute protobuf cmd:', 'tools/protoc/win64/bin/protoc.exe --csharp_out=out_protobuf_csharp/ protos/TestListTablesTemplate.proto'),)[0m
+[36m[2024-04-23 15:12:15,206] [utility.py:91] [utility:__console] [DEBUG]- (('generate protobuf script success:', 'TestListTablesTemplate'),)[0m
+[36m[2024-04-23 15:12:15,207] [utility.py:91] [utility:__console] [DEBUG]- (('execute protobuf cmd:', 'tools/protoc/win64/bin/protoc.exe --csharp_out=out_protobuf_csharp/ protos/TestTableArraysTemplate.proto'),)[0m
+[36m[2024-04-23 15:12:15,256] [utility.py:91] [utility:__console] [DEBUG]- (('generate protobuf script success:', 'TestTableArraysTemplate'),)[0m
+[36m[2024-04-23 15:12:15,259] [utility.py:91] [utility:__console] [DEBUG]- (('export flat proto file success:', 'Position3d.proto'),)[0m
+[36m[2024-04-23 15:12:15,262] [utility.py:91] [utility:__console] [DEBUG]- (('export flat buff scheme file success:flat/Position3d.fbs',),)[0m
+[36m[2024-04-23 15:12:15,266] [utility.py:91] [utility:__console] [DEBUG]- (('export flat proto file success:', 'PositionArray3d.proto'),)[0m
+[36m[2024-04-23 15:12:15,269] [utility.py:91] [utility:__console] [DEBUG]- (('export flat buff scheme file success:flat/PositionArray3d.fbs',),)[0m
+[36m[2024-04-23 15:12:15,273] [utility.py:91] [utility:__console] [DEBUG]- (('export flat proto file success:', 'Position3dInt.proto'),)[0m
+[36m[2024-04-23 15:12:15,276] [utility.py:91] [utility:__console] [DEBUG]- (('export flat buff scheme file success:flat/Position3dInt.fbs',),)[0m
+[36m[2024-04-23 15:12:15,278] [utility.py:91] [utility:__console] [DEBUG]- (('export flat proto file success:', 'CommonType.proto'),)[0m
+[36m[2024-04-23 15:12:15,282] [utility.py:91] [utility:__console] [DEBUG]- (('export flat buff scheme file success:flat/CommonType.fbs',),)[0m
+[36m[2024-04-23 15:12:15,284] [utility.py:91] [utility:__console] [DEBUG]- (('export flat proto file success:', 'TestGlobalTemplate.proto'),)[0m
+[36m[2024-04-23 15:12:15,286] [utility.py:91] [utility:__console] [DEBUG]- (('export flat buff scheme file success:flat/TestGlobalTemplate.fbs',),)[0m
+[36m[2024-04-23 15:12:15,290] [utility.py:91] [utility:__console] [DEBUG]- (('export flat proto file success:', 'TestGlobal2Template.proto'),)[0m
+[36m[2024-04-23 15:12:15,292] [utility.py:91] [utility:__console] [DEBUG]- (('export flat buff scheme file success:flat/TestGlobal2Template.fbs',),)[0m
+[36m[2024-04-23 15:12:15,295] [utility.py:91] [utility:__console] [DEBUG]- (('export flat proto file success:', 'TestListTablesTemplate.proto'),)[0m
+[36m[2024-04-23 15:12:15,300] [utility.py:91] [utility:__console] [DEBUG]- (('export flat buff scheme file success:flat/TestListTablesTemplate.fbs',),)[0m
+[36m[2024-04-23 15:12:15,303] [utility.py:91] [utility:__console] [DEBUG]- (('export flat proto file success:', 'TestTableArraysTemplate.proto'),)[0m
+[36m[2024-04-23 15:12:15,307] [utility.py:91] [utility:__console] [DEBUG]- (('export flat buff scheme file success:flat/TestTableArraysTemplate.fbs',),)[0m
+[36m[2024-04-23 15:12:15,310] [utility.py:91] [utility:__console] [DEBUG]- (('execute flatbuffer cmd:', 'flatc --csharp --bfbs-comments -o out_flatbuffer_csharp flat/Position3d.fbs --gen-onefile'),)[0m
+[36m[2024-04-23 15:12:15,353] [utility.py:91] [utility:__console] [DEBUG]- (('generate flat buffer script success:', 'Position3d'),)[0m
+[36m[2024-04-23 15:12:15,355] [utility.py:91] [utility:__console] [DEBUG]- (('execute flatbuffer cmd:', 'flatc --csharp --bfbs-comments -o out_flatbuffer_csharp flat/PositionArray3d.fbs --gen-onefile'),)[0m
+[36m[2024-04-23 15:12:15,388] [utility.py:91] [utility:__console] [DEBUG]- (('generate flat buffer script success:', 'PositionArray3d'),)[0m
+[36m[2024-04-23 15:12:15,389] [utility.py:91] [utility:__console] [DEBUG]- (('execute flatbuffer cmd:', 'flatc --csharp --bfbs-comments -o out_flatbuffer_csharp flat/Position3dInt.fbs --gen-onefile'),)[0m
+[36m[2024-04-23 15:12:15,415] [utility.py:91] [utility:__console] [DEBUG]- (('generate flat buffer script success:', 'Position3dInt'),)[0m
+[36m[2024-04-23 15:12:15,416] [utility.py:91] [utility:__console] [DEBUG]- (('execute flatbuffer cmd:', 'flatc --csharp --bfbs-comments -o out_flatbuffer_csharp flat/CommonType.fbs --gen-onefile'),)[0m
+[36m[2024-04-23 15:12:15,458] [utility.py:91] [utility:__console] [DEBUG]- (('generate flat buffer script success:', 'CommonType'),)[0m
+[36m[2024-04-23 15:12:15,460] [utility.py:91] [utility:__console] [DEBUG]- (('execute flatbuffer cmd:', 'flatc --csharp --bfbs-comments -o out_flatbuffer_csharp flat/TestGlobalTemplate.fbs --gen-onefile'),)[0m
+[36m[2024-04-23 15:12:15,516] [utility.py:91] [utility:__console] [DEBUG]- (('generate flat buffer script success:', 'TestGlobalTemplate'),)[0m
+[36m[2024-04-23 15:12:15,520] [utility.py:91] [utility:__console] [DEBUG]- (('execute flatbuffer cmd:', 'flatc --csharp --bfbs-comments -o out_flatbuffer_csharp flat/TestGlobal2Template.fbs --gen-onefile'),)[0m
+[36m[2024-04-23 15:12:15,556] [utility.py:91] [utility:__console] [DEBUG]- (('generate flat buffer script success:', 'TestGlobal2Template'),)[0m
+[36m[2024-04-23 15:12:15,557] [utility.py:91] [utility:__console] [DEBUG]- (('execute flatbuffer cmd:', 'flatc --csharp --bfbs-comments -o out_flatbuffer_csharp flat/TestListTablesTemplate.fbs --gen-onefile'),)[0m
+[36m[2024-04-23 15:12:15,586] [utility.py:91] [utility:__console] [DEBUG]- (('generate flat buffer script success:', 'TestListTablesTemplate'),)[0m
+[36m[2024-04-23 15:12:15,587] [utility.py:91] [utility:__console] [DEBUG]- (('execute flatbuffer cmd:', 'flatc --csharp --bfbs-comments -o out_flatbuffer_csharp flat/TestTableArraysTemplate.fbs --gen-onefile'),)[0m
+[36m[2024-04-23 15:12:15,615] [utility.py:91] [utility:__console] [DEBUG]- (('generate flat buffer script success:', 'TestTableArraysTemplate'),)[0m
+[36m[2024-04-23 15:12:15,616] [utility.py:91] [utility:__console] [DEBUG]- (('export json data success:', 'out_json/TestGlobalTemplate.json'),)[0m
+[36m[2024-04-23 15:12:15,618] [utility.py:91] [utility:__console] [DEBUG]- (('export json data success:', 'out_json/TestGlobal2Template.json'),)[0m
+[36m[2024-04-23 15:12:15,619] [utility.py:91] [utility:__console] [DEBUG]- (('export json data success:', 'out_json/TestListTablesTemplate.json'),)[0m
+[36m[2024-04-23 15:12:15,621] [utility.py:91] [utility:__console] [DEBUG]- (('export json data success:', 'out_json/TestTableArraysTemplate.json'),)[0m
+[36m[2024-04-23 15:14:51,819] [utility.py:91] [utility:__console] [DEBUG]- (('build single sheet :测试全局表|TestGlobal',),)[0m
+[36m[2024-04-23 15:14:51,822] [utility.py:91] [utility:__console] [DEBUG]- (('build single sheet :测试全局表2|TestGlobal2',),)[0m
+[36m[2024-04-23 15:14:51,823] [utility.py:91] [utility:__console] [DEBUG]- (('build list sheet :测试列表3|TestListTable',),)[0m
+[36m[2024-04-23 15:14:51,830] [utility.py:91] [utility:__console] [DEBUG]- (('build list sheet :测试单表|TestTableArray',),)[0m
+[36m[2024-04-23 15:14:51,868] [utility.py:91] [utility:__console] [DEBUG]- (('export global protobuf proto file success:', 'Position3d.proto'),)[0m
+[36m[2024-04-23 15:14:51,875] [utility.py:91] [utility:__console] [DEBUG]- (('export global protobuf proto file success:', 'PositionArray3d.proto'),)[0m
+[36m[2024-04-23 15:14:51,877] [utility.py:91] [utility:__console] [DEBUG]- (('export global protobuf proto file success:', 'Position3dInt.proto'),)[0m
+[36m[2024-04-23 15:14:51,909] [utility.py:91] [utility:__console] [DEBUG]- (('export global protobuf proto file success:', 'CommonType.proto'),)[0m
+[36m[2024-04-23 15:14:51,915] [utility.py:91] [utility:__console] [DEBUG]- (('export protobuf proto file success:', 'TestGlobalTemplate.proto'),)[0m
+[36m[2024-04-23 15:14:51,918] [utility.py:91] [utility:__console] [DEBUG]- (('export protobuf proto file success:', 'TestGlobal2Template.proto'),)[0m
+[36m[2024-04-23 15:14:51,920] [utility.py:91] [utility:__console] [DEBUG]- (('export protobuf proto file success:', 'TestListTablesTemplate.proto'),)[0m
+[36m[2024-04-23 15:14:51,922] [utility.py:91] [utility:__console] [DEBUG]- (('export protobuf proto file success:', 'TestTableArraysTemplate.proto'),)[0m
+[36m[2024-04-23 15:14:51,923] [utility.py:91] [utility:__console] [DEBUG]- (('execute protobuf cmd:', 'F:\\GiantWork\\ExcelExport\\Exporter\\tools\\protoc\\win64\\bin\\protoc.exe --csharp_out=out_protobuf_csharp/ protos/Position3d.proto'),)[0m
+[36m[2024-04-23 15:14:53,024] [utility.py:91] [utility:__console] [DEBUG]- (('generate protobuf script success:', 'Position3d'),)[0m
+[36m[2024-04-23 15:14:53,025] [utility.py:91] [utility:__console] [DEBUG]- (('execute protobuf cmd:', 'F:\\GiantWork\\ExcelExport\\Exporter\\tools\\protoc\\win64\\bin\\protoc.exe --csharp_out=out_protobuf_csharp/ protos/PositionArray3d.proto'),)[0m
+[36m[2024-04-23 15:14:53,209] [utility.py:91] [utility:__console] [DEBUG]- (('generate protobuf script success:', 'PositionArray3d'),)[0m
+[36m[2024-04-23 15:14:53,212] [utility.py:91] [utility:__console] [DEBUG]- (('execute protobuf cmd:', 'F:\\GiantWork\\ExcelExport\\Exporter\\tools\\protoc\\win64\\bin\\protoc.exe --csharp_out=out_protobuf_csharp/ protos/Position3dInt.proto'),)[0m
+[36m[2024-04-23 15:14:53,364] [utility.py:91] [utility:__console] [DEBUG]- (('generate protobuf script success:', 'Position3dInt'),)[0m
+[36m[2024-04-23 15:14:53,365] [utility.py:91] [utility:__console] [DEBUG]- (('execute protobuf cmd:', 'F:\\GiantWork\\ExcelExport\\Exporter\\tools\\protoc\\win64\\bin\\protoc.exe --csharp_out=out_protobuf_csharp/ protos/CommonType.proto'),)[0m
+[36m[2024-04-23 15:14:53,469] [utility.py:91] [utility:__console] [DEBUG]- (('generate protobuf script success:', 'CommonType'),)[0m
+[36m[2024-04-23 15:14:53,470] [utility.py:91] [utility:__console] [DEBUG]- (('execute protobuf cmd:', 'F:\\GiantWork\\ExcelExport\\Exporter\\tools\\protoc\\win64\\bin\\protoc.exe --csharp_out=out_protobuf_csharp/ protos/TestGlobalTemplate.proto'),)[0m
+[36m[2024-04-23 15:14:53,609] [utility.py:91] [utility:__console] [DEBUG]- (('generate protobuf script success:', 'TestGlobalTemplate'),)[0m
+[36m[2024-04-23 15:14:53,610] [utility.py:91] [utility:__console] [DEBUG]- (('execute protobuf cmd:', 'F:\\GiantWork\\ExcelExport\\Exporter\\tools\\protoc\\win64\\bin\\protoc.exe --csharp_out=out_protobuf_csharp/ protos/TestGlobal2Template.proto'),)[0m
+[36m[2024-04-23 15:14:53,711] [utility.py:91] [utility:__console] [DEBUG]- (('generate protobuf script success:', 'TestGlobal2Template'),)[0m
+[36m[2024-04-23 15:14:53,712] [utility.py:91] [utility:__console] [DEBUG]- (('execute protobuf cmd:', 'F:\\GiantWork\\ExcelExport\\Exporter\\tools\\protoc\\win64\\bin\\protoc.exe --csharp_out=out_protobuf_csharp/ protos/TestListTablesTemplate.proto'),)[0m
+[36m[2024-04-23 15:14:53,811] [utility.py:91] [utility:__console] [DEBUG]- (('generate protobuf script success:', 'TestListTablesTemplate'),)[0m
+[36m[2024-04-23 15:14:53,812] [utility.py:91] [utility:__console] [DEBUG]- (('execute protobuf cmd:', 'F:\\GiantWork\\ExcelExport\\Exporter\\tools\\protoc\\win64\\bin\\protoc.exe --csharp_out=out_protobuf_csharp/ protos/TestTableArraysTemplate.proto'),)[0m
+[36m[2024-04-23 15:14:53,912] [utility.py:91] [utility:__console] [DEBUG]- (('generate protobuf script success:', 'TestTableArraysTemplate'),)[0m
+[36m[2024-04-23 15:14:53,912] [utility.py:91] [utility:__console] [DEBUG]- (('export flat proto file success:', 'Position3d.proto'),)[0m
+[36m[2024-04-23 15:14:53,914] [utility.py:91] [utility:__console] [DEBUG]- (('export flat buff scheme file success:flat/Position3d.fbs',),)[0m
+[36m[2024-04-23 15:14:53,917] [utility.py:91] [utility:__console] [DEBUG]- (('export flat proto file success:', 'PositionArray3d.proto'),)[0m
+[36m[2024-04-23 15:14:53,919] [utility.py:91] [utility:__console] [DEBUG]- (('export flat buff scheme file success:flat/PositionArray3d.fbs',),)[0m
+[36m[2024-04-23 15:14:53,921] [utility.py:91] [utility:__console] [DEBUG]- (('export flat proto file success:', 'Position3dInt.proto'),)[0m
+[36m[2024-04-23 15:14:53,922] [utility.py:91] [utility:__console] [DEBUG]- (('export flat buff scheme file success:flat/Position3dInt.fbs',),)[0m
+[36m[2024-04-23 15:14:53,923] [utility.py:91] [utility:__console] [DEBUG]- (('export flat proto file success:', 'CommonType.proto'),)[0m
+[36m[2024-04-23 15:14:53,924] [utility.py:91] [utility:__console] [DEBUG]- (('export flat buff scheme file success:flat/CommonType.fbs',),)[0m
+[36m[2024-04-23 15:14:53,925] [utility.py:91] [utility:__console] [DEBUG]- (('export flat proto file success:', 'TestGlobalTemplate.proto'),)[0m
+[36m[2024-04-23 15:14:53,926] [utility.py:91] [utility:__console] [DEBUG]- (('export flat buff scheme file success:flat/TestGlobalTemplate.fbs',),)[0m
+[36m[2024-04-23 15:14:53,928] [utility.py:91] [utility:__console] [DEBUG]- (('export flat proto file success:', 'TestGlobal2Template.proto'),)[0m
+[36m[2024-04-23 15:14:53,929] [utility.py:91] [utility:__console] [DEBUG]- (('export flat buff scheme file success:flat/TestGlobal2Template.fbs',),)[0m
+[36m[2024-04-23 15:14:53,929] [utility.py:91] [utility:__console] [DEBUG]- (('export flat proto file success:', 'TestListTablesTemplate.proto'),)[0m
+[36m[2024-04-23 15:14:53,930] [utility.py:91] [utility:__console] [DEBUG]- (('export flat buff scheme file success:flat/TestListTablesTemplate.fbs',),)[0m
+[36m[2024-04-23 15:14:53,931] [utility.py:91] [utility:__console] [DEBUG]- (('export flat proto file success:', 'TestTableArraysTemplate.proto'),)[0m
+[36m[2024-04-23 15:14:53,932] [utility.py:91] [utility:__console] [DEBUG]- (('export flat buff scheme file success:flat/TestTableArraysTemplate.fbs',),)[0m
+[36m[2024-04-23 15:14:53,933] [utility.py:91] [utility:__console] [DEBUG]- (('execute flatbuffer cmd:', 'flatc --csharp --bfbs-comments -o out_flatbuffer_csharp flat/Position3d.fbs --gen-onefile'),)[0m
+[36m[2024-04-23 15:14:53,962] [utility.py:91] [utility:__console] [DEBUG]- (('generate flat buffer script success:', 'Position3d'),)[0m
+[36m[2024-04-23 15:14:53,963] [utility.py:91] [utility:__console] [DEBUG]- (('execute flatbuffer cmd:', 'flatc --csharp --bfbs-comments -o out_flatbuffer_csharp flat/PositionArray3d.fbs --gen-onefile'),)[0m
+[36m[2024-04-23 15:14:53,991] [utility.py:91] [utility:__console] [DEBUG]- (('generate flat buffer script success:', 'PositionArray3d'),)[0m
+[36m[2024-04-23 15:14:53,992] [utility.py:91] [utility:__console] [DEBUG]- (('execute flatbuffer cmd:', 'flatc --csharp --bfbs-comments -o out_flatbuffer_csharp flat/Position3dInt.fbs --gen-onefile'),)[0m
+[36m[2024-04-23 15:14:54,026] [utility.py:91] [utility:__console] [DEBUG]- (('generate flat buffer script success:', 'Position3dInt'),)[0m
+[36m[2024-04-23 15:14:54,027] [utility.py:91] [utility:__console] [DEBUG]- (('execute flatbuffer cmd:', 'flatc --csharp --bfbs-comments -o out_flatbuffer_csharp flat/CommonType.fbs --gen-onefile'),)[0m
+[36m[2024-04-23 15:14:54,072] [utility.py:91] [utility:__console] [DEBUG]- (('generate flat buffer script success:', 'CommonType'),)[0m
+[36m[2024-04-23 15:14:54,074] [utility.py:91] [utility:__console] [DEBUG]- (('execute flatbuffer cmd:', 'flatc --csharp --bfbs-comments -o out_flatbuffer_csharp flat/TestGlobalTemplate.fbs --gen-onefile'),)[0m
+[36m[2024-04-23 15:14:54,118] [utility.py:91] [utility:__console] [DEBUG]- (('generate flat buffer script success:', 'TestGlobalTemplate'),)[0m
+[36m[2024-04-23 15:14:54,119] [utility.py:91] [utility:__console] [DEBUG]- (('execute flatbuffer cmd:', 'flatc --csharp --bfbs-comments -o out_flatbuffer_csharp flat/TestGlobal2Template.fbs --gen-onefile'),)[0m
+[36m[2024-04-23 15:14:54,163] [utility.py:91] [utility:__console] [DEBUG]- (('generate flat buffer script success:', 'TestGlobal2Template'),)[0m
+[36m[2024-04-23 15:14:54,165] [utility.py:91] [utility:__console] [DEBUG]- (('execute flatbuffer cmd:', 'flatc --csharp --bfbs-comments -o out_flatbuffer_csharp flat/TestListTablesTemplate.fbs --gen-onefile'),)[0m
+[36m[2024-04-23 15:14:54,206] [utility.py:91] [utility:__console] [DEBUG]- (('generate flat buffer script success:', 'TestListTablesTemplate'),)[0m
+[36m[2024-04-23 15:14:54,207] [utility.py:91] [utility:__console] [DEBUG]- (('execute flatbuffer cmd:', 'flatc --csharp --bfbs-comments -o out_flatbuffer_csharp flat/TestTableArraysTemplate.fbs --gen-onefile'),)[0m
+[36m[2024-04-23 15:14:54,257] [utility.py:91] [utility:__console] [DEBUG]- (('generate flat buffer script success:', 'TestTableArraysTemplate'),)[0m
+[36m[2024-04-23 15:14:54,258] [utility.py:91] [utility:__console] [DEBUG]- (('export json data success:', 'out_json/TestGlobalTemplate.json'),)[0m
+[36m[2024-04-23 15:14:54,260] [utility.py:91] [utility:__console] [DEBUG]- (('export json data success:', 'out_json/TestGlobal2Template.json'),)[0m
+[36m[2024-04-23 15:14:54,261] [utility.py:91] [utility:__console] [DEBUG]- (('export json data success:', 'out_json/TestListTablesTemplate.json'),)[0m
+[36m[2024-04-23 15:14:54,263] [utility.py:91] [utility:__console] [DEBUG]- (('export json data success:', 'out_json/TestTableArraysTemplate.json'),)[0m
+[36m[2024-04-23 15:19:44,160] [utility.py:91] [utility:__console] [DEBUG]- (('build single sheet :测试全局表|TestGlobal',),)[0m
+[36m[2024-04-23 15:19:44,164] [utility.py:91] [utility:__console] [DEBUG]- (('build single sheet :测试全局表2|TestGlobal2',),)[0m
+[36m[2024-04-23 15:19:44,165] [utility.py:91] [utility:__console] [DEBUG]- (('build list sheet :测试列表3|TestListTable',),)[0m
+[36m[2024-04-23 15:19:44,172] [utility.py:91] [utility:__console] [DEBUG]- (('build list sheet :测试单表|TestTableArray',),)[0m
+[36m[2024-04-23 15:19:44,175] [utility.py:91] [utility:__console] [DEBUG]- (('export global protobuf proto file success:', 'Position3d.proto'),)[0m
+[36m[2024-04-23 15:19:44,176] [utility.py:91] [utility:__console] [DEBUG]- (('export global protobuf proto file success:', 'PositionArray3d.proto'),)[0m
+[36m[2024-04-23 15:19:44,178] [utility.py:91] [utility:__console] [DEBUG]- (('export global protobuf proto file success:', 'Position3dInt.proto'),)[0m
+[36m[2024-04-23 15:19:44,179] [utility.py:91] [utility:__console] [DEBUG]- (('export global protobuf proto file success:', 'CommonType.proto'),)[0m
+[36m[2024-04-23 15:19:44,180] [utility.py:91] [utility:__console] [DEBUG]- (('export protobuf proto file success:', 'TestGlobalTemplate.proto'),)[0m
+[36m[2024-04-23 15:19:44,181] [utility.py:91] [utility:__console] [DEBUG]- (('export protobuf proto file success:', 'TestGlobal2Template.proto'),)[0m
+[36m[2024-04-23 15:19:44,183] [utility.py:91] [utility:__console] [DEBUG]- (('export protobuf proto file success:', 'TestListTablesTemplate.proto'),)[0m
+[36m[2024-04-23 15:19:44,184] [utility.py:91] [utility:__console] [DEBUG]- (('export protobuf proto file success:', 'TestTableArraysTemplate.proto'),)[0m
+[36m[2024-04-23 15:19:44,186] [utility.py:91] [utility:__console] [DEBUG]- (('execute protobuf cmd:', 'F:\\GiantWork\\ExcelExport\\Exporter\\tools\\protoc\\win64\\bin\\protoc.exe --csharp_out=out_protobuf_csharp/ protos/Position3d.proto'),)[0m
+[36m[2024-04-23 15:19:44,294] [utility.py:91] [utility:__console] [DEBUG]- (('generate protobuf script success:', 'Position3d'),)[0m
+[36m[2024-04-23 15:19:44,295] [utility.py:91] [utility:__console] [DEBUG]- (('execute protobuf cmd:', 'F:\\GiantWork\\ExcelExport\\Exporter\\tools\\protoc\\win64\\bin\\protoc.exe --csharp_out=out_protobuf_csharp/ protos/PositionArray3d.proto'),)[0m
+[36m[2024-04-23 15:19:44,362] [utility.py:91] [utility:__console] [DEBUG]- (('generate protobuf script success:', 'PositionArray3d'),)[0m
+[36m[2024-04-23 15:19:44,364] [utility.py:91] [utility:__console] [DEBUG]- (('execute protobuf cmd:', 'F:\\GiantWork\\ExcelExport\\Exporter\\tools\\protoc\\win64\\bin\\protoc.exe --csharp_out=out_protobuf_csharp/ protos/Position3dInt.proto'),)[0m
+[36m[2024-04-23 15:19:44,447] [utility.py:91] [utility:__console] [DEBUG]- (('generate protobuf script success:', 'Position3dInt'),)[0m
+[36m[2024-04-23 15:19:44,448] [utility.py:91] [utility:__console] [DEBUG]- (('execute protobuf cmd:', 'F:\\GiantWork\\ExcelExport\\Exporter\\tools\\protoc\\win64\\bin\\protoc.exe --csharp_out=out_protobuf_csharp/ protos/CommonType.proto'),)[0m
+[36m[2024-04-23 15:19:44,514] [utility.py:91] [utility:__console] [DEBUG]- (('generate protobuf script success:', 'CommonType'),)[0m
+[36m[2024-04-23 15:19:44,515] [utility.py:91] [utility:__console] [DEBUG]- (('execute protobuf cmd:', 'F:\\GiantWork\\ExcelExport\\Exporter\\tools\\protoc\\win64\\bin\\protoc.exe --csharp_out=out_protobuf_csharp/ protos/TestGlobalTemplate.proto'),)[0m
+[36m[2024-04-23 15:19:44,584] [utility.py:91] [utility:__console] [DEBUG]- (('generate protobuf script success:', 'TestGlobalTemplate'),)[0m
+[36m[2024-04-23 15:19:44,585] [utility.py:91] [utility:__console] [DEBUG]- (('execute protobuf cmd:', 'F:\\GiantWork\\ExcelExport\\Exporter\\tools\\protoc\\win64\\bin\\protoc.exe --csharp_out=out_protobuf_csharp/ protos/TestGlobal2Template.proto'),)[0m
+[36m[2024-04-23 15:19:44,668] [utility.py:91] [utility:__console] [DEBUG]- (('generate protobuf script success:', 'TestGlobal2Template'),)[0m
+[36m[2024-04-23 15:19:44,669] [utility.py:91] [utility:__console] [DEBUG]- (('execute protobuf cmd:', 'F:\\GiantWork\\ExcelExport\\Exporter\\tools\\protoc\\win64\\bin\\protoc.exe --csharp_out=out_protobuf_csharp/ protos/TestListTablesTemplate.proto'),)[0m
+[36m[2024-04-23 15:19:44,739] [utility.py:91] [utility:__console] [DEBUG]- (('generate protobuf script success:', 'TestListTablesTemplate'),)[0m
+[36m[2024-04-23 15:19:44,740] [utility.py:91] [utility:__console] [DEBUG]- (('execute protobuf cmd:', 'F:\\GiantWork\\ExcelExport\\Exporter\\tools\\protoc\\win64\\bin\\protoc.exe --csharp_out=out_protobuf_csharp/ protos/TestTableArraysTemplate.proto'),)[0m
+[36m[2024-04-23 15:19:44,813] [utility.py:91] [utility:__console] [DEBUG]- (('generate protobuf script success:', 'TestTableArraysTemplate'),)[0m
+[36m[2024-04-23 15:19:44,815] [utility.py:91] [utility:__console] [DEBUG]- (('export flat proto file success:', 'Position3d.proto'),)[0m
+[36m[2024-04-23 15:19:44,816] [utility.py:91] [utility:__console] [DEBUG]- (('export flat buff scheme file success:flat/Position3d.fbs',),)[0m
+[36m[2024-04-23 15:19:44,818] [utility.py:91] [utility:__console] [DEBUG]- (('export flat proto file success:', 'PositionArray3d.proto'),)[0m
+[36m[2024-04-23 15:19:44,820] [utility.py:91] [utility:__console] [DEBUG]- (('export flat buff scheme file success:flat/PositionArray3d.fbs',),)[0m
+[36m[2024-04-23 15:19:44,822] [utility.py:91] [utility:__console] [DEBUG]- (('export flat proto file success:', 'Position3dInt.proto'),)[0m
+[36m[2024-04-23 15:19:44,823] [utility.py:91] [utility:__console] [DEBUG]- (('export flat buff scheme file success:flat/Position3dInt.fbs',),)[0m
+[36m[2024-04-23 15:19:44,827] [utility.py:91] [utility:__console] [DEBUG]- (('export flat proto file success:', 'CommonType.proto'),)[0m
+[36m[2024-04-23 15:19:44,829] [utility.py:91] [utility:__console] [DEBUG]- (('export flat buff scheme file success:flat/CommonType.fbs',),)[0m
+[36m[2024-04-23 15:19:44,830] [utility.py:91] [utility:__console] [DEBUG]- (('export flat proto file success:', 'TestGlobalTemplate.proto'),)[0m
+[36m[2024-04-23 15:19:44,832] [utility.py:91] [utility:__console] [DEBUG]- (('export flat buff scheme file success:flat/TestGlobalTemplate.fbs',),)[0m
+[36m[2024-04-23 15:19:44,834] [utility.py:91] [utility:__console] [DEBUG]- (('export flat proto file success:', 'TestGlobal2Template.proto'),)[0m
+[36m[2024-04-23 15:19:44,835] [utility.py:91] [utility:__console] [DEBUG]- (('export flat buff scheme file success:flat/TestGlobal2Template.fbs',),)[0m
+[36m[2024-04-23 15:19:44,836] [utility.py:91] [utility:__console] [DEBUG]- (('export flat proto file success:', 'TestListTablesTemplate.proto'),)[0m
+[36m[2024-04-23 15:19:44,838] [utility.py:91] [utility:__console] [DEBUG]- (('export flat buff scheme file success:flat/TestListTablesTemplate.fbs',),)[0m
+[36m[2024-04-23 15:19:44,840] [utility.py:91] [utility:__console] [DEBUG]- (('export flat proto file success:', 'TestTableArraysTemplate.proto'),)[0m
+[36m[2024-04-23 15:19:44,843] [utility.py:91] [utility:__console] [DEBUG]- (('export flat buff scheme file success:flat/TestTableArraysTemplate.fbs',),)[0m
+[36m[2024-04-23 15:20:01,243] [utility.py:91] [utility:__console] [DEBUG]- (('build single sheet :测试全局表|TestGlobal',),)[0m
+[36m[2024-04-23 15:20:01,246] [utility.py:91] [utility:__console] [DEBUG]- (('build single sheet :测试全局表2|TestGlobal2',),)[0m
+[36m[2024-04-23 15:20:01,247] [utility.py:91] [utility:__console] [DEBUG]- (('build list sheet :测试列表3|TestListTable',),)[0m
+[36m[2024-04-23 15:20:01,254] [utility.py:91] [utility:__console] [DEBUG]- (('build list sheet :测试单表|TestTableArray',),)[0m
+[36m[2024-04-23 15:20:01,256] [utility.py:91] [utility:__console] [DEBUG]- (('export global protobuf proto file success:', 'Position3d.proto'),)[0m
+[36m[2024-04-23 15:20:01,260] [utility.py:91] [utility:__console] [DEBUG]- (('export global protobuf proto file success:', 'PositionArray3d.proto'),)[0m
+[36m[2024-04-23 15:20:01,263] [utility.py:91] [utility:__console] [DEBUG]- (('export global protobuf proto file success:', 'Position3dInt.proto'),)[0m
+[36m[2024-04-23 15:20:01,266] [utility.py:91] [utility:__console] [DEBUG]- (('export global protobuf proto file success:', 'CommonType.proto'),)[0m
+[36m[2024-04-23 15:20:01,269] [utility.py:91] [utility:__console] [DEBUG]- (('export protobuf proto file success:', 'TestGlobalTemplate.proto'),)[0m
+[36m[2024-04-23 15:20:01,287] [utility.py:91] [utility:__console] [DEBUG]- (('export protobuf proto file success:', 'TestGlobal2Template.proto'),)[0m
+[36m[2024-04-23 15:20:01,335] [utility.py:91] [utility:__console] [DEBUG]- (('export protobuf proto file success:', 'TestListTablesTemplate.proto'),)[0m
+[36m[2024-04-23 15:20:01,338] [utility.py:91] [utility:__console] [DEBUG]- (('export protobuf proto file success:', 'TestTableArraysTemplate.proto'),)[0m
+[36m[2024-04-23 15:20:01,340] [utility.py:91] [utility:__console] [DEBUG]- (('execute protobuf cmd:', 'F:\\GiantWork\\ExcelExport\\Exporter\\tools\\protoc\\win64\\bin\\protoc.exe --csharp_out=out_protobuf_csharp/ protos/Position3d.proto'),)[0m
+[36m[2024-04-23 15:20:01,538] [utility.py:91] [utility:__console] [DEBUG]- (('generate protobuf script success:', 'Position3d'),)[0m
+[36m[2024-04-23 15:20:01,543] [utility.py:91] [utility:__console] [DEBUG]- (('execute protobuf cmd:', 'F:\\GiantWork\\ExcelExport\\Exporter\\tools\\protoc\\win64\\bin\\protoc.exe --csharp_out=out_protobuf_csharp/ protos/PositionArray3d.proto'),)[0m
+[36m[2024-04-23 15:20:01,693] [utility.py:91] [utility:__console] [DEBUG]- (('generate protobuf script success:', 'PositionArray3d'),)[0m
+[36m[2024-04-23 15:20:01,696] [utility.py:91] [utility:__console] [DEBUG]- (('execute protobuf cmd:', 'F:\\GiantWork\\ExcelExport\\Exporter\\tools\\protoc\\win64\\bin\\protoc.exe --csharp_out=out_protobuf_csharp/ protos/Position3dInt.proto'),)[0m
+[36m[2024-04-23 15:20:01,950] [utility.py:91] [utility:__console] [DEBUG]- (('generate protobuf script success:', 'Position3dInt'),)[0m
+[36m[2024-04-23 15:20:01,950] [utility.py:91] [utility:__console] [DEBUG]- (('execute protobuf cmd:', 'F:\\GiantWork\\ExcelExport\\Exporter\\tools\\protoc\\win64\\bin\\protoc.exe --csharp_out=out_protobuf_csharp/ protos/CommonType.proto'),)[0m
+[36m[2024-04-23 15:20:02,020] [utility.py:91] [utility:__console] [DEBUG]- (('generate protobuf script success:', 'CommonType'),)[0m
+[36m[2024-04-23 15:20:02,021] [utility.py:91] [utility:__console] [DEBUG]- (('execute protobuf cmd:', 'F:\\GiantWork\\ExcelExport\\Exporter\\tools\\protoc\\win64\\bin\\protoc.exe --csharp_out=out_protobuf_csharp/ protos/TestGlobalTemplate.proto'),)[0m
+[36m[2024-04-23 15:20:02,085] [utility.py:91] [utility:__console] [DEBUG]- (('generate protobuf script success:', 'TestGlobalTemplate'),)[0m
+[36m[2024-04-23 15:20:02,086] [utility.py:91] [utility:__console] [DEBUG]- (('execute protobuf cmd:', 'F:\\GiantWork\\ExcelExport\\Exporter\\tools\\protoc\\win64\\bin\\protoc.exe --csharp_out=out_protobuf_csharp/ protos/TestGlobal2Template.proto'),)[0m
+[36m[2024-04-23 15:20:02,146] [utility.py:91] [utility:__console] [DEBUG]- (('generate protobuf script success:', 'TestGlobal2Template'),)[0m
+[36m[2024-04-23 15:20:02,147] [utility.py:91] [utility:__console] [DEBUG]- (('execute protobuf cmd:', 'F:\\GiantWork\\ExcelExport\\Exporter\\tools\\protoc\\win64\\bin\\protoc.exe --csharp_out=out_protobuf_csharp/ protos/TestListTablesTemplate.proto'),)[0m
+[36m[2024-04-23 15:20:02,245] [utility.py:91] [utility:__console] [DEBUG]- (('generate protobuf script success:', 'TestListTablesTemplate'),)[0m
+[36m[2024-04-23 15:20:02,245] [utility.py:91] [utility:__console] [DEBUG]- (('execute protobuf cmd:', 'F:\\GiantWork\\ExcelExport\\Exporter\\tools\\protoc\\win64\\bin\\protoc.exe --csharp_out=out_protobuf_csharp/ protos/TestTableArraysTemplate.proto'),)[0m
+[36m[2024-04-23 15:20:02,308] [utility.py:91] [utility:__console] [DEBUG]- (('generate protobuf script success:', 'TestTableArraysTemplate'),)[0m
+[36m[2024-04-23 15:20:02,309] [utility.py:91] [utility:__console] [DEBUG]- (('export flat proto file success:', 'Position3d.proto'),)[0m
+[36m[2024-04-23 15:20:02,310] [utility.py:91] [utility:__console] [DEBUG]- (('export flat buff scheme file success:flat/Position3d.fbs',),)[0m
+[36m[2024-04-23 15:20:02,311] [utility.py:91] [utility:__console] [DEBUG]- (('export flat proto file success:', 'PositionArray3d.proto'),)[0m
+[36m[2024-04-23 15:20:02,312] [utility.py:91] [utility:__console] [DEBUG]- (('export flat buff scheme file success:flat/PositionArray3d.fbs',),)[0m
+[36m[2024-04-23 15:20:02,314] [utility.py:91] [utility:__console] [DEBUG]- (('export flat proto file success:', 'Position3dInt.proto'),)[0m
+[36m[2024-04-23 15:20:02,315] [utility.py:91] [utility:__console] [DEBUG]- (('export flat buff scheme file success:flat/Position3dInt.fbs',),)[0m
+[36m[2024-04-23 15:20:02,316] [utility.py:91] [utility:__console] [DEBUG]- (('export flat proto file success:', 'CommonType.proto'),)[0m
+[36m[2024-04-23 15:20:02,318] [utility.py:91] [utility:__console] [DEBUG]- (('export flat buff scheme file success:flat/CommonType.fbs',),)[0m
+[36m[2024-04-23 15:20:02,319] [utility.py:91] [utility:__console] [DEBUG]- (('export flat proto file success:', 'TestGlobalTemplate.proto'),)[0m
+[36m[2024-04-23 15:20:02,320] [utility.py:91] [utility:__console] [DEBUG]- (('export flat buff scheme file success:flat/TestGlobalTemplate.fbs',),)[0m
+[36m[2024-04-23 15:20:02,320] [utility.py:91] [utility:__console] [DEBUG]- (('export flat proto file success:', 'TestGlobal2Template.proto'),)[0m
+[36m[2024-04-23 15:20:02,321] [utility.py:91] [utility:__console] [DEBUG]- (('export flat buff scheme file success:flat/TestGlobal2Template.fbs',),)[0m
+[36m[2024-04-23 15:20:02,322] [utility.py:91] [utility:__console] [DEBUG]- (('export flat proto file success:', 'TestListTablesTemplate.proto'),)[0m
+[36m[2024-04-23 15:20:02,323] [utility.py:91] [utility:__console] [DEBUG]- (('export flat buff scheme file success:flat/TestListTablesTemplate.fbs',),)[0m
+[36m[2024-04-23 15:20:02,324] [utility.py:91] [utility:__console] [DEBUG]- (('export flat proto file success:', 'TestTableArraysTemplate.proto'),)[0m
+[36m[2024-04-23 15:20:02,325] [utility.py:91] [utility:__console] [DEBUG]- (('export flat buff scheme file success:flat/TestTableArraysTemplate.fbs',),)[0m
+[36m[2024-04-23 15:20:02,326] [utility.py:91] [utility:__console] [DEBUG]- (('execute flatbuffer cmd:', 'F:\\GiantWork\\ExcelExport\\Exporter\\tools\\flatc\\flatc.exe --csharp --bfbs-comments -o out_flatbuffer_csharp flat/Position3d.fbs --gen-onefile'),)[0m
+[36m[2024-04-23 15:20:02,638] [utility.py:91] [utility:__console] [DEBUG]- (('generate flat buffer script success:', 'Position3d'),)[0m
+[36m[2024-04-23 15:20:02,638] [utility.py:91] [utility:__console] [DEBUG]- (('execute flatbuffer cmd:', 'F:\\GiantWork\\ExcelExport\\Exporter\\tools\\flatc\\flatc.exe --csharp --bfbs-comments -o out_flatbuffer_csharp flat/PositionArray3d.fbs --gen-onefile'),)[0m
+[36m[2024-04-23 15:20:02,794] [utility.py:91] [utility:__console] [DEBUG]- (('generate flat buffer script success:', 'PositionArray3d'),)[0m
+[36m[2024-04-23 15:20:02,795] [utility.py:91] [utility:__console] [DEBUG]- (('execute flatbuffer cmd:', 'F:\\GiantWork\\ExcelExport\\Exporter\\tools\\flatc\\flatc.exe --csharp --bfbs-comments -o out_flatbuffer_csharp flat/Position3dInt.fbs --gen-onefile'),)[0m
+[36m[2024-04-23 15:20:02,898] [utility.py:91] [utility:__console] [DEBUG]- (('generate flat buffer script success:', 'Position3dInt'),)[0m
+[36m[2024-04-23 15:20:02,899] [utility.py:91] [utility:__console] [DEBUG]- (('execute flatbuffer cmd:', 'F:\\GiantWork\\ExcelExport\\Exporter\\tools\\flatc\\flatc.exe --csharp --bfbs-comments -o out_flatbuffer_csharp flat/CommonType.fbs --gen-onefile'),)[0m
+[36m[2024-04-23 15:20:03,013] [utility.py:91] [utility:__console] [DEBUG]- (('generate flat buffer script success:', 'CommonType'),)[0m
+[36m[2024-04-23 15:20:03,014] [utility.py:91] [utility:__console] [DEBUG]- (('execute flatbuffer cmd:', 'F:\\GiantWork\\ExcelExport\\Exporter\\tools\\flatc\\flatc.exe --csharp --bfbs-comments -o out_flatbuffer_csharp flat/TestGlobalTemplate.fbs --gen-onefile'),)[0m
+[36m[2024-04-23 15:20:03,108] [utility.py:91] [utility:__console] [DEBUG]- (('generate flat buffer script success:', 'TestGlobalTemplate'),)[0m
+[36m[2024-04-23 15:20:03,110] [utility.py:91] [utility:__console] [DEBUG]- (('execute flatbuffer cmd:', 'F:\\GiantWork\\ExcelExport\\Exporter\\tools\\flatc\\flatc.exe --csharp --bfbs-comments -o out_flatbuffer_csharp flat/TestGlobal2Template.fbs --gen-onefile'),)[0m
+[36m[2024-04-23 15:20:03,241] [utility.py:91] [utility:__console] [DEBUG]- (('generate flat buffer script success:', 'TestGlobal2Template'),)[0m
+[36m[2024-04-23 15:20:03,242] [utility.py:91] [utility:__console] [DEBUG]- (('execute flatbuffer cmd:', 'F:\\GiantWork\\ExcelExport\\Exporter\\tools\\flatc\\flatc.exe --csharp --bfbs-comments -o out_flatbuffer_csharp flat/TestListTablesTemplate.fbs --gen-onefile'),)[0m
+[36m[2024-04-23 15:20:03,343] [utility.py:91] [utility:__console] [DEBUG]- (('generate flat buffer script success:', 'TestListTablesTemplate'),)[0m
+[36m[2024-04-23 15:20:03,345] [utility.py:91] [utility:__console] [DEBUG]- (('execute flatbuffer cmd:', 'F:\\GiantWork\\ExcelExport\\Exporter\\tools\\flatc\\flatc.exe --csharp --bfbs-comments -o out_flatbuffer_csharp flat/TestTableArraysTemplate.fbs --gen-onefile'),)[0m
+[36m[2024-04-23 15:20:03,893] [utility.py:91] [utility:__console] [DEBUG]- (('generate flat buffer script success:', 'TestTableArraysTemplate'),)[0m
+[36m[2024-04-23 15:20:03,894] [utility.py:91] [utility:__console] [DEBUG]- (('export json data success:', 'out_json/TestGlobalTemplate.json'),)[0m
+[36m[2024-04-23 15:20:03,895] [utility.py:91] [utility:__console] [DEBUG]- (('export json data success:', 'out_json/TestGlobal2Template.json'),)[0m
+[36m[2024-04-23 15:20:03,897] [utility.py:91] [utility:__console] [DEBUG]- (('export json data success:', 'out_json/TestListTablesTemplate.json'),)[0m
+[36m[2024-04-23 15:20:03,898] [utility.py:91] [utility:__console] [DEBUG]- (('export json data success:', 'out_json/TestTableArraysTemplate.json'),)[0m

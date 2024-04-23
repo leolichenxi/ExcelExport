@@ -1,5 +1,5 @@
 attribute "priority";
-namespace Config;
+namespace Logic.Config;
 table TestListTablesTemplate {
    key:string ; // Key
 }

@@ -1,5 +1,5 @@
 syntax = "proto3";
-package Config;
+package Logic.Config;
 import "protos/Position3d.proto";
 import "protos/PositionArray3d.proto";
 message TestGlobalTemplate {

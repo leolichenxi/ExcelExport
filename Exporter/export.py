@@ -32,18 +32,18 @@ out_protobuf_script_formats = {
 
 out_flat_script_formats = {
     'csharp': 'out_flatbuffer_csharp',
-    'lua': 'out_flatbuffer_lua',
+    # 'lua': 'out_flatbuffer_lua',
 }
 
 # 导出数据格式 ['json', 'lua', 'protobuf']
 out_data_formats = {
     'json': 'out_json',
-    'lua': 'out_lua',
-    'protobuf': 'out_protobuf',
-    'flatbuffer': "out_flatbuffer"
+    # 'lua': 'out_lua',
+    # 'protobuf': 'out_protobuf',
+    # 'flatbuffer': "out_flatbuffer"
 }
 
-NameSpace = "Config"
+NameSpace = "Logic.Config"
 Suffix = "Template"
 
 # 拷贝到工程的路径
@@ -52,12 +52,13 @@ Suffix = "Template"
 
 
 if __name__ == '__main__':
-    try:
-        tools.generator.generator(export_files, out_protobuf_script_formats, out_flat_script_formats, out_data_formats,
+    # try:
+    tools.generator.generator(export_files, out_protobuf_script_formats, out_flat_script_formats, out_data_formats,
                                   NameSpace, Suffix)
-    except Exception as e:
-        os.system("pause")
-        raise ValueError(e)
+    # except Exception as e:
+    #     # os.system("pause")
+    #     print(e.args)
+    #     raise ValueError(e)
 
     # os.system("pause")
     # copyconfig.copy(out_data_formats, out_script_formats, out_config_path, out_script_path)
